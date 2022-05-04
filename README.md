@@ -7,3 +7,7 @@
 <li>Typecheck: Jan Perthel</li>
 <li>ASM: Reinhold Jooß</li>
 </ul>
+
+
+# Erste UML Entwürfe
+![UML](./UML/First.png)
