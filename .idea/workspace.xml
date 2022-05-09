@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6650e656-649f-49dc-87d4-833594b0a3d6" name="Default Changelist" comment="">
+    <list default="true" id="6650e656-649f-49dc-87d4-833594b0a3d6" name="Default Changelist" comment="Update">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UML/Design.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Design.vpp" afterDir="false" />
@@ -62,6 +62,14 @@
       <updated>1651397247208</updated>
       <workItem from="1651397248671" duration="101000" />
     </task>
+    <task id="LOCAL-00001" summary="Update">
+      <created>1652085860509</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652085860509</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -77,5 +85,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
