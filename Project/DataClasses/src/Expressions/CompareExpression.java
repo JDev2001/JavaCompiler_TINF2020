@@ -6,6 +6,8 @@ package Expressions;
 public class CompareExpression implements IExpression
 {
     private IExpression a;
+    private IExpression b;
+    private ComapreOperators comapreOperator;
 
     public CompareExpression(IExpression a, IExpression b, ComapreOperators comapreOperator)
     {
@@ -28,9 +30,6 @@ public class CompareExpression implements IExpression
     {
         return comapreOperator;
     }
-
-    private IExpression b;
-    private ComapreOperators comapreOperator;
 
     public enum ComapreOperators
     {

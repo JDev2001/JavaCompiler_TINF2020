@@ -5,6 +5,9 @@ package Expressions;
  */
 public class BinaryExpression implements IExpression
 {
+    private IExpression a;
+    private IExpression b;
+
     public BinaryExpression(IExpression a, IExpression b)
     {
         this.a = a;
@@ -20,7 +23,4 @@ public class BinaryExpression implements IExpression
     {
         return b;
     }
-
-    private IExpression a;
-    private IExpression b;
 }
