@@ -1,6 +1,9 @@
+package src;
+
 public class SemantikCheck {
 
     public void test(){
+        /*
         Object i  = new A();
         switch (i)
         {
@@ -8,6 +11,8 @@ public class SemantikCheck {
             case B a  -> System.out.println("B");
             case Object o -> System.out.println("default");
         }
+
+         */
     }
 }
 
