@@ -2,6 +2,8 @@ package com.company;
 
 public class Main {
     public static void main(String[] args) {
+
+        /*
         Object i  = new A();
             switch (i)
             {
@@ -9,6 +11,8 @@ public class Main {
                 case B a  -> System.out.println("B");
                 case Object o -> System.out.println("default");
             }
+
+         */
         }
  }
 
