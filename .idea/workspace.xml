@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6650e656-649f-49dc-87d4-833594b0a3d6" name="Default Changelist" comment="Update">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Design.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/UML/Design.vpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Design.vpp.bak_044d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Design.vpp.bak_045d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Design.vpp.bak_046d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/UML/Design.vpp.bak_047d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +12,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Project/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -36,7 +34,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/suuya/IdeaProjects/JavaCompiler_TINF2020/Project"
   }
 }]]></component>
   <component name="RunManager">
@@ -47,6 +46,13 @@
         </value>
       </option>
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Unnamed" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="16" />
+      <module name="JavaCompiler_TINF2020" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -69,7 +75,21 @@
       <option name="project" value="LOCAL" />
       <updated>1652085860509</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Update">
+      <created>1652086912689</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1652086912689</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update">
+      <created>1652086990995</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652086990995</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
