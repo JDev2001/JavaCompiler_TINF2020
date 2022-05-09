@@ -1,4 +1,4 @@
-Statement/Anweisung: "Alles was man in eine Zeile schreibt
+Statement/Anweisung: Kontrollstrukturen, Expressions
 
 Block: { ... }
 
