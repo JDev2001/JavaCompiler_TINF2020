@@ -1,30 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Base for the Parser/Lexer (Added Program/Class Adapter)">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/ProgramAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/module-info.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Program.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Program.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/IfElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/IfElseStatement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/Parser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/Parser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/SemantikCheck.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFile.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/common/SyntaxTreeGenerator/ISyntaxTreeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/SyntaxTreeGenerator/ISyntaxTreeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/common/SyntaxTreeGenerator/SyntaxTreeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/SyntaxTreeGenerator/SyntaxTreeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652112691052</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)">
+      <created>1652118331666</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1652118331666</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -133,6 +121,7 @@
     <MESSAGE value="Setup parser folder structure and main methode" />
     <MESSAGE value="Antlr Configuration" />
     <MESSAGE value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
+    <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
   </component>
 </project>
