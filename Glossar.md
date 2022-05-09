@@ -1,3 +1,5 @@
-Statement: https://de.wikipedia.org/wiki/Anweisung_(Programmierung)
+Statement/Anweisung: "Alles was man in eine Zeile schreibt
 
-Block: https://de.wikipedia.org/wiki/Blockstruktur
+Block: { ... }
+
+Expression/Ausdruck: Kann ausgewertet werden (Funktionsaufrufe, Literale/Konstanten, Variablen)
