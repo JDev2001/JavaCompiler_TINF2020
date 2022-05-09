@@ -1,4 +1,4 @@
-// Generated from F:/User Folder/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.9.2
+// Generated from F:/User Folder/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
 package generated;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
