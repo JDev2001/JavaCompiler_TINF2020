@@ -4,5 +4,5 @@ module DataClasses {
     exports Field;
     exports Method;
     exports Statements;
-    exports  Types;
+    exports Types;
 }

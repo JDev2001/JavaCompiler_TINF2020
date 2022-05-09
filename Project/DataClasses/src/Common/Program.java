@@ -6,8 +6,9 @@ public class Program
 {
     List<Class> classes;
 
-    public Program(List<Class> classes)
-    {
+    public Program() { }
+
+    public void setClasses(List<Class> classes) {
         this.classes = classes;
     }
 

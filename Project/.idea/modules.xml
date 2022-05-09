@@ -4,10 +4,10 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" filepath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" />
       <module fileurl="file://$PROJECT_DIR$/DataClasses/DataClasses.iml" filepath="$PROJECT_DIR$/DataClasses/DataClasses.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Parser/Parser.iml" filepath="$PROJECT_DIR$/Parser/Parser.iml" />
       <module fileurl="file://$PROJECT_DIR$/Project.iml" filepath="$PROJECT_DIR$/Project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" filepath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" />
       <module fileurl="file://$PROJECT_DIR$/Tests/Tests.iml" filepath="$PROJECT_DIR$/Tests/Tests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" filepath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Parser/Parser.iml" filepath="$PROJECT_DIR$/Parser/Parser.iml" />
     </modules>
   </component>
 </project>
