@@ -14,7 +14,7 @@ public class ClassAdapter {
      */
     public static Class generate(antlrGrammarParser.JClassContext ctx) {
 
-        //TODO: Hier gehts weiter runter
+        //TODO: Hier gehts weiter runter ... WUUUHOOO
         return null;
     }
 

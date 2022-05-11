@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="EmptyClass.java added">
-      <change afterPath="$PROJECT_DIR$/Ressources/ClassWithVar.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class edited">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +113,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652259310567</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Main class edited">
+      <created>1652259765716</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1652259765716</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -134,6 +141,7 @@
     <MESSAGE value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="EmptyClass.java added" />
-    <option name="LAST_COMMIT_MESSAGE" value="EmptyClass.java added" />
+    <MESSAGE value="Main class edited" />
+    <option name="LAST_COMMIT_MESSAGE" value="Main class edited" />
   </component>
 </project>
