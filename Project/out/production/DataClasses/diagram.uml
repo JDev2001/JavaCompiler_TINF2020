@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="3170.366006944444" y="265.0">StatementExpression.MethodCallStatement</node>
+    <node x="1537.9895833333333" y="276.0">Statements.VarDeclarationStatement</node>
+    <node x="229.5" y="298.5">Types.IntType</node>
+    <node x="2175.5494270833333" y="558.0">Statements.IfElseStatement</node>
+    <node x="4875.366006944444" y="310.5">Expressions.SuperExpression</node>
+    <node x="5366.366006944444" y="265.0">Expressions.BinaryExpression</node>
+    <node x="765.5" y="298.5">Types.BoolType</node>
+    <node x="4029.366006944444" y="310.5">Expressions.JNullExpression</node>
+    <node x="3581.366006944444" y="276.0">StatementExpression.InstVarStatementExpression</node>
+    <node x="1833.9895833333333" y="287.0">Expressions.TypeExpression</node>
+    <node x="1837.5378298611106" y="569.0">StatementExpression.NewStatementExpression</node>
+    <node x="1373.9895833333333" y="298.5">Types.CharType</node>
+    <node x="30.5" y="287.0">Types.CustomType</node>
+    <node x="963.7253298611106" y="952.0">Common.Program</node>
+    <node x="2236.367760416667" y="12.0">Statements.IStatement</node>
+    <node x="2531.5494270833333" y="569.0">Statements.WhileStatement</node>
+    <node x="3802.8177604166667" y="12.0">Expressions.IExpression</node>
+    <node x="189.05616319444425" y="558.0">Field.Field</node>
+    <node x="589.5" y="310.5">Types.IMethodType</node>
+    <node x="353.5" y="254.0">Common.AccessModfiers</node>
+    <node x="3849.366006944444" y="310.5">Expressions.ThisExpression</node>
+    <node x="1223.617760416667" y="0.0">Types.IType</node>
+    <node x="900.5144965277775" y="536.0">Method.Method</node>
+    <node x="2637.366006944444" y="276.0">StatementExpression.AssignStatementExpression</node>
+    <node x="4237.366006944444" y="287.0">Expressions.ConstExpression</node>
+    <node x="870.5586631944441" y="771.0">Common.Class</node>
+    <node x="917.5" y="298.5">Types.ObjectType</node>
+    <node x="2922.366006944444" y="287.0">Statements.ReturnStatement</node>
+    <node x="2138.3222569444442" y="276.0">Common.Block</node>
+    <node x="37.05616319444425" y="591.5">Types.VoidType</node>
+    <node x="5083.366006944444" y="276.0">Expressions.UnaryExpression</node>
+    <node x="4459.366006944444" y="265.0">Expressions.CompareExpression</node>
+    <node x="1112.9895833333333" y="276.0">Method.MethodParameter</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Method.MethodParameter" target="Types.IType">
+      <point x="-55.25" y="-49.5" />
+      <point x="1168.2395833333333" y="234.0" />
+      <point x="1269.086510416667" y="234.0" />
+      <point x="-3.03125" y="27.0" />
+    </edge>
+    <edge source="Expressions.BinaryExpression" target="Expressions.BinaryExpression">
+      <point x="0.0" y="60.5" />
+      <point x="5521.366006944444" y="406.0" />
+      <point x="5346.366006944444" y="406.0" />
+      <point x="5346.366006944444" y="325.5" />
+      <point x="-155.0" y="-0.0" />
+    </edge>
+    <edge source="Statements.VarDeclarationStatement" target="Statements.IStatement">
+      <point x="85.33333333333326" y="-49.5" />
+      <point x="1751.3229166666665" y="94.0" />
+      <point x="2243.478871527778" y="94.0" />
+      <point x="-56.88888888888869" y="15.0" />
+    </edge>
+    <edge source="Method.Method" target="Common.Block">
+      <point x="146.5625" y="-82.5" />
+      <point x="1281.5769965277775" y="446.0" />
+      <point x="2216.1347569444442" y="446.0" />
+      <point x="-46.6875" y="49.5" />
+    </edge>
+    <edge source="Statements.WhileStatement" target="Expressions.CompareExpression">
+      <point x="56.80000000000018" y="-49.5" />
+      <point x="2730.3494270833335" y="506.0" />
+      <point x="4736.566006944444" y="506.0" />
+      <point x="79.19999999999982" y="60.5" />
+    </edge>
+    <edge source="StatementExpression.NewStatementExpression" target="StatementExpression.NewStatementExpression">
+      <point x="0.0" y="49.5" />
+      <point x="1979.5378298611106" y="688.0" />
+      <point x="1817.5378298611106" y="688.0" />
+      <point x="1817.5378298611106" y="618.5" />
+      <point x="-142.0" y="-0.0" />
+    </edge>
+    <edge source="Expressions.TypeExpression" target="Expressions.TypeExpression">
+      <point x="0.0" y="38.5" />
+      <point x="1918.4895833333333" y="384.0" />
+      <point x="1813.9895833333333" y="384.0" />
+      <point x="1813.9895833333333" y="325.5" />
+      <point x="-84.5" y="-0.0" />
+    </edge>
+    <edge source="StatementExpression.InstVarStatementExpression" target="Expressions.IExpression">
+      <point x="-82.66666666666697" y="-49.5" />
+      <point x="3622.699340277777" y="214.0" />
+      <point x="3850.9844270833337" y="214.0" />
+      <point x="-19.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Types.CustomType" target="Types.CustomType">
+      <point x="0.0" y="38.5" />
+      <point x="109.5" y="384.0" />
+      <point x="10.5" y="384.0" />
+      <point x="10.5" y="325.5" />
+      <point x="-79.0" y="-0.0" />
+    </edge>
+    <edge source="Expressions.ConstExpression" target="Expressions.IExpression">
+      <point x="0.0" y="-38.5" />
+      <point x="4328.366006944444" y="214.0" />
+      <point x="3879.3177604166667" y="214.0" />
+      <point x="8.5" y="15.0" />
+    </edge>
+    <edge source="Types.VoidType" target="Types.VoidType">
+      <point x="0.0" y="27.0" />
+      <point x="93.05616319444425" y="665.5" />
+      <point x="17.056163194444252" y="665.5" />
+      <point x="17.056163194444252" y="618.5" />
+      <point x="-56.0" y="-0.0" />
+    </edge>
+    <edge source="StatementExpression.MethodCallStatement" target="StatementExpression.MethodCallStatement">
+      <point x="-123.66666666666674" y="60.5" />
+      <point x="3232.1993402777775" y="406.0" />
+      <point x="3150.366006944444" y="406.0" />
+      <point x="3150.366006944444" y="325.5" />
+      <point x="-185.5" y="-0.0" />
+    </edge>
+    <edge source="Expressions.UnaryExpression" target="Expressions.IExpression">
+      <point x="-81.0" y="-49.5" />
+      <point x="5123.866006944444" y="164.0" />
+      <point x="3907.6510937500007" y="164.0" />
+      <point x="36.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Common.Class" target="Common.Class">
+      <point x="-88.33333333333326" y="60.5" />
+      <point x="914.7253298611108" y="912.0" />
+      <point x="850.5586631944441" y="912.0" />
+      <point x="850.5586631944441" y="831.5" />
+      <point x="-132.5" y="-0.0" />
+    </edge>
+    <edge source="Statements.VarDeclarationStatement" target="Statements.VarDeclarationStatement">
+      <point x="0.0" y="49.5" />
+      <point x="1665.9895833333333" y="395.0" />
+      <point x="1517.9895833333333" y="395.0" />
+      <point x="1517.9895833333333" y="325.5" />
+      <point x="-128.0" y="-0.0" />
+    </edge>
+    <edge source="Types.BoolType" target="Types.IType">
+      <point x="0.0" y="-27.0" />
+      <point x="821.5" y="214.0" />
+      <point x="1256.961510416667" y="214.0" />
+      <point x="-15.15625" y="27.0" />
+    </edge>
+    <edge source="StatementExpression.NewStatementExpression" target="Types.IType">
+      <point x="-56.799999999999955" y="-49.5" />
+      <point x="1922.7378298611106" y="426.0" />
+      <point x="1507.4895833333333" y="426.0" />
+      <point x="1507.4895833333333" y="204.0" />
+      <point x="1293.336510416667" y="204.0" />
+      <point x="21.21875" y="27.0" />
+    </edge>
+    <edge source="Types.BoolType" target="Types.BoolType">
+      <point x="0.0" y="27.0" />
+      <point x="821.5" y="372.5" />
+      <point x="745.5" y="372.5" />
+      <point x="745.5" y="325.5" />
+      <point x="-56.0" y="-0.0" />
+    </edge>
+    <edge source="Common.Class" target="Method.Method">
+      <point x="33.125" y="-60.5" />
+      <point x="1036.183663194444" y="741.0" />
+      <point x="1135.0144965277775" y="741.0" />
+      <point x="0.0" y="82.5" />
+    </edge>
+    <edge source="Statements.IfElseStatement" target="Expressions.CompareExpression">
+      <point x="63.19999999999982" y="-60.5" />
+      <point x="2396.749427083333" y="486.0" />
+      <point x="4578.166006944444" y="486.0" />
+      <point x="-79.19999999999982" y="60.5" />
+    </edge>
+    <edge source="Method.Method" target="Method.MethodParameter">
+      <point x="29.3125" y="-82.5" />
+      <point x="1164.3269965277775" y="426.0" />
+      <point x="1223.4895833333333" y="426.0" />
+      <point x="0.0" y="49.5" />
+    </edge>
+    <edge source="Types.CharType" target="Types.CharType">
+      <point x="0.0" y="27.0" />
+      <point x="1429.9895833333333" y="372.5" />
+      <point x="1353.9895833333333" y="372.5" />
+      <point x="1353.9895833333333" y="325.5" />
+      <point x="-56.0" y="-0.0" />
+    </edge>
+    <edge source="StatementExpression.AssignStatementExpression" target="StatementExpression.AssignStatementExpression">
+      <point x="0.0" y="49.5" />
+      <point x="2759.866006944444" y="395.0" />
+      <point x="2617.366006944444" y="395.0" />
+      <point x="2617.366006944444" y="325.5" />
+      <point x="-122.5" y="-0.0" />
+    </edge>
+    <edge source="Expressions.TypeExpression" target="Expressions.IExpression">
+      <point x="56.33333333333326" y="-38.5" />
+      <point x="1974.8229166666665" y="134.0" />
+      <point x="3805.6510937500007" y="134.0" />
+      <point x="-65.16666666666652" y="15.0" />
+    </edge>
+    <edge source="Expressions.ThisExpression" target="Expressions.IExpression">
+      <point x="0.0" y="-15.0" />
+      <point x="3929.366006944444" y="234.0" />
+      <point x="3867.9844270833337" y="234.0" />
+      <point x="-2.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Expressions.UnaryExpression" target="Expressions.UnaryExpression">
+      <point x="0.0" y="49.5" />
+      <point x="5204.866006944444" y="395.0" />
+      <point x="5063.366006944444" y="395.0" />
+      <point x="5063.366006944444" y="325.5" />
+      <point x="-121.5" y="-0.0" />
+    </edge>
+    <edge source="Expressions.BinaryExpression" target="Expressions.IExpression">
+      <point x="-103.33333333333348" y="-60.5" />
+      <point x="5418.032673611111" y="134.0" />
+      <point x="3924.6510937500007" y="134.0" />
+      <point x="53.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Expressions.JNullExpression" target="Expressions.IExpression">
+      <point x="0.0" y="-15.0" />
+      <point x="4113.366006944444" y="224.0" />
+      <point x="3873.6510937500007" y="224.0" />
+      <point x="2.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Types.VoidType" target="Types.IMethodType">
+      <point x="0.0" y="-27.0" />
+      <point x="93.05616319444425" y="516.0" />
+      <point x="612.1666666666665" y="516.0" />
+      <point x="-45.33333333333337" y="15.0" />
+    </edge>
+    <edge source="StatementExpression.MethodCallStatement" target="Expressions.IExpression">
+      <point x="-46.375" y="-60.5" />
+      <point x="3309.491006944444" y="184.0" />
+      <point x="3833.9844270833337" y="184.0" />
+      <point x="-36.833333333333485" y="15.0" />
+    </edge>
+    <edge source="Statements.ReturnStatement" target="Statements.IStatement">
+      <point x="-69.33333333333348" y="-38.5" />
+      <point x="2957.032673611111" y="94.0" />
+      <point x="2343.0344270833334" y="94.0" />
+      <point x="42.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Common.Program" target="Common.Program">
+      <point x="0.0" y="38.5" />
+      <point x="1047.2253298611106" y="1049.0" />
+      <point x="943.7253298611106" y="1049.0" />
+      <point x="943.7253298611106" y="990.5" />
+      <point x="-83.5" y="-0.0" />
+    </edge>
+    <edge source="Statements.ReturnStatement" target="Expressions.IExpression">
+      <point x="0.0" y="-38.5" />
+      <point x="3026.366006944444" y="164.0" />
+      <point x="3822.6510937500007" y="164.0" />
+      <point x="-48.166666666666515" y="15.0" />
+    </edge>
+    <edge source="Common.Block" target="Common.Block">
+      <point x="-77.8125" y="49.5" />
+      <point x="2185.0097569444442" y="405.0" />
+      <point x="2108.3222569444442" y="405.0" />
+      <point x="2108.3222569444442" y="300.75" />
+      <point x="-124.5" y="-24.75" />
+    </edge>
+    <edge source="Common.Block" target="Statements.IStatement">
+      <point x="-62.25" y="-49.5" />
+      <point x="2200.5722569444442" y="124.0" />
+      <point x="2286.1455381944447" y="124.0" />
+      <point x="-14.222222222222172" y="15.0" />
+    </edge>
+    <edge source="Statements.WhileStatement" target="Common.Block">
+      <point x="-113.59999999999991" y="-49.5" />
+      <point x="2559.9494270833334" y="456.0" />
+      <point x="2340.6347569444442" y="456.0" />
+      <point x="77.8125" y="49.5" />
+    </edge>
+    <edge source="StatementExpression.NewStatementExpression" target="Statements.IStatement">
+      <point x="0.0" y="-49.5" />
+      <point x="1979.5378298611106" y="436.0" />
+      <point x="2013.4895833333333" y="436.0" />
+      <point x="2013.4895833333333" y="104.0" />
+      <point x="2257.7010937500004" y="104.0" />
+      <point x="-42.666666666666515" y="15.0" />
+    </edge>
+    <edge source="Types.IntType" target="Types.IType">
+      <point x="0.0" y="-27.0" />
+      <point x="281.5" y="194.0" />
+      <point x="1244.836510416667" y="194.0" />
+      <point x="-27.28125" y="27.0" />
+    </edge>
+    <edge source="Expressions.CompareExpression" target="Expressions.CompareExpression">
+      <point x="-158.4000000000001" y="60.5" />
+      <point x="4498.9660069444435" y="406.0" />
+      <point x="4439.366006944444" y="406.0" />
+      <point x="4439.366006944444" y="325.5" />
+      <point x="-198.0" y="-0.0" />
+    </edge>
+    <edge source="StatementExpression.MethodCallStatement" target="Statements.IStatement">
+      <point x="-139.125" y="-60.5" />
+      <point x="3216.741006944444" y="84.0" />
+      <point x="2357.2566493055556" y="84.0" />
+      <point x="56.88888888888869" y="15.0" />
+    </edge>
+    <edge source="Statements.WhileStatement" target="Statements.IStatement">
+      <point x="0.0" y="-49.5" />
+      <point x="2673.5494270833333" y="436.0" />
+      <point x="2606.866006944444" y="436.0" />
+      <point x="2606.866006944444" y="114.0" />
+      <point x="2314.589982638889" y="114.0" />
+      <point x="14.222222222222172" y="15.0" />
+    </edge>
+    <edge source="Types.IMethodType" target="Types.IType">
+      <point x="0.0" y="-15.0" />
+      <point x="657.5" y="204.0" />
+      <point x="1250.899010416667" y="204.0" />
+      <point x="-21.21875" y="27.0" />
+    </edge>
+    <edge source="StatementExpression.AssignStatementExpression" target="Statements.IStatement">
+      <point x="-81.66666666666652" y="-49.5" />
+      <point x="2678.199340277778" y="104.0" />
+      <point x="2328.8122048611112" y="104.0" />
+      <point x="28.444444444444343" y="15.0" />
+    </edge>
+    <edge source="Method.Method" target="Common.AccessModfiers">
+      <point x="-205.1875" y="-82.5" />
+      <point x="929.8269965277775" y="506.0" />
+      <point x="488.5" y="506.0" />
+      <point x="27.0" y="71.5" />
+    </edge>
+    <edge source="Field.Field" target="Types.IType">
+      <point x="-29.875" y="-60.5" />
+      <point x="278.68116319444425" y="496.0" />
+      <point x="199.0" y="496.0" />
+      <point x="199.0" y="184.0" />
+      <point x="1238.774010416667" y="184.0" />
+      <point x="-33.34375" y="27.0" />
+    </edge>
+    <edge source="Expressions.TypeExpression" target="Types.IType">
+      <point x="-56.333333333333485" y="-38.5" />
+      <point x="1862.1562499999998" y="84.0" />
+      <point x="1311.524010416667" y="84.0" />
+      <point x="39.40625" y="27.0" />
+    </edge>
+    <edge source="Statements.VarDeclarationStatement" target="Types.IType">
+      <point x="-85.33333333333326" y="-49.5" />
+      <point x="1580.65625" y="194.0" />
+      <point x="1299.399010416667" y="194.0" />
+      <point x="27.28125" y="27.0" />
+    </edge>
+    <edge source="StatementExpression.AssignStatementExpression" target="Expressions.IExpression">
+      <point x="0.0" y="-49.5" />
+      <point x="2759.866006944444" y="144.0" />
+      <point x="3811.3177604166667" y="144.0" />
+      <point x="-59.5" y="15.0" />
+    </edge>
+    <edge source="Field.Field" target="Field.Field">
+      <point x="-79.66666666666674" y="60.5" />
+      <point x="228.8894965277775" y="699.0" />
+      <point x="169.05616319444425" y="699.0" />
+      <point x="169.05616319444425" y="618.5" />
+      <point x="-119.5" y="-0.0" />
+    </edge>
+    <edge source="Statements.IfElseStatement" target="Statements.IStatement">
+      <point x="-126.40000000000009" y="-60.5" />
+      <point x="2207.149427083333" y="436.0" />
+      <point x="2049.1940798611104" y="436.0" />
+      <point x="2049.1940798611104" y="114.0" />
+      <point x="2271.9233159722226" y="114.0" />
+      <point x="-28.444444444444343" y="15.0" />
+    </edge>
+    <edge source="Types.CustomType" target="Types.IType">
+      <point x="0.0" y="-38.5" />
+      <point x="109.5" y="174.0" />
+      <point x="1232.711510416667" y="174.0" />
+      <point x="-39.40625" y="27.0" />
+    </edge>
+    <edge source="Field.Field" target="Common.AccessModfiers">
+      <point x="29.875" y="-60.5" />
+      <point x="338.43116319444425" y="506.0" />
+      <point x="380.5" y="506.0" />
+      <point x="-81.0" y="71.5" />
+    </edge>
+    <edge source="StatementExpression.NewStatementExpression" target="StatementExpression.MethodCallStatement">
+      <point x="56.80000000000018" y="-49.5" />
+      <point x="2036.3378298611108" y="466.0" />
+      <point x="3355.866006944444" y="466.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="StatementExpression.InstVarStatementExpression" target="StatementExpression.InstVarStatementExpression">
+      <point x="0.0" y="49.5" />
+      <point x="3705.366006944444" y="395.0" />
+      <point x="3561.366006944444" y="395.0" />
+      <point x="3561.366006944444" y="325.5" />
+      <point x="-124.0" y="-0.0" />
+    </edge>
+    <edge source="Statements.IfElseStatement" target="Common.Block">
+      <point x="-63.19999999999982" y="-60.5" />
+      <point x="2270.3494270833335" y="456.0" />
+      <point x="2278.3847569444442" y="456.0" />
+      <point x="15.5625" y="49.5" />
+    </edge>
+    <edge source="Expressions.ConstExpression" target="Expressions.ConstExpression">
+      <point x="0.0" y="38.5" />
+      <point x="4328.366006944444" y="384.0" />
+      <point x="4217.366006944444" y="384.0" />
+      <point x="4217.366006944444" y="325.5" />
+      <point x="-91.0" y="-0.0" />
+    </edge>
+    <edge source="Types.CharType" target="Types.IType">
+      <point x="0.0" y="-27.0" />
+      <point x="1429.9895833333333" y="224.0" />
+      <point x="1281.211510416667" y="224.0" />
+      <point x="9.09375" y="27.0" />
+    </edge>
+    <edge source="Common.Class" target="Field.Field">
+      <point x="-99.375" y="-60.5" />
+      <point x="903.6836631944441" y="751.0" />
+      <point x="308.55616319444425" y="751.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="Types.ObjectType" target="Types.IType">
+      <point x="0.0" y="-27.0" />
+      <point x="981.5" y="224.0" />
+      <point x="1263.024010416667" y="224.0" />
+      <point x="-9.09375" y="27.0" />
+    </edge>
+    <edge source="Method.Method" target="Method.Method">
+      <point x="-156.33333333333326" y="82.5" />
+      <point x="978.6811631944443" y="721.0" />
+      <point x="880.5144965277775" y="721.0" />
+      <point x="880.5144965277775" y="618.5" />
+      <point x="-234.5" y="-0.0" />
+    </edge>
+    <edge source="Method.Method" target="Types.IMethodType">
+      <point x="-87.9375" y="-82.5" />
+      <point x="1047.0769965277775" y="486.0" />
+      <point x="657.5" y="486.0" />
+      <point x="0.0" y="15.0" />
+    </edge>
+    <edge source="Expressions.SuperExpression" target="Expressions.IExpression">
+      <point x="0.0" y="-15.0" />
+      <point x="4959.366006944444" y="174.0" />
+      <point x="3901.9844270833337" y="174.0" />
+      <point x="31.166666666666515" y="15.0" />
+    </edge>
+    <edge source="Common.Program" target="Common.Class">
+      <point x="-41.75" y="-38.5" />
+      <point x="1005.4753298611106" y="932.0" />
+      <point x="1003.0586631944441" y="932.0" />
+      <point x="0.0" y="60.5" />
+    </edge>
+    <edge source="Statements.IfElseStatement" target="Statements.IfElseStatement">
+      <point x="0.0" y="60.5" />
+      <point x="2333.5494270833333" y="699.0" />
+      <point x="2155.5494270833333" y="699.0" />
+      <point x="2155.5494270833333" y="618.5" />
+      <point x="-158.0" y="-0.0" />
+    </edge>
+    <edge source="Method.MethodParameter" target="Method.MethodParameter">
+      <point x="-73.66666666666663" y="49.5" />
+      <point x="1149.8229166666665" y="395.0" />
+      <point x="1092.9895833333333" y="395.0" />
+      <point x="1092.9895833333333" y="325.5" />
+      <point x="-110.5" y="-0.0" />
+    </edge>
+    <edge source="Types.IntType" target="Types.IntType">
+      <point x="0.0" y="27.0" />
+      <point x="281.5" y="372.5" />
+      <point x="209.5" y="372.5" />
+      <point x="209.5" y="325.5" />
+      <point x="-52.0" y="-0.0" />
+    </edge>
+    <edge source="Expressions.CompareExpression" target="Expressions.IExpression">
+      <point x="132.0" y="-60.5" />
+      <point x="4789.366006944444" y="184.0" />
+      <point x="3896.3177604166667" y="184.0" />
+      <point x="25.5" y="15.0" />
+    </edge>
+    <edge source="Statements.ReturnStatement" target="Statements.ReturnStatement">
+      <point x="0.0" y="38.5" />
+      <point x="3026.366006944444" y="384.0" />
+      <point x="2902.366006944444" y="384.0" />
+      <point x="2902.366006944444" y="325.5" />
+      <point x="-104.0" y="-0.0" />
+    </edge>
+    <edge source="Statements.WhileStatement" target="Statements.WhileStatement">
+      <point x="0.0" y="49.5" />
+      <point x="2673.5494270833333" y="688.0" />
+      <point x="2511.5494270833333" y="688.0" />
+      <point x="2511.5494270833333" y="618.5" />
+      <point x="-142.0" y="-0.0" />
+    </edge>
+    <edge source="Types.ObjectType" target="Types.ObjectType">
+      <point x="0.0" y="27.0" />
+      <point x="981.5" y="372.5" />
+      <point x="897.5" y="372.5" />
+      <point x="897.5" y="325.5" />
+      <point x="-64.0" y="-0.0" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5427435387673959" x="1385.4394529578199" y="550.1387657348006" />
+  <SelectedNodes>
+    <node>StatementExpression.AssignStatementExpression</node>
+  </SelectedNodes>
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Properties</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Constructors</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
