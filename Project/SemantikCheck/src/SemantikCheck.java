@@ -1,26 +1,13 @@
-package src;
+import Common.Class;
+import typedStatements.*;
+import Statements.*;
+import typedCommon.*;
 
-public class SemantikCheck {
+public interface SemantikCheck {
+    
+    TypedClass semantikCheck(Class untyped);
 
-    public void test(){
-        /*
-        Object i  = new A();
-        switch (i)
-        {
-            case A a  -> System.out.println("A");
-            case B a  -> System.out.println("B");
-            case Object o -> System.out.println("default");
-        }
-
-         */
-    }
-}
-
-class A {
-
-}
-
-class B{
+    TypedIfElseStatement semantikCheck(IfElseStatement untyped);
 
 }
 
