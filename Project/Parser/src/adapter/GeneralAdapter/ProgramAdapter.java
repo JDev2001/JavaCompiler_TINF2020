@@ -1,4 +1,4 @@
-package adapter;
+package adapter.GeneralAdapter;
 
 import Common.Program;
 import Common.Class;

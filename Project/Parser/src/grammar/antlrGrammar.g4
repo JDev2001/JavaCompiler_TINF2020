@@ -1,13 +1,21 @@
 grammar antlrGrammar;
 
-programm: jClass+;
+programm: Identifier? jClass+;
+
 jClass: 'class' Identifier classBody;
-constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
+
 classBody: CurlyLBracket (methodDeclaration|fieldDeclaration|constructor)* CurlyRBracket;
-methodDeclaration: AccessModifier? (objectType|Void) Identifier LBracket nMethodParameters RBracket block;
-fieldDeclaration: AccessModifier?  objectType Identifier (Comma Identifier)* (Equal expression)? Semicolon;
-methodParameter: objectType Identifier;
+
+
 nMethodParameters: (methodParameter)? | methodParameter (Comma methodParameter)+;
+methodParameter: objectType Identifier;
+constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
+
+fieldDeclaration: AccessModifier?  objectType Identifier (Comma Identifier)* (Equal expression)? Semicolon;
+
+methodDeclaration: AccessModifier? (objectType|Void) Identifier LBracket nMethodParameters RBracket block;
+
+
 
 nArguments: expression? | expression (Comma expression)* | instVar;
 expression:  basicexpressions | binary;

@@ -6,7 +6,7 @@
         <PerGrammarGenerationSettings>
           <option name="fileName" value="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" />
           <option name="autoGen" value="true" />
-          <option name="outputDir" value="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\Parser\src\" />
+          <option name="outputDir" value="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Parser\src" />
           <option name="libDir" value="" />
           <option name="encoding" value="" />
           <option name="pkg" value="generated" />
@@ -16,7 +16,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_18_PREVIEW" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" project-jdk-name="openjdk-18" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

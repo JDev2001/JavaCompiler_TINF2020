@@ -13,9 +13,11 @@ import java.io.IOException;
 public class EmptyClass {
     @Test
     public void Test() throws IOException {
+
         String src = "class Empty {}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         var emptyClass = syntaxTree.getClasses().get(0);
-        Assertions.assertSame("Empty", emptyClass.getIdentifier());
+
+        Assertions.assertEquals("Empty", emptyClass.getIdentifier());
     }
 }

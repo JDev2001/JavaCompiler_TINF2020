@@ -1,10 +1,9 @@
-package adapter;
+package adapter.FieldAdapter;
 
-import Common.Class;
+import Field.Field;
 import generated.antlrGrammarParser;
 
-public class ClassAdapter {
-
+public class FieldAdapter {
 
     /**
      *  generates a new Object of the fitting class
@@ -12,9 +11,9 @@ public class ClassAdapter {
      * @param ctx Antlr context
      * @return new Object
      */
-    public static Class generate(antlrGrammarParser.JClassContext ctx) {
+    public static Field generate(antlrGrammarParser.FieldDeclarationContext ctx) {
 
-        //TODO: Hier gehts weiter runter ... WUUUHOOO
+
         return null;
     }
 
