@@ -2,19 +2,9 @@ package Statements;
 
 import Expressions.IExpression;
 
-public class ReturnStatement implements IStatement
+public record ReturnStatement(IExpression returnValue) implements IStatement
 {
-    IExpression returnValue;
 
-    public ReturnStatement(IExpression returnValue)
-    {
-        this.returnValue = returnValue;
-    }
-
-    public IExpression getReturnValue()
-    {
-        return returnValue;
-    }
 }
 
 

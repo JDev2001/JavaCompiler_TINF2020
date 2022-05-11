@@ -1,13 +1,7 @@
 package Types;
 
-public class CustomType implements IType
+public record CustomType(String name) implements IType
 {
-    private final String name;
-
-    public CustomType(String name)
-    {
-        this.name = name;
-    }
 
     public String getName()
     {

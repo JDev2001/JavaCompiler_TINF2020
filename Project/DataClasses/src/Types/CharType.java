@@ -1,6 +1,6 @@
 package Types;
 
-public class CharType implements IType
+public record CharType() implements IType
 {
 
     @Override

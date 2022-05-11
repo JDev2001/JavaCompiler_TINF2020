@@ -3,7 +3,7 @@ package Expressions;
 /**
  * null
  */
-public class JNullExpression implements IExpression
+public record JNullExpression() implements IExpression
 {
 
 }

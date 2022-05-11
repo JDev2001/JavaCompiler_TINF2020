@@ -1,64 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class edited">
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/EmptyClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45__Default_Changelist_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45__Default_Changelist_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/SyntaxTreeGenerator/SyntaxTreeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/SyntaxTreeGenerator/SyntaxTreeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/ProgramAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ProgramAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/SyntaxTreeGenerator/SyntaxTreeGenerator.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/SyntaxTreeGenerator/SyntaxTreeGenerator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/adapter/ClassAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/adapter/ProgramAdapter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$AssignContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$AssignContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BaseTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BaseTypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BasicexpressionsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BasicexpressionsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BinaryContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BinaryContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BlockContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$BlockContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ClassBodyContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ClassBodyContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ConstructorContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ConstructorContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ExpressionContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ExpressionContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$FieldDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$FieldDeclarationContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$IfelseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$IfelseContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$InstVarContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$InstVarContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JClassContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JClassContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JElseContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JElseContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JElseIfContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JElseIfContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JIfContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JIfContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JNewContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JNewContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JReturnContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JReturnContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JWhileContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$JWhileContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$LocalVarDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$LocalVarDeclarationContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodCallContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodCallContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodCallPrefixContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodCallPrefixContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodDeclarationContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodDeclarationContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodParameterContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$MethodParameterContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$NArgumentsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$NArgumentsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$NMethodParametersContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$NMethodParametersContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ObjectTypeContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ObjectTypeContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$OperatorsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$OperatorsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ProgrammContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$ProgrammContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$StatementContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$StatementContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$StatementExpressionsContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$StatementExpressionsContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$UnaryContext.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser$UnaryContext.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/generated/antlrGrammarParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/grammar/antlrGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Parser/module-info.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Parser/module-info.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tests/ParserTests/EmptyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Tests/ParserTests/EmptyClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/CompareExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/CompareExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/ConstExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/ConstExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/JNullExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/JNullExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/SuperExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/SuperExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/ThisExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/ThisExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/TypeExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/TypeExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/UnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/StatementExpression/AssignStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/AssignStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/StatementExpression/InstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/InstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/StatementExpression/MethodCallStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/MethodCallStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/StatementExpression/NewStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/NewStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/IfElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/IfElseStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/ReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/ReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/VarDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/VarDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/CharType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/CharType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/CustomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/CustomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/VoidType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/VoidType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,17 +68,11 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.19934641" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -110,8 +85,10 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-18" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
       <option name="PROGRAM_PARAMETERS" value="Ressources/EmptyClass.java" />
@@ -125,7 +102,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmptyClass" type="JUnit" factoryName="JUnit" nameIsGenerated="true">
       <module name="Tests" />
       <extension name="coverage">
         <pattern>
@@ -156,9 +133,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.EmptyClass" />
+      <item itemvalue="JUnit.EmptyClass.Test" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmptyClass" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.EmptyClass.Test" />
       </list>
@@ -172,6 +153,9 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1652108297266</updated>
+      <workItem from="1652274947510" duration="120000" />
+      <workItem from="1652275121540" duration="352000" />
+      <workItem from="1652275826045" duration="750000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -211,6 +195,9 @@
     <option name="localTasksCounter" value="6" />
     <servers />
   </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -231,5 +218,19 @@
     <MESSAGE value="EmptyClass.java added" />
     <MESSAGE value="Main class edited" />
     <option name="LAST_COMMIT_MESSAGE" value="Main class edited" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="414" y="175" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1652274882801">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="414" y="175" width="1092" height="762" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1920.5.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1652274882801" />
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1652275210004">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/-1920.5.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1652275210004" />
+    <state x="440" y="94" key="SettingsEditor" timestamp="1652274914632">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="440" y="94" key="SettingsEditor/-1920.5.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1652274914632" />
   </component>
 </project>

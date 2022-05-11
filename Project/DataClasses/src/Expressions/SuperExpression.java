@@ -3,7 +3,7 @@ package Expressions;
 /**
  * super
  */
-public class SuperExpression implements IExpression
+public record SuperExpression() implements IExpression
 {
 
 }

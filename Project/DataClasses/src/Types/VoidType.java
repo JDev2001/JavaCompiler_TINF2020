@@ -1,6 +1,6 @@
 package Types;
 
-public class VoidType implements  IMethodType
+public record VoidType() implements  IMethodType
 {
     @Override
     public String getName()

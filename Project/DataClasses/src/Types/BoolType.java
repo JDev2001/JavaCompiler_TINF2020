@@ -1,6 +1,6 @@
 package Types;
 
-public class BoolType implements IType
+public record BoolType() implements IType
 {
     @Override
     public String getName()

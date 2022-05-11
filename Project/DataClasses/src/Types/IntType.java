@@ -1,6 +1,6 @@
 package Types;
 
-public class IntType implements IType
+public record IntType() implements IType
 {
 
     @Override
