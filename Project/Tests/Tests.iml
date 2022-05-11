@@ -24,5 +24,15 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="module" module-name="Project" scope="TEST" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../antlr-4.10.1-complete.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
