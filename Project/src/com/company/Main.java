@@ -21,52 +21,33 @@ public class Main {
 
         //Der Pfad der Input Datei (./EmptyClass.java) wird als startparameter mitgegeben
         //Ändern unter "Edit Configurations ..."->"Program arguments"
-        /*
-        if (args.length == 0) {
+
+        if (args.length != 1) {
             System.out.println("Falsche Eingabeparameter!");
             return;
         }
 
+        /*
+        //Für mehrere Files in den args
         //Itterates over the input files an create an inputstream for each
         var inputFiles = new ArrayList<FileInputStream>() {{
             for (var filePath : args) {
                 add(new FileInputStream(filePath));
             }
         }};
-
          */
 
-
-        String str = "class Main {}";
-
+        //Generates the syntax tree
         System.out.println("Generating the syntax tree!");
-        Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(str));
+        Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromStream(new FileInputStream(args[0])));
 
+        System.out.println("Generating the typed syntax tree!");
+        //TODO: typed syntax call
 
+        System.out.println("Generating the bytecode");
+        //TODO: Bytecode call
 
-
-        /*
-        try (var files = new SequenceInputStream(Collections.enumeration(inputFiles))) {
-
-            //Generates the syntax tree
-            System.out.println("Generating the syntax tree!");
-            Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree();
-
-            System.out.println("Generating the typed syntax tree!");
-            //TODO: typed syntax call
-
-            System.out.println("Generating the bytecode");
-            //TODO: Bytecode call
-
-            System.out.println("Finished! Outputfile path: [filepath]");
-
-        } catch (Exception e) {
-            System.out.println("Es ist ein Fehler aufgetreten! UEberpruefen sie die Angabe der .java Datei!");
-            System.out.println(e);
-            System.exit(0);
-        }
-
-         */
+        System.out.println("Finished! Outputfile path: [filepath]");
     }
 }
 
