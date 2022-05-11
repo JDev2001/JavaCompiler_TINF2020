@@ -5,4 +5,5 @@ module DataClasses {
     exports Method;
     exports Statements;
     exports Types;
+    exports StatementExpression;
 }

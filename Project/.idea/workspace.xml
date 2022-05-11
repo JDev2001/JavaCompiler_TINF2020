@@ -1,11 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AnalysisUIOptions">
+    <option name="SCOPE_TYPE" value="4" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Refactored Classes">
+      <change afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/CodeGenerator/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/IStatementExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/NewStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TestFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/TestFile.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Block.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Block.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/CompareExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/CompareExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/ConstExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/ConstExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/InstVarExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/InstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/UnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/UnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/AssignStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/AssignStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/MethodCallStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/StatementExpression/MethodCallStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/NewStatenent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/BoolType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/BoolType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/CharType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/CharType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/CustomType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/CustomType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/IntType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/IntType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/ObjectType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/VoidType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/VoidType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,11 +45,15 @@
       <list>
         <option value="module-info" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="28vsGKvKvucAAL3geNhZ8gNIrng" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -31,17 +63,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.19934641" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/suuya/IdeaProjects/JavaCompiler_TINF2020/Project"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\src\com\company" />
@@ -114,7 +142,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -122,6 +149,18 @@
     <MESSAGE value="Antlr Configuration" />
     <MESSAGE value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
+    <MESSAGE value="Refactored Classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored Classes" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java</url>
+          <line>17</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

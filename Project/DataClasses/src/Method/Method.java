@@ -1,21 +1,20 @@
 package Method;
 
 import Common.AccessModfiers;
-import Common.Block;
+import Statements.IStatement;
 import Types.IMethodType;
-import Types.IType;
 
 import java.util.List;
 
 public class Method
 {
-    public Method(AccessModfiers accessModfier, String identifer, List<MethodParameter> parameters, Block block, IMethodType returnType)
+    public Method(AccessModfiers accessModfier, String identifer, List<MethodParameter> parameters, IMethodType returnType, IStatement statement)
     {
         this.accessModfier = accessModfier;
         this.identifer = identifer;
         this.parameters = parameters;
-        this.block = block;
         this.returnType = returnType;
+        this.statement = statement;
     }
 
     public IMethodType getReturnType()
@@ -38,15 +37,16 @@ public class Method
         return parameters;
     }
 
-    public Block getBlock()
-    {
-        return block;
-    }
-    private IMethodType returnType;
-    private AccessModfiers accessModfier;
-    private String identifer;
-    private List<MethodParameter> parameters;
-    private Block block;
 
+    private final IMethodType returnType;
+    private final AccessModfiers accessModfier;
+    private final String identifer;
+    private final List<MethodParameter> parameters;
+
+    public IStatement getStatement() {
+        return statement;
+    }
+
+    private final IStatement statement;
 }
 

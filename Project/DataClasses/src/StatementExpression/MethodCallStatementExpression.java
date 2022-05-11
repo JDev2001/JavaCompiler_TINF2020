@@ -1,4 +1,4 @@
-package Statements;
+package StatementExpression;
 
 import Expressions.IExpression;
 
@@ -7,13 +7,13 @@ import java.util.List;
 /**
  * target.name();
  */
-public class MethodCallStatement implements IStatement
+public class MethodCallStatementExpression implements IStatementExpression
 {
-    private String name;
-    private IExpression target;
-    private List<IExpression> parameters;
+    private final String name;
+    private final IExpression target;
+    private final List<IExpression> parameters;
 
-    public MethodCallStatement(String name, IExpression target, List<IExpression> parameters)
+    public MethodCallStatementExpression(String name, IExpression target, List<IExpression> parameters)
     {
         this.name = name;
         this.target = target;

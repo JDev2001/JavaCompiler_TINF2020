@@ -3,7 +3,7 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="3170.366006944444" y="265.0">Statements.MethodCallStatement</node>
+    <node x="3170.366006944444" y="265.0">StatementExpression.MethodCallStatement</node>
     <node x="1537.9895833333333" y="276.0">Statements.VarDeclarationStatement</node>
     <node x="229.5" y="298.5">Types.IntType</node>
     <node x="2175.5494270833333" y="558.0">Statements.IfElseStatement</node>
@@ -11,9 +11,9 @@
     <node x="5366.366006944444" y="265.0">Expressions.BinaryExpression</node>
     <node x="765.5" y="298.5">Types.BoolType</node>
     <node x="4029.366006944444" y="310.5">Expressions.JNullExpression</node>
-    <node x="3581.366006944444" y="276.0">Expressions.InstVarExpression</node>
+    <node x="3581.366006944444" y="276.0">StatementExpression.InstVarStatementExpression</node>
     <node x="1833.9895833333333" y="287.0">Expressions.TypeExpression</node>
-    <node x="1837.5378298611106" y="569.0">Statements.NewStatenent</node>
+    <node x="1837.5378298611106" y="569.0">StatementExpression.NewStatementExpression</node>
     <node x="1373.9895833333333" y="298.5">Types.CharType</node>
     <node x="30.5" y="287.0">Types.CustomType</node>
     <node x="963.7253298611106" y="952.0">Common.Program</node>
@@ -26,7 +26,7 @@
     <node x="3849.366006944444" y="310.5">Expressions.ThisExpression</node>
     <node x="1223.617760416667" y="0.0">Types.IType</node>
     <node x="900.5144965277775" y="536.0">Method.Method</node>
-    <node x="2637.366006944444" y="276.0">Statements.AssignStatement</node>
+    <node x="2637.366006944444" y="276.0">StatementExpression.AssignStatementExpression</node>
     <node x="4237.366006944444" y="287.0">Expressions.ConstExpression</node>
     <node x="870.5586631944441" y="771.0">Common.Class</node>
     <node x="917.5" y="298.5">Types.ObjectType</node>
@@ -70,7 +70,7 @@
       <point x="4736.566006944444" y="506.0" />
       <point x="79.19999999999982" y="60.5" />
     </edge>
-    <edge source="Statements.NewStatenent" target="Statements.NewStatenent">
+    <edge source="StatementExpression.NewStatementExpression" target="StatementExpression.NewStatementExpression">
       <point x="0.0" y="49.5" />
       <point x="1979.5378298611106" y="688.0" />
       <point x="1817.5378298611106" y="688.0" />
@@ -84,7 +84,7 @@
       <point x="1813.9895833333333" y="325.5" />
       <point x="-84.5" y="-0.0" />
     </edge>
-    <edge source="Expressions.InstVarExpression" target="Expressions.IExpression">
+    <edge source="StatementExpression.InstVarStatementExpression" target="Expressions.IExpression">
       <point x="-82.66666666666697" y="-49.5" />
       <point x="3622.699340277777" y="214.0" />
       <point x="3850.9844270833337" y="214.0" />
@@ -110,7 +110,7 @@
       <point x="17.056163194444252" y="618.5" />
       <point x="-56.0" y="-0.0" />
     </edge>
-    <edge source="Statements.MethodCallStatement" target="Statements.MethodCallStatement">
+    <edge source="StatementExpression.MethodCallStatement" target="StatementExpression.MethodCallStatement">
       <point x="-123.66666666666674" y="60.5" />
       <point x="3232.1993402777775" y="406.0" />
       <point x="3150.366006944444" y="406.0" />
@@ -143,7 +143,7 @@
       <point x="1256.961510416667" y="214.0" />
       <point x="-15.15625" y="27.0" />
     </edge>
-    <edge source="Statements.NewStatenent" target="Types.IType">
+    <edge source="StatementExpression.NewStatementExpression" target="Types.IType">
       <point x="-56.799999999999955" y="-49.5" />
       <point x="1922.7378298611106" y="426.0" />
       <point x="1507.4895833333333" y="426.0" />
@@ -183,7 +183,7 @@
       <point x="1353.9895833333333" y="325.5" />
       <point x="-56.0" y="-0.0" />
     </edge>
-    <edge source="Statements.AssignStatement" target="Statements.AssignStatement">
+    <edge source="StatementExpression.AssignStatementExpression" target="StatementExpression.AssignStatementExpression">
       <point x="0.0" y="49.5" />
       <point x="2759.866006944444" y="395.0" />
       <point x="2617.366006944444" y="395.0" />
@@ -227,7 +227,7 @@
       <point x="612.1666666666665" y="516.0" />
       <point x="-45.33333333333337" y="15.0" />
     </edge>
-    <edge source="Statements.MethodCallStatement" target="Expressions.IExpression">
+    <edge source="StatementExpression.MethodCallStatement" target="Expressions.IExpression">
       <point x="-46.375" y="-60.5" />
       <point x="3309.491006944444" y="184.0" />
       <point x="3833.9844270833337" y="184.0" />
@@ -271,7 +271,7 @@
       <point x="2340.6347569444442" y="456.0" />
       <point x="77.8125" y="49.5" />
     </edge>
-    <edge source="Statements.NewStatenent" target="Statements.IStatement">
+    <edge source="StatementExpression.NewStatementExpression" target="Statements.IStatement">
       <point x="0.0" y="-49.5" />
       <point x="1979.5378298611106" y="436.0" />
       <point x="2013.4895833333333" y="436.0" />
@@ -292,7 +292,7 @@
       <point x="4439.366006944444" y="325.5" />
       <point x="-198.0" y="-0.0" />
     </edge>
-    <edge source="Statements.MethodCallStatement" target="Statements.IStatement">
+    <edge source="StatementExpression.MethodCallStatement" target="Statements.IStatement">
       <point x="-139.125" y="-60.5" />
       <point x="3216.741006944444" y="84.0" />
       <point x="2357.2566493055556" y="84.0" />
@@ -312,7 +312,7 @@
       <point x="1250.899010416667" y="204.0" />
       <point x="-21.21875" y="27.0" />
     </edge>
-    <edge source="Statements.AssignStatement" target="Statements.IStatement">
+    <edge source="StatementExpression.AssignStatementExpression" target="Statements.IStatement">
       <point x="-81.66666666666652" y="-49.5" />
       <point x="2678.199340277778" y="104.0" />
       <point x="2328.8122048611112" y="104.0" />
@@ -344,7 +344,7 @@
       <point x="1299.399010416667" y="194.0" />
       <point x="27.28125" y="27.0" />
     </edge>
-    <edge source="Statements.AssignStatement" target="Expressions.IExpression">
+    <edge source="StatementExpression.AssignStatementExpression" target="Expressions.IExpression">
       <point x="0.0" y="-49.5" />
       <point x="2759.866006944444" y="144.0" />
       <point x="3811.3177604166667" y="144.0" />
@@ -377,13 +377,13 @@
       <point x="380.5" y="506.0" />
       <point x="-81.0" y="71.5" />
     </edge>
-    <edge source="Statements.NewStatenent" target="Statements.MethodCallStatement">
+    <edge source="StatementExpression.NewStatementExpression" target="StatementExpression.MethodCallStatement">
       <point x="56.80000000000018" y="-49.5" />
       <point x="2036.3378298611108" y="466.0" />
       <point x="3355.866006944444" y="466.0" />
       <point x="0.0" y="60.5" />
     </edge>
-    <edge source="Expressions.InstVarExpression" target="Expressions.InstVarExpression">
+    <edge source="StatementExpression.InstVarStatementExpression" target="StatementExpression.InstVarStatementExpression">
       <point x="0.0" y="49.5" />
       <point x="3705.366006944444" y="395.0" />
       <point x="3561.366006944444" y="395.0" />
@@ -497,7 +497,7 @@
   </edges>
   <settings layout="Hierarchic Group" zoom="0.5427435387673959" x="1385.4394529578199" y="550.1387657348006" />
   <SelectedNodes>
-    <node>Statements.AssignStatement</node>
+    <node>StatementExpression.AssignStatementExpression</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
