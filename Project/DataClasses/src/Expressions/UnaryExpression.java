@@ -5,8 +5,8 @@ package Expressions;
  */
 public class UnaryExpression implements IExpression
 {
-    private IExpression expression;
-    private String operator;
+    private final IExpression expression;
+    private final String operator;
 
     public UnaryExpression(IExpression expression, String operator)
     {

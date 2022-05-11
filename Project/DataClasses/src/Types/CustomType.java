@@ -2,7 +2,7 @@ package Types;
 
 public class CustomType implements IType
 {
-    private String name;
+    private final String name;
 
     public CustomType(String name)
     {

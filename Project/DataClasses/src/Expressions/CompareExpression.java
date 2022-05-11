@@ -5,9 +5,9 @@ package Expressions;
  */
 public class CompareExpression implements IExpression
 {
-    private IExpression a;
-    private IExpression b;
-    private ComapreOperators comapreOperator;
+    private final IExpression a;
+    private final IExpression b;
+    private final ComapreOperators comapreOperator;
 
     public CompareExpression(IExpression a, IExpression b, ComapreOperators comapreOperator)
     {

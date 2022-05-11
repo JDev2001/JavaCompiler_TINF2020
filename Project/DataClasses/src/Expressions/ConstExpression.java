@@ -5,7 +5,7 @@ package Expressions;
  */
 public class ConstExpression implements IExpression
 {
-    private Object value;
+    private final Object value;
 
     public ConstExpression(Object value)
     {
