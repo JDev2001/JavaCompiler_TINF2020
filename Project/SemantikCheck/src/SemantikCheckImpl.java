@@ -1,11 +1,32 @@
-import Statements.IfElseStatement;
+import typedCommon.*;
+import typedStatements.*;
+
+import Common.*;
 import Common.Class;
-import typedCommon.TypedClass;
+import Expressions.*;
+import Field.*;
+import Method.*;
+import StatementExpression.*;
+import Statements.*;
+import Types.*;
+
 import typedStatements.TypedIfElseStatement;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
+    public TypedAccessModifiers semantikCheck(AccessModifiers untyped){
+        return null;
+    }
+
+    public TypedBlock semantikCheck(Block untyped){
+        return null;
+    }
+
     public TypedClass semantikCheck(Class untyped){
+        return null;
+    }
+
+    public TypedProgram semantikCheck(Program untyped){
         return null;
     }
 
@@ -20,6 +41,4 @@ public class SemantikCheckImpl implements SemantikCheck{
             // error
         }
     }
-
-
 }
