@@ -2,14 +2,8 @@ package typedStatementExpression;
 
 import StatementExpression.*;
 import Types.IType;
-import typedStatements.TypedBaseObject;
 
-public class TypedNewStatementExpression extends TypedBaseObject {
+public record TypedNewStatementExpression(NewStatementExpression unTypedNewStatementExpression, IType objectType) implements ITypedStatementExpression {
 
-    public TypedNewStatementExpression(NewStatementExpression unTypedNewStatementExpression, IType objectType){
-        super(objectType);
-        this.NewStatementExpression = unTypedNewStatementExpression;
-    }
 
-    NewStatementExpression NewStatementExpression;
 }

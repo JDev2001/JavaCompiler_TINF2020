@@ -2,14 +2,8 @@ package typedExpressions;
 
 import Expressions.*;
 import Types.IType;
-import typedStatements.TypedBaseObject;
 
-public class TypedCompareExpression extends TypedBaseObject {
+public record TypedCompareExpression(CompareExpression unTypedCompareExpression, IType objectType) implements  ITypedExpression {
 
-    public TypedCompareExpression(CompareExpression unTypedCompareExpression, IType objectType){
-        super(objectType);
-        this.CompareExpression = unTypedCompareExpression;
-    }
 
-    CompareExpression CompareExpression;
 }

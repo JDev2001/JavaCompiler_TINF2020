@@ -2,15 +2,9 @@ package typedCommon;
 
 import Common.Block;
 import Types.IMethodType;
-import Types.IType;
-import typedStatements.TypedBaseObject;
+import typedStatements.ITypedStatement;
 
-public class TypedBlock extends TypedBaseObject {
+public record TypedBlock (Block unTypedBlock, IMethodType objectType) implements ITypedStatement {
 
-    public TypedBlock(Block unTypedBlock, IMethodType objectType){
-        super(objectType);
-        this.Block = unTypedBlock;
-    }
 
-    Block Block;
 }

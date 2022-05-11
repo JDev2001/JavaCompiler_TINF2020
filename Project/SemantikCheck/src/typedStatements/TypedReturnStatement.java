@@ -2,14 +2,7 @@ package typedStatements;
 
 import Statements.*;
 import Types.IType;
-import typedStatements.TypedBaseObject;
 
-public class TypedReturnStatement extends TypedBaseObject {
+public record TypedReturnStatement(ReturnStatement unTypedReturnStatement, IType objectType)  implements ITypedStatement {
 
-    public TypedReturnStatement(ReturnStatement unTypedReturnStatement, IType objectType) {
-        super(objectType);
-        this.ReturnStatement = unTypedReturnStatement;
-    }
-
-    ReturnStatement ReturnStatement;
 }

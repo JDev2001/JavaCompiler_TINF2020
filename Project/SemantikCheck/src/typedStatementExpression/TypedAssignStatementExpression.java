@@ -2,14 +2,8 @@ package typedStatementExpression;
 
 import StatementExpression.*;
 import Types.IType;
-import typedStatements.TypedBaseObject;
 
-public class TypedAssignStatementExpression extends TypedBaseObject {
+public record TypedAssignStatementExpression(AssignStatementExpression unTypedAssignStatementExpression, IType objectType) implements ITypedStatementExpression {
 
-    public TypedAssignStatementExpression(AssignStatementExpression unTypedAssignStatementExpression, IType objectType){
-        super(objectType);
-        this.AssignStatementExpression = unTypedAssignStatementExpression;
-    }
 
-    AssignStatementExpression AssignStatementExpression;
 }

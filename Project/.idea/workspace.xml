@@ -1,31 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class edited">
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/ITypedExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedField/TypedField.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethodParameter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/ITypedStatementExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedAssignStatementExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedInstVarStatementExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedMethodCallStatementExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedNewStatementExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/ITypedStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedReturnStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedVarDeclarationStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedWhileStatement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/ITypedMethodType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/ITypedType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedBoolType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedCharType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedCustomType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedIntType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedVoidType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheckImpl.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Klassen auf Records umgestellt">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedAccessModifiers.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedCompareExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedCompareExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedConstExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedConstExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedJNullExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedJNullExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedSuperExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedSuperExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedThisExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedThisExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedTypeExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedTypeExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedUnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedUnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedField/TypedField.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedField/TypedField.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethodParameter.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedMethod/TypedMethodParameter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedAssignStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedAssignStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedInstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedInstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedMethodCallStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedMethodCallStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedNewStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedNewStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedBaseObject.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedIfElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedIfElseStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedVarDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedVarDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedWhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedWhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/ITypedMethodType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/ITypedType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedBoolType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedCharType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedCustomType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedIntType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedTypes/TypedVoidType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Common/Block.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Common/Block.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Common/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Common/Class.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/BinaryExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/CompareExpression$ComapreOperators.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/CompareExpression$ComapreOperators.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/CompareExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/CompareExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/ConstExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/ConstExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/JNullExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/JNullExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/SuperExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/SuperExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/ThisExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/ThisExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/TypeExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/TypeExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/UnaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/UnaryExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Field/Field.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Field/Field.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Method/Method.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Method/Method.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Method/MethodParameter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Method/MethodParameter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/AssignStatementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/AssignStatementExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/InstVarStatementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/InstVarStatementExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/MethodCallStatementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/MethodCallStatementExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/NewStatementExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/NewStatementExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Statements/IfElseStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Statements/IfElseStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Statements/ReturnStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Statements/ReturnStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Statements/VarDeclarationStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Statements/VarDeclarationStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Statements/WhileStatement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Statements/WhileStatement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/BoolType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/BoolType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/CharType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/CharType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/CustomType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/CustomType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/IntType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/IntType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/VoidType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/VoidType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/Tests/ParserTests/EmptyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Tests/ParserTests/EmptyClass.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,17 +94,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.19934641" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -77,7 +114,7 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass">
+  <component name="RunManager" selected="JUnit.EmptyClass.Test">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
@@ -123,11 +160,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.EmptyClass" />
+      <item itemvalue="JUnit.EmptyClass.Test" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmptyClass" />
-        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.EmptyClass.Test" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.EmptyClass" />
       </list>
     </recent_temporary>
   </component>
@@ -175,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652259765716</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Klassen auf Records umgestellt">
+      <created>1652276614096</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1652276614096</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -197,6 +246,7 @@
     <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="EmptyClass.java added" />
     <MESSAGE value="Main class edited" />
-    <option name="LAST_COMMIT_MESSAGE" value="Main class edited" />
+    <MESSAGE value="Klassen auf Records umgestellt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Klassen auf Records umgestellt" />
   </component>
 </project>
