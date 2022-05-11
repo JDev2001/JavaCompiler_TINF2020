@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Project/CodeGenerator/CodeGenerator.iml" filepath="$PROJECT_DIR$/Project/CodeGenerator/CodeGenerator.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/DataClasses/DataClasses.iml" filepath="$PROJECT_DIR$/Project/DataClasses/DataClasses.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/JavaCompiler_TINF2020.iml" filepath="$PROJECT_DIR$/.idea/JavaCompiler_TINF2020.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Parser/Parser.iml" filepath="$PROJECT_DIR$/Project/Parser/Parser.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Project.iml" filepath="$PROJECT_DIR$/Project/Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Project/Tests/Tests.iml" filepath="$PROJECT_DIR$/Project/Tests/Tests.iml" />
+    </modules>
+  </component>
+</project>
