@@ -1,0 +1,179 @@
+<changelist name="Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]" date="1652265908815" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 11.05.2022 10:45 [Default Changelist]" />
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$BlockContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$BlockContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$BlockContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JElseContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JElseContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JElseContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodParameterContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodParameterContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$MethodParameterContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodDeclarationContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodDeclarationContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$MethodDeclarationContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/SyntaxTreeGenerator/SyntaxTreeGenerator.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/SyntaxTreeGenerator/SyntaxTreeGenerator.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/SyntaxTreeGenerator.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$StatementExpressionsContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$StatementExpressionsContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$StatementExpressionsContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodCallContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodCallContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$MethodCallContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$BaseTypeContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$BaseTypeContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$BaseTypeContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/test/Tests/ParserTests/EmptyClass.class" />
+    <option name="AFTER_PATH" value="out/test/Tests/ParserTests/EmptyClass.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/EmptyClass.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$NArgumentsContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$NArgumentsContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$NArgumentsContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$ConstructorContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$ConstructorContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$ConstructorContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$ObjectTypeContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$ObjectTypeContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$ObjectTypeContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JIfContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JIfContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JIfContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$InstVarContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$InstVarContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$InstVarContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JReturnContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JReturnContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JReturnContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$LocalVarDeclarationContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$LocalVarDeclarationContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$LocalVarDeclarationContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$ClassBodyContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$ClassBodyContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$ClassBodyContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/adapter/ClassAdapter.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/adapter/ClassAdapter.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/ClassAdapter.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$UnaryContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$UnaryContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$UnaryContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$BinaryContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$BinaryContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$BinaryContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$ProgrammContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$ProgrammContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$ProgrammContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JWhileContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JWhileContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JWhileContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$AssignContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$AssignContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$AssignContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JClassContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JClassContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JClassContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$IfelseContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$IfelseContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$IfelseContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$ExpressionContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$ExpressionContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$ExpressionContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$FieldDeclarationContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$FieldDeclarationContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$FieldDeclarationContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodCallPrefixContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$MethodCallPrefixContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$MethodCallPrefixContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$StatementContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$StatementContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$StatementContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$NMethodParametersContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$NMethodParametersContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$NMethodParametersContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$BasicexpressionsContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$BasicexpressionsContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$BasicexpressionsContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$OperatorsContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$OperatorsContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$OperatorsContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JNewContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JNewContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JNewContext.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="out/production/Parser/generated/antlrGrammarParser$JElseIfContext.class" />
+    <option name="AFTER_PATH" value="out/production/Parser/generated/antlrGrammarParser$JElseIfContext.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_11_05_2022_10_45_[Default_Changelist]/antlrGrammarParser$JElseIfContext.class" />
+  </binary>
+</changelist>
