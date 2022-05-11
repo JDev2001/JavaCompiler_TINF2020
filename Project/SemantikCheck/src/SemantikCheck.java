@@ -1,12 +1,18 @@
-import Common.AccessModifiers;
-import Common.Block;
+import Common.*;
 import Common.Class;
-import Common.Program;
 import Expressions.*;
+import Field.*;
+import Method.*;
+import StatementExpression.*;
+import Types.*;
 import typedExpressions.*;
+import typedField.*;
+import typedMethod.*;
+import typedStatementExpression.*;
 import typedStatements.*;
 import Statements.*;
 import typedCommon.*;
+import typedTypes.*;
 
 public interface SemantikCheck {
     TypedAccessModifiers semantikCheck(AccessModifiers untyped);
@@ -23,7 +29,25 @@ public interface SemantikCheck {
     TypedTypeExpression semantikCheck(TypeExpression untyped);
     TypedUnaryExpression semantikCheck(UnaryExpression untyped);
 
-    TypedIfElseStatement semantikCheck(IfElseStatement untyped);
+    TypedField semantikCheck(Field untyped);
 
+    TypedMethod semantikCheck(Method untyped);
+    TypedMethodParameter semantikCheck(MethodParameter untyped);
+
+    TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped);
+    TypedInstVarStatementExpression semantikCheck(InstVarStatementExpression untyped);
+    TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped);
+    TypedNewStatementExpression semantikCheck(NewStatementExpression untyped);
+
+    TypedIfElseStatement semantikCheck(IfElseStatement untyped);
+    TypedReturnStatement semantikCheck(ReturnStatement untyped);
+    TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped);
+    TypedWhileStatement semantikCheck(WhileStatement untyped);
+
+    TypedBoolType semantikCheck(BoolType untyped);
+    TypedCharType semantikCheck(CharType untyped);
+    TypedCustomType semantikCheck(CustomType untyped);
+    TypedIntType semantikCheck(IntType untyped);
+    TypedVoidType semantikCheck(VoidType untyped);
 }
 

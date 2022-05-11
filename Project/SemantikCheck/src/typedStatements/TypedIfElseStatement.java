@@ -11,5 +11,4 @@ public class TypedIfElseStatement extends TypedBaseObject {
     }
 
     IfElseStatement ifElseStatement;
-
 }

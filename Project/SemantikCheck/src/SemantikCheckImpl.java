@@ -1,6 +1,10 @@
 import typedCommon.*;
 import typedExpressions.*;
+import typedField.*;
+import typedMethod.*;
+import typedStatementExpression.*;
 import typedStatements.*;
+import typedTypes.*;
 
 import Common.*;
 import Common.Class;
@@ -11,11 +15,7 @@ import StatementExpression.*;
 import Statements.*;
 import Types.*;
 
-import typedStatements.TypedIfElseStatement;
-
 public class SemantikCheckImpl implements SemantikCheck{
-
-
 
     public TypedAccessModifiers semantikCheck(AccessModifiers untyped){
         return null;
@@ -69,6 +69,40 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
 
+    public TypedField semantikCheck(Field untyped){
+        return null;
+    }
+
+
+
+    public TypedMethod semantikCheck(Method untyped){
+        return null;
+    }
+
+    public TypedMethodParameter semantikCheck(MethodParameter untyped){
+        return null;
+    }
+
+
+
+    public TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped){
+        return null;
+    }
+
+    public TypedInstVarStatementExpression semantikCheck(InstVarStatementExpression untyped){
+        return null;
+    }
+
+    public TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped){
+        return null;
+    }
+
+    public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped){
+        return null;
+    }
+
+
+
     public TypedIfElseStatement semantikCheck(IfElseStatement untyped){
 
         if( true /*untyped.getCondition().semantikCheck() == boolean */){
@@ -80,4 +114,39 @@ public class SemantikCheckImpl implements SemantikCheck{
             // error
         }
     }
+
+    public TypedReturnStatement semantikCheck(ReturnStatement untyped){
+        return null;
+    }
+
+    public TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped){
+        return null;
+    }
+
+    public TypedWhileStatement semantikCheck(WhileStatement untyped){
+        return null;
+    }
+
+
+
+    public TypedBoolType semantikCheck(BoolType untyped){
+        return null;
+    }
+
+    public TypedCharType semantikCheck(CharType untyped){
+        return null;
+    }
+
+    public TypedCustomType semantikCheck(CustomType untyped){
+        return null;
+    }
+
+    public TypedIntType semantikCheck(IntType untyped){
+        return null;
+    }
+
+    public TypedVoidType semantikCheck(VoidType untyped){
+        return null;
+    }
+
 }
