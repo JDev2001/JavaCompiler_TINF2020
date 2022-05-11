@@ -1,6 +1,6 @@
 package Common;
 
-public enum AccessModfiers
+public enum AccessModifiers
 {
     Private,
     Public,

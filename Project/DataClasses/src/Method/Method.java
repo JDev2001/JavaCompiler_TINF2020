@@ -1,6 +1,6 @@
 package Method;
 
-import Common.AccessModfiers;
+import Common.AccessModifiers;
 import Statements.IStatement;
 import Types.IMethodType;
 
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class Method
 {
-    public Method(AccessModfiers accessModfier, String identifer, List<MethodParameter> parameters, IMethodType returnType, IStatement statement)
+    public Method(AccessModifiers accessModfier, String identifer, List<MethodParameter> parameters, IMethodType returnType, IStatement statement)
     {
         this.accessModfier = accessModfier;
         this.identifer = identifer;
@@ -22,7 +22,7 @@ public class Method
         return returnType;
     }
 
-    public AccessModfiers getAccessModfier()
+    public AccessModifiers getAccessModfier()
     {
         return accessModfier;
     }
@@ -39,7 +39,7 @@ public class Method
 
 
     private final IMethodType returnType;
-    private final AccessModfiers accessModfier;
+    private final AccessModifiers accessModfier;
     private final String identifer;
     private final List<MethodParameter> parameters;
 

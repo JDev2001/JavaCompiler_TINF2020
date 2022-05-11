@@ -1,19 +1,19 @@
 package Field;
 
-import Common.AccessModfiers;
+import Common.AccessModifiers;
 import Types.IType;
 
 public class Field
 {
     String name;
     IType type;
-    AccessModfiers accessModfiers;
+    AccessModifiers accessModifiers;
 
-    public Field(String name, IType type, AccessModfiers accessModfiers)
+    public Field(String name, IType type, AccessModifiers accessModifiers)
     {
         this.name = name;
         this.type = type;
-        this.accessModfiers = accessModfiers;
+        this.accessModifiers = accessModifiers;
     }
 
     public String getName()
@@ -26,8 +26,8 @@ public class Field
         return type;
     }
 
-    public AccessModfiers getAccessModfiers()
+    public AccessModifiers getAccessModfiers()
     {
-        return accessModfiers;
+        return accessModifiers;
     }
 }

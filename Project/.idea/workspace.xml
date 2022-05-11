@@ -2,10 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Main class edited">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/ClassAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheckImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedBaseObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedIfElseStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/AccessModfiers.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/AccessModifiers.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Field/Field.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Field/Field.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Method/Method.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/diagram.uml" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/diagram.uml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/Test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Project/com/company/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
