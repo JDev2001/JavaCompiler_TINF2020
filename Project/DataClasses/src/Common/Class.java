@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Class
 {
-    private String identifier;
-    private List<Method> methods;
-    private List<Field> fields;
+    private final String identifier;
+    private final List<Method> methods;
+    private final List<Field> fields;
 
     public Class(String identifier, List<Method> methods, List<Field> fields)
     {

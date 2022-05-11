@@ -5,9 +5,9 @@ package Expressions;
  */
 public class BinaryExpression implements IExpression
 {
-    private IExpression a;
-    private IExpression b;
-    private String operator;
+    private final IExpression a;
+    private final IExpression b;
+    private final String operator;
 
     public BinaryExpression(IExpression a, IExpression b, String operator)
     {

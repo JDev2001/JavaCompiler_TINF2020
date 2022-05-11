@@ -1,27 +1,20 @@
 package Common;
 
+import StatementExpression.IStatementExpression;
 import Statements.IStatement;
 
 import java.util.List;
 
-public class Block
+public class Block implements IStatement
 {
-    private List<IStatement> statements;
+    private final List<IStatement> statements;
 
-    private List<Block> childBlocks;
-
-    public Block(List<IStatement> statements, List<Block> childBlocks)
+    public Block(List<IStatement> statements)
     {
         this.statements = statements;
-        this.childBlocks = childBlocks;
     }
     public List<IStatement> getStatements()
     {
         return statements;
-    }
-
-    public List<Block> getChildBlocks()
-    {
-        return childBlocks;
     }
 }

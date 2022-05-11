@@ -1,10 +1,10 @@
 package com.company.common.Factory;
 
-import com.company.common.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import com.company.common.SyntaxTreeGenerator.ISyntaxTreeGenerator;
 
 public interface IFactory
 {
 
-    SyntaxTreeGenerator getSyntaxTreeGenerator();
+    ISyntaxTreeGenerator getSyntaxTreeGenerator();
 
 }

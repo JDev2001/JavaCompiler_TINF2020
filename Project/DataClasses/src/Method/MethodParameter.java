@@ -20,6 +20,6 @@ public class MethodParameter
         return type;
     }
 
-    private String identifier;
-    private IType type;
+    private final String identifier;
+    private final IType type;
 }

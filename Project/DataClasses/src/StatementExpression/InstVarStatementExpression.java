@@ -1,16 +1,16 @@
-package Expressions;
+package StatementExpression;
 
-import java.util.List;
+import Expressions.IExpression;
 
 /**
  * Instanzvariable: myObj.x
  */
-public class InstVarExpression implements IExpression
+public class InstVarStatementExpression implements IStatementExpression
 {
     String varName;
     IExpression expression;
 
-    public InstVarExpression(String varName, IExpression expression)
+    public InstVarStatementExpression(String varName, IExpression expression)
     {
         this.varName = varName;
         this.expression = expression;

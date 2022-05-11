@@ -1,5 +1,6 @@
 package com.company.common.Factory;
 
+import com.company.common.SyntaxTreeGenerator.ISyntaxTreeGenerator;
 import com.company.common.SyntaxTreeGenerator.SyntaxTreeGenerator;
 
 public class Factory implements IFactory
@@ -14,10 +15,11 @@ public class Factory implements IFactory
         return new Factory();
     }
 
-    public SyntaxTreeGenerator getSyntaxTreeGenerator()
+    public ISyntaxTreeGenerator getSyntaxTreeGenerator()
     {
         return new SyntaxTreeGenerator();
     }
+
 
 
 }
