@@ -1,4 +1,4 @@
-package com.company.common.SyntaxTreeGenerator;
+package SyntaxTreeGenerator;
 
 import Common.Program;
 import org.antlr.v4.runtime.CharStream;

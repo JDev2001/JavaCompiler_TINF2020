@@ -1,4 +1,4 @@
-package com.company.common.SyntaxTreeGenerator;
+package SyntaxTreeGenerator;
 
 
 

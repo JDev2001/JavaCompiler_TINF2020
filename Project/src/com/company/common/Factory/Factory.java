@@ -1,7 +1,7 @@
 package com.company.common.Factory;
 
-import com.company.common.SyntaxTreeGenerator.ISyntaxTreeGenerator;
-import com.company.common.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import SyntaxTreeGenerator.ISyntaxTreeGenerator;
+import SyntaxTreeGenerator.SyntaxTreeGenerator;
 
 public class Factory implements IFactory
 {

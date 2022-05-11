@@ -1,5 +1,7 @@
 module Tests {
     requires DataClasses;
     requires org.junit.jupiter.api;
-    requires rt;
+    requires antlr;
+    requires Parser;
+    exports  ParserTests;
 }
