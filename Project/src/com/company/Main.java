@@ -2,8 +2,10 @@ package com.company;
 
 import Common.Program;
 import com.company.common.Factory.Factory;
+import org.antlr.v4.runtime.CharStreams;
 
 import java.io.*;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -12,15 +14,14 @@ public class Main {
     /**
      * Main method of the application
      *
-     * @param args path of the input java file (./TestFile.java)
+     * @param args path of the input java file (./EmptyClass.java)
      * @throws IOException IO errror if the file does not exist
      */
     public static void main(String[] args) throws IOException {
 
-        //Der Pfad der Input Datei (./TestFile.java) wird als startparameter mitgegeben
+        //Der Pfad der Input Datei (./EmptyClass.java) wird als startparameter mitgegeben
         //Ändern unter "Edit Configurations ..."->"Program arguments"
-
-
+        /*
         if (args.length == 0) {
             System.out.println("Falsche Eingabeparameter!");
             return;
@@ -33,11 +34,23 @@ public class Main {
             }
         }};
 
+         */
+
+
+        String str = "class Main {}";
+
+        System.out.println("Generating the syntax tree!");
+        Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(str));
+
+
+
+
+        /*
         try (var files = new SequenceInputStream(Collections.enumeration(inputFiles))) {
 
             //Generates the syntax tree
             System.out.println("Generating the syntax tree!");
-            Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(files);
+            Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree();
 
             System.out.println("Generating the typed syntax tree!");
             //TODO: typed syntax call
@@ -52,6 +65,8 @@ public class Main {
             System.out.println(e);
             System.exit(0);
         }
+
+         */
     }
 }
 

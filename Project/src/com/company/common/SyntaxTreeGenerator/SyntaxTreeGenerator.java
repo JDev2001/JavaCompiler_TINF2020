@@ -21,18 +21,15 @@ public class SyntaxTreeGenerator implements ISyntaxTreeGenerator
     /**
      * Methode to generate a new syntax tree using antlr (Lexer->Tokens->Parser)
      *
-     * @param stream input Filestream
+     * @param inputstream input Filestream
      * @return new Program
      * @throws IOException Exception for the IOStream
      */
     @Override
-    public Program getSyntaxTree(InputStream stream) throws IOException {
-
-        //Filestream to charstream
-        CharStream inputstream = CharStreams.fromStream(stream);
+    public Program getSyntaxTree(CharStream inputstream) throws IOException {
 
         //Call the generated Components from the antlr file (lexer->tokens->parser)
-        antlrGrammarLexer lexer = new antlrGrammarLexer(CharStreams.fromStream(stream));
+        antlrGrammarLexer lexer = new antlrGrammarLexer(inputstream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
         antlrGrammarParser parser = new antlrGrammarParser(tokens);
 
