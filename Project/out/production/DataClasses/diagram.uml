@@ -22,7 +22,7 @@
     <node x="3802.8177604166667" y="12.0">Expressions.IExpression</node>
     <node x="189.05616319444425" y="558.0">Field.Field</node>
     <node x="589.5" y="310.5">Types.IMethodType</node>
-    <node x="353.5" y="254.0">Common.AccessModfiers</node>
+    <node x="353.5" y="254.0">Common.AccessModifiers</node>
     <node x="3849.366006944444" y="310.5">Expressions.ThisExpression</node>
     <node x="1223.617760416667" y="0.0">Types.IType</node>
     <node x="900.5144965277775" y="536.0">Method.Method</node>
@@ -318,7 +318,7 @@
       <point x="2328.8122048611112" y="104.0" />
       <point x="28.444444444444343" y="15.0" />
     </edge>
-    <edge source="Method.Method" target="Common.AccessModfiers">
+    <edge source="Method.Method" target="Common.AccessModifiers">
       <point x="-205.1875" y="-82.5" />
       <point x="929.8269965277775" y="506.0" />
       <point x="488.5" y="506.0" />
@@ -371,7 +371,7 @@
       <point x="1232.711510416667" y="174.0" />
       <point x="-39.40625" y="27.0" />
     </edge>
-    <edge source="Field.Field" target="Common.AccessModfiers">
+    <edge source="Field.Field" target="Common.AccessModifiers">
       <point x="29.875" y="-60.5" />
       <point x="338.43116319444425" y="506.0" />
       <point x="380.5" y="506.0" />

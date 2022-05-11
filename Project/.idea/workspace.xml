@@ -67,7 +67,7 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass.Test">
+  <component name="RunManager" selected="JUnit.EmptyClass">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
@@ -78,6 +78,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmptyClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.EmptyClass" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -100,6 +115,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmptyClass" />
         <item itemvalue="JUnit.EmptyClass.Test" />
         <item itemvalue="Application.Main" />
       </list>
