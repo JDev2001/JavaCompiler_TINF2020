@@ -1,6 +1,6 @@
 package Types;
 
-public interface IMethodType extends IType
+public interface IMethodType
 {
 
 }

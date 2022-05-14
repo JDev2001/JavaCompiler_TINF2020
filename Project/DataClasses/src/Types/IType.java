@@ -1,6 +1,6 @@
 package Types;
 
-public interface IType
+public interface IType extends IMethodType
 {
     String getName();
 }
