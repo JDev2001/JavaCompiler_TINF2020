@@ -1,12 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Klassen auf Records umgestellt">
-      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAttributes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithEmptyMethod.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithSimpleReturnMethod.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Tests eingefügt">
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassInstantiatingAnotherClass.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAttributeAccessMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithConstructor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithEmptyParamerterMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithLocalVarDecMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/Tests/META-INF/Tests.kotlin_module" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/Tests/META-INF/Tests.kotlin_module" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/StatementExpression/InstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/InstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Types/IType.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Types/IType.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedInstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithEmptyMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithEmptyMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithSimpleReturnMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithSimpleReturnMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Expressions/BinaryExpression.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Expressions/BinaryExpression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/StatementExpression/InstVarStatementExpression.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/IMethodType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/IMethodType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/DataClasses/Types/IType.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/DataClasses/Types/IType.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,17 +73,33 @@
       <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass.Test">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="Ressources/EmptyClass.java" />
+  <component name="RunManager" selected="JUnit.ParserTests in Tests">
+    <configuration name="ClassInstantiatingAnotherClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.company.*" />
+          <option name="PATTERN" value="ParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassInstantiatingAnotherClass" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassWithSimpleReturnMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithSimpleReturnMethod" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -105,16 +135,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParserTests in Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.ClassInstantiatingAnotherClass" />
+      <item itemvalue="JUnit.ClassWithSimpleReturnMethod" />
+      <item itemvalue="JUnit.ParserTests in Tests" />
       <item itemvalue="JUnit.EmptyClass" />
       <item itemvalue="JUnit.EmptyClass.Test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmptyClass.Test" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.ParserTests in Tests" />
+        <item itemvalue="JUnit.ClassInstantiatingAnotherClass" />
+        <item itemvalue="JUnit.ClassWithSimpleReturnMethod" />
         <item itemvalue="JUnit.EmptyClass" />
+        <item itemvalue="JUnit.EmptyClass.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -128,7 +176,7 @@
       <updated>1652108297266</updated>
       <workItem from="1652284676770" duration="802000" />
       <workItem from="1652448693751" duration="1209000" />
-      <workItem from="1652528109751" duration="4748000" />
+      <workItem from="1652528109751" duration="8078000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -172,7 +220,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652276614096</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Tests eingefügt">
+      <created>1652547701033</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1652547701033</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,6 +253,7 @@
     <MESSAGE value="EmptyClass.java added" />
     <MESSAGE value="Main class edited" />
     <MESSAGE value="Klassen auf Records umgestellt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Klassen auf Records umgestellt" />
+    <MESSAGE value="Tests eingefügt" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tests eingefügt" />
   </component>
 </project>

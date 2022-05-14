@@ -22,16 +22,15 @@ public class ClassWithEmptyMethod
     @Test
     public void Test() throws IOException {
 
-        String src = "class MyClass { public void A(int x) { } }";
+        String src = "class MyClass { public void A() { } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
-        var emptyClass = syntaxTree.getClasses().get(0);
 
-        Assertions.assertEquals(emptyClass,
+        Assertions.assertEquals(syntaxTree,new Program(List.of(
                 new Class("MyClass", List.of(
                 new Method(AccessModifiers.Public,"A",
-                        List.of(new MethodParameter("x", new IntType())),
+                        new ArrayList<>(),
                         new VoidType(),
                         new Block(new ArrayList<>()))),
-                        new ArrayList<>()));
+                        new ArrayList<>()))));
     }
 }

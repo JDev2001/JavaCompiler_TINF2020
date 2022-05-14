@@ -23,10 +23,9 @@ public class ClassWithAttributes
 
         String src = "class MyClass { private int i; public boolean j; }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
-        var emptyClass = syntaxTree.getClasses().get(0);
 
-        Assertions.assertEquals(emptyClass, new Class("MyClass",new ArrayList<>(),
+        Assertions.assertEquals(syntaxTree,new Program(List.of(new Class("MyClass",new ArrayList<>(),
                 List.of(new Field("i", new IntType(), AccessModifiers.Private),
-                        new Field("j", new BoolType(), AccessModifiers.Public))));
+                        new Field("j", new BoolType(), AccessModifiers.Public))))));
     }
 }
