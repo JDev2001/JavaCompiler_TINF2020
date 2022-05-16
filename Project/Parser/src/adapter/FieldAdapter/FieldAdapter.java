@@ -1,7 +1,14 @@
 package adapter.FieldAdapter;
 
+import Common.AccessModifiers;
 import Field.Field;
+import Types.BoolType;
+import adapter.GeneralAdapter.AccessModifierAdapter;
+import adapter.Types.TypeAdapter;
 import generated.antlrGrammarParser;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class FieldAdapter {
 
@@ -11,10 +18,18 @@ public class FieldAdapter {
      * @param ctx Antlr context
      * @return new Object
      */
-    public static Field generate(antlrGrammarParser.FieldDeclarationContext ctx) {
+    public static List<Field> generate(antlrGrammarParser.FieldDeclarationContext ctx) {
 
+        List<Field> allInnerFields = new ArrayList<>();
 
-        return null;
+        ctx.Identifier().forEach(identifiere ->
+                allInnerFields.add(
+                    new Field(
+                            identifiere.getText(),
+                            TypeAdapter.generate(ctx.type()),
+                            AccessModifierAdapter.generate(ctx.AccessModifier()))));
+
+        return allInnerFields;
     }
 
 

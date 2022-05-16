@@ -1,4 +1,4 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
 package generated;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -23,12 +23,6 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitJClass(antlrGrammarParser.JClassContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#constructor}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructor(antlrGrammarParser.ConstructorContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#classBody}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -47,17 +41,41 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitFieldDeclaration(antlrGrammarParser.FieldDeclarationContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * Visit a parse tree produced by {@link antlrGrammarParser#constructor}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	T visitConstructor(antlrGrammarParser.ConstructorContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#type}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitType(antlrGrammarParser.TypeContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#methodType}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMethodType(antlrGrammarParser.MethodTypeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#nMethodParameters}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitNMethodParameters(antlrGrammarParser.NMethodParametersContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#block}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitBlock(antlrGrammarParser.BlockContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#nArguments}.
 	 * @param ctx the parse tree
@@ -125,12 +143,6 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStatement(antlrGrammarParser.StatementContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#block}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBlock(antlrGrammarParser.BlockContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#ifelse}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -184,12 +196,6 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitBaseType(antlrGrammarParser.BaseTypeContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#objectType}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitObjectType(antlrGrammarParser.ObjectTypeContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#operators}.
 	 * @param ctx the parse tree

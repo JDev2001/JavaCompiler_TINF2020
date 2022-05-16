@@ -1,4 +1,4 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
 package generated;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -40,18 +40,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterConstructor(antlrGrammarParser.ConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstructor(antlrGrammarParser.ConstructorContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterClassBody(antlrGrammarParser.ClassBodyContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -88,13 +76,37 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterMethodParameter(antlrGrammarParser.MethodParameterContext ctx) { }
+	@Override public void enterConstructor(antlrGrammarParser.ConstructorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitMethodParameter(antlrGrammarParser.MethodParameterContext ctx) { }
+	@Override public void exitConstructor(antlrGrammarParser.ConstructorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterType(antlrGrammarParser.TypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitType(antlrGrammarParser.TypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethodType(antlrGrammarParser.MethodTypeContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethodType(antlrGrammarParser.MethodTypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -107,6 +119,30 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitNMethodParameters(antlrGrammarParser.NMethodParametersContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterMethodParameter(antlrGrammarParser.MethodParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMethodParameter(antlrGrammarParser.MethodParameterContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterBlock(antlrGrammarParser.BlockContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitBlock(antlrGrammarParser.BlockContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -244,18 +280,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBlock(antlrGrammarParser.BlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBlock(antlrGrammarParser.BlockContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterIfelse(antlrGrammarParser.IfelseContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -359,18 +383,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitBaseType(antlrGrammarParser.BaseTypeContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterObjectType(antlrGrammarParser.ObjectTypeContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitObjectType(antlrGrammarParser.ObjectTypeContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
