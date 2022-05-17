@@ -39,6 +39,7 @@ public class BytecodeGenerator {
         cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
         MethodVisitor methodVisitor;
         FieldVisitor fieldVisitor;
+        //V18 for Java Version
         cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
 
         //visit Fields first
@@ -59,6 +60,7 @@ public class BytecodeGenerator {
         for (Field field : pField) {
             int accessmod = -1;
             String descriptor;
+            // Extract access modifier
             switch (field.accessModifiers()) {
                 case Public:
                     accessmod = Opcodes.ACC_PUBLIC;
@@ -69,8 +71,10 @@ public class BytecodeGenerator {
                 case Protected:
                     accessmod = Opcodes.ACC_PROTECTED;
                     break;
-                default: throw new IllegalStateException("Unexpected value: " + field.type());
+                default:
+                    throw new IllegalStateException("Unexpected value: " + field.type());
             }
+            // extract field type
             switch (field.type()) {
                 case BoolType type -> {
                     descriptor = "B";
@@ -129,9 +133,7 @@ public class BytecodeGenerator {
             case TypedWhileStatement statement -> {
                 System.out.println(statement);
             }
-            default -> {
-
-            }
+            default -> throw new IllegalStateException("Unexpected value: " + pStatement);
         }
     }
 
@@ -164,9 +166,7 @@ public class BytecodeGenerator {
             case TypedUnaryExpression expression -> {
                 System.out.println(expression);
             }
-            default -> {
-
-            }
+            default -> throw new IllegalStateException("Unexpected value: " + pExpression);
         }
     }
 
