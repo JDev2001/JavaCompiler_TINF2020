@@ -3,16 +3,12 @@ import Common.Program;
 import Field.Field;
 import Method.Method;
 import org.objectweb.asm.ClassWriter;
-import typedMethod.TypedMethod;
-import typedStatementExpression.ITypedStatementExpression;
-import typedStatementExpression.TypedAssignStatementExpression;
-import typedStatementExpression.TypedMethodCallStatementExpression;
-import typedStatementExpression.TypedNewStatementExpression;
-import typedStatements.ITypedStatement;
+import typedExpressions.*;
 import typedStatements.*;
+import typedStatementExpression.*;
 
 public class BytecodeGenerator {
-    private Program aProgram;
+    private static Program aProgram;
 
     public BytecodeGenerator(Program pProgram) {
         aProgram = pProgram;
@@ -25,6 +21,7 @@ public class BytecodeGenerator {
             generateClassCode(pClass);
         }
     }
+
     private void generateClassCode(Class pClass) {
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
 
@@ -41,19 +38,15 @@ public class BytecodeGenerator {
     private void generateStatements(ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedIfElseStatement statement -> {
-
                 System.out.println(statement);
             }
             case TypedReturnStatement statement -> {
-
                 System.out.println(statement);
             }
             case TypedVarDeclarationStatement statement -> {
-
                 System.out.println(statement);
             }
             case TypedWhileStatement statement -> {
-
                 System.out.println(statement);
             }
             default -> {
@@ -62,19 +55,51 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateStatementExpressions(ITypedStatementExpression pStatement) {
-        switch (pStatement) {
+    private void generateStatementExpressions(ITypedStatementExpression pStatementExpression) {
+        switch (pStatementExpression) {
             case TypedAssignStatementExpression statement -> {
-
                 System.out.println(statement);
             }
             case TypedMethodCallStatementExpression statement -> {
-
                 System.out.println(statement);
             }
             case TypedNewStatementExpression statement -> {
-
                 System.out.println(statement);
+            }
+            default -> {
+
+            }
+        }
+    }
+
+    private void generateExpression(ITypedExpression pExpression) {
+        switch (pExpression) {
+            case TypedBinaryExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedCompareExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedConstExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedInstVarStatementExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedJNullExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedSuperExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedThisExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedTypeExpression expression -> {
+                System.out.println(expression);
+            }
+            case TypedUnaryExpression expression -> {
+                System.out.println(expression);
             }
             default -> {
 

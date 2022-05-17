@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Tests eingefügt">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="BCGen stuff">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652547701033</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="BCGen stuff">
+      <created>1652771389247</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1652771389247</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -253,7 +260,8 @@
     <MESSAGE value="Main class edited" />
     <MESSAGE value="Klassen auf Records umgestellt" />
     <MESSAGE value="Tests eingefügt" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tests eingefügt" />
+    <MESSAGE value="BCGen stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="BCGen stuff" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
