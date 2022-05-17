@@ -3,7 +3,6 @@ import Common.Program;
 import Field.Field;
 import Method.Method;
 import org.objectweb.asm.ClassWriter;
-import typedStatements.TypedIfElseStatement;
 
 public class BytecodeGenerator {
     private Program aProgram;

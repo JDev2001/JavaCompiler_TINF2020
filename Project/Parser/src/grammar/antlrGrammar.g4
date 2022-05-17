@@ -4,16 +4,24 @@ programm: Identifier? jClass+;
 
 jClass: 'class' Identifier classBody;
 
+//Class
 classBody: CurlyLBracket (methodDeclaration|fieldDeclaration|constructor)* CurlyRBracket;
 
-
-nMethodParameters: (methodParameter)? | methodParameter (Comma methodParameter)+;
-methodParameter: objectType Identifier;
+//Class objects
+methodDeclaration: AccessModifier? methodType Identifier LBracket nMethodParameters RBracket block;
+fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal expression)? Semicolon;
 constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 
-fieldDeclaration: AccessModifier?  objectType Identifier (Comma Identifier)* (Equal expression)? Semicolon;
+//Method
 
-methodDeclaration: AccessModifier? (objectType|Void) Identifier LBracket nMethodParameters RBracket block;
+//Type
+type: 'int'|'char'|'boolean'| Identifier;
+methodType: 'void'|type;
+//Methodparameters
+nMethodParameters: (methodParameter)? | methodParameter (Comma methodParameter)+;
+methodParameter: type Identifier;
+//Method Block
+block: CurlyLBracket (statement)* CurlyRBracket;
 
 
 
@@ -23,14 +31,13 @@ basicexpressions:  baseType | instVar | Identifier | statementExpressions | unar
 instVar:  This Dot Identifier|(This Dot)? (Identifier Dot)+ Identifier;
 statementExpressions: assign | jNew | methodCall;
 assign: (instVar | Identifier) (Equal|PlusEqual|MinusEqual) expression;
-localVarDeclaration: objectType Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
+localVarDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
 jNew: 'new' Identifier LBracket nArguments RBracket;
 methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)*
 (Identifier LBracket nArguments RBracket);
 methodCallPrefix: (instVar|Identifier Dot);
 statement: ifelse | localVarDeclaration Semicolon | jReturn Semicolon | jWhile | block
     | statementExpressions Semicolon;
-block: CurlyLBracket (statement)* CurlyRBracket;
 ifelse: jIf jElseIf* jElse?;
 jIf: If LBracket expression RBracket block;
 jElseIf: Else If LBracket expression RBracket block;
@@ -39,14 +46,13 @@ jWhile: 'while' LBracket expression RBracket block;
 jReturn: 'return' expression;
 unary:  NotOperator expression;
 binary: basicexpressions (operators basicexpressions)+;
-baseType: JBoolean | JNull | This | JString | JCharacter | JInteger | Super; //implicit definition of token JString in parser TODO: Warum? Eränzen??
-objectType: 'int'|'char'|'boolean'|Identifier;
+baseType: JBoolean | JNull | This | WS | JCharacter | JInteger | Super; //JString = WS ??? Vorher stand bei ws JString
+
 operators: LogicalOperator|Comperator|AddSubOperator|PointOperator;
 
 AccessModifier: 'public' | 'protected' | 'private';
 JBoolean: 'true'|'false';
 JNull: 'null';
-Void: 'void';
 Super: 'super';
 This: 'this';
 If: 'if';

@@ -25,7 +25,8 @@ public class ClassAdapter {
         List<Field> fields = new ArrayList<Field>();
 
         ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> methods.add(MethodeAdapter.generate(methodDeclarationContext)));
-        ctx.classBody().fieldDeclaration().forEach(fieldDeclarationContext -> fields.add(FieldAdapter.generate(fieldDeclarationContext)));
+        ctx.classBody().fieldDeclaration().forEach(fieldDeclarationContext -> fields.addAll(FieldAdapter.generate(fieldDeclarationContext)));
+
 
         return new Class(ctx.Identifier().getText(), methods, fields);
     }

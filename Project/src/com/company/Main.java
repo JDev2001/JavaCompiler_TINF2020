@@ -38,7 +38,6 @@ public class Main {
             }
         }};
          */
-        
 
         //Generates the syntax tree
         System.out.println("Generating the syntax tree!");

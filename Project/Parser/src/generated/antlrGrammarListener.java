@@ -1,4 +1,4 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
 package generated;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -27,16 +27,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitJClass(antlrGrammarParser.JClassContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#constructor}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructor(antlrGrammarParser.ConstructorContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#constructor}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructor(antlrGrammarParser.ConstructorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#classBody}.
 	 * @param ctx the parse tree
@@ -68,15 +58,35 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitFieldDeclaration(antlrGrammarParser.FieldDeclarationContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * Enter a parse tree produced by {@link antlrGrammarParser#constructor}.
 	 * @param ctx the parse tree
 	 */
-	void enterMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	void enterConstructor(antlrGrammarParser.ConstructorContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * Exit a parse tree produced by {@link antlrGrammarParser#constructor}.
 	 * @param ctx the parse tree
 	 */
-	void exitMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	void exitConstructor(antlrGrammarParser.ConstructorContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#type}.
+	 * @param ctx the parse tree
+	 */
+	void enterType(antlrGrammarParser.TypeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#type}.
+	 * @param ctx the parse tree
+	 */
+	void exitType(antlrGrammarParser.TypeContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#methodType}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethodType(antlrGrammarParser.MethodTypeContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#methodType}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethodType(antlrGrammarParser.MethodTypeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#nMethodParameters}.
 	 * @param ctx the parse tree
@@ -87,6 +97,26 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitNMethodParameters(antlrGrammarParser.NMethodParametersContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * @param ctx the parse tree
+	 */
+	void enterMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#methodParameter}.
+	 * @param ctx the parse tree
+	 */
+	void exitMethodParameter(antlrGrammarParser.MethodParameterContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void enterBlock(antlrGrammarParser.BlockContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#block}.
+	 * @param ctx the parse tree
+	 */
+	void exitBlock(antlrGrammarParser.BlockContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#nArguments}.
 	 * @param ctx the parse tree
@@ -198,16 +228,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitStatement(antlrGrammarParser.StatementContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#block}.
-	 * @param ctx the parse tree
-	 */
-	void enterBlock(antlrGrammarParser.BlockContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#block}.
-	 * @param ctx the parse tree
-	 */
-	void exitBlock(antlrGrammarParser.BlockContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#ifelse}.
 	 * @param ctx the parse tree
 	 */
@@ -297,16 +317,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitBaseType(antlrGrammarParser.BaseTypeContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#objectType}.
-	 * @param ctx the parse tree
-	 */
-	void enterObjectType(antlrGrammarParser.ObjectTypeContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#objectType}.
-	 * @param ctx the parse tree
-	 */
-	void exitObjectType(antlrGrammarParser.ObjectTypeContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#operators}.
 	 * @param ctx the parse tree
