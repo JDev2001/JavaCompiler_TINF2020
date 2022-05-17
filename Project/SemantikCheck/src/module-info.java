@@ -1,5 +1,6 @@
 module SemantikCheck {
     requires DataClasses;
     exports typedStatements;
-    exports;
+    exports typedStatementExpression;
+    exports typedExpressions;
 }

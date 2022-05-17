@@ -3,6 +3,13 @@ import Common.Program;
 import Field.Field;
 import Method.Method;
 import org.objectweb.asm.ClassWriter;
+import typedMethod.TypedMethod;
+import typedStatementExpression.ITypedStatementExpression;
+import typedStatementExpression.TypedAssignStatementExpression;
+import typedStatementExpression.TypedMethodCallStatementExpression;
+import typedStatementExpression.TypedNewStatementExpression;
+import typedStatements.ITypedStatement;
+import typedStatements.*;
 
 public class BytecodeGenerator {
     private Program aProgram;
@@ -31,11 +38,23 @@ public class BytecodeGenerator {
 
     }
 
-    private void generateStatements(TypedBaseObject pStatement) {
+    private void generateStatements(ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedIfElseStatement statement -> {
 
-                System.out.println("Typed");
+                System.out.println(statement);
+            }
+            case TypedReturnStatement statement -> {
+
+                System.out.println(statement);
+            }
+            case TypedVarDeclarationStatement statement -> {
+
+                System.out.println(statement);
+            }
+            case TypedWhileStatement statement -> {
+
+                System.out.println(statement);
             }
             default -> {
 
@@ -43,7 +62,23 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateStatementExpressions() {
+    private void generateStatementExpressions(ITypedStatementExpression pStatement) {
+        switch (pStatement) {
+            case TypedAssignStatementExpression statement -> {
 
+                System.out.println(statement);
+            }
+            case TypedMethodCallStatementExpression statement -> {
+
+                System.out.println(statement);
+            }
+            case TypedNewStatementExpression statement -> {
+
+                System.out.println(statement);
+            }
+            default -> {
+
+            }
+        }
     }
 }
