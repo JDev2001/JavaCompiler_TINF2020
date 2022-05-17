@@ -9,6 +9,8 @@ import typedExpressions.*;
 import typedStatements.*;
 import typedStatementExpression.*;
 
+import java.util.List;
+
 public class BytecodeGenerator {
     private static Program aProgram;
 
@@ -25,13 +27,39 @@ public class BytecodeGenerator {
     }
 
     private byte[] generateClassCode(Class pClass) {
+        //Initiate class
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
-        //visit Constructor method
-        //visit Fields next
+        cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
+
+        //visit Fields first
+
+        //visit Constructors
+        generateConstructors(cw, pClass.constructors());
+
         //visit Methods next
+
+        //Close classwriter
         cw.visitEnd();
         var classBytecode = cw.toByteArray();
         return classBytecode;
+    }
+
+    private void generateConstructors(ClassWriter cw, List<Method> pConstructors) {
+        if(pConstructors.isEmpty()) {
+            //No constructors means standard constructor
+            MethodVisitor methodVisitor;
+            methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
+            methodVisitor.visitCode();
+            methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
+            methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
+            methodVisitor.visitInsn(Opcodes.RETURN);
+            methodVisitor.visitMaxs(1, 1);
+            methodVisitor.visitEnd();
+        } else {
+            for(Method pMethod : pConstructors) {
+
+            }
+        }
     }
 
     private void generateMethodCode(Method pMethod, ClassWriter cw) {
