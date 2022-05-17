@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="BCGen stuff">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="BCGen stuff&#10;Fixed InstVarStatementExpression">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeGenerator/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Common/Class.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +72,14 @@
       <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassWithAttributes">
+  <component name="RunManager" selected="Application.Main (1)">
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="CodeGenerator" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
@@ -133,35 +140,20 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Tests" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ParserTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.EmptyClass" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
-      <item itemvalue="JUnit.EmptyClass" />
       <item itemvalue="JUnit.ClassWithAttributes" />
       <item itemvalue="JUnit.ClassWithEmptyMethod" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ClassWithAttributes" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
         <item itemvalue="JUnit.ClassWithEmptyMethod" />
-        <item itemvalue="JUnit.EmptyClass" />
       </list>
     </recent_temporary>
   </component>
@@ -233,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652771389247</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="BCGen stuff&#10;Fixed InstVarStatementExpression">
+      <created>1652777174023</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1652777174023</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,7 +260,8 @@
     <MESSAGE value="Klassen auf Records umgestellt" />
     <MESSAGE value="Tests eingefügt" />
     <MESSAGE value="BCGen stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="BCGen stuff" />
+    <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
+    <option name="LAST_COMMIT_MESSAGE" value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

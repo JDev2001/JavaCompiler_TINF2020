@@ -3,6 +3,8 @@ import Common.Program;
 import Field.Field;
 import Method.Method;
 import org.objectweb.asm.ClassWriter;
+import org.objectweb.asm.MethodVisitor;
+import org.objectweb.asm.Opcodes;
 import typedExpressions.*;
 import typedStatements.*;
 import typedStatementExpression.*;
@@ -12,7 +14,7 @@ public class BytecodeGenerator {
 
     public BytecodeGenerator(Program pProgram) {
         aProgram = pProgram;
-        System.out.println("Help");
+        System.out.println(pProgram);
     }
 
     public void genCode() {
@@ -22,9 +24,14 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateClassCode(Class pClass) {
+    private byte[] generateClassCode(Class pClass) {
         ClassWriter cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
-
+        //visit Constructor method
+        //visit Fields next
+        //visit Methods next
+        cw.visitEnd();
+        var classBytecode = cw.toByteArray();
+        return classBytecode;
     }
 
     private void generateMethodCode(Method pMethod, ClassWriter cw) {
