@@ -1,5 +1,6 @@
 package BytecodeGenerator;
 
+import Common.AccessModifiers;
 import Common.Class;
 import Common.Program;
 import Field.Field;
@@ -29,12 +30,13 @@ public class BytecodeGenerator {
         System.out.println(pProgram);
     }
 
-    public void genCode() {
+    public HashMap<String, byte[]> genCode() {
         var classList = aProgram.classes();
-        List<byte[]> allClasses = new ArrayList<>();
+        HashMap<String, byte[]> allClasses = new HashMap<String, byte[]>();
         for (Class pClass : classList) {
-            allClasses.add(generateClassCode(pClass));
+            allClasses.put(pClass.identifier(),generateClassCode(pClass));
         }
+        return allClasses;
     }
 
     private byte[] generateClassCode(Class pClass) {
@@ -64,24 +66,25 @@ public class BytecodeGenerator {
             int accessmod = -1;
             String descriptor;
             // Extract access modifier
-            switch (field.accessModifier()) {
-                case Public:
-                    accessmod = Opcodes.ACC_PUBLIC;
-                    break;
-                case Private:
-                    accessmod = Opcodes.ACC_PRIVATE;
-                    break;
-                case Protected:
-                    accessmod = Opcodes.ACC_PROTECTED;
-                    break;
-                default:
-                    throw new IllegalStateException("Unexpected value: " + field.type());
-            }
+            accessmod = generateAccessMod(field.accessModifier());
             // extract field type
             descriptor = generateTypeString(field.type());
 
             fieldVisitor = cw.visitField(accessmod, field.name(), descriptor, null, null);
             fieldVisitor.visitEnd();
+        }
+    }
+
+    private int generateAccessMod(AccessModifiers accessModifier) {
+        switch (accessModifier) {
+            case Public:
+                return Opcodes.ACC_PUBLIC;
+            case Private:
+                return Opcodes.ACC_PRIVATE;
+            case Protected:
+                return Opcodes.ACC_PROTECTED;
+            default:
+                throw new IllegalStateException("Unexpected value: " + accessModifier);
         }
     }
 
