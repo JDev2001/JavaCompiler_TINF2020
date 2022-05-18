@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="refactor">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="genCode returns all classes' bytearray in a hashmap with classes identifier">
       <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator/BytecodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -271,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652875474585</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="genCode returns all classes' bytearray in a hashmap with classes identifier">
+      <created>1652876000431</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652876000431</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -305,7 +311,8 @@
     <MESSAGE value="Added stack for variables and fields" />
     <MESSAGE value="Refactor" />
     <MESSAGE value="refactor" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor" />
+    <MESSAGE value="genCode returns all classes' bytearray in a hashmap with classes identifier" />
+    <option name="LAST_COMMIT_MESSAGE" value="genCode returns all classes' bytearray in a hashmap with classes identifier" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

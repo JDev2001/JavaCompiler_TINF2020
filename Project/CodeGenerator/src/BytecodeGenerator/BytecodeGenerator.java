@@ -15,7 +15,6 @@ import typedExpressions.*;
 import typedStatementExpression.*;
 import typedStatements.*;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -158,7 +157,7 @@ public class BytecodeGenerator {
 
     }
 
-    private void generateStatements(ITypedStatement pStatement) {
+    private void generateStatement(ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedIfElseStatement statement -> {
                 System.out.println(statement);
@@ -206,7 +205,7 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateStatementExpressions(ITypedStatementExpression pStatementExpression) {
+    private void generateStatementExpression(ITypedStatementExpression pStatementExpression) {
         switch (pStatementExpression) {
             case TypedAssignStatementExpression statement -> {
                 System.out.println(statement);
