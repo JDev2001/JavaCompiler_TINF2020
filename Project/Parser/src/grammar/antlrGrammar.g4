@@ -26,7 +26,8 @@ block: CurlyLBracket (statement)* CurlyRBracket;
 statement: block | varDeclaration Semicolon | ifelse | jWhile | jReturn Semicolon | statementExpressions Semicolon;
 
 //localVar
-varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
+varDeclaration : type Identifier (Comma Identifier)* expression;
+//varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?; -> Warum was soll das?
 
 //something with if
 //ifelse: jIf jElseIf* jElse?;
