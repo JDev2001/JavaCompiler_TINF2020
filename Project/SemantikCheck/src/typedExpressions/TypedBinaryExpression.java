@@ -1,9 +1,10 @@
 package typedExpressions;
 
 import Expressions.BinaryExpression;
+import Expressions.IExpression;
 import Types.IMethodType;
 
-public record TypedBinaryExpression(BinaryExpression unTypedBinaryExpression, IMethodType objectType) implements ITypedExpression  {
+public record TypedBinaryExpression(ITypedExpression a, ITypedExpression b, String operator, IMethodType objectType) implements ITypedExpression  {
 
 
     @Override

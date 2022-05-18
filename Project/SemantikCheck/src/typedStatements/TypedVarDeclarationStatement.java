@@ -4,7 +4,7 @@ import Statements.*;
 import Types.IMethodType;
 import Types.IType;
 
-public record TypedVarDeclarationStatement(VarDeclarationStatement unTypedVarDeclarationStatement, IMethodType objectType)  implements ITypedStatement {
+public record TypedVarDeclarationStatement(String name, IType type, IMethodType objectType)  implements ITypedStatement {
 
 
     @Override

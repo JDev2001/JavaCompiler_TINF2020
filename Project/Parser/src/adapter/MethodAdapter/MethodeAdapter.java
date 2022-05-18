@@ -1,7 +1,5 @@
 package adapter.MethodAdapter;
 
-import Common.AccessModifiers;
-import Common.Block;
 import Method.Method;
 import Method.MethodParameter;
 import Types.VoidType;
@@ -57,7 +55,7 @@ public class MethodeAdapter {
         }
 
         if(Objects.equals(className, ctx.Identifier().getText())){
-            return new Method(AccessModifiers.Public,
+            return new Method(AccessModifierAdapter.generate(ctx.AccessModifier()),
                     className,
                     methodParameters,
                     new VoidType(),

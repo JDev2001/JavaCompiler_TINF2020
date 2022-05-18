@@ -3,7 +3,7 @@ package typedExpressions;
 import Expressions.*;
 import Types.IMethodType;
 
-public record TypedConstExpression(ConstExpression unTypedConstExpression, IMethodType objectType) implements ITypedExpression {
+public record TypedConstExpression(Object value, IMethodType objectType) implements ITypedExpression {
 
     @Override
     public IMethodType getType() {

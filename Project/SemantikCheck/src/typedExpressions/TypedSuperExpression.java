@@ -3,7 +3,7 @@ package typedExpressions;
 import Expressions.*;
 import Types.IMethodType;
 
-public record TypedSuperExpression (SuperExpression unTypedSuperExpression, IMethodType objectType)  implements ITypedExpression {
+public record TypedSuperExpression (String name, IMethodType objectType)  implements ITypedExpression {
 
     @Override
     public IMethodType getType() {
