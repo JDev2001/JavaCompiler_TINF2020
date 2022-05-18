@@ -3,7 +3,7 @@ package typedStatementExpression;
 import StatementExpression.*;
 import Types.IMethodType;
 
-public record TypedNewStatementExpression(NewStatementExpression unTypedNewStatementExpression, IMethodType objectType) implements ITypedStatementExpression {
+public record TypedNewStatementExpression(TypedMethodCallStatementExpression constructorCall, IMethodType objectType) implements ITypedStatementExpression {
 
 
     @Override

@@ -1,9 +1,11 @@
 package typedStatementExpression;
 
+import Expressions.IExpression;
 import StatementExpression.*;
 import Types.IMethodType;
+import typedExpressions.ITypedExpression;
 
-public record TypedAssignStatementExpression(AssignStatementExpression unTypedAssignStatementExpression, IMethodType objectType) implements ITypedStatementExpression {
+public record TypedAssignStatementExpression(ITypedExpression expressionA, ITypedExpression expressionB, IMethodType objectType) implements ITypedStatementExpression {
 
 
     @Override
