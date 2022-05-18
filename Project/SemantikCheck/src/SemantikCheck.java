@@ -33,6 +33,6 @@ public interface SemantikCheck {
     TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception;
     TypedReturnStatement semantikCheck(ReturnStatement untyped);
     TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped);
-    TypedWhileStatement semantikCheck(WhileStatement untyped);
+    TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception;
 }
 
