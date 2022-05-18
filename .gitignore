@@ -1,4 +1,4 @@
-#Gitgnor - 18052022 - FW
+#gitgnore - 18052022 - FW
 
 # User-specific stuff
 .idea/**/workspace.xml
@@ -6,6 +6,13 @@
 .idea/**/usage.statistics.xml
 .idea/**/dictionaries
 .idea/**/shelf
+
+# User-specific stuff
+Projekt/.idea/**/workspace.xml
+Projekt/.idea/**/tasks.xml
+Projekt/.idea/**/usage.statistics.xml
+Projekt/.idea/**/dictionaries
+Projekt/.idea/**/shelf
 
 # File-based project format
 *.iws
