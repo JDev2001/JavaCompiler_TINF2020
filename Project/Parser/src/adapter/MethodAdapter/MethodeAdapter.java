@@ -40,12 +40,10 @@ public class MethodeAdapter {
                 BlockAdapter.generate(ctx.block()));
     }
 
-    public Method generateConstructor(antlrGrammarParser.MethodDeclarationContext ctx){
+    public static Method generateConstructor(String className, antlrGrammarParser.MethodDeclarationContext ctx){
+
+        List<Method> constuctors = new ArrayList<Method>();
 
         return null;
-
     }
-
-    //Methode generate Constructor
-
 }
