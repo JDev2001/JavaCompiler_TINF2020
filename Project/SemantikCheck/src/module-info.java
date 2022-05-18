@@ -3,4 +3,5 @@ module SemantikCheck {
     exports typedStatements;
     exports typedStatementExpression;
     exports typedExpressions;
+    exports typedMethod;
 }

@@ -1,21 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added stack for variables and fields">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="..">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/DataClasses.iml" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/DataClasses.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parser/Parser.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/Parser.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/Tests.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Tests.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/EmptyClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/src/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,16 +38,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,6 +60,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/asm-util-9.3.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -80,7 +84,7 @@
       <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassWithConstructor">
+  <component name="RunManager" selected="JUnit.EmptyClass.Test">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CodeGenerator" />
@@ -132,16 +136,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassWithEmptyMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="EmptyClass.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ParserTests.*" />
+          <option name="PATTERN" value="CodeGenTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithEmptyMethod" />
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.EmptyClass" />
       <option name="METHOD_NAME" value="Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -151,17 +155,17 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
+      <item itemvalue="JUnit.EmptyClass.Test" />
       <item itemvalue="JUnit.ClassWithAttributes" />
       <item itemvalue="JUnit.ClassWithConstructor" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.EmptyClass.Test" />
         <item itemvalue="JUnit.ClassWithConstructor" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ClassWithAttributes" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
       </list>
     </recent_temporary>
   </component>
