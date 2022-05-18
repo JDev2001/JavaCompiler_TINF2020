@@ -1,9 +1,10 @@
 package typedExpressions;
 
+import Expressions.IExpression;
 import Expressions.InstVarStatementExpression;
 import Types.IMethodType;
 
-public record TypedInstVarStatementExpression(InstVarStatementExpression unTypedInstVarStatementExpression, IMethodType objectType) implements ITypedExpression
+public record TypedInstVarStatementExpression(String varName, ITypedExpression expression, IMethodType objectType) implements ITypedExpression
 {
 
 

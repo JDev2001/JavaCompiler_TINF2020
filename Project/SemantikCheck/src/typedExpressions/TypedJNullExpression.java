@@ -4,7 +4,7 @@ import Expressions.*;
 import Types.IMethodType;
 import Types.IType;
 
-public record TypedJNullExpression(JNullExpression unTypedJNullExpression, IMethodType objectType) implements ITypedExpression {
+public record TypedJNullExpression(IMethodType objectType) implements ITypedExpression {
 
 
     @Override

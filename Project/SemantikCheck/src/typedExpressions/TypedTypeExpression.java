@@ -1,9 +1,9 @@
 package typedExpressions;
 
-import Expressions.*;
 import Types.IMethodType;
+import Types.IType;
 
-public record TypedTypeExpression(TypeExpression unTypedTypeExpression, IMethodType objectType) implements ITypedExpression {
+public record TypedTypeExpression(IType type, IMethodType objectType) implements ITypedExpression {
 
 
     @Override

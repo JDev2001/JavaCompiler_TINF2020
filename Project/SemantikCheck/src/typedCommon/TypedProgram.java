@@ -1,9 +1,12 @@
 package typedCommon;
 
-import Common.Program;
+import Common.Class;
+import Types.IMethodType;
 import Types.IType;
 
-public record TypedProgram(Program unTypedProgram, IType objectType) {
+import java.util.List;
+
+public record TypedProgram(List<TypedClass> classes, IMethodType objectType) {
 
 
 }

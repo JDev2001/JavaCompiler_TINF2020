@@ -167,10 +167,13 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception {
+        ITypedExpression typedCondition = checkExpression(untyped.condition());
+        ITypedStatement typedBlock = checkStatement(untyped.block());
+
         if (true) {
             return null;
         }
-        else{
+        else {
             throw new Exception("");
         }
     }
