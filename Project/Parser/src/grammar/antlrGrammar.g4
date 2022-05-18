@@ -12,8 +12,7 @@ methodDeclaration: AccessModifier? methodType Identifier LBracket nMethodParamet
 fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal expression)? Semicolon;
 constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 
-//Method
-
+//Method things
 //Type
 type: 'int'|'char'|'boolean'| Identifier;
 methodType: 'void'|type;
