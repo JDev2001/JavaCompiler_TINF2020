@@ -1,3 +1,18 @@
+#Gitgnor - 18052022 - FW
+
+# User-specific stuff
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries
+.idea/**/shelf
+
+# File-based project format
+*.iws
+
+# IntelliJ
+out/
 
 Project/.idea/workspace.xml
 Project/.idea
+
