@@ -9,7 +9,7 @@ import SyntaxTreeGenerator.SyntaxTreeGenerator;
 import Types.VoidType;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
-import org.testng.annotations.Test;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;

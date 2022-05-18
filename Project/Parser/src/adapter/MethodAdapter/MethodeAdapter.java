@@ -1,7 +1,10 @@
 package adapter.MethodAdapter;
 
+import Common.AccessModifiers;
+import Common.Block;
 import Method.Method;
 import Method.MethodParameter;
+import Types.VoidType;
 import adapter.GeneralAdapter.AccessModifierAdapter;
 import adapter.GeneralAdapter.BlockAdapter;
 import adapter.Types.MethodeTypeAdapter;
@@ -10,6 +13,7 @@ import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class MethodeAdapter {
 
@@ -40,9 +44,25 @@ public class MethodeAdapter {
                 BlockAdapter.generate(ctx.block()));
     }
 
-    public static Method generateConstructor(String className, antlrGrammarParser.MethodDeclarationContext ctx){
+    public static Method generateConstructor(String className, antlrGrammarParser.ConstructorContext ctx){
 
-        List<Method> constuctors = new ArrayList<Method>();
+        List<MethodParameter> methodParameters = new ArrayList<>();
+
+        //Direct implementation of the method Parameter generation!!!!
+        if (ctx.nMethodParameters() != null) {
+            //generates method parameter -> parameter gets Identifier and Objecttyp
+            ctx.nMethodParameters().methodParameter().forEach(
+                    methodParameter -> methodParameters.add(
+                            new MethodParameter(methodParameter.Identifier().getText(), TypeAdapter.generate(methodParameter.type()))));
+        }
+
+        if(Objects.equals(className, ctx.Identifier().getText())){
+            return new Method(AccessModifiers.Public,
+                    className,
+                    methodParameters,
+                    new VoidType(),
+                    BlockAdapter.generate(ctx.block()));
+        }
 
         return null;
     }

@@ -8,9 +8,8 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" exported="" name="antlr-4.10.1-complete" level="project" />
+    <orderEntry type="library" name="Project" level="project" />
     <orderEntry type="module" module-name="DataClasses" />
-    <orderEntry type="module" module-name="Parser" />
     <orderEntry type="module" module-name="Parser" />
   </component>
 </module>
