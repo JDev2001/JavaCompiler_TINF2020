@@ -1,15 +1,10 @@
 package com.company;
 
-import Common.Program;
-import StatementExpression.AssignStatementExpression;
-import StatementExpression.IStatementExpression;
+import DataClasses.Common.Program;
 import com.company.common.Factory.Factory;
 import org.antlr.v4.runtime.CharStreams;
 
 import java.io.*;
-import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Collections;
 
 public class Main {
 
