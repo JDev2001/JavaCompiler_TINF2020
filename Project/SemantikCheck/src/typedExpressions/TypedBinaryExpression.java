@@ -1,9 +1,13 @@
 package typedExpressions;
 
 import Expressions.BinaryExpression;
-import Types.IType;
+import Types.IMethodType;
 
-public record TypedBinaryExpression(BinaryExpression unTypedBinaryExpression, IType objectType) implements ITypedExpression  {
+public record TypedBinaryExpression(BinaryExpression unTypedBinaryExpression, IMethodType objectType) implements ITypedExpression  {
 
 
+    @Override
+    public IMethodType getType() {
+        return objectType;
+    }
 }

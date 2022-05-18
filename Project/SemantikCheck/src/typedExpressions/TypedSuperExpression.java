@@ -1,8 +1,12 @@
 package typedExpressions;
 
 import Expressions.*;
-import Types.IType;
+import Types.IMethodType;
 
-public record TypedSuperExpression (SuperExpression unTypedSuperExpression, IType objectType)  implements ITypedExpression {
+public record TypedSuperExpression (SuperExpression unTypedSuperExpression, IMethodType objectType)  implements ITypedExpression {
 
+    @Override
+    public IMethodType getType() {
+        return objectType;
+    }
 }

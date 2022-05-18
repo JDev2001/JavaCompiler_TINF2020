@@ -1,20 +1,88 @@
+import java.util.List;
+
 import typedCommon.*;
 import typedExpressions.*;
-import typedField.*;
-import typedMethod.*;
 import typedStatementExpression.*;
 import typedStatements.*;
 
 import Common.*;
 import Common.Class;
 import Expressions.*;
-import Field.*;
 import Method.*;
 import StatementExpression.*;
 import Statements.*;
 import Types.*;
 
 public class SemantikCheckImpl implements SemantikCheck{
+
+    public void semantikCheckStart(Program semantikCheckProgram) throws Exception {
+        var classList = semantikCheckProgram.classes();
+        for (Class semantikCheckClass : classList) {
+            semantikCheck(semantikCheckClass);
+            for (Method semantikCheckMethod : semantikCheckClass.methods()){
+                switch (semantikCheckMethod.statement()) {
+                    case IStatementExpression iStatementExpression -> checkStatementExpression(iStatementExpression);
+
+                    case IExpression iExpression -> checkExpression(iExpression);
+
+                    case IStatement iStatement -> checkStatement(iStatement);
+                }
+            }
+        }
+    }
+
+
+
+    public ITypedExpression checkExpression(IExpression expression) throws Exception {
+        switch (expression) {
+            case BinaryExpression binaryExpression: { return semantikCheck(binaryExpression); }
+
+            case ConstExpression constExpression: { return semantikCheck(constExpression); }
+
+            case InstVarStatementExpression instVarStatementExpression: { return semantikCheck(instVarStatementExpression); }
+
+            case JNullExpression jNullExpression: { return semantikCheck(jNullExpression); }
+
+            case SuperExpression superExpression: { return semantikCheck(superExpression); }
+
+            case ThisExpression thisExpression: { return semantikCheck(thisExpression); }
+
+            case TypeExpression typeExpression: { return semantikCheck(typeExpression); }
+
+            case UnaryExpression unaryExpression: { return semantikCheck(unaryExpression); }
+
+            default: throw new IllegalStateException("Unexpected value: " + expression);
+        }
+    }
+
+    public ITypedStatementExpression checkStatementExpression(IStatementExpression statementExpression) throws Exception {
+        switch (statementExpression) {
+            case AssignStatementExpression assignStatementExpression: { return semantikCheck(assignStatementExpression); }
+
+            case MethodCallStatementExpression methodCallStatementExpression: { return semantikCheck(methodCallStatementExpression); }
+
+            case NewStatementExpression newStatementExpression: { return semantikCheck(newStatementExpression); }
+
+            default: throw new IllegalStateException("Unexpected value: " + statementExpression);
+        }
+    }
+
+    public ITypedStatement checkStatement(IStatement statement) throws Exception {
+        switch (statement) {
+            case Block block: { return semantikCheck(block); }
+
+            case IfElseStatement ifElseStatement: { return semantikCheck(ifElseStatement); }
+
+            case ReturnStatement returnStatement: { return semantikCheck(returnStatement); }
+
+            case VarDeclarationStatement varDeclarationStatement: { return semantikCheck(varDeclarationStatement); }
+
+            case WhileStatement whileStatement: { return semantikCheck(whileStatement); }
+
+            default: throw new IllegalStateException("Unexpected value: " + statement);
+        }
+    }
+
 
 
     public TypedBlock semantikCheck(Block untyped){
@@ -25,17 +93,9 @@ public class SemantikCheckImpl implements SemantikCheck{
         return null;
     }
 
-    public TypedProgram semantikCheck(Program untyped){
-        return null;
-    }
-
 
 
     public TypedBinaryExpression semantikCheck(BinaryExpression untyped){
-        return null;
-    }
-
-    public TypedCompareExpression semantikCheck(CompareExpression untyped){
         return null;
     }
 
@@ -65,22 +125,6 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
 
-    public TypedField semantikCheck(Field untyped){
-        return null;
-    }
-
-
-
-    public TypedMethod semantikCheck(Method untyped){
-        return null;
-    }
-
-    public TypedMethodParameter semantikCheck(MethodParameter untyped){
-        return null;
-    }
-
-
-
     public TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped){
         return null;
     }
@@ -100,19 +144,14 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception {
+        if (checkExpression(untyped.expression()).getType() instanceof BoolType
+                && checkStatement(untyped.ifBlock()).equals(checkStatement(untyped.elseBlock()))) {
 
-        if(semantikCheck(untyped.condition()).equals(new BoolType())
-                && semantikCheck(untyped.ifBlock()).equals(semantikCheck(untyped.elseBlock()))){
-            //Type type = semantikCheck(untyped.ifBlock());
-            //return type;
-            return new TypedIfElseStatement(untyped, new IType() {
-                public String getName() {
-                    return "objectType";
-                }
-            });
+            return new TypedIfElseStatement(checkExpression(untyped.expression()),
+                    (TypedBlock) checkStatement(untyped.ifBlock()), (TypedBlock) checkStatement(untyped.elseBlock()), checkStatement(untyped.ifBlock()).getType());
         }
-        else {
-            throw new Exception("Error");
+        else{
+            throw new Exception("");
         }
     }
 
@@ -126,26 +165,6 @@ public class SemantikCheckImpl implements SemantikCheck{
 
     public TypedWhileStatement semantikCheck(WhileStatement untyped){
         return null;
-    }
-
-    public BoolType semantikCheck(BoolType untyped){
-        return new BoolType();
-    }
-
-    public CharType semantikCheck(CharType untyped){
-        return new CharType();
-    }
-
-    public CustomType semantikCheck(CustomType untyped){
-        return new CustomType("titel");
-    }
-
-    public IntType semantikCheck(IntType untyped){
-        return new IntType();
-    }
-
-    public VoidType semantikCheck(VoidType untyped){
-        return new VoidType();
     }
 
 }

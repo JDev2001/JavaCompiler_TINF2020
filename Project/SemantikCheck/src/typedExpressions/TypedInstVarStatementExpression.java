@@ -1,12 +1,14 @@
 package typedExpressions;
 
-import Expressions.IExpression;
 import Expressions.InstVarStatementExpression;
-import Types.IType;
-import typedStatementExpression.ITypedStatementExpression;
+import Types.IMethodType;
 
-public record TypedInstVarStatementExpression(InstVarStatementExpression unTypedInstVarStatementExpression, IType objectType) implements ITypedExpression
+public record TypedInstVarStatementExpression(InstVarStatementExpression unTypedInstVarStatementExpression, IMethodType objectType) implements ITypedExpression
 {
 
 
+    @Override
+    public IMethodType getType() {
+        return objectType;
+    }
 }
