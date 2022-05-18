@@ -29,15 +29,21 @@ nArguments: expression? | expression (Comma expression)* | instVar;
 expression:  basicexpressions | binary;
 basicexpressions:  baseType | instVar | Identifier | statementExpressions | unary | LBracket expression RBracket ;
 instVar:  This Dot Identifier|(This Dot)? (Identifier Dot)+ Identifier;
+
 statementExpressions: assign | jNew | methodCall;
+
 assign: (instVar | Identifier) (Equal|PlusEqual|MinusEqual) expression;
+
+
 localVarDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
 jNew: 'new' Identifier LBracket nArguments RBracket;
 methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)*
 (Identifier LBracket nArguments RBracket);
 methodCallPrefix: (instVar|Identifier Dot);
+
 statement: ifelse | localVarDeclaration Semicolon | jReturn Semicolon | jWhile | block
     | statementExpressions Semicolon;
+
 ifelse: jIf jElseIf* jElse?;
 jIf: If LBracket expression RBracket block;
 jElseIf: Else If LBracket expression RBracket block;
