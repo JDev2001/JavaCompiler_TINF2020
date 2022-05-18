@@ -144,11 +144,14 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception {
-        if (checkExpression(untyped.expression()).getType() instanceof BoolType
-                && checkStatement(untyped.ifBlock()).equals(checkStatement(untyped.elseBlock()))) {
+        ITypedExpression typedExpression = checkExpression(untyped.expression());
+        ITypedStatement typedIfBlock = checkStatement(untyped.ifBlock());
+        ITypedStatement typedElseBlock = checkStatement(untyped.elseBlock());
 
-            return new TypedIfElseStatement(checkExpression(untyped.expression()),
-                    (TypedBlock) checkStatement(untyped.ifBlock()), (TypedBlock) checkStatement(untyped.elseBlock()), checkStatement(untyped.ifBlock()).getType());
+        if (typedExpression.getType() instanceof BoolType
+                && typedIfBlock.getType().equals(typedElseBlock.getType())) {
+
+            return new TypedIfElseStatement(typedExpression, (TypedBlock) typedIfBlock, (TypedBlock) typedElseBlock, typedIfBlock.getType());
         }
         else{
             throw new Exception("");
@@ -163,8 +166,13 @@ public class SemantikCheckImpl implements SemantikCheck{
         return null;
     }
 
-    public TypedWhileStatement semantikCheck(WhileStatement untyped){
-        return null;
+    public TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception {
+        if (true) {
+            return null;
+        }
+        else{
+            throw new Exception("");
+        }
     }
 
 }
