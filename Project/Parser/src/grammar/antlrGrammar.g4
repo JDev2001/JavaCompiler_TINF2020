@@ -13,7 +13,6 @@ fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal ex
 constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 
 //Method things
-
 //Type
 type: 'int'|'char'|'boolean'| Identifier;
 methodType: 'void'|type;
