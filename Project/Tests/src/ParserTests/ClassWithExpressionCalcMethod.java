@@ -27,14 +27,14 @@ public class ClassWithExpressionCalcMethod
         String src = "class MyClass { public void A() { int x; x = 1+4 } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
-//        Assertions.assertEquals(syntaxTree,new Program(List.of(
-//                new Class("MyClass", new ArrayList<>(),List.of(
-//                        new Method(AccessModifiers.Public,"A",
-//                                new ArrayList<>(),
-//                                new VoidType(),
-//                                new Block(List.of(
-//                                        new VarDeclarationStatement("x", new IntType(),
-//                                                new AssignStatementExpression(null,null)))))),
-//                        new ArrayList<>()))));
+        Assertions.assertEquals(syntaxTree,new Program(List.of(
+                new Class("MyClass", new ArrayList<>(),List.of(
+                        new Method(AccessModifiers.Public,"A",
+                                new ArrayList<>(),
+                                new VoidType(),
+                                new Block(List.of(
+                                        new VarDeclarationStatement("x", new IntType(),
+                                                new AssignStatementExpression(null,null)))))),
+                        new ArrayList<>()))));
     }
 }
