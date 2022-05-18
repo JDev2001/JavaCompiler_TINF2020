@@ -4,7 +4,6 @@ import typedField.*;
 import typedMethod.*;
 import typedStatementExpression.*;
 import typedStatements.*;
-import typedTypes.*;
 
 import Common.*;
 import Common.Class;
@@ -17,9 +16,6 @@ import Types.*;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
-    public TypedAccessModifiers semantikCheck(AccessModifiers untyped){
-        return null;
-    }
 
     public TypedBlock semantikCheck(Block untyped){
         return null;
@@ -103,15 +99,20 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
 
-    public TypedIfElseStatement semantikCheck(IfElseStatement untyped){
+    public TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception {
 
-        if( true /*untyped.getCondition().semantikCheck() == boolean */){
-            // type
-            return null;
+        if(semantikCheck(untyped.condition()).equals(new BoolType())
+                && semantikCheck(untyped.ifBlock()).equals(semantikCheck(untyped.elseBlock()))){
+            //Type type = semantikCheck(untyped.ifBlock());
+            //return type;
+            return new TypedIfElseStatement(untyped, new IType() {
+                public String getName() {
+                    return "objectType";
+                }
+            });
         }
         else {
-            return null;
-            // error
+            throw new Exception("Error");
         }
     }
 
@@ -127,26 +128,24 @@ public class SemantikCheckImpl implements SemantikCheck{
         return null;
     }
 
-
-
-    public TypedBoolType semantikCheck(BoolType untyped){
-        return null;
+    public BoolType semantikCheck(BoolType untyped){
+        return new BoolType();
     }
 
-    public TypedCharType semantikCheck(CharType untyped){
-        return null;
+    public CharType semantikCheck(CharType untyped){
+        return new CharType();
     }
 
-    public TypedCustomType semantikCheck(CustomType untyped){
-        return null;
+    public CustomType semantikCheck(CustomType untyped){
+        return new CustomType("titel");
     }
 
-    public TypedIntType semantikCheck(IntType untyped){
-        return null;
+    public IntType semantikCheck(IntType untyped){
+        return new IntType();
     }
 
-    public TypedVoidType semantikCheck(VoidType untyped){
-        return null;
+    public VoidType semantikCheck(VoidType untyped){
+        return new VoidType();
     }
 
 }

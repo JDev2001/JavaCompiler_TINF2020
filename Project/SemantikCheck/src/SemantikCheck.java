@@ -12,10 +12,8 @@ import typedStatementExpression.*;
 import typedStatements.*;
 import Statements.*;
 import typedCommon.*;
-import typedTypes.*;
 
 public interface SemantikCheck {
-    TypedAccessModifiers semantikCheck(AccessModifiers untyped);
     TypedBlock semantikCheck(Block untyped);
     TypedClass semantikCheck(Class untyped);
     TypedProgram semantikCheck(Program untyped);
@@ -39,15 +37,15 @@ public interface SemantikCheck {
     TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped);
     TypedNewStatementExpression semantikCheck(NewStatementExpression untyped);
 
-    TypedIfElseStatement semantikCheck(IfElseStatement untyped);
+    TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception;
     TypedReturnStatement semantikCheck(ReturnStatement untyped);
     TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped);
     TypedWhileStatement semantikCheck(WhileStatement untyped);
 
-    TypedBoolType semantikCheck(BoolType untyped);
-    TypedCharType semantikCheck(CharType untyped);
-    TypedCustomType semantikCheck(CustomType untyped);
-    TypedIntType semantikCheck(IntType untyped);
-    TypedVoidType semantikCheck(VoidType untyped);
+    BoolType semantikCheck(BoolType untyped);
+    CharType semantikCheck(CharType untyped);
+    CustomType semantikCheck(CustomType untyped);
+    IntType semantikCheck(IntType untyped);
+    VoidType semantikCheck(VoidType untyped);
 }
 

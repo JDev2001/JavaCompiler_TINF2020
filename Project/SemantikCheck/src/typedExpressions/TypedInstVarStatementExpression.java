@@ -5,7 +5,7 @@ import Expressions.InstVarStatementExpression;
 import Types.IType;
 import typedStatementExpression.ITypedStatementExpression;
 
-public record TypedInstVarStatementExpression(InstVarStatementExpression unTypedInstVarStatementExpression, IType objectType) implements IExpression
+public record TypedInstVarStatementExpression(InstVarStatementExpression unTypedInstVarStatementExpression, IType objectType) implements ITypedExpression
 {
 
 
