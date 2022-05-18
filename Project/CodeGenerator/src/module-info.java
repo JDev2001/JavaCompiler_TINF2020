@@ -1,0 +1,3 @@
+module CodeGenerator {
+    exports BytecodeGenerator;
+}
