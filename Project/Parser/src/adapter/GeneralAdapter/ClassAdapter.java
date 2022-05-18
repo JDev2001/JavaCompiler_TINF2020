@@ -27,10 +27,9 @@ public class ClassAdapter {
 
         ctx.classBody().fieldDeclaration().forEach(fieldDeclarationContext -> fields.addAll(FieldAdapter.generate(fieldDeclarationContext)));
 
-
-        ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> constructor.add(MethodeAdapter.generate(methodDeclarationContext)));
+        //Differentiate constructor and normal methode
+        ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> constructor.add(MethodeAdapter.generateConstructor(ctx.Identifier().getText(), methodDeclarationContext)));
         ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> methods.add(MethodeAdapter.generate(methodDeclarationContext)));
-        //Hier unterscheiden in Consturctur oder normale Methode
 
         return new Class(ctx.Identifier().getText(), constructor, methods, fields);
     }
