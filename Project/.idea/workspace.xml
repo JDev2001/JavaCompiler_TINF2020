@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Fixed Tests">
-      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added LocalOrFieldVar">
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/SimpleIfElse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,14 +55,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/Tests/junit-jupiter-5.8.2.jar",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/Tests/junit-jupiter-5.8.2.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -74,24 +78,10 @@
       <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParserTests in Tests">
+  <component name="RunManager" selected="JUnit.ClassWithExpressionCalcMethod">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CodeGenerator" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value=".\Ressources\EmptyClass.java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -111,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassWithEmptyMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClassWithExpressionCalcMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <extension name="coverage">
         <pattern>
@@ -120,7 +110,22 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithEmptyMethod" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithExpressionCalcMethod" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassWithExpressionCalcMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithExpressionCalcMethod" />
       <option name="METHOD_NAME" value="Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -142,19 +147,19 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
+      <item itemvalue="JUnit.ClassWithExpressionCalcMethod" />
+      <item itemvalue="JUnit.ClassWithExpressionCalcMethod.Test" />
       <item itemvalue="JUnit.ParserTests in Tests" />
-      <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
       <item itemvalue="JUnit.ClassWithAttributes" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClassWithExpressionCalcMethod" />
+        <item itemvalue="JUnit.ClassWithExpressionCalcMethod.Test" />
         <item itemvalue="JUnit.ParserTests in Tests" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ClassWithAttributes" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -261,7 +266,28 @@
       <option name="project" value="LOCAL" />
       <updated>1652864880560</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary=".">
+      <created>1652866293676</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866293676</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".">
+      <created>1652866437495</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866437495</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added LocalOrFieldVar">
+      <created>1652866561548</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866561548</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,22 +319,11 @@
     <MESSAGE value="Added constructors to class" />
     <MESSAGE value="standard constructor" />
     <MESSAGE value="Fixed Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Tests" />
+    <MESSAGE value="." />
+    <MESSAGE value="Added LocalOrFieldVar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added LocalOrFieldVar" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java</url>
-          <line>24</line>
-          <properties class="ParserTests.ClassWithExpressionCalcMethod" method="Test">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />

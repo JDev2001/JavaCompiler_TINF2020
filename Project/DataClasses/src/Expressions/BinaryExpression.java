@@ -7,7 +7,7 @@ import Statements.IStatement;
 /**
  * expression + expression
  */
-public record BinaryExpression(IExpression a, IExpression b, String operator) implements IStatement
+public record BinaryExpression(IExpression a, IExpression b, String operator) implements IExpression
 {
 
 }
