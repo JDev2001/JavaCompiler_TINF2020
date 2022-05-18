@@ -1,3 +1,5 @@
+package BytecodeGenerator;
+
 import Common.AccessModifiers;
 import Common.Class;
 import Common.Program;
@@ -30,7 +32,7 @@ public class BytecodeGenerator {
     }
 
     public void genCode() {
-        var classList = aProgram.getClasses();
+        var classList = aProgram.classes();
         for (Class pClass : classList) {
             generateClassCode(pClass);
         }
@@ -49,7 +51,7 @@ public class BytecodeGenerator {
         generateFieldCode(pClass.fields(), fieldNames);
 
         //visit Constructors
-        generateConstructors(cw, pClass.constructors());
+        generateConstructors(cw, pClass.constructor());
 
         //visit Methods next
 
