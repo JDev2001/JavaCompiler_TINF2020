@@ -7,6 +7,6 @@ public class VarDeclarationAdapter {
 
     public static IStatement generate(antlrGrammarParser.VarDeclarationContext varDeclaration) {
 
-
+        return null;
     }
 }

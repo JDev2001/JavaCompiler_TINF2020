@@ -2,8 +2,10 @@ package Statements;
 
 import Common.Block;
 import Expressions.BinaryExpression;
+import Expressions.IExpression;
+import StatementExpression.IStatementExpression;
 
-public record  WhileStatement(BinaryExpression condition, Block block) implements IStatement
+public record  WhileStatement(IExpression expression, Block block) implements IStatement
 {
 
 }

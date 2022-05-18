@@ -29,9 +29,10 @@ statement: block | varDeclaration Semicolon | ifelse | jWhile | jReturn Semicolo
 varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
 
 //something with if
-ifelse: jIf jElseIf* jElse?;
+//ifelse: jIf jElseIf* jElse?;
+ifelse: jIf jElse?;
 jIf: If LBracket expression RBracket block;
-jElseIf: Else If LBracket expression RBracket block;
+//jElseIf: Else If LBracket expression RBracket block; -> if else( ){ }
 jElse: Else block;
 
 //localVars

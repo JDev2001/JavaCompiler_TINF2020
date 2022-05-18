@@ -1,39 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment=".">
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammar.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammar.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarBaseListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarLexer.interp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarLexer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarLexer.tokens" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarListener.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarParser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/gen/grammar/antlrGrammarVisitor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/IfElseAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/ReturnAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/VarDeclarationAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/WhileAdapter.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="StatementParser">
+      <change afterPath="$PROJECT_DIR$/Parser/src/adapter/Expressions/ExpressionAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Statements/StatementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/StatementAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Types/MethodeTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Types/MethodeTypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Types/VoidTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Types/VoidTypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammar.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/generated/antlrGrammarVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Statements/WhileStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/StatementExpression/StatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Statements/IfElseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/IfElseAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Statements/ReturnAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/ReturnAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Statements/VarDeclarationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/VarDeclarationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/Statements/WhileAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/Statements/WhileAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -277,7 +253,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652874287460</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="StatementParser">
+      <created>1652876294300</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652876294300</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -310,7 +293,8 @@
     <MESSAGE value="standard constructor" />
     <MESSAGE value="Added stack for variables and fields" />
     <MESSAGE value="." />
-    <option name="LAST_COMMIT_MESSAGE" value="." />
+    <MESSAGE value="StatementParser" />
+    <option name="LAST_COMMIT_MESSAGE" value="StatementParser" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
