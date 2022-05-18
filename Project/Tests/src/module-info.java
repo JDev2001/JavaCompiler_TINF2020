@@ -4,5 +4,6 @@ module Tests {
     requires Parser;
     requires org.testng;
     requires org.junit.jupiter.api;
+    requires CodeGenerator;
     exports  ParserTests;
 }
