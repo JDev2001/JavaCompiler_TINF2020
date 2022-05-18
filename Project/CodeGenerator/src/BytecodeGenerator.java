@@ -2,7 +2,7 @@ import Common.AccessModifiers;
 import Common.Class;
 import Common.Program;
 import Field.Field;
-import Method.Method;
+import Method.*;
 import Types.*;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
@@ -12,6 +12,8 @@ import typedExpressions.*;
 import typedStatements.*;
 import typedStatementExpression.*;
 
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 
 import static Common.AccessModifiers.*;
@@ -37,13 +39,14 @@ public class BytecodeGenerator {
     private byte[] generateClassCode(Class pClass) {
         //Initiate class
         cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
+        HashMap<String, Integer> fieldNames = new HashMap<String, Integer>();
         MethodVisitor methodVisitor;
         FieldVisitor fieldVisitor;
         //V18 for Java Version
         cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
 
         //visit Fields first
-        generateFieldCode(pClass.fields());
+        generateFieldCode(pClass.fields(), fieldNames);
 
         //visit Constructors
         generateConstructors(cw, pClass.constructors());
@@ -56,9 +59,10 @@ public class BytecodeGenerator {
         return classBytecode;
     }
 
-    private void generateFieldCode(List<Field> pField) {
+    private void generateFieldCode(List<Field> pField, HashMap<String, Integer> fieldNames) {
         for (Field field : pField) {
             int accessmod = -1;
+            fieldNames.put(field.name(), fieldNames.size()+1);
             String descriptor;
             // Extract access modifier
             switch (field.accessModifiers()) {
@@ -99,20 +103,34 @@ public class BytecodeGenerator {
     private void generateConstructors(ClassWriter cw, List<Method> pConstructors) {
         if (pConstructors.isEmpty()) {
             //No constructors means standard constructor
-            methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
-            methodVisitor.visitCode();
-            methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
-            methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
-            methodVisitor.visitInsn(Opcodes.RETURN);
-            methodVisitor.visitMaxs(0, 0);
-            methodVisitor.visitEnd();
+            generateStandardConstructor(cw);
         } else {
             //TODO
             for (Method pMethod : pConstructors) {
-//                methodVisitor = cw.visitMethod();
-//                methodVisitor.visitMaxs(0,0);
+                HashMap<String, Integer> variables = addParameters(pMethod.parameters());
             }
         }
+    }
+
+    private void generateStandardConstructor(ClassWriter cw) {
+        methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
+        methodVisitor.visitCode();
+        methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
+        methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
+
+        //Initialize fields
+
+        methodVisitor.visitInsn(Opcodes.RETURN);
+        methodVisitor.visitMaxs(0, 0);
+        methodVisitor.visitEnd();
+    }
+
+    private HashMap<String, Integer> addParameters(List<MethodParameter> methodParameters) {
+        HashMap<String,Integer> parameters = new HashMap<String, Integer>();
+        for (var parameter : methodParameters) {
+            parameters.put(parameter.identifier(), parameters.size()+1);
+        }
+        return parameters;
     }
 
     private void generateMethodCode(Method pMethod, ClassWriter cw) {
