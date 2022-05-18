@@ -1,24 +1,22 @@
 package BytecodeGenerator;
 
-import Common.AccessModifiers;
 import Common.Class;
 import Common.Program;
 import Field.Field;
-import Method.*;
+import Method.Method;
+import Method.MethodParameter;
 import Types.*;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
 import org.objectweb.asm.Opcodes;
 import typedExpressions.*;
-import typedStatements.*;
 import typedStatementExpression.*;
+import typedStatements.*;
 
-import java.util.Collection;
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import static Common.AccessModifiers.*;
 
 public class BytecodeGenerator {
     private static Program aProgram;
@@ -33,22 +31,22 @@ public class BytecodeGenerator {
 
     public void genCode() {
         var classList = aProgram.classes();
+        List<byte[]> allClasses = new ArrayList<>();
         for (Class pClass : classList) {
-            generateClassCode(pClass);
+            allClasses.add(generateClassCode(pClass));
         }
     }
 
     private byte[] generateClassCode(Class pClass) {
         //Initiate class
         cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
-        HashMap<String, Integer> fieldNames = new HashMap<String, Integer>();
         MethodVisitor methodVisitor;
         FieldVisitor fieldVisitor;
         //V18 for Java Version
         cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
 
         //visit Fields first
-        generateFieldCode(pClass.fields(), fieldNames);
+        generateFieldCode(pClass.fields());
 
         //visit Constructors
         generateConstructors(cw, pClass.constructor());
@@ -61,13 +59,12 @@ public class BytecodeGenerator {
         return classBytecode;
     }
 
-    private void generateFieldCode(List<Field> pField, HashMap<String, Integer> fieldNames) {
+    private void generateFieldCode(List<Field> pField) {
         for (Field field : pField) {
             int accessmod = -1;
-            fieldNames.put(field.name(), fieldNames.size()+1);
             String descriptor;
             // Extract access modifier
-            switch (field.accessModifiers()) {
+            switch (field.accessModifier()) {
                 case Public:
                     accessmod = Opcodes.ACC_PUBLIC;
                     break;
@@ -81,21 +78,7 @@ public class BytecodeGenerator {
                     throw new IllegalStateException("Unexpected value: " + field.type());
             }
             // extract field type
-            switch (field.type()) {
-                case BoolType type -> {
-                    descriptor = "B";
-                }
-                case IntType type -> {
-                    descriptor = "I";
-                }
-                case CharType type -> {
-                    descriptor = "C";
-                }
-                case CustomType type -> {
-                    descriptor = "L" + type.getName();
-                }
-                default -> throw new IllegalStateException("Unexpected value: " + field.type());
-            }
+            descriptor = generateTypeString(field.type());
 
             fieldVisitor = cw.visitField(accessmod, field.name(), descriptor, null, null);
             fieldVisitor.visitEnd();
@@ -109,10 +92,43 @@ public class BytecodeGenerator {
         } else {
             //TODO
             for (Method pMethod : pConstructors) {
-                HashMap<String, Integer> variables = addParameters(pMethod.parameters());
+                HashMap<String, Integer> locals = addParameters(pMethod.parameters());
+                generateDescriptor(pMethod.parameters(), new VoidType());
             }
         }
     }
+
+    private String generateDescriptor(List<MethodParameter> parameters, IMethodType returnType) {
+        String descriptor = "(";
+        for(var parameter : parameters) {
+            descriptor = descriptor + generateTypeString(parameter.type());
+            }
+        descriptor = descriptor + ")" + generateTypeString(returnType);
+        return descriptor;
+    }
+
+    private String generateTypeString(IMethodType returnType) {
+    String typestring;
+        switch (returnType) {
+            case BoolType type -> {
+                typestring = "B";
+            }
+            case IntType type -> {
+                typestring = "I";
+            }
+            case CharType type -> {
+                typestring = "C";
+            }
+            case CustomType type -> {
+                typestring = "L";
+            }
+            case VoidType type -> {
+                typestring = "V";
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + returnType);
+        }
+        return typestring;
+}
 
     private void generateStandardConstructor(ClassWriter cw) {
         methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
@@ -160,9 +176,6 @@ public class BytecodeGenerator {
     private void generateExpression(ITypedExpression pExpression) {
         switch (pExpression) {
             case TypedBinaryExpression expression -> {
-                System.out.println(expression);
-            }
-            case TypedCompareExpression expression -> {
                 System.out.println(expression);
             }
             case TypedConstExpression expression -> {
