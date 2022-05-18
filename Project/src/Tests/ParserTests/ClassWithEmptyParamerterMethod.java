@@ -1,31 +1,19 @@
 package Tests.ParserTests;
 
 
-import DataClasses.Common.Program;
-import DataClasses.Expressions.InstVarStatementExpression;
-import DataClasses.Expressions.ThisExpression;
-import DataClasses.Field.Field;
-import DataClasses.Method.Method;
-import DataClasses.Method.MethodParameter;
-import DataClasses.Statements.ReturnStatement;
-import DataClasses.Types.BoolType;
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Method.MethodParameter;
 import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
-import DataClasses.Common.AccessModifiers;
-import DataClasses.Common.Block;
-import DataClasses.Common.Program;
-import DataClasses.Expressions.ConstExpression;
-import DataClasses.Expressions.LocalOrFieldVar;
-import DataClasses.StatementExpression.AssignStatementExpression;
-import DataClasses.Statements.VarDeclarationStatement;
-import DataClasses.Types.IntType;
-import DataClasses.Types.VoidType;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
-import org.antlr.v4.runtime.CharStreams;
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Block;
+import Parser.DataClasses.Types.IntType;
+import Parser.DataClasses.Types.VoidType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import DataClasses.Common.Class;
+import Parser.DataClasses.Common.Class;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

@@ -1,6 +1,6 @@
 package Parser.adapter.FieldAdapter;
 
-import DataClasses.Field.Field;
+import Parser.DataClasses.Field.Field;
 import Parser.adapter.GeneralAdapter.AccessModifierAdapter;
 import Parser.adapter.Types.TypeAdapter;
 import Parser.generated.antlrGrammarParser;

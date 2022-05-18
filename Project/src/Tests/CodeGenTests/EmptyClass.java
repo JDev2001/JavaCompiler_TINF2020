@@ -2,7 +2,7 @@ package Tests.CodeGenTests;
 
 
 import CodeGenerator.BytecodeGenerator;
-import DataClasses.Common.Program;
+import Parser.DataClasses.Common.Program;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

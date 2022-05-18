@@ -1,7 +1,7 @@
 package Parser.adapter.Types;
 
-import DataClasses.Types.IMethodType;
-import DataClasses.Types.VoidType;
+import Parser.DataClasses.Types.IMethodType;
+import Parser.DataClasses.Types.VoidType;
 import Parser.generated.antlrGrammarParser;
 
 public class MethodeTypeAdapter {

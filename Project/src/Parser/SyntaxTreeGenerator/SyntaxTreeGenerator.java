@@ -4,7 +4,7 @@ package Parser.SyntaxTreeGenerator;
 
 import java.io.IOException;
 
-import DataClasses.Common.Program;
+import Parser.DataClasses.Common.Program;
 import Parser.adapter.GeneralAdapter.ProgramAdapter;
 import Parser.generated.antlrGrammarLexer;
 import Parser.generated.antlrGrammarParser;

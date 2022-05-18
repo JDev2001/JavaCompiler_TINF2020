@@ -1,32 +1,23 @@
 package Tests.ParserTests;
 
 
-import DataClasses.Common.Program;
-import DataClasses.Expressions.*;
-import DataClasses.Field.Field;
-import DataClasses.Method.Method;
-import DataClasses.Statements.IfElseStatement;
-import DataClasses.Statements.ReturnStatement;
-import DataClasses.Types.BoolType;
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.BinaryExpression;
+import Parser.DataClasses.Expressions.ConstExpression;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Statements.IfElseStatement;
 import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
-import DataClasses.Common.AccessModifiers;
-import DataClasses.Common.Block;
-import DataClasses.Common.Program;
-import DataClasses.StatementExpression.AssignStatementExpression;
-import DataClasses.Statements.VarDeclarationStatement;
-import DataClasses.Types.IntType;
-import DataClasses.Types.VoidType;
-import DataClasses.Common.Class;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
-import org.antlr.v4.runtime.CharStreams;
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Block;
+import Parser.DataClasses.Types.VoidType;
+import Parser.DataClasses.Common.Class;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 public class IfElse

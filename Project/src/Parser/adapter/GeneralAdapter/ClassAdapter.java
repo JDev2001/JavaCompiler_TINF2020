@@ -1,8 +1,8 @@
 package Parser.adapter.GeneralAdapter;
 
-import DataClasses.Common.Class;
-import DataClasses.Field.Field;
-import DataClasses.Method.Method;
+import Parser.DataClasses.Common.Class;
+import Parser.DataClasses.Field.Field;
+import Parser.DataClasses.Method.Method;
 import Parser.adapter.FieldAdapter.FieldAdapter;
 import Parser.adapter.MethodAdapter.MethodeAdapter;
 import Parser.generated.antlrGrammarParser;

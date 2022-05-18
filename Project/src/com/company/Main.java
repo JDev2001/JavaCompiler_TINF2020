@@ -1,6 +1,6 @@
 package com.company;
 
-import DataClasses.Common.Program;
+import Parser.DataClasses.Common.Program;
 import com.company.common.Factory.Factory;
 import org.antlr.v4.runtime.CharStreams;
 

@@ -1,6 +1,6 @@
 package Parser.adapter.Types;
 
-import DataClasses.Types.*;
+import Parser.DataClasses.Types.*;
 import Parser.generated.antlrGrammarParser;
 
 public class TypeAdapter {

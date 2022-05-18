@@ -1,6 +1,6 @@
 package Parser.adapter.Statements;
 
-import DataClasses.Statements.IStatement;
+import Parser.DataClasses.Statements.IStatement;
 import Parser.adapter.GeneralAdapter.BlockAdapter;
 import Parser.adapter.StatementExpression.StatementExpressionAdapter;
 import Parser.generated.antlrGrammarParser;

@@ -1,8 +1,8 @@
 package Parser.adapter.GeneralAdapter;
 
-import DataClasses.Common.Block;
+import Parser.DataClasses.Common.Block;
 import Parser.adapter.Statements.StatementAdapter;
-import DataClasses.Statements.IStatement;
+import Parser.DataClasses.Statements.IStatement;
 import Parser.generated.antlrGrammarParser;
 
 import java.util.ArrayList;

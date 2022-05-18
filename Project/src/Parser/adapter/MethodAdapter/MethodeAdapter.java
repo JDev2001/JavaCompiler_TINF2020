@@ -1,9 +1,9 @@
 package Parser.adapter.MethodAdapter;
 
-import DataClasses.Method.Method;
-import DataClasses.Method.MethodParameter;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Method.MethodParameter;
 import Parser.adapter.GeneralAdapter.AccessModifierAdapter;
-import DataClasses.Types.VoidType;
+import Parser.DataClasses.Types.VoidType;
 import Parser.adapter.GeneralAdapter.BlockAdapter;
 import Parser.adapter.Types.MethodeTypeAdapter;
 import Parser.adapter.Types.TypeAdapter;

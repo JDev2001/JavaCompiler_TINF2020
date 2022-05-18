@@ -211,7 +211,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in Project">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="com.company.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
       <extension name="coverage">
@@ -264,7 +264,7 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.com.company.Main" />
       <item itemvalue="JUnit.All in Project" />
       <item itemvalue="JUnit.All in Tests (1)" />
       <item itemvalue="JUnit.EmptyClass" />
@@ -273,7 +273,7 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.com.company.Main" />
         <item itemvalue="JUnit.All in Tests (2)" />
         <item itemvalue="JUnit.EmptyClass" />
         <item itemvalue="JUnit.All in Tests (1)" />

@@ -1,6 +1,6 @@
 package Parser.adapter.Expressions;
 
-import DataClasses.Expressions.IExpression;
+import Parser.DataClasses.Expressions.IExpression;
 import Parser.generated.antlrGrammarParser;
 
 public class ExpressionAdapter {

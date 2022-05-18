@@ -1,6 +1,6 @@
 package Parser.SyntaxTreeGenerator;
 
-import DataClasses.Common.Program;
+import Parser.DataClasses.Common.Program;
 import org.antlr.v4.runtime.CharStream;
 
 import java.io.IOException;

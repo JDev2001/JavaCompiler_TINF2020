@@ -1,24 +1,24 @@
 package SemanticCheck;
 
-import DataClasses.Common.Block;
-import DataClasses.Common.Program;
-import DataClasses.Expressions.*;
-import DataClasses.Method.Method;
-import DataClasses.StatementExpression.AssignStatementExpression;
-import DataClasses.StatementExpression.IStatementExpression;
-import DataClasses.StatementExpression.MethodCallStatementExpression;
-import DataClasses.StatementExpression.NewStatementExpression;
-import DataClasses.Statements.*;
-import DataClasses.Types.BoolType;
-import TypedDataClasses.typedCommon.TypedBlock;
-import TypedDataClasses.typedCommon.TypedClass;
-import TypedDataClasses.typedExpressions.*;
-import TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
-import TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
-import TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
-import TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
-import TypedDataClasses.typedStatements.*;
-import DataClasses.Common.Class;
+import Parser.DataClasses.Common.Block;
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.*;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.StatementExpression.AssignStatementExpression;
+import Parser.DataClasses.StatementExpression.IStatementExpression;
+import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
+import Parser.DataClasses.StatementExpression.NewStatementExpression;
+import Parser.DataClasses.Statements.*;
+import Parser.DataClasses.Types.BoolType;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedExpressions.*;
+import SemanticCheck.TypedDataClasses.typedStatements.*;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
+import Parser.DataClasses.Common.Class;
 public class SemantikCheckImpl implements SemantikCheck{
 
     public void semantikCheckStart(Program semantikCheckProgram) throws Exception {

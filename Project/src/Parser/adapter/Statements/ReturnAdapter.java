@@ -1,6 +1,6 @@
 package Parser.adapter.Statements;
 
-import DataClasses.Statements.IStatement;
+import Parser.DataClasses.Statements.IStatement;
 import Parser.generated.antlrGrammarParser;
 
 public class ReturnAdapter {

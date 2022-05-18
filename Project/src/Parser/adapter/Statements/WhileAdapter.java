@@ -1,8 +1,8 @@
 package Parser.adapter.Statements;
 
 import Parser.adapter.GeneralAdapter.BlockAdapter;
-import DataClasses.Statements.IStatement;
-import DataClasses.Statements.WhileStatement;
+import Parser.DataClasses.Statements.IStatement;
+import Parser.DataClasses.Statements.WhileStatement;
 import Parser.adapter.Expressions.ExpressionAdapter;
 import Parser.generated.antlrGrammarParser;
 

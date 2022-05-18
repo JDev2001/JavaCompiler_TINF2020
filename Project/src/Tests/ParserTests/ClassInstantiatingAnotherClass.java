@@ -1,20 +1,20 @@
 package Tests.ParserTests;
 
 
-import DataClasses.Common.AccessModifiers;
-import DataClasses.Common.Block;
-import DataClasses.Common.Program;
-import DataClasses.Expressions.ThisExpression;
-import DataClasses.Method.Method;
-import DataClasses.StatementExpression.MethodCallStatementExpression;
-import DataClasses.StatementExpression.NewStatementExpression;
-import DataClasses.Types.CustomType;
-import DataClasses.Types.VoidType;
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Block;
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.ThisExpression;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
+import Parser.DataClasses.StatementExpression.NewStatementExpression;
+import Parser.DataClasses.Types.CustomType;
+import Parser.DataClasses.Types.VoidType;
 import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import DataClasses.Common.Class;
+import Parser.DataClasses.Common.Class;
 
 import java.io.IOException;
 import java.util.ArrayList;

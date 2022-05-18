@@ -1,6 +1,6 @@
 package Parser.adapter.GeneralAdapter;
 
-import DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.AccessModifiers;
 import org.antlr.v4.runtime.tree.TerminalNode;
 
 public class AccessModifierAdapter {

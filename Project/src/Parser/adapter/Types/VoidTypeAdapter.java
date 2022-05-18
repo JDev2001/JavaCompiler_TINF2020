@@ -1,6 +1,6 @@
 package Parser.adapter.Types;
 
-import DataClasses.Types.VoidType;
+import Parser.DataClasses.Types.VoidType;
 
 public class VoidTypeAdapter {
 
