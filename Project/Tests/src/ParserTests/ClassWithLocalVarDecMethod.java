@@ -26,7 +26,7 @@ public class ClassWithLocalVarDecMethod
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", List.of(
+                new Class("MyClass", new ArrayList<>(),List.of(
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
                                 new VoidType(),

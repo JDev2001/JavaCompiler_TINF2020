@@ -12,8 +12,7 @@ methodDeclaration: AccessModifier? methodType Identifier LBracket nMethodParamet
 fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal expression)? Semicolon;
 constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 
-//Method
-
+//Method things
 //Type
 type: 'int'|'char'|'boolean'| Identifier;
 methodType: 'void'|type;
@@ -23,32 +22,46 @@ methodParameter: type Identifier;
 //Method Block
 block: CurlyLBracket (statement)* CurlyRBracket;
 
+//Statements
+statement: block | localVarDeclaration Semicolon | ifelse | jWhile | jReturn Semicolon | statementExpressions Semicolon;
 
-
-nArguments: expression? | expression (Comma expression)* | instVar;
-expression:  basicexpressions | binary;
-basicexpressions:  baseType | instVar | Identifier | statementExpressions | unary | LBracket expression RBracket ;
-instVar:  This Dot Identifier|(This Dot)? (Identifier Dot)+ Identifier;
-statementExpressions: assign | jNew | methodCall;
-assign: (instVar | Identifier) (Equal|PlusEqual|MinusEqual) expression;
+//localVar
 localVarDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
-jNew: 'new' Identifier LBracket nArguments RBracket;
-methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)*
-(Identifier LBracket nArguments RBracket);
-methodCallPrefix: (instVar|Identifier Dot);
-statement: ifelse | localVarDeclaration Semicolon | jReturn Semicolon | jWhile | block
-    | statementExpressions Semicolon;
+
+//something with if
 ifelse: jIf jElseIf* jElse?;
 jIf: If LBracket expression RBracket block;
 jElseIf: Else If LBracket expression RBracket block;
 jElse: Else block;
+
+//localVars
 jWhile: 'while' LBracket expression RBracket block;
 jReturn: 'return' expression;
-unary:  NotOperator expression;
-binary: basicexpressions (operators basicexpressions)+;
-baseType: JBoolean | JNull | This | WS | JCharacter | JInteger | Super; //JString = WS ??? Vorher stand bei ws JString
 
-operators: LogicalOperator|Comperator|AddSubOperator|PointOperator;
+//Statements
+statementExpressions: assign | methodCall | jNew ;
+
+//Statement Expressions
+assign: (instVar | Identifier) (Equal|PlusEqual|MinusEqual) expression;
+methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
+jNew: 'new' Identifier LBracket nArguments RBracket;
+
+//Method Call
+methodCallPrefix: (instVar|Identifier Dot);
+nArguments: expression? | expression (Comma expression)* | instVar;
+
+//In all other
+expression:  basicexpressions | binary;
+
+//Expressions
+binary: basicexpressions (operators basicexpressions)+;
+basicexpressions:  baseType | instVar | Identifier | statementExpressions | unary | LBracket expression RBracket ;
+instVar:  (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier); //Hier geändert -> passt????
+
+//Base
+unary:  NotOperator expression;
+baseType: JBoolean | JNull | This | WS | JCharacter | JInteger | Super; //JString = WS ??? Vorher stand bei ws JString
+operators: LogicalOperator|Comperator|AddSubOperator|PointSlashOperator;
 
 AccessModifier: 'public' | 'protected' | 'private';
 JBoolean: 'true'|'false';
@@ -62,8 +75,8 @@ PlusEqual: '+=';
 MinusEqual: '-=';
 Comperator: '=='|'!='|'>='|'<='|'>'|'<';
 NotOperator: '!';
-OpBeforeOrAfterIdentifier: '++'|'--';
-PointOperator: '*'|'/';
+OpIdentifier: '++'|'--';
+PointSlashOperator: '*'|'/';
 AddSubOperator: '+'|'-'|'%';
 LogicalOperator: '&&'|'||';
 LBracket:'(';

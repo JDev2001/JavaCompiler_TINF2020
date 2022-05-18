@@ -26,7 +26,7 @@ public class ClassWithSimpleReturnMethod
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", List.of(
+                new Class("MyClass",new ArrayList<>(), List.of(
                 new Method(AccessModifiers.Public,"A", new ArrayList<>(),
                         new BoolType(),
                         new Block(List.of(new ReturnStatement(new ConstExpression(false)))))),

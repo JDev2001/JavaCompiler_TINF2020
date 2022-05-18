@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="standard constructor">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added LocalOrFieldVar">
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/src/ParserTests/SimpleIfElse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/DataClasses/src/Expressions/BinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/src/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,16 +33,16 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataClasses/src/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,17 +55,14 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="Downloaded.Files.Path.Enabled" value="false" />
-    <property name="Repository.Attach.Annotations" value="false" />
-    <property name="Repository.Attach.JavaDocs" value="false" />
-    <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.language.Kotlin" />
-  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/Tests/junit-jupiter-5.8.2.jar&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+  }
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -79,24 +78,10 @@
       <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main (1)">
+  <component name="RunManager" selected="JUnit.ClassWithExpressionCalcMethod">
     <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="CodeGenerator" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value=".\Ressources\EmptyClass.java" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,7 +101,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassWithEmptyMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClassWithExpressionCalcMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <extension name="coverage">
         <pattern>
@@ -125,13 +110,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithEmptyMethod" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithExpressionCalcMethod" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassWithEmptyMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClassWithExpressionCalcMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Tests" />
       <extension name="coverage">
         <pattern>
@@ -140,27 +125,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithEmptyMethod" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithExpressionCalcMethod" />
       <option name="METHOD_NAME" value="Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ParserTests in Tests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Tests" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
+      <item itemvalue="JUnit.ClassWithExpressionCalcMethod" />
+      <item itemvalue="JUnit.ClassWithExpressionCalcMethod.Test" />
+      <item itemvalue="JUnit.ParserTests in Tests" />
       <item itemvalue="JUnit.ClassWithAttributes" />
-      <item itemvalue="JUnit.ClassWithEmptyMethod" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ClassWithExpressionCalcMethod" />
+        <item itemvalue="JUnit.ClassWithExpressionCalcMethod.Test" />
+        <item itemvalue="JUnit.ParserTests in Tests" />
         <item itemvalue="Application.Main (1)" />
         <item itemvalue="JUnit.ClassWithAttributes" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.ClassWithEmptyMethod.Test" />
-        <item itemvalue="JUnit.ClassWithEmptyMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -253,7 +252,42 @@
       <option name="project" value="LOCAL" />
       <updated>1652782503786</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Fixed Tests">
+      <created>1652864315746</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1652864315746</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Fixed Tests">
+      <created>1652864880560</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652864880560</updated>
+    </task>
+    <task id="LOCAL-00014" summary=".">
+      <created>1652866293676</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866293676</updated>
+    </task>
+    <task id="LOCAL-00015" summary=".">
+      <created>1652866437495</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866437495</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Added LocalOrFieldVar">
+      <created>1652866561548</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652866561548</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -284,7 +318,10 @@
     <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
     <MESSAGE value="Added constructors to class" />
     <MESSAGE value="standard constructor" />
-    <option name="LAST_COMMIT_MESSAGE" value="standard constructor" />
+    <MESSAGE value="Fixed Tests" />
+    <MESSAGE value="." />
+    <MESSAGE value="Added LocalOrFieldVar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added LocalOrFieldVar" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

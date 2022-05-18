@@ -1,9 +1,8 @@
 package Statements;
 
 import Common.Block;
-import Expressions.CompareExpression;
-
-import java.util.List;
+import Expressions.BinaryExpression;
+import Expressions.IExpression;
 
 /**
  * if(CompareExpression)
@@ -14,7 +13,9 @@ import java.util.List;
  * {
  *     ...
  * }
+ *
+ * a>b wird eine Binary Expression
  */
-public record IfElseStatement(CompareExpression condition, Block ifBlock, Block elseBlock) implements IStatement
+public record IfElseStatement(IExpression expression, Block ifBlock, Block elseBlock) implements IStatement
 {
 }

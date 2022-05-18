@@ -9,7 +9,7 @@ import SyntaxTreeGenerator.SyntaxTreeGenerator;
 import Types.VoidType;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
+import org.testng.annotations.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -30,6 +30,6 @@ public class ClassWithConstructor
                                 new ArrayList<>(),
                                 new VoidType(),
                                 new Block(new ArrayList<>()))),
-                        new ArrayList<>()))));
+                        new ArrayList<>(),new ArrayList<>()))));
     }
 }
