@@ -1,4 +1,4 @@
-package Tests.ParserTests;
+package ParserTests;
 
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Method.Method;
