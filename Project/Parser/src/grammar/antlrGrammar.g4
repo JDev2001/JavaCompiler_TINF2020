@@ -8,9 +8,9 @@ jClass: 'class' Identifier classBody;
 classBody: CurlyLBracket (methodDeclaration|fieldDeclaration|constructor)* CurlyRBracket;
 
 //Class objects
+constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 methodDeclaration: AccessModifier? methodType Identifier LBracket nMethodParameters RBracket block;
 fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal expression)? Semicolon;
-constructor: AccessModifier? Identifier LBracket nMethodParameters RBracket block;
 
 //Method things
 //Type

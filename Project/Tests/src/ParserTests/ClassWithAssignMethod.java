@@ -38,6 +38,6 @@ public class ClassWithAssignMethod
                                 new VoidType(),
                                 new Block(List.of(
                                         new VarDeclarationStatement("x", new IntType()),asign)))),
-                        new ArrayList<>())))));
+                        new ArrayList<>()))));
     }
 }
