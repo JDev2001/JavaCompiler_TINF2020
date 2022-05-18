@@ -22,13 +22,17 @@ public class ClassAdapter {
     public static Class generate(antlrGrammarParser.JClassContext ctx) {
 
         List<Method> methods = new ArrayList<Method>();
+        List<Method> constructor = new ArrayList<Method>();
         List<Field> fields = new ArrayList<Field>();
 
-        ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> methods.add(MethodeAdapter.generate(methodDeclarationContext)));
         ctx.classBody().fieldDeclaration().forEach(fieldDeclarationContext -> fields.addAll(FieldAdapter.generate(fieldDeclarationContext)));
 
 
-        return new Class(ctx.Identifier().getText(), methods, fields);
+        ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> constructor.add(MethodeAdapter.generate(methodDeclarationContext)));
+        ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> methods.add(MethodeAdapter.generate(methodDeclarationContext)));
+        //Hier unterscheiden in Consturctur oder normale Methode
+
+        return new Class(ctx.Identifier().getText(), constructor, methods, fields);
     }
 
 
