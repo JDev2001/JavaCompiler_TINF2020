@@ -42,7 +42,7 @@ public class MethodeAdapter {
 
     public Method generateConstructor(antlrGrammarParser.MethodDeclarationContext ctx){
 
-
+        return null;
 
     }
 

@@ -4,7 +4,8 @@ import Common.Program;
 
 import SyntaxTreeGenerator.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
 
 
