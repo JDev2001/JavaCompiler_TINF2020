@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Program to Record and Parser">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Gitgnore die zweite">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -254,7 +252,35 @@
       <option name="project" value="LOCAL" />
       <updated>1652864121580</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Grammar">
+      <created>1652865353454</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1652865353454</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Gitgnore">
+      <created>1652865541429</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1652865541429</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Gitgnore die zweite">
+      <created>1652865779279</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1652865779279</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Gitgnore die zweite">
+      <created>1652865892699</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1652865892699</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -286,7 +312,10 @@
     <MESSAGE value="Added constructors to class" />
     <MESSAGE value="standard constructor" />
     <MESSAGE value="Program to Record and Parser" />
-    <option name="LAST_COMMIT_MESSAGE" value="Program to Record and Parser" />
+    <MESSAGE value="Grammar" />
+    <MESSAGE value="Gitgnore" />
+    <MESSAGE value="Gitgnore die zweite" />
+    <option name="LAST_COMMIT_MESSAGE" value="Gitgnore die zweite" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
