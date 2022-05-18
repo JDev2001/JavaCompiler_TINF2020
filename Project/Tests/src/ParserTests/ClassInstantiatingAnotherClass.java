@@ -33,10 +33,10 @@ public class ClassInstantiatingAnotherClass
         Assertions.assertEquals(syntaxTree,new Program(List.of(
                 new Class("MyClass", List.of(
                         new Method(AccessModifiers.Public,"MyClass",
-                                new ArrayList<>(),
+                                new ArrayList<>(),new ArrayList<>()
                                 new VoidType(),
                                 new Block(List.of(constructorCall)))), new ArrayList<>()),
-                new Class("A",new ArrayList<>(),new ArrayList<>())))
+                new Class("A",new ArrayList<>(),new ArrayList<>(),new ArrayList<>())))
         );
     }
 }

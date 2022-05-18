@@ -18,6 +18,6 @@ public class EmptyClass {
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         var emptyClass = syntaxTree.getClasses().get(0);
 
-        Assertions.assertEquals(emptyClass, new Class("Empty",new ArrayList<>(),new ArrayList<>()));
+        Assertions.assertEquals(emptyClass, new Class("Empty",new ArrayList<>(),new ArrayList<>(),new ArrayList<>()));
     }
 }
