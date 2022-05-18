@@ -23,10 +23,10 @@ methodParameter: type Identifier;
 block: CurlyLBracket (statement)* CurlyRBracket;
 
 //Statements
-statement: block | localVarDeclaration Semicolon | ifelse | jWhile | jReturn Semicolon | statementExpressions Semicolon;
+statement: block | varDeclaration Semicolon | ifelse | jWhile | jReturn Semicolon | statementExpressions Semicolon;
 
 //localVar
-localVarDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
+varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?;
 
 //something with if
 ifelse: jIf jElseIf* jElse?;

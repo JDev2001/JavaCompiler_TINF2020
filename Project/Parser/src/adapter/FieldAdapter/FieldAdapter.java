@@ -1,8 +1,6 @@
 package adapter.FieldAdapter;
 
-import Common.AccessModifiers;
 import Field.Field;
-import Types.BoolType;
 import adapter.GeneralAdapter.AccessModifierAdapter;
 import adapter.Types.TypeAdapter;
 import generated.antlrGrammarParser;

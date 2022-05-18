@@ -1,5 +1,5 @@
 // Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package generated;
+package grammar;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
