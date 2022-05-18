@@ -1,36 +1,29 @@
 import Common.*;
 import Common.Class;
 import Expressions.*;
-import Field.*;
-import Method.*;
 import StatementExpression.*;
-import Types.*;
 import typedExpressions.*;
-import typedField.*;
-import typedMethod.*;
 import typedStatementExpression.*;
 import typedStatements.*;
 import Statements.*;
 import typedCommon.*;
 
 public interface SemantikCheck {
+    void semantikCheckStart(Program program) throws Exception;
+    ITypedExpression checkExpression(IExpression expression) throws Exception;
+    ITypedStatement checkStatement(IStatement statement) throws Exception;
+    ITypedStatementExpression checkStatementExpression(IStatementExpression statementExpression) throws Exception;
+
     TypedBlock semantikCheck(Block untyped);
     TypedClass semantikCheck(Class untyped);
-    TypedProgram semantikCheck(Program untyped);
 
     TypedBinaryExpression semantikCheck(BinaryExpression untyped);
-    TypedCompareExpression semantikCheck(CompareExpression untyped);
     TypedConstExpression semantikCheck(ConstExpression untyped);
     TypedJNullExpression semantikCheck(JNullExpression untyped);
     TypedSuperExpression semantikCheck(SuperExpression untyped);
     TypedThisExpression semantikCheck(ThisExpression untyped);
     TypedTypeExpression semantikCheck(TypeExpression untyped);
     TypedUnaryExpression semantikCheck(UnaryExpression untyped);
-
-    TypedField semantikCheck(Field untyped);
-
-    TypedMethod semantikCheck(Method untyped);
-    TypedMethodParameter semantikCheck(MethodParameter untyped);
 
     TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped);
     TypedInstVarStatementExpression semantikCheck(InstVarStatementExpression untyped);
@@ -41,11 +34,5 @@ public interface SemantikCheck {
     TypedReturnStatement semantikCheck(ReturnStatement untyped);
     TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped);
     TypedWhileStatement semantikCheck(WhileStatement untyped);
-
-    BoolType semantikCheck(BoolType untyped);
-    CharType semantikCheck(CharType untyped);
-    CustomType semantikCheck(CustomType untyped);
-    IntType semantikCheck(IntType untyped);
-    VoidType semantikCheck(VoidType untyped);
 }
 

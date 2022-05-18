@@ -2,9 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added stack for variables and fields">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/CodeGenerator.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/CodeGenerator/src/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/SemantikCheck.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/SemantikCheckImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedCommon/TypedBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/ITypedExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/ITypedExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedBinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedCompareExpression.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedConstExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedConstExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedInstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedJNullExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedJNullExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedSuperExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedSuperExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedThisExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedThisExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedTypeExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedTypeExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedUnaryExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedExpressions/TypedUnaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedField/TypedField.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/ITypedStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/ITypedStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedAssignStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedAssignStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedMethodCallStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedMethodCallStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedNewStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatementExpression/TypedNewStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/ITypedStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/ITypedStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedIfElseStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedIfElseStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedReturnStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedReturnStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedVarDeclarationStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedVarDeclarationStatement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedWhileStatement.java" beforeDir="false" afterPath="$PROJECT_DIR$/SemantikCheck/src/typedStatements/TypedWhileStatement.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,15 +53,15 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/DataClasses/src/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Parser/src/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Parser/src/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/DataClasses/src/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -53,15 +74,9 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ignore.preview.features.used": "true",
-    "last_opened_file_path": "C:/Users/suuya/IdeaProjects/JavaCompiler_TINF2020/Project",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />

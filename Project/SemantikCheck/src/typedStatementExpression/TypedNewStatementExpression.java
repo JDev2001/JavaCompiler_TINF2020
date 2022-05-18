@@ -1,9 +1,13 @@
 package typedStatementExpression;
 
 import StatementExpression.*;
-import Types.IType;
+import Types.IMethodType;
 
-public record TypedNewStatementExpression(NewStatementExpression unTypedNewStatementExpression, IType objectType) implements ITypedStatementExpression {
+public record TypedNewStatementExpression(NewStatementExpression unTypedNewStatementExpression, IMethodType objectType) implements ITypedStatementExpression {
 
 
+    @Override
+    public IMethodType getType() {
+        return objectType;
+    }
 }

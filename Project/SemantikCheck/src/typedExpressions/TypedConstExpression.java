@@ -1,8 +1,12 @@
 package typedExpressions;
 
 import Expressions.*;
-import Types.IType;
+import Types.IMethodType;
 
-public record TypedConstExpression(ConstExpression unTypedConstExpression, IType objectType) implements ITypedExpression {
+public record TypedConstExpression(ConstExpression unTypedConstExpression, IMethodType objectType) implements ITypedExpression {
 
+    @Override
+    public IMethodType getType() {
+        return objectType;
+    }
 }
