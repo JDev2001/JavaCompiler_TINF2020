@@ -104,7 +104,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -113,7 +113,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -124,7 +124,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -133,7 +133,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -142,7 +142,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -151,7 +151,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -160,7 +160,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -169,7 +169,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -178,7 +178,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -189,7 +189,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -198,7 +198,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -207,7 +207,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -216,7 +216,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -232,7 +232,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return new TypedIfElseStatement(typedExpression, (TypedBlock) typedIfBlock, (TypedBlock) typedElseBlock, typedIfBlock.getType());
         }
         else{
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -241,7 +241,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
@@ -250,21 +250,20 @@ public class SemantikCheckImpl implements SemantikCheck{
             return null;
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
     public TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception {
-        ITypedExpression typedCondition = checkExpression(untyped.condition());
+        ITypedExpression typedExpression = checkExpression(untyped.expression());
         ITypedStatement typedBlock = checkStatement(untyped.block());
 
-        if (typedCondition.getType() instanceof BoolType
-         //       && typedBlock.getType()
-        ) {
-            return new TypedWhileStatement((TypedBinaryExpression) typedCondition, (TypedBlock) typedBlock, typedBlock.getType());
+        if (typedExpression.getType() instanceof BoolType
+                && typedBlock instanceof TypedBlock) {
+            return new TypedWhileStatement((TypedBinaryExpression) typedExpression, (TypedBlock) typedBlock, typedBlock.getType());
         }
         else {
-            throw new Exception("");
+            throw new Exception("Invalid type");
         }
     }
 
