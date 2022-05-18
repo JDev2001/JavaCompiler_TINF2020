@@ -8,11 +8,11 @@
 .idea/**/shelf
 
 # User-specific stuff
-Projekt/.idea/**/workspace.xml
-Projekt/.idea/**/tasks.xml
-Projekt/.idea/**/usage.statistics.xml
-Projekt/.idea/**/dictionaries
-Projekt/.idea/**/shelf
+Project/.idea/**/workspace.xml
+Project/.idea/**/tasks.xml
+Project/.idea/**/usage.statistics.xml
+Project/.idea/**/dictionaries
+Project/.idea/**/shelf
 
 # File-based project format
 *.iws
