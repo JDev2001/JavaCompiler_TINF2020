@@ -9,7 +9,7 @@ import Parser.DataClasses.StatementExpression.IStatementExpression;
 import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
 import Parser.DataClasses.StatementExpression.NewStatementExpression;
 import Parser.DataClasses.Statements.*;
-import Parser.DataClasses.Types.BoolType;
+import Parser.DataClasses.Types.*;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
@@ -19,6 +19,9 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatem
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import Parser.DataClasses.Common.Class;
+
+import java.util.List;
+
 public class SemantikCheckImpl implements SemantikCheck{
 
     public void semantikCheckStart(Program semantikCheckProgram) throws Exception {
@@ -135,12 +138,37 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedBinaryExpression semantikCheck(BinaryExpression untyped) throws Exception {
         ITypedExpression typedA = checkExpression(untyped.a());
         ITypedExpression typedB = checkExpression(untyped.b());
+        String operator = untyped.operator();
 
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
+        switch (operator){
+            case "AddSubOperator":
+            case "PointSlashOperator":
+                if(typedA.getType() instanceof IntType || typedA.getType() instanceof CharType
+                        && typedB.getType() instanceof IntType || typedB.getType() instanceof CharType){
+                    return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
+                }
+                else{
+                    throw new Exception("Invalid type");
+                }
+            case "LogicalOperator":
+                if(typedA.getType() instanceof BoolType && typedB.getType() instanceof BoolType){
+                    return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
+                }
+            case "PlusEqual":
+            case "MinusEqual":
+                if(typedA.getType() instanceof IntType || typedA.getType() instanceof CharType
+                        && typedB.getType() instanceof IntType || typedB.getType() instanceof CharType){
+                    return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType()); //TODO: BoolType
+                }
+                else{
+                    throw new Exception("Invalid type");
+                }
+            case "Equal":
+                if(typedA.getType() instanceof BoolType && typedB.getType() instanceof BoolType){
+                    return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType()); //TODO: BoolType
+                }
+            default: throw new Exception("Invalid type");
+
         }
     }
 
@@ -154,48 +182,41 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedJNullExpression semantikCheck(JNullExpression untyped) throws Exception {
-        if (true) {
             return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
     }
 
     public TypedSuperExpression semantikCheck(SuperExpression untyped) throws Exception {
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+        return null;
     }
 
     public TypedThisExpression semantikCheck(ThisExpression untyped) throws Exception {
-        if (true) {
             return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
     }
 
     public TypedTypeExpression semantikCheck(TypeExpression untyped) throws Exception {
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+        return null;
     }
 
     public TypedUnaryExpression semantikCheck(UnaryExpression untyped) throws Exception {
         ITypedExpression typedExpression = checkExpression(untyped.expression());
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
+        String operator = untyped.operator();
+        switch(operator){
+            case "NotOperator":
+                if(typedExpression.getType() instanceof BoolType){
+                    return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
+                }
+                else {
+                    throw new Exception("Invalid type");
+                }
+            case "AddSubOperator":
+            case "PointSlashOperator":
+                if(typedExpression.getType() instanceof CharType || typedExpression.getType() instanceof IntType){
+                    return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
+                }
+                else{
+                    throw new Exception("Invalid type");
+                }
+            default: throw new Exception("Invalid type");
         }
     }
 
@@ -204,12 +225,8 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped) throws Exception {
         ITypedExpression typedExpressionA = checkExpression(untyped.expressionA());
         ITypedExpression typedExpressionB = checkExpression(untyped.expressionB());
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+
+        return new TypedAssignStatementExpression(typedExpressionA, typedExpressionB, typedExpressionA.getType()); //TODO: void
     }
 
     public TypedInstVarStatementExpression semantikCheck(InstVarStatementExpression untyped) throws Exception {
@@ -223,24 +240,16 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped) throws Exception {
-        //ITypedExpression typedParameters = checkExpression(untyped.parameters());
+        //List<ITypedExpression> typedParameters = checkExpression(untyped.parameters());
         ITypedExpression typedTarget = checkExpression(untyped.target());
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+        //return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, typedParameters.getType());
+        return null;
     }
 
     public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped) throws Exception {
         ITypedStatementExpression typedConstructorCall = checkStatementExpression(untyped.constructorCall());
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+
+        return new TypedNewStatementExpression((TypedMethodCallStatementExpression) typedConstructorCall, untyped.type(), typedConstructorCall.getType()); //TODO: review
     }
 
 
@@ -261,21 +270,19 @@ public class SemantikCheckImpl implements SemantikCheck{
 
     public TypedReturnStatement semantikCheck(ReturnStatement untyped) throws Exception {
         ITypedExpression typedReturnValue = checkExpression(untyped.returnValue());
-        if (true) {
+        if (typedReturnValue == null) {
             return null;
+            //return new TypedReturnStatement(void); TODO: check
         }
         else {
-            throw new Exception("Invalid type");
+            return new TypedReturnStatement(typedReturnValue, typedReturnValue.getType());
         }
     }
 
     public TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped) throws Exception {
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
-        }
+        //TODO: already defined check
+        //return new TypedVarDeclarationStatement(untyped.name(), untyped.type(), Typ); TODO: type
+        return null;
     }
 
     public TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception {
