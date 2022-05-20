@@ -108,6 +108,7 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedBlock semantikCheck(Block untyped) throws Exception {
+        //ITypedStatement typedStatements = checkStatement(untyped.statements());
         if (true) {
             return null;
         }
@@ -117,6 +118,10 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedClass semantikCheck(Class untyped) throws Exception {
+        //ITypedExpression typedConstructor = checkExpression(untyped.constructor());
+        //ITypedExpression typedFields = checkExpression(untyped.fields());
+        //ITypedExpression typedIdentifier = checkExpression(untyped.identifier());
+        //ITypedExpression typedMethods = checkExpression(untyped.methods());
         if (true) {
             return null;
         }
@@ -128,6 +133,9 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedBinaryExpression semantikCheck(BinaryExpression untyped) throws Exception {
+        ITypedExpression typedA = checkExpression(untyped.a());
+        ITypedExpression typedB = checkExpression(untyped.b());
+
         if (true) {
             return null;
         }
@@ -182,6 +190,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedUnaryExpression semantikCheck(UnaryExpression untyped) throws Exception {
+        ITypedExpression typedExpression = checkExpression(untyped.expression());
         if (true) {
             return null;
         }
@@ -193,6 +202,8 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped) throws Exception {
+        ITypedExpression typedExpressionA = checkExpression(untyped.expressionA());
+        ITypedExpression typedExpressionB = checkExpression(untyped.expressionB());
         if (true) {
             return null;
         }
@@ -202,6 +213,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedInstVarStatementExpression semantikCheck(InstVarStatementExpression untyped) throws Exception {
+        ITypedExpression typedExpression = checkExpression(untyped.expression());
         if (true) {
             return null;
         }
@@ -211,6 +223,8 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped) throws Exception {
+        //ITypedExpression typedParameters = checkExpression(untyped.parameters());
+        ITypedExpression typedTarget = checkExpression(untyped.target());
         if (true) {
             return null;
         }
@@ -220,6 +234,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped) throws Exception {
+        ITypedStatementExpression typedConstructorCall = checkStatementExpression(untyped.constructorCall());
         if (true) {
             return null;
         }
@@ -245,6 +260,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedReturnStatement semantikCheck(ReturnStatement untyped) throws Exception {
+        ITypedExpression typedReturnValue = checkExpression(untyped.returnValue());
         if (true) {
             return null;
         }
