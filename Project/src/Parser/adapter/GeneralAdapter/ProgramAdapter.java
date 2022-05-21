@@ -2,7 +2,7 @@ package Parser.adapter.GeneralAdapter;
 
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Common.Class;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

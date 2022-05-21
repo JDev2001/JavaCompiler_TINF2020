@@ -4,7 +4,7 @@ package ParserTests;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Types.BoolType;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.AccessModifiers;

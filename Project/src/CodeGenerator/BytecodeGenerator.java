@@ -21,6 +21,8 @@ import org.objectweb.asm.Opcodes;
 import java.util.HashMap;
 import java.util.List;
 
+import static com.company.Main.debugFlag;
+
 public class BytecodeGenerator {
     private static Program aProgram;
     private ClassWriter cw;
@@ -29,7 +31,8 @@ public class BytecodeGenerator {
 
     public BytecodeGenerator(Program pProgram) {
         aProgram = pProgram;
-        System.out.println(pProgram);
+        if(debugFlag)
+            System.out.println(pProgram);
     }
 
     public HashMap<String, byte[]> genCode() {

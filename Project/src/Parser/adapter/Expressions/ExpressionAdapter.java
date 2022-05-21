@@ -1,7 +1,7 @@
 package Parser.adapter.Expressions;
 
 import Parser.DataClasses.Expressions.IExpression;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 public class ExpressionAdapter {
 

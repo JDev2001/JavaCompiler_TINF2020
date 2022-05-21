@@ -1,7 +1,7 @@
 package Parser.adapter.Statements;
 
 import Parser.DataClasses.Statements.IStatement;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 public class ReturnAdapter {
 

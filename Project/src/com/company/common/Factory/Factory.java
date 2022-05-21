@@ -1,7 +1,9 @@
 package com.company.common.Factory;
 
-import Parser.SyntaxTreeGenerator.ISyntaxTreeGenerator;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import CodeGenerator.Factory.CodeGenerator;
+import CodeGenerator.Factory.ICodeGenerator;
+import Parser.Factory.ISyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 
 public class Factory implements IFactory
 {
@@ -20,6 +22,5 @@ public class Factory implements IFactory
         return new SyntaxTreeGenerator();
     }
 
-
-
+    public ICodeGenerator getCodeGenerator() {return new CodeGenerator();}
 }

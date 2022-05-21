@@ -1,4 +1,4 @@
-package Parser.SyntaxTreeGenerator;
+package Parser.Factory;
 
 import Parser.DataClasses.Common.Program;
 import org.antlr.v4.runtime.CharStream;

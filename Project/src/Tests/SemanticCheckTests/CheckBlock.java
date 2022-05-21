@@ -7,7 +7,7 @@ import Parser.DataClasses.Types.BoolType;
 import Parser.DataClasses.Types.CharType;
 import Parser.DataClasses.Types.IntType;
 import Parser.DataClasses.Types.VoidType;
-import SemanticCheck.SemantikCheckImpl;
+import SemanticCheck.Factory.SemantikCheckImpl;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedExpressions.TypedConstExpression;
 import SemanticCheck.TypedDataClasses.typedStatements.TypedReturnStatement;

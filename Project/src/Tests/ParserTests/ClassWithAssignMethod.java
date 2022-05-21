@@ -14,7 +14,7 @@ import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Statements.VarDeclarationStatement;
 import Parser.DataClasses.Types.IntType;
 import Parser.DataClasses.Types.VoidType;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;

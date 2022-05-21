@@ -3,7 +3,7 @@ package Parser.adapter.GeneralAdapter;
 import Parser.DataClasses.Common.Block;
 import Parser.adapter.Statements.StatementAdapter;
 import Parser.DataClasses.Statements.IStatement;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

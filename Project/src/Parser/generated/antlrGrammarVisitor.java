@@ -1,5 +1,5 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package Parser.generated;
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+package generated;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -100,12 +100,6 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitJIf(antlrGrammarParser.JIfContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#jElseIf}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJElseIf(antlrGrammarParser.JElseIfContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#jElse}.
 	 * @param ctx the parse tree

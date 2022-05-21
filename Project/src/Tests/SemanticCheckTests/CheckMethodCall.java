@@ -7,16 +7,14 @@ import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Expressions.ThisExpression;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
-import Parser.DataClasses.Statements.IStatement;
 import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.CustomType;
 import Parser.DataClasses.Types.IntType;
 import Parser.DataClasses.Types.VoidType;
-import SemanticCheck.SemantikCheckImpl;
+import SemanticCheck.Factory.SemantikCheckImpl;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedExpressions.TypedThisExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 

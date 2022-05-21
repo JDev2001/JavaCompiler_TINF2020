@@ -1,5 +1,5 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package Parser.generated;
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+package generated;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
 /**
@@ -157,16 +157,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitJIf(antlrGrammarParser.JIfContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#jElseIf}.
-	 * @param ctx the parse tree
-	 */
-	void enterJElseIf(antlrGrammarParser.JElseIfContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#jElseIf}.
-	 * @param ctx the parse tree
-	 */
-	void exitJElseIf(antlrGrammarParser.JElseIfContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#jElse}.
 	 * @param ctx the parse tree

@@ -6,15 +6,15 @@ import Parser.DataClasses.Expressions.BinaryExpression;
 import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Statements.IfElseStatement;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Types.VoidType;
 import Parser.DataClasses.Common.Class;
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;

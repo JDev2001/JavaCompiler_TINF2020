@@ -4,7 +4,7 @@ import Parser.adapter.GeneralAdapter.BlockAdapter;
 import Parser.DataClasses.Statements.IStatement;
 import Parser.DataClasses.Statements.IfElseStatement;
 import Parser.adapter.Expressions.ExpressionAdapter;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 public class IfElseAdapter {
 

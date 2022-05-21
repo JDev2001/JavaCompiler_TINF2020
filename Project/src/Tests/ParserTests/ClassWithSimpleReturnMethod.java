@@ -5,15 +5,16 @@ import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.BoolType;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Expressions.ConstExpression;
+import Parser.DataClasses.Common.Class;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import Parser.DataClasses.Common.Class;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

@@ -7,7 +7,7 @@ import Parser.DataClasses.Types.VoidType;
 import Parser.adapter.GeneralAdapter.BlockAdapter;
 import Parser.adapter.Types.MethodeTypeAdapter;
 import Parser.adapter.Types.TypeAdapter;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

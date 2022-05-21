@@ -3,7 +3,7 @@ package ParserTests;
 
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Method.Method;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
 import Parser.DataClasses.Common.AccessModifiers;

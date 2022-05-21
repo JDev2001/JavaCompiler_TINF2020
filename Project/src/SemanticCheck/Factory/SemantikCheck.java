@@ -1,4 +1,4 @@
-package SemanticCheck;
+package SemanticCheck.Factory;
 
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Block;

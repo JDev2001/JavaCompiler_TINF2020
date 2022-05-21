@@ -1,4 +1,4 @@
-package SemanticCheck;
+package SemanticCheck.Factory;
 
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Program;
@@ -19,9 +19,6 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatem
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import Parser.DataClasses.Common.Class;
-import org.antlr.v4.runtime.atn.PredicateTransition;
-
-import java.util.List;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
