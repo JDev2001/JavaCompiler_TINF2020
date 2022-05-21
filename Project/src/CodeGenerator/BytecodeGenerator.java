@@ -116,7 +116,7 @@ public class BytecodeGenerator {
     String typestring;
         switch (returnType) {
             case BoolType type -> {
-                typestring = "B";
+                typestring = "Z";
             }
             case IntType type -> {
                 typestring = "I";
