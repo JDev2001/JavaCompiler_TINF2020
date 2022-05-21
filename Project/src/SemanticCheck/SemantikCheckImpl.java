@@ -19,6 +19,7 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatem
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import Parser.DataClasses.Common.Class;
+import org.antlr.v4.runtime.atn.PredicateTransition;
 
 import java.util.List;
 
@@ -141,18 +142,24 @@ public class SemantikCheckImpl implements SemantikCheck{
         String operator = untyped.operator();
 
         switch (operator){
-            case "AddSubOperator":
-            case "PointSlashOperator":
-                if(typedA.getType() instanceof IntType || typedA.getType() instanceof CharType
-                        && typedB.getType() instanceof IntType || typedB.getType() instanceof CharType){
+            case "+":
+            case "-":
+            case "/":
+            case "*":
+                if((typedA.getType() instanceof IntType || typedA.getType() instanceof CharType)
+                        && (typedB.getType() instanceof IntType || typedB.getType() instanceof CharType)){
                     return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
                 }
                 else{
-                    throw new Exception("Invalid type");
+                    throw new Exception("Invalid types Expression");
                 }
-            case "LogicalOperator":
+            case "&":
+            case "|":
                 if(typedA.getType() instanceof BoolType && typedB.getType() instanceof BoolType){
                     return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
+                }
+                else{
+                    throw new Exception("Invalid type in Expression");
                 }
             case "PlusEqual":
             case "MinusEqual":
@@ -173,11 +180,14 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedConstExpression semantikCheck(ConstExpression untyped) throws Exception {
-        if (true) {
-            return null;
-        }
-        else {
-            throw new Exception("Invalid type");
+
+        var value = untyped.value();
+        switch (value)
+        {
+            case Integer i ->{return new TypedConstExpression(i,new IntType());}
+            case Boolean b ->{return new TypedConstExpression(b,new BoolType());}
+            case Character c -> {return  new TypedConstExpression(c,new CharType());}
+            default ->     throw new Exception("Invalid type");
         }
     }
 

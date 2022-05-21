@@ -4,6 +4,7 @@ import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Expressions.BinaryExpression;
 import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Statements.ReturnStatement;
+import Parser.DataClasses.Types.BoolType;
 import Parser.DataClasses.Types.IntType;
 import SemanticCheck.SemantikCheckImpl;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
@@ -18,7 +19,7 @@ import java.util.List;
 public class CheckExpression
 {
     @Test
-    public void TestSimpleExpression() throws Exception
+    public void TestAddExpression() throws Exception
     {
         var checker = new SemantikCheckImpl();
         var expression = new BinaryExpression(new ConstExpression(4),new ConstExpression(5), "+");
@@ -32,19 +33,106 @@ public class CheckExpression
         Assertions.assertEquals(expectedBinaryExpression,typedExpression);
     }
     @Test
+    public void TestMinusExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(4),new ConstExpression(5), "-");
+
+        var typedExpression = checker.semantikCheck(expression);
+
+        var expectedBinaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(4,new IntType()),
+                new TypedConstExpression(5, new IntType()),
+                "-",new IntType());
+        Assertions.assertEquals(expectedBinaryExpression,typedExpression);
+    }
+    @Test
+    public void TestMulExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(4),new ConstExpression(5), "*");
+
+        var typedExpression = checker.semantikCheck(expression);
+
+        var expectedBinaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(4,new IntType()),
+                new TypedConstExpression(5, new IntType()),
+                "*",new IntType());
+        Assertions.assertEquals(expectedBinaryExpression,typedExpression);
+    }
+    @Test
+    public void TestDivExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(4),new ConstExpression(5), "/");
+
+        var typedExpression = checker.semantikCheck(expression);
+
+        var expectedBinaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(4,new IntType()),
+                new TypedConstExpression(5, new IntType()),
+                "/",new IntType());
+        Assertions.assertEquals(expectedBinaryExpression,typedExpression);
+    }
+
+    @Test
+    public void TestAndExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(false),new ConstExpression(true), "&");
+
+        var typedExpression = checker.semantikCheck(expression);
+
+        var expectedBinaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(false,new BoolType()),
+                new TypedConstExpression(true, new BoolType()),
+                "&",new BoolType());
+        Assertions.assertEquals(expectedBinaryExpression,typedExpression);
+    }
+    @Test
+    public void TestOrExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(false),new ConstExpression(true), "|");
+
+        var typedExpression = checker.semantikCheck(expression);
+
+        var expectedBinaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(false,new BoolType()),
+                new TypedConstExpression(true, new BoolType()),
+                "|",new BoolType());
+        Assertions.assertEquals(expectedBinaryExpression,typedExpression);
+    }
+    @Test
+    public void InvalidLogicalExpression() throws Exception
+    {
+        var checker = new SemantikCheckImpl();
+        var expression = new BinaryExpression(new ConstExpression(5),new ConstExpression(true), "|");
+
+        try{
+            var typedExpression = checker.semantikCheck(expression);
+            Assertions.fail();
+        }
+        catch (Exception e)
+        {
+            Assertions.assertTrue(true);
+        }
+
+    }
+    @Test
     public void MixedInvalidSimpleExpression() throws Exception
     {
         var checker = new SemantikCheckImpl();
         var expression = new BinaryExpression(new ConstExpression(4),new ConstExpression(false), "+");
-
-        var typedExpression = checker.semantikCheck(expression);
-
-        var expectedExpression = new TypedBinaryExpression(
-                new TypedConstExpression(4,new IntType()),
-                new TypedConstExpression(5, new IntType()),
-                "+",new IntType());
-
-        Assertions.assertEquals(expectedExpression,typedExpression);
+        try
+        {
+            var typedExpression = checker.semantikCheck(expression);
+            Assertions.fail();
+        }
+        catch (Exception e)
+        {
+            Assertions.assertTrue(true);
+        }
     }
 
 
