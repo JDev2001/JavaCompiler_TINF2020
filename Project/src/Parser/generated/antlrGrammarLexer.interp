@@ -73,7 +73,7 @@ Comma
 Semicolon
 Identifier
 JCharacter
-JInteger
+Const
 WS
 Comment
 LineComment
@@ -112,7 +112,7 @@ Comma
 Semicolon
 Identifier
 JCharacter
-JInteger
+Const
 WS
 Comment
 LineComment

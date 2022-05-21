@@ -5,7 +5,7 @@ import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.ConstExpression;
-import Parser.DataClasses.Expressions.InstVarStatementExpression;
+import Parser.DataClasses.StatementExpression.InstVarStatementExpression;
 import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.StatementExpression.AssignStatementExpression;

@@ -8,7 +8,7 @@ import generated.antlrGrammarParser;
 
 public class IfElseAdapter {
 
-    public IStatement generate(antlrGrammarParser.IfelseContext ctx) {
+    public static IStatement generate(antlrGrammarParser.IfelseContext ctx) {
 
         //Hier noch JElseIf ergönzen
 

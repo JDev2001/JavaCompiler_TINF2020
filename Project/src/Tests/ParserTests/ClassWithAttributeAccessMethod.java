@@ -2,7 +2,7 @@ package ParserTests;
 
 
 import Parser.DataClasses.Common.Program;
-import Parser.DataClasses.Expressions.InstVarStatementExpression;
+import Parser.DataClasses.StatementExpression.InstVarStatementExpression;
 import Parser.DataClasses.Expressions.ThisExpression;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;

@@ -5,32 +5,44 @@ import Parser.adapter.GeneralAdapter.BlockAdapter;
 import Parser.adapter.StatementExpression.StatementExpressionAdapter;
 import generated.antlrGrammarParser;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class StatementAdapter {
 
-    public static IStatement generate(antlrGrammarParser.StatementContext ctx){
+    public static List<IStatement> generate(antlrGrammarParser.StatementContext ctx){
+
+        //returns a list cause vardecls can be more than one -> int a,b,c,d,e;
+
+        List<IStatement> retList = new ArrayList<>();
 
         if(ctx.block() != null){
-            return BlockAdapter.generate(ctx.block());
+            retList.add(BlockAdapter.generate(ctx.block()));
+            return retList;
         }
         else if(ctx.varDeclaration() != null){
-            return VarDeclarationAdapter.generate(ctx.varDeclaration());
+            retList.addAll(VarDeclarationAdapter.generate(ctx.varDeclaration()));
+            return retList;
         }
         else if(ctx.ifelse() != null){
-            new IfElseAdapter().generate(ctx.ifelse());
+            retList.add(IfElseAdapter.generate(ctx.ifelse()));
+            return retList;
         }
         else if(ctx.jWhile() != null){
-            return WhileAdapter.generate(ctx.jWhile());
+            retList.add(WhileAdapter.generate(ctx.jWhile()));
+            return retList;
         }
         else if(ctx.jReturn() != null){
-            return ReturnAdapter.generate(ctx.jReturn());
+            retList.add(ReturnAdapter.generate(ctx.jReturn()));
+            return retList;
         }
         else if(ctx.statementExpressions() != null){
-            return StatementExpressionAdapter.generate(ctx.statementExpressions());
+            retList.add(StatementExpressionAdapter.generate(ctx.statementExpressions()));
+            return retList;
         }
-        else{
+        else {
             System.out.println("Missmatch -> in Statement Adapter!");
             return null;
         }
-        return null;
     }
 }

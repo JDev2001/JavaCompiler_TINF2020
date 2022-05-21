@@ -41,28 +41,33 @@ jWhile: 'while' LBracket expression RBracket block;
 jReturn: 'return' expression;
 
 //Statements
-statementExpressions: assign | methodCall | jNew ;
+statementExpressions: assign | instVar | methodCall | jNew ;
+instVar:  (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier);
 
 //Statement Expressions
-assign: (instVar | Identifier) (Equal|PlusEqual|MinusEqual) expression;
-methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
+assign: (instVar | Identifier) assignOperator expression;
+assignOperator: Equal | PlusEqual | MinusEqual;
+methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket); //methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
 jNew: 'new' Identifier LBracket nArguments RBracket;
 
 //Method Call
 methodCallPrefix: (instVar|Identifier Dot);
-nArguments: expression? | expression (Comma expression)* | instVar;
+nArguments: expression? | expression (Comma expression)*; //| instVar
 
 //In all other
-expression:  basicexpressions | binary;
+expression:  basicexpressions | expression operators expression;
 
 //Expressions
-binary: basicexpressions (operators basicexpressions)+;
-basicexpressions:  baseType | instVar | Identifier | statementExpressions | unary | LBracket expression RBracket ;
-instVar:  (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier); //Hier geändert -> passt????
+//binary: basicexpressions operators basicexpressions; -> so hats mal funktioniert
+//binary: expression operators expression; versuch -> ist aber Linksrekursiv
+//binary: basicexpressions (operators basicexpressions)+; -> mal schauen
+basicexpressions: baseType | statementExpressions | unary | LBracket expression RBracket ;
+//Hier war mal instvar
 
 //Base
-unary:  NotOperator expression;
-baseType: JBoolean | JNull | This | WS | JCharacter | JInteger | Super; //JString = WS ??? Vorher stand bei ws JString
+unary:  unaryOperator expression;
+unaryOperator: NotOperator|OpIdentifier;
+baseType: type | JBoolean | JNull | This | Identifier | JCharacter | Const | Super; //JString = WS ??? Vorher stand bei ws JString
 operators: LogicalOperator|Comperator|AddSubOperator|PointSlashOperator;
 
 AccessModifier: 'public' | 'protected' | 'private';
@@ -90,7 +95,7 @@ Comma: ',';
 Semicolon: ';';
 Identifier: [A-Za-z][A-Za-z0-9]*;
 JCharacter: '\'' [A-Za-z]'\'';
-JInteger: [0-9]+;
+Const: [0-9]+;
 
 WS: ([ \t\r\n]+) -> skip;
 Comment: '/*' .*? '*/' -> skip;

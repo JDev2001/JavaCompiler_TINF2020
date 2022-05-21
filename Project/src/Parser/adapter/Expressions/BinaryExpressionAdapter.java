@@ -4,14 +4,11 @@ import Parser.DataClasses.Expressions.BinaryExpression;
 import Parser.DataClasses.Expressions.IExpression;
 import generated.antlrGrammarParser;
 
-public class ExpressionAdapter {
+public class BinaryExpressionAdapter {
 
     public static IExpression generate(antlrGrammarParser.ExpressionContext ctx) {
-
-        if (ctx.basicexpressions() != null) {
-            return BaseExpressionAdapter.generate(ctx.basicexpressions());
-        } else { //binary
-            return BinaryExpressionAdapter.generate(ctx);
-        }
+        return new BinaryExpression(ExpressionAdapter.generate(ctx.expression(0)),
+                ExpressionAdapter.generate(ctx.expression(1)),
+                ctx.operators().getText());
     }
 }

@@ -4,10 +4,7 @@ import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.*;
 import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.StatementExpression.AssignStatementExpression;
-import Parser.DataClasses.StatementExpression.IStatementExpression;
-import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
-import Parser.DataClasses.StatementExpression.NewStatementExpression;
+import Parser.DataClasses.StatementExpression.*;
 import Parser.DataClasses.Statements.*;
 import Parser.DataClasses.Types.*;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
@@ -48,7 +45,8 @@ public class SemantikCheckImpl implements SemantikCheck{
             case ConstExpression constExpression -> {
                 return semantikCheck(constExpression);
             }
-            case InstVarStatementExpression instVarStatementExpression -> {
+            case InstVarStatementExpression
+                instVarStatementExpression -> {
                 return semantikCheck(instVarStatementExpression);
             }
             case JNullExpression jNullExpression -> {

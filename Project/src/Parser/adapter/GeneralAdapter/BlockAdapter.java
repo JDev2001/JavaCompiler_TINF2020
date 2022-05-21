@@ -17,7 +17,7 @@ public class BlockAdapter {
 
         //Are there any statements?
         if(ctx.statement() != null){
-            ctx.statement().forEach(statementContext -> statements.add(StatementAdapter.generate(statementContext)));
+            ctx.statement().forEach(statementContext -> statements.addAll(StatementAdapter.generate(statementContext)));
         }
 
         return new Block(statements);

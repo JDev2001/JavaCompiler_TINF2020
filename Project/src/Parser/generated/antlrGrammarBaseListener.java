@@ -244,6 +244,18 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterInstVar(antlrGrammarParser.InstVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInstVar(antlrGrammarParser.InstVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterAssign(antlrGrammarParser.AssignContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -316,18 +328,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBinary(antlrGrammarParser.BinaryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBinary(antlrGrammarParser.BinaryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterBasicexpressions(antlrGrammarParser.BasicexpressionsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -340,18 +340,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInstVar(antlrGrammarParser.InstVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitInstVar(antlrGrammarParser.InstVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterUnary(antlrGrammarParser.UnaryContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -359,6 +347,18 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitUnary(antlrGrammarParser.UnaryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

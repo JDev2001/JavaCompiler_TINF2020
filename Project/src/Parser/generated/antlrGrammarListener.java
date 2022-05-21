@@ -198,6 +198,16 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitStatementExpressions(antlrGrammarParser.StatementExpressionsContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#instVar}.
+	 * @param ctx the parse tree
+	 */
+	void enterInstVar(antlrGrammarParser.InstVarContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#instVar}.
+	 * @param ctx the parse tree
+	 */
+	void exitInstVar(antlrGrammarParser.InstVarContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#assign}.
 	 * @param ctx the parse tree
 	 */
@@ -258,16 +268,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitExpression(antlrGrammarParser.ExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#binary}.
-	 * @param ctx the parse tree
-	 */
-	void enterBinary(antlrGrammarParser.BinaryContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#binary}.
-	 * @param ctx the parse tree
-	 */
-	void exitBinary(antlrGrammarParser.BinaryContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#basicexpressions}.
 	 * @param ctx the parse tree
 	 */
@@ -278,16 +278,6 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitBasicexpressions(antlrGrammarParser.BasicexpressionsContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link antlrGrammarParser#instVar}.
-	 * @param ctx the parse tree
-	 */
-	void enterInstVar(antlrGrammarParser.InstVarContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link antlrGrammarParser#instVar}.
-	 * @param ctx the parse tree
-	 */
-	void exitInstVar(antlrGrammarParser.InstVarContext ctx);
-	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#unary}.
 	 * @param ctx the parse tree
 	 */
@@ -297,6 +287,16 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitUnary(antlrGrammarParser.UnaryContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#unaryOperator}.
+	 * @param ctx the parse tree
+	 */
+	void enterUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#unaryOperator}.
+	 * @param ctx the parse tree
+	 */
+	void exitUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#baseType}.
 	 * @param ctx the parse tree
