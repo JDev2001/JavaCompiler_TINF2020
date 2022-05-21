@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="AddedTests">
-      <change afterPath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckMethodCall.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/ITypedStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/ITypedStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +83,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.CheckMethodCall.TypeVoidMethodCall">
+  <component name="RunManager" selected="JUnit.CodeGenTests in Project">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -161,11 +160,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
-        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.CodeGenTests in Project" />
         <item itemvalue="JUnit.CodeGenTests.Helper in Project" />
+        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.ClassWithFields" />
+        <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
       </list>
     </recent_temporary>
   </component>
@@ -181,7 +180,7 @@
       <workItem from="1652448693751" duration="1209000" />
       <workItem from="1652528109751" duration="8078000" />
       <workItem from="1652974373468" duration="652000" />
-      <workItem from="1653134296437" duration="3838000" />
+      <workItem from="1653134296437" duration="4141000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -316,7 +315,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653136358939</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="AddedTests">
+      <created>1653138145606</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1653138145606</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -356,20 +362,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="AddedTests" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java</url>
-          <line>31</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java</url>
-          <line>32</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />

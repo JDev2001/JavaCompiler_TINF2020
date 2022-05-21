@@ -30,7 +30,7 @@ public class ClassWithFields
         java.lang.Class c = loader.findClass(identifier);
         var name = c.getName();
         var fieldI = c.getField("i");
-        var fieldJ = c.getField("j");
+        var fieldJ = c.getDeclaredField("j");
         Assertions.assertEquals(identifier,name);
         Assertions.assertEquals(int.class,fieldI.getType());
         Assertions.assertEquals(boolean.class,fieldJ.getType());
