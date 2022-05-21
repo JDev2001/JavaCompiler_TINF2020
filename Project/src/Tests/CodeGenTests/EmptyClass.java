@@ -3,7 +3,7 @@ package CodeGenTests;
 
 import CodeGenerator.BytecodeGenerator;
 
-import CodeGenTests.Helper.ReflectLoader;
+import Helper.ReflectLoader;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
 import org.junit.jupiter.api.Assertions;

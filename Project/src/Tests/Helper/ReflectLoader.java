@@ -1,4 +1,4 @@
-package CodeGenTests.Helper;
+package Helper;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

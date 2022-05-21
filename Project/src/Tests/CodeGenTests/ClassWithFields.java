@@ -1,7 +1,7 @@
 package CodeGenTests;
 
 
-import CodeGenTests.Helper.ReflectLoader;
+import Helper.ReflectLoader;
 import CodeGenerator.BytecodeGenerator;
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Class;
@@ -29,7 +29,7 @@ public class ClassWithFields
         ReflectLoader loader = new ReflectLoader(byteCode.get(identifier));
         java.lang.Class c = loader.findClass(identifier);
         var name = c.getName();
-        var fieldI = c.getField("i");
+        var fieldI = c.getDeclaredField("i");
         var fieldJ = c.getDeclaredField("j");
         Assertions.assertEquals(identifier,name);
         Assertions.assertEquals(int.class,fieldI.getType());
