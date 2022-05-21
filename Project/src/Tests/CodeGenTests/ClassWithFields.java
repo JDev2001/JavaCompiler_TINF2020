@@ -1,7 +1,7 @@
 package CodeGenTests;
 
 
-import Helper.ReflectLoader;
+import CodeGenTests.Helper.ReflectLoader;
 import CodeGenerator.BytecodeGenerator;
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Class;
@@ -33,7 +33,7 @@ public class ClassWithFields
         var fieldJ = c.getField("j");
         Assertions.assertEquals(identifier,name);
         Assertions.assertEquals(int.class,fieldI.getType());
-        Assertions.assertEquals(boolean.class,fieldJ);
+        Assertions.assertEquals(boolean.class,fieldJ.getType());
     }
 }
 

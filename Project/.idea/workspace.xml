@@ -1,25 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Removed Modules">
-      <change afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/Helper/ReflectLoader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckExpression.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="AddedTests">
+      <change afterPath="$PROJECT_DIR$/src/Tests/ParserTests/AccessingInstVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/ParserTests/MethodCalls.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ReturnExpressionMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/Helper/ReflectLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/Helper/ReflectLoader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassInstantiatingAnotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassInstantiatingAnotherClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributeAccessMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributeAccessMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithConstructor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithLocalVarDecMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithLocalVarDecMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/EmptyClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/IfElse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/IfElse.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,18 +61,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
@@ -93,12 +87,12 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ParserTests" />
       <recent name="SemanticCheckTests" />
       <recent name="CodeGenTests" />
-      <recent name="ParserTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="JUnit.CodeGenTests in Project">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -107,84 +101,79 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckBlock.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClassWithFields" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="PATTERN" value="CodeGenTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.ClassWithFields" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassWithFields.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.ClassWithFields" />
       <option name="METHOD_NAME" value="Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckBlock.TestEmptyBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodeGenTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="PATTERN" value="CodeGenTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
-      <option name="METHOD_NAME" value="TestEmptyBlock" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckBlock.TestInvalidBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodeGenTests.Helper in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="PATTERN" value="CodeGenTests.Helper.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
-      <option name="METHOD_NAME" value="TestInvalidBlock" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckExpression.MixedTestExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckExpression" />
-      <option name="METHOD_NAME" value="MixedTestExpression" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="CodeGenTests.Helper" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.ClassWithFields" />
+      <item itemvalue="JUnit.ClassWithFields.Test" />
+      <item itemvalue="JUnit.CodeGenTests in Project" />
+      <item itemvalue="JUnit.CodeGenTests.Helper in Project" />
       <item itemvalue="JUnit.All in Project" />
-      <item itemvalue="JUnit.CheckBlock.Test" />
-      <item itemvalue="JUnit.CheckBlock.TestEmptyBlock" />
-      <item itemvalue="JUnit.CheckBlock.TestInvalidBlock" />
-      <item itemvalue="JUnit.CheckExpression.MixedTestExpression" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CodeGenTests in Project" />
+        <item itemvalue="JUnit.CodeGenTests.Helper in Project" />
+        <item itemvalue="JUnit.ClassWithFields" />
+        <item itemvalue="JUnit.ClassWithFields.Test" />
         <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.CheckBlock.TestInvalidBlock" />
-        <item itemvalue="JUnit.CheckExpression.MixedTestExpression" />
-        <item itemvalue="JUnit.CheckBlock.TestEmptyBlock" />
-        <item itemvalue="JUnit.CheckBlock.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -199,6 +188,8 @@
       <workItem from="1652284676770" duration="802000" />
       <workItem from="1652448693751" duration="1209000" />
       <workItem from="1652528109751" duration="8078000" />
+      <workItem from="1652974373468" duration="652000" />
+      <workItem from="1653134296437" duration="2050000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -319,7 +310,14 @@
       <option name="project" value="LOCAL" />
       <updated>1652889653488</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="AddedTests">
+      <created>1652904660473</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1652904660473</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -355,9 +353,24 @@
     <MESSAGE value="StatementParser" />
     <MESSAGE value="Parser Expressions" />
     <MESSAGE value="Removed Modules" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed Modules" />
+    <MESSAGE value="AddedTests" />
+    <option name="LAST_COMMIT_MESSAGE" value="AddedTests" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />
