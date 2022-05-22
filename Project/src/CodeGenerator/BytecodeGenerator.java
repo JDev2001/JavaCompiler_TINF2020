@@ -1,18 +1,19 @@
 package CodeGenerator;
 
-import Parser.DataClasses.Common.AccessModifiers;
-import Parser.DataClasses.Common.Class;
-import Parser.DataClasses.Common.Program;
-import Parser.DataClasses.Field.Field;
-import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.Method.MethodParameter;
-import Parser.DataClasses.Types.*;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
+import com.company.Parser.DataClasses.Common.AccessModifiers;
+import com.company.Parser.DataClasses.Common.Class;
+import com.company.Parser.DataClasses.Common.Program;
+import com.company.Parser.DataClasses.Field.Field;
+import com.company.Parser.DataClasses.Method.Method;
+import com.company.Parser.DataClasses.Method.MethodParameter;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
+import com.company.Parser.DataClasses.Types.*;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -81,22 +82,25 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateMethodCode(ClassWriter cw, List<Method> pMethods) {
-        for (var method : pMethods) {
-            generateDescriptor(method.parameters(), method.returnType());
-        }
-    }
-
     private void generateConstructors(ClassWriter cw, List<Method> pConstructors) {
         if (pConstructors.isEmpty()) {
             //No constructors means standard constructor
             generateStandardConstructor(cw);
         } else {
-            //TODO
-            for (Method pMethod : pConstructors) {
-                HashMap<String, Integer> locals = addParameters(pMethod.parameters());
-                generateDescriptor(pMethod.parameters(), new VoidType());
+            for (Method method : pConstructors) {
+                //Initiate HashMap for local variables inside the method
+                HashMap<String, Integer> locals = generateParameters(method.parameters());
+                MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), new VoidType()), null, null);
             }
+        }
+    }
+
+    private void generateMethodCode(ClassWriter cw, List<Method> pMethods) {
+        for (var method : pMethods) {
+            //Initiate HashMap for local variables inside the method
+            HashMap<String, Integer> locals = generateParameters(method.parameters());
+            MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), method.returnType()), null, null);
+            methodVisitor.visitCode();
         }
     }
 
@@ -150,15 +154,12 @@ public class BytecodeGenerator {
         methodVisitor.visitCode();
         methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
         methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
-
-        //Initialize fields
-
         methodVisitor.visitInsn(Opcodes.RETURN);
         methodVisitor.visitMaxs(0, 0);
         methodVisitor.visitEnd();
     }
 
-    private HashMap<String, Integer> addParameters(List<MethodParameter> methodParameters) {
+    private HashMap<String, Integer> generateParameters(List<MethodParameter> methodParameters) {
         HashMap<String, Integer> parameters = new HashMap<String, Integer>();
         int counter = 1;
         for (var parameter : methodParameters) {
@@ -168,9 +169,13 @@ public class BytecodeGenerator {
         return parameters;
     }
 
-    private void generateStatement(ITypedStatement pStatement) {
+    private void generateStatement(ClassWriter cw, ITypedStatement pStatement) {
         switch (pStatement) {
+            case TypedBlock statement -> {
+                generateBlock(cw, statement.statements());
+            }
             case TypedIfElseStatement statement -> {
+                generateIfElse(cw, statement);
                 System.out.println(statement);
             }
             case TypedReturnStatement statement -> {
@@ -182,7 +187,27 @@ public class BytecodeGenerator {
             case TypedWhileStatement statement -> {
                 System.out.println(statement);
             }
+            //StatementExpressions
+            case TypedAssignStatementExpression statement -> {
+                System.out.println(statement);
+            }
+            case TypedMethodCallStatementExpression statement -> {
+                System.out.println(statement);
+            }
+            case TypedNewStatementExpression statement -> {
+                System.out.println(statement);
+            }
             default -> throw new IllegalStateException("Unexpected value: " + pStatement);
+        }
+    }
+
+    private void generateIfElse(ClassWriter cw, TypedIfElseStatement statement) {
+
+    }
+
+    private void generateBlock(ClassWriter cw, List<ITypedStatement> statements) {
+        for(var statement : statements) {
+            generateStatement(cw, statement);
         }
     }
 
@@ -212,12 +237,7 @@ public class BytecodeGenerator {
             case TypedUnaryExpression expression -> {
                 System.out.println(expression);
             }
-            default -> throw new IllegalStateException("Unexpected value: " + pExpression);
-        }
-    }
-
-    private void generateStatementExpression(ITypedStatementExpression pStatementExpression) {
-        switch (pStatementExpression) {
+            //StatementExpressions
             case TypedAssignStatementExpression statement -> {
                 System.out.println(statement);
             }
@@ -227,9 +247,8 @@ public class BytecodeGenerator {
             case TypedNewStatementExpression statement -> {
                 System.out.println(statement);
             }
-            default -> {
-
-            }
+            default -> throw new IllegalStateException("Unexpected value: " + pExpression);
         }
     }
+
 }
