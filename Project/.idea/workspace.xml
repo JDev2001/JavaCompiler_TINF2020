@@ -2,39 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Can generate EmptyClass.class">
-      <change afterPath="$PROJECT_DIR$/src/Parser/DataClasses/Expressions/BooleanExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/DataClasses/Expressions/CharacterExpression.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseExpressionAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BinaryExpressionAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/AssignStatementExpressionGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/InstVarStatementExpressionAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/filename.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/DataClasses/Expressions/InstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/InstVarStatementExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Expressions/ExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/ExpressionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/IfElseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/IfElseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/ReturnAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/ReturnAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/VarDeclarationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/VarDeclarationAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.tokens" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.tokens" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheck.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/AccessingInstVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/AccessingInstVar.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributeAccessMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributeAccessMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,26 +32,26 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Project.iml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ReturnExpressionMethod.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/MethodCalls.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Project.iml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/EmptyClass.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/IfElse.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ReturnExpressionMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/MethodCalls.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -100,7 +71,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Parser" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.19934641" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -404,7 +375,6 @@
         </entry>
       </map>
     </option>
-    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -434,7 +404,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <url>file://$PROJECT_DIR$/src/com/company/SemanticCheck/Factory/SemantikCheckImpl.java</url>
           <line>137</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>

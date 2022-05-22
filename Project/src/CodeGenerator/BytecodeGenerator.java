@@ -8,11 +8,11 @@ import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Method.MethodParameter;
 import Parser.DataClasses.Types.*;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
-import SemanticCheck.TypedDataClasses.typedStatements.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatements.*;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -31,7 +31,7 @@ public class BytecodeGenerator {
 
     public BytecodeGenerator(Program pProgram) {
         aProgram = pProgram;
-        if(debugFlag)
+        if (debugFlag)
             System.out.println(pProgram);
     }
 
@@ -39,7 +39,7 @@ public class BytecodeGenerator {
         var classList = aProgram.classes();
         HashMap<String, byte[]> allClasses = new HashMap<String, byte[]>();
         for (Class pClass : classList) {
-            allClasses.put(pClass.identifier(),generateClassCode(pClass));
+            allClasses.put(pClass.identifier(), generateClassCode(pClass));
         }
         return allClasses;
     }
@@ -59,6 +59,7 @@ public class BytecodeGenerator {
         generateConstructors(cw, pClass.constructor());
 
         //visit Methods next
+        generateMethodCode(cw, pClass.methods());
 
         //Close classwriter
         cw.visitEnd();
@@ -80,16 +81,9 @@ public class BytecodeGenerator {
         }
     }
 
-    private int generateAccessMod(AccessModifiers accessModifier) {
-        switch (accessModifier) {
-            case Public:
-                return Opcodes.ACC_PUBLIC;
-            case Private:
-                return Opcodes.ACC_PRIVATE;
-            case Protected:
-                return Opcodes.ACC_PROTECTED;
-            default:
-                throw new IllegalStateException("Unexpected value: " + accessModifier);
+    private void generateMethodCode(ClassWriter cw, List<Method> pMethods) {
+        for (var method : pMethods) {
+            generateDescriptor(method.parameters(), method.returnType());
         }
     }
 
@@ -106,37 +100,50 @@ public class BytecodeGenerator {
         }
     }
 
+    private int generateAccessMod(AccessModifiers accessModifier) {
+        switch (accessModifier) {
+            case Public:
+                return Opcodes.ACC_PUBLIC;
+            case Private:
+                return Opcodes.ACC_PRIVATE;
+            case Protected:
+                return Opcodes.ACC_PROTECTED;
+            default:
+                throw new IllegalStateException("Unexpected value: " + accessModifier);
+        }
+    }
+
     private String generateDescriptor(List<MethodParameter> parameters, IMethodType returnType) {
         String descriptor = "(";
-        for(var parameter : parameters) {
+        for (var parameter : parameters) {
             descriptor = descriptor + generateTypeString(parameter.type());
-            }
+        }
         descriptor = descriptor + ")" + generateTypeString(returnType);
         return descriptor;
     }
 
     private String generateTypeString(IMethodType returnType) {
-    String typestring;
+        String typeString;
         switch (returnType) {
             case BoolType type -> {
-                typestring = "Z";
+                typeString = "Z";
             }
             case IntType type -> {
-                typestring = "I";
+                typeString = "I";
             }
             case CharType type -> {
-                typestring = "C";
+                typeString = "C";
             }
             case CustomType type -> {
-                typestring = "L";
+                typeString = "L";
             }
             case VoidType type -> {
-                typestring = "V";
+                typeString = "V";
             }
             default -> throw new IllegalStateException("Unexpected value: " + returnType);
         }
-        return typestring;
-}
+        return typeString;
+    }
 
     private void generateStandardConstructor(ClassWriter cw) {
         methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
@@ -152,15 +159,13 @@ public class BytecodeGenerator {
     }
 
     private HashMap<String, Integer> addParameters(List<MethodParameter> methodParameters) {
-        HashMap<String,Integer> parameters = new HashMap<String, Integer>();
+        HashMap<String, Integer> parameters = new HashMap<String, Integer>();
+        int counter = 1;
         for (var parameter : methodParameters) {
-            parameters.put(parameter.identifier(), parameters.size()+1);
+            parameters.put(parameter.identifier(), counter);
+            counter++;
         }
         return parameters;
-    }
-
-    private void generateMethodCode(Method pMethod, ClassWriter cw) {
-
     }
 
     private void generateStatement(ITypedStatement pStatement) {
@@ -216,7 +221,7 @@ public class BytecodeGenerator {
             case TypedAssignStatementExpression statement -> {
                 System.out.println(statement);
             }
-            case    TypedMethodCallStatementExpression statement -> {
+            case TypedMethodCallStatementExpression statement -> {
                 System.out.println(statement);
             }
             case TypedNewStatementExpression statement -> {
