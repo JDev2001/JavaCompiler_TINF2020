@@ -1,19 +1,25 @@
 package CodeGenerator;
 
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Field.Field;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
-import com.company.Parser.DataClasses.Common.AccessModifiers;
-import com.company.Parser.DataClasses.Common.Class;
-import com.company.Parser.DataClasses.Common.Program;
-import com.company.Parser.DataClasses.Field.Field;
-import com.company.Parser.DataClasses.Method.Method;
-import com.company.Parser.DataClasses.Method.MethodParameter;
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Class;
+import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Field.Field;
+import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Method.MethodParameter;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
+import SemanticCheck.TypedDataClasses.typedMethod.TypedMethod;
+import SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
-import com.company.Parser.DataClasses.Types.*;
+import Parser.DataClasses.Types.*;
 import org.objectweb.asm.ClassWriter;
 import org.objectweb.asm.FieldVisitor;
 import org.objectweb.asm.MethodVisitor;
@@ -25,12 +31,12 @@ import java.util.List;
 import static com.company.Main.debugFlag;
 
 public class BytecodeGenerator {
-    private static Program aProgram;
+    private static TypedProgram aProgram;
     private ClassWriter cw;
     private MethodVisitor methodVisitor;
     private FieldVisitor fieldVisitor;
 
-    public BytecodeGenerator(Program pProgram) {
+    public BytecodeGenerator(TypedProgram pProgram) {
         aProgram = pProgram;
         if (debugFlag)
             System.out.println(pProgram);
@@ -39,13 +45,13 @@ public class BytecodeGenerator {
     public HashMap<String, byte[]> genCode() {
         var classList = aProgram.classes();
         HashMap<String, byte[]> allClasses = new HashMap<String, byte[]>();
-        for (Class pClass : classList) {
+        for (TypedClass pClass : classList) {
             allClasses.put(pClass.identifier(), generateClassCode(pClass));
         }
         return allClasses;
     }
 
-    private byte[] generateClassCode(Class pClass) {
+    private byte[] generateClassCode(TypedClass pClass) {
         //Initiate class
         cw = new ClassWriter(ClassWriter.COMPUTE_FRAMES | ClassWriter.COMPUTE_MAXS);
         MethodVisitor methodVisitor;
@@ -82,12 +88,12 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateConstructors(ClassWriter cw, List<Method> pConstructors) {
+    private void generateConstructors(ClassWriter cw, List<TypedMethod> pConstructors) {
         if (pConstructors.isEmpty()) {
             //No constructors means standard constructor
             generateStandardConstructor(cw);
         } else {
-            for (Method method : pConstructors) {
+            for (var method : pConstructors) {
                 //Initiate HashMap for local variables inside the method
                 HashMap<String, Integer> locals = generateParameters(method.parameters());
                 MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), new VoidType()), null, null);
@@ -95,12 +101,13 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateMethodCode(ClassWriter cw, List<Method> pMethods) {
+    private void generateMethodCode(ClassWriter cw, List<TypedMethod> pMethods) {
         for (var method : pMethods) {
             //Initiate HashMap for local variables inside the method
             HashMap<String, Integer> locals = generateParameters(method.parameters());
             MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), method.returnType()), null, null);
             methodVisitor.visitCode();
+            generateBlock(cw, (TypedBlock) method.statement());
         }
     }
 
@@ -117,7 +124,7 @@ public class BytecodeGenerator {
         }
     }
 
-    private String generateDescriptor(List<MethodParameter> parameters, IMethodType returnType) {
+    private String generateDescriptor(List<TypedMethodParameter> parameters, IMethodType returnType) {
         String descriptor = "(";
         for (var parameter : parameters) {
             descriptor = descriptor + generateTypeString(parameter.type());
@@ -159,7 +166,7 @@ public class BytecodeGenerator {
         methodVisitor.visitEnd();
     }
 
-    private HashMap<String, Integer> generateParameters(List<MethodParameter> methodParameters) {
+    private HashMap<String, Integer> generateParameters(List<TypedMethodParameter> methodParameters) {
         HashMap<String, Integer> parameters = new HashMap<String, Integer>();
         int counter = 1;
         for (var parameter : methodParameters) {
@@ -172,7 +179,7 @@ public class BytecodeGenerator {
     private void generateStatement(ClassWriter cw, ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedBlock statement -> {
-                generateBlock(cw, statement.statements());
+                generateBlock(cw, statement);
             }
             case TypedIfElseStatement statement -> {
                 generateIfElse(cw, statement);
@@ -205,8 +212,8 @@ public class BytecodeGenerator {
 
     }
 
-    private void generateBlock(ClassWriter cw, List<ITypedStatement> statements) {
-        for(var statement : statements) {
+    private void generateBlock(ClassWriter cw, TypedBlock block) {
+        for(var statement : block.statements()) {
             generateStatement(cw, statement);
         }
     }
