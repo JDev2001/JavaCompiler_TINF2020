@@ -1,10 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Can generate EmptyClass.class">
-      <change afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedLocalOrFieldVar.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="fixed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/Factory/CodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/Factory/CodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/Factory/ICodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/Factory/ICodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedCommon/TypedClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedCommon/TypedClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedCommon/TypedProgram.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedCommon/TypedProgram.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/common/Factory/IFactory.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +80,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.19934641" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
@@ -95,7 +105,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass">
+  <component name="RunManager" selected="JUnit.All in Project">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
@@ -176,10 +186,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.EmptyClass" />
         <item itemvalue="JUnit.ParserTests in Project" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.EmptyClass.Test" />
       </list>
     </recent_temporary>
@@ -359,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653167273756</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="fixed">
+      <created>1653245703051</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1653245703051</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,7 +415,8 @@
     <MESSAGE value="AddedTests" />
     <MESSAGE value="FixedTest" />
     <MESSAGE value="Can generate EmptyClass.class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Can generate EmptyClass.class" />
+    <MESSAGE value="fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

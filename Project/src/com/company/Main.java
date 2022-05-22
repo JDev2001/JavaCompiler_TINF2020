@@ -1,6 +1,7 @@
 package com.company;
 
 import Parser.DataClasses.Common.Program;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import com.company.common.Factory.Factory;
 import org.antlr.v4.runtime.CharStreams;
 
@@ -20,7 +21,7 @@ public class Main {
      * @param args path of the input java file (./EmptyClass.java)
      * @throws IOException IO errror if the file does not exist
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
         //Der Pfad der Input Datei (./EmptyClass.java) wird als startparameter mitgegeben
         //Ändern unter "Edit Configurations ..."->"Program arguments"
@@ -43,12 +44,12 @@ public class Main {
         //Generates the syntax tree
         System.out.println("Generating the syntax tree!");
         Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromStream(new FileInputStream(args[0])));
-
+        TypedProgram typedSyntaxTree = Factory.getFactory().getSemantikCheck().semantikCheckStart(syntaxTree);
         System.out.println("Generating the typed syntax tree!");
         //TODO: typed syntax call
 
         System.out.println("Generating the bytecode");
-        HashMap<String, byte[]> res = Factory.getFactory().getCodeGenerator().getCode(syntaxTree);
+        HashMap<String, byte[]> res = Factory.getFactory().getCodeGenerator().getCode(typedSyntaxTree);
 
 
 

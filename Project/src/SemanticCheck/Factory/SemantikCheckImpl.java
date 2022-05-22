@@ -9,6 +9,7 @@ import Parser.DataClasses.Statements.*;
 import Parser.DataClasses.Types.*;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
@@ -19,7 +20,7 @@ import Parser.DataClasses.Common.Class;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
-    public void semantikCheckStart(Program semantikCheckProgram) throws Exception {
+    public TypedProgram semantikCheckStart(Program semantikCheckProgram) throws Exception {
         var classList = semantikCheckProgram.classes();
         for (Class semantikCheckClass : classList) {
             semantikCheck(semantikCheckClass);
@@ -33,6 +34,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                 }
             }
         }
+        throw new Exception("Semantic check not implemented");
     }
 
 
