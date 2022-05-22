@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Fixes">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="updated IntelliJ and added function for vars...">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
     </list>
@@ -375,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653247387682</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="updated IntelliJ and added function for vars...">
+      <created>1653249623534</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1653249623534</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -417,7 +424,8 @@
     <MESSAGE value="fixed" />
     <MESSAGE value="Fix for the gods" />
     <MESSAGE value="Fixes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixes" />
+    <MESSAGE value="updated IntelliJ and added function for vars..." />
+    <option name="LAST_COMMIT_MESSAGE" value="updated IntelliJ and added function for vars..." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -90,7 +90,7 @@ public class BytecodeGenerator {
                 HashMap<String, Integer> locals = generateParameters(method.parameters());
                 MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), new VoidType()), null, null);
                 methodVisitor.visitCode();
-                generateBlock(cw, (TypedBlock) method.statement());
+                generateStatement(cw, locals, method.statement());
                 methodVisitor.visitEnd();
             }
         }
@@ -102,7 +102,7 @@ public class BytecodeGenerator {
             HashMap<String, Integer> locals = generateParameters(method.parameters());
             MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), method.returnType()), null, null);
             methodVisitor.visitCode();
-            generateBlock(cw, (TypedBlock) method.statement());
+            generateStatement(cw, locals, method.statement());
             methodVisitor.visitEnd();
         }
     }
@@ -178,7 +178,7 @@ public class BytecodeGenerator {
     private void generateStatement(ClassWriter cw, HashMap<String, Integer> locals, ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedBlock statement -> {
-                generateBlock(cw, statement);
+                generateBlock(cw, locals, statement);
             }
             case TypedIfElseStatement statement -> {
                 generateIfElse(cw, statement);
@@ -211,9 +211,9 @@ public class BytecodeGenerator {
 
     }
 
-    private void generateBlock(ClassWriter cw, TypedBlock block) {
+    private void generateBlock(ClassWriter cw,   HashMap<String, Integer> locals, TypedBlock block) {
         for (var statement : block.statements()) {
-            generateStatement(cw, statement);
+            generateStatement(cw, locals, statement);
         }
     }
 
