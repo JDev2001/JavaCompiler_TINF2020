@@ -1,12 +1,19 @@
 package com.company;
 
 import Parser.DataClasses.Common.Program;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import com.company.common.Factory.Factory;
 import org.antlr.v4.runtime.CharStreams;
 
 import java.io.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Main {
+
+    //Global Debuging Flas -> For more/less debugging infos turn true/false
+    public static boolean debugFlag = true;
 
     /**
      * Main method of the application
@@ -14,7 +21,7 @@ public class Main {
      * @param args path of the input java file (./EmptyClass.java)
      * @throws IOException IO errror if the file does not exist
      */
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
         //Der Pfad der Input Datei (./EmptyClass.java) wird als startparameter mitgegeben
         //Ändern unter "Edit Configurations ..."->"Program arguments"
@@ -37,14 +44,54 @@ public class Main {
         //Generates the syntax tree
         System.out.println("Generating the syntax tree!");
         Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromStream(new FileInputStream(args[0])));
-
+        TypedProgram typedSyntaxTree = Factory.getFactory().getSemantikCheck().semantikCheckStart(syntaxTree);
         System.out.println("Generating the typed syntax tree!");
         //TODO: typed syntax call
 
         System.out.println("Generating the bytecode");
-        //TODO: Bytecode call
+        HashMap<String, byte[]> res = Factory.getFactory().getCodeGenerator().getCode(typedSyntaxTree);
 
-        System.out.println("Finished! Outputfile path: [filepath]");
+
+
+        //Only for Debugging reasons
+        for(Map.Entry<String, byte[]> entry : res.entrySet()) {
+            String key = entry.getKey();
+            byte[] value = entry.getValue();
+
+            //Generate output File
+            try {
+                File outputFile = new File(TransformFilename(args[0]));
+                if(debugFlag) {
+                    if (outputFile.createNewFile()) {
+                        System.out.println("File created: " + outputFile.getName());
+                    } else {
+
+                        System.out.println("File already exists.");
+                    }
+                }
+
+                //Write Bytecode to File
+                FileOutputStream outputStream = new FileOutputStream(outputFile);
+                outputStream.write(value);
+
+            } catch (IOException e) {
+                System.out.println("An error occurred.");
+                e.printStackTrace();
+            }
+
+            //Debugging output
+            if(debugFlag) {
+                System.out.println("Key: \n" + key);
+                System.out.println("Value: \n" + Arrays.toString(value));
+            }
+        }
+
+        System.out.println("Finished! Outputfile path: " + TransformFilename(args[0]));
+    }
+
+    //TestClass.java -> TestClass.class
+    public static String TransformFilename(String input){
+        return input.substring(0, input.length() - 5) + ".class";
     }
 }
 

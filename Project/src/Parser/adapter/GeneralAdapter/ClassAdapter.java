@@ -5,7 +5,7 @@ import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
 import Parser.adapter.FieldAdapter.FieldAdapter;
 import Parser.adapter.MethodAdapter.MethodeAdapter;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

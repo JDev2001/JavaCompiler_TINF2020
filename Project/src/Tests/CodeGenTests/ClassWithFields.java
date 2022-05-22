@@ -8,7 +8,10 @@ import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Types.BoolType;
+import Parser.DataClasses.Types.IMethodType;
 import Parser.DataClasses.Types.IntType;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -22,7 +25,7 @@ public class ClassWithFields
     public void Test() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException
     {
         String identifier = "TestIdentifier";
-        var prog = new Program(List.of(new Class(identifier, new ArrayList<>(),new ArrayList<>(),
+        var prog = new TypedProgram(List.of(new TypedClass(identifier, new ArrayList<>(),new ArrayList<>(),
                 List.of(new Field("i", new IntType(), AccessModifiers.Public),new Field("j", new BoolType(), AccessModifiers.Private)))));
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();

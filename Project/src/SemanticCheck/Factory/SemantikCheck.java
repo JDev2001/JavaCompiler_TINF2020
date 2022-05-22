@@ -1,16 +1,14 @@
-package SemanticCheck;
+package SemanticCheck.Factory;
 
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.*;
-import Parser.DataClasses.StatementExpression.AssignStatementExpression;
-import Parser.DataClasses.StatementExpression.IStatementExpression;
-import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
-import Parser.DataClasses.StatementExpression.NewStatementExpression;
+import Parser.DataClasses.StatementExpression.*;
 import Parser.DataClasses.Statements.*;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
@@ -19,7 +17,7 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallSt
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 
 public interface SemantikCheck {
-    void semantikCheckStart(Program program) throws Exception;
+    TypedProgram semantikCheckStart(Program program) throws Exception;
     ITypedExpression checkExpression(IExpression expression) throws Exception;
     ITypedStatement checkStatement(IStatement statement) throws Exception;
     ITypedStatementExpression checkStatementExpression(IStatementExpression statementExpression) throws Exception;

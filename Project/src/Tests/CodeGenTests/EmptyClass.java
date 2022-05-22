@@ -6,6 +6,8 @@ import CodeGenerator.BytecodeGenerator;
 import Helper.ReflectLoader;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -20,7 +22,7 @@ public class EmptyClass
     public void Test() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
         String identifier = "TestIdentifier";
-        var prog = new Program(List.of(new Class(identifier, new ArrayList<>(),new ArrayList<>(),new ArrayList<>())));
+        var prog = new TypedProgram(List.of(new TypedClass(identifier, new ArrayList<>(),new ArrayList<>(),new ArrayList<>())));
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
         ReflectLoader loader = new ReflectLoader(byteCode.get(identifier));

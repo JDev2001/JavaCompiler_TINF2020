@@ -1,5 +1,5 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package Parser.generated;
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+package generated;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
 /**
@@ -101,12 +101,6 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitJIf(antlrGrammarParser.JIfContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#jElseIf}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitJElseIf(antlrGrammarParser.JElseIfContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#jElse}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -130,6 +124,12 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitStatementExpressions(antlrGrammarParser.StatementExpressionsContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#instVar}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitInstVar(antlrGrammarParser.InstVarContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#assign}.
 	 * @param ctx the parse tree
@@ -167,29 +167,23 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitExpression(antlrGrammarParser.ExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#binary}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitBinary(antlrGrammarParser.BinaryContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#basicexpressions}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitBasicexpressions(antlrGrammarParser.BasicexpressionsContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link antlrGrammarParser#instVar}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitInstVar(antlrGrammarParser.InstVarContext ctx);
-	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#unary}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
 	T visitUnary(antlrGrammarParser.UnaryContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#unaryOperator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#baseType}.
 	 * @param ctx the parse tree

@@ -2,11 +2,11 @@ package ParserTests;
 
 
 import Parser.DataClasses.Common.Program;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
+import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;

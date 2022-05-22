@@ -6,7 +6,7 @@ import Parser.DataClasses.Types.IMethodType;
 
 import java.util.List;
 
-public record TypedProgram(List<TypedClass> classes, IMethodType objectType) {
+public record TypedProgram(List<TypedClass> classes) {
 
 
 }

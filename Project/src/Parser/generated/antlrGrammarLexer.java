@@ -1,5 +1,5 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package Parser.generated;
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+package generated;
 import org.antlr.v4.runtime.Lexer;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.Token;
@@ -22,7 +22,7 @@ public class antlrGrammarLexer extends Lexer {
 		MinusEqual=18, Comperator=19, NotOperator=20, OpIdentifier=21, PointSlashOperator=22, 
 		AddSubOperator=23, LogicalOperator=24, LBracket=25, RBracket=26, CurlyLBracket=27, 
 		CurlyRBracket=28, Dot=29, Comma=30, Semicolon=31, Identifier=32, JCharacter=33, 
-		JInteger=34, WS=35, Comment=36, LineComment=37;
+		Const=34, WS=35, Comment=36, LineComment=37;
 	public static String[] channelNames = {
 		"DEFAULT_TOKEN_CHANNEL", "HIDDEN"
 	};
@@ -38,7 +38,7 @@ public class antlrGrammarLexer extends Lexer {
 			"MinusEqual", "Comperator", "NotOperator", "OpIdentifier", "PointSlashOperator", 
 			"AddSubOperator", "LogicalOperator", "LBracket", "RBracket", "CurlyLBracket", 
 			"CurlyRBracket", "Dot", "Comma", "Semicolon", "Identifier", "JCharacter", 
-			"JInteger", "WS", "Comment", "LineComment"
+			"Const", "WS", "Comment", "LineComment"
 		};
 	}
 	public static final String[] ruleNames = makeRuleNames();
@@ -59,7 +59,7 @@ public class antlrGrammarLexer extends Lexer {
 			"MinusEqual", "Comperator", "NotOperator", "OpIdentifier", "PointSlashOperator", 
 			"AddSubOperator", "LogicalOperator", "LBracket", "RBracket", "CurlyLBracket", 
 			"CurlyRBracket", "Dot", "Comma", "Semicolon", "Identifier", "JCharacter", 
-			"JInteger", "WS", "Comment", "LineComment"
+			"Const", "WS", "Comment", "LineComment"
 		};
 	}
 	private static final String[] _SYMBOLIC_NAMES = makeSymbolicNames();

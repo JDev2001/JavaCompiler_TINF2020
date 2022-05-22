@@ -1,17 +1,15 @@
-package SemanticCheck;
+package SemanticCheck.Factory;
 
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.*;
 import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.StatementExpression.AssignStatementExpression;
-import Parser.DataClasses.StatementExpression.IStatementExpression;
-import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
-import Parser.DataClasses.StatementExpression.NewStatementExpression;
+import Parser.DataClasses.StatementExpression.*;
 import Parser.DataClasses.Statements.*;
 import Parser.DataClasses.Types.*;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
+import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
@@ -19,13 +17,10 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatem
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 import Parser.DataClasses.Common.Class;
-import org.antlr.v4.runtime.atn.PredicateTransition;
-
-import java.util.List;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
-    public void semantikCheckStart(Program semantikCheckProgram) throws Exception {
+    public TypedProgram semantikCheckStart(Program semantikCheckProgram) throws Exception {
         var classList = semantikCheckProgram.classes();
         for (Class semantikCheckClass : classList) {
             semantikCheck(semantikCheckClass);
@@ -39,6 +34,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                 }
             }
         }
+        throw new Exception("Semantic check not implemented");
     }
 
 
@@ -51,7 +47,8 @@ public class SemantikCheckImpl implements SemantikCheck{
             case ConstExpression constExpression -> {
                 return semantikCheck(constExpression);
             }
-            case InstVarStatementExpression instVarStatementExpression -> {
+            case InstVarStatementExpression
+                instVarStatementExpression -> {
                 return semantikCheck(instVarStatementExpression);
             }
             case JNullExpression jNullExpression -> {

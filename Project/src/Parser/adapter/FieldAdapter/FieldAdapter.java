@@ -3,7 +3,7 @@ package Parser.adapter.FieldAdapter;
 import Parser.DataClasses.Field.Field;
 import Parser.adapter.GeneralAdapter.AccessModifierAdapter;
 import Parser.adapter.Types.TypeAdapter;
-import Parser.generated.antlrGrammarParser;
+import generated.antlrGrammarParser;
 
 import java.util.ArrayList;
 import java.util.List;

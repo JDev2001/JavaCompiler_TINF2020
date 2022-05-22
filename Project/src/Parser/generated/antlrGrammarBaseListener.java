@@ -1,5 +1,5 @@
-// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Parser/src/grammar\antlrGrammar.g4 by ANTLR 4.10.1
-package Parser.generated;
+// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+package generated;
 
 import org.antlr.v4.runtime.ParserRuleContext;
 import org.antlr.v4.runtime.tree.ErrorNode;
@@ -196,18 +196,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterJElseIf(antlrGrammarParser.JElseIfContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitJElseIf(antlrGrammarParser.JElseIfContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterJElse(antlrGrammarParser.JElseContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -251,6 +239,18 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStatementExpressions(antlrGrammarParser.StatementExpressionsContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterInstVar(antlrGrammarParser.InstVarContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitInstVar(antlrGrammarParser.InstVarContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -328,18 +328,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterBinary(antlrGrammarParser.BinaryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitBinary(antlrGrammarParser.BinaryContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterBasicexpressions(antlrGrammarParser.BasicexpressionsContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -352,18 +340,6 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterInstVar(antlrGrammarParser.InstVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitInstVar(antlrGrammarParser.InstVarContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
 	@Override public void enterUnary(antlrGrammarParser.UnaryContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -371,6 +347,18 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitUnary(antlrGrammarParser.UnaryContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUnaryOperator(antlrGrammarParser.UnaryOperatorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *

@@ -1,13 +1,12 @@
-package Parser.SyntaxTreeGenerator;
+package Parser.Factory;
 
 
 
 import java.io.IOException;
-
+import generated.antlrGrammarLexer;
+import generated.antlrGrammarParser;
 import Parser.DataClasses.Common.Program;
 import Parser.adapter.GeneralAdapter.ProgramAdapter;
-import Parser.generated.antlrGrammarLexer;
-import Parser.generated.antlrGrammarParser;
 import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.CharStream;
 
@@ -27,7 +26,7 @@ public class SyntaxTreeGenerator implements ISyntaxTreeGenerator
         //Call the generated Components from the antlr file (lexer->tokens->parser)
         antlrGrammarLexer lexer = new antlrGrammarLexer(inputstream);
         CommonTokenStream tokens = new CommonTokenStream(lexer);
-        antlrGrammarParser parser = new antlrGrammarParser(tokens);
+        antlrGrammarParser parser = new generated.antlrGrammarParser(tokens);
 
         return  new ProgramAdapter().generate(parser.programm());
     }

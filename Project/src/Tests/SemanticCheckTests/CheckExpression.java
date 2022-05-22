@@ -1,20 +1,14 @@
 package SemanticCheckTests;
 
-import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Expressions.BinaryExpression;
 import Parser.DataClasses.Expressions.ConstExpression;
-import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.BoolType;
 import Parser.DataClasses.Types.IntType;
-import SemanticCheck.SemantikCheckImpl;
-import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
+import SemanticCheck.Factory.SemantikCheckImpl;
 import SemanticCheck.TypedDataClasses.typedExpressions.TypedBinaryExpression;
 import SemanticCheck.TypedDataClasses.typedExpressions.TypedConstExpression;
-import SemanticCheck.TypedDataClasses.typedStatements.TypedReturnStatement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import java.util.List;
 
 public class CheckExpression
 {

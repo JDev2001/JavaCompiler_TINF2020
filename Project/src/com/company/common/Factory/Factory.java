@@ -1,7 +1,11 @@
 package com.company.common.Factory;
 
-import Parser.SyntaxTreeGenerator.ISyntaxTreeGenerator;
-import Parser.SyntaxTreeGenerator.SyntaxTreeGenerator;
+import CodeGenerator.Factory.CodeGenerator;
+import CodeGenerator.Factory.ICodeGenerator;
+import Parser.Factory.ISyntaxTreeGenerator;
+import Parser.Factory.SyntaxTreeGenerator;
+import SemanticCheck.Factory.SemantikCheck;
+import SemanticCheck.Factory.SemantikCheckImpl;
 
 public class Factory implements IFactory
 {
@@ -20,6 +24,10 @@ public class Factory implements IFactory
         return new SyntaxTreeGenerator();
     }
 
+    @Override
+    public SemantikCheck getSemantikCheck() {
+        return new SemantikCheckImpl();
+    }
 
-
+    public ICodeGenerator getCodeGenerator() {return new CodeGenerator();}
 }
