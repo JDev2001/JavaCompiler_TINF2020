@@ -1,23 +1,14 @@
 package CodeGenerator;
 
-import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Field.Field;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import Parser.DataClasses.Common.AccessModifiers;
-import Parser.DataClasses.Common.Class;
-import Parser.DataClasses.Common.Program;
-import Parser.DataClasses.Field.Field;
-import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.Method.MethodParameter;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedMethod.TypedMethod;
 import SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import Parser.DataClasses.Types.*;
 import org.objectweb.asm.ClassWriter;
@@ -226,9 +217,6 @@ public class BytecodeGenerator {
             case TypedConstExpression expression -> {
                 System.out.println(expression);
             }
-            case TypedInstVarStatementExpression expression -> {
-                System.out.println(expression);
-            }
             case TypedJNullExpression expression -> {
                 System.out.println(expression);
             }
@@ -245,6 +233,9 @@ public class BytecodeGenerator {
                 System.out.println(expression);
             }
             //StatementExpressions
+            case TypedInstVarStatementExpression expression -> {
+                System.out.println(expression);
+            }
             case TypedAssignStatementExpression statement -> {
                 System.out.println(statement);
             }
