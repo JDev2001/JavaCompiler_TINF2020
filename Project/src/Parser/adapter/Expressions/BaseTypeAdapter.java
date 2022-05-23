@@ -27,7 +27,7 @@ public class BaseTypeAdapter {
         }
         else if(ctx.Const() != null){
             //So Richtig??
-            return new ConstExpression(ctx.Const().getText());
+            return new ConstExpression(Integer.parseInt(ctx.Const().getText()));
         }
         else if(ctx.Super() != null){
             return new SuperExpression();

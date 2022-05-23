@@ -42,6 +42,7 @@ public class StatementAdapter {
         }
         else {
             System.out.println("Missmatch -> in Statement Adapter!");
+            //throw new Exception("Missmatch -> in Statement Adapter!");
             return null;
         }
     }

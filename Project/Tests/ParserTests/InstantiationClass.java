@@ -32,7 +32,7 @@ public class InstantiationClass
         String src = "class MyClass { public MyClass() { new A(); } } class A {}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
-        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),new ArrayList<>()),new CustomType("A"));
+        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),new ArrayList<>()));
 
         Assertions.assertEquals(syntaxTree,
                 new Program(List.of(
@@ -52,32 +52,36 @@ public class InstantiationClass
         String src = "class MyClass { public MyClass() { new A(9); } } class A {}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
-        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),List.of(new ConstExpression(9))),new CustomType("A"));
+        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),List.of(new ConstExpression(9))));
 
-        Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", new ArrayList<>(), List.of(
+        Program ast = new Program(List.of(
+                new Class("MyClass", List.of(
                         new Method(AccessModifiers.Public,"MyClass",
                                 new ArrayList<>(),
                                 new VoidType(),
-                                new Block(List.of(constructorCall)))), new ArrayList<>()),
-                new Class("A",new ArrayList<>(),new ArrayList<>(),new ArrayList<>())))
-        );
+                                new Block(List.of(constructorCall)))),
+                        new ArrayList<>(),
+                        new ArrayList<>()),
+                new Class("A",new ArrayList<>(),new ArrayList<>(),new ArrayList<>())));
+
+        Assertions.assertEquals(syntaxTree, ast);
     }
+
     @Test
     public void InstantiatingWithAssignment() throws IOException
     {
-
         String src = "class MyClass { public MyClass() { x =  new A(); } } class A {}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
-        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),new ArrayList<>()),new CustomType("A"));
+        var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),new ArrayList<>()));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", new ArrayList<>(), List.of(
+                new Class("MyClass", List.of(
                         new Method(AccessModifiers.Public,"MyClass",
                                 new ArrayList<>(),
                                 new VoidType(),
-                                new Block(List.of(new AssignStatementExpression(new LocalOrFieldVar("x"),constructorCall))))), new ArrayList<>()),
+                                new Block(List.of(new AssignStatementExpression(new LocalOrFieldVar("x"),constructorCall))))),
+                        new ArrayList<>(),  new ArrayList<>()),
                 new Class("A",new ArrayList<>(),new ArrayList<>(),new ArrayList<>())))
         );
     }

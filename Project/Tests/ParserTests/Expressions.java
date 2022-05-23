@@ -107,19 +107,20 @@ public class Expressions
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
         var assign =  new AssignStatementExpression(new LocalOrFieldVar("x"),
-                new BinaryExpression(new ConstExpression(1),
-                        new BinaryExpression(new ConstExpression(4), new ConstExpression(2),"*"),
-                        "/"));
+                new BinaryExpression(
+                        new BinaryExpression(new ConstExpression(1),
+                                new ConstExpression(4), "/"),
+                        new ConstExpression(2), "*"));
 
-        Assertions.assertEquals(syntaxTree,new Program(List.of(
+        Program ast = new Program(List.of(
                 new Class("MyClass", new ArrayList<>(),List.of(
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
                                 new VoidType(),
                                 new Block(List.of(
                                         new VarDeclarationStatement("x", new IntType()),assign)))),
-                        new ArrayList<>()))));
+                        new ArrayList<>())));
 
-
+        Assertions.assertEquals(syntaxTree, ast);
     }
 }

@@ -42,16 +42,18 @@ jReturn: 'return' expression;
 
 //Statements
 statementExpressions: assign | methodCall | jNew ;
-instVar:  (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier);
+instVar: (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier);
+this: This Dot;
 
 //Statement Expressions
 assign: (instVar | Identifier) assignOperator expression;
 assignOperator: Equal | PlusEqual | MinusEqual;
-methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket); //methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
+methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
+//methodCall: methodCallPrefix? (Identifier LBracket nArguments RBracket Dot)* (Identifier LBracket nArguments RBracket);
 jNew: 'new' Identifier LBracket nArguments RBracket;
 
 //Method Call
-methodCallPrefix: (instVar|Identifier Dot);
+methodCallPrefix: (this|instVar|Identifier Dot); //this??
 nArguments: expression? | expression (Comma expression)*; // | instVar
 
 //In all other

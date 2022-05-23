@@ -44,16 +44,16 @@ public class Main {
         //Generates the syntax tree
         System.out.println("Generating the syntax tree!");
         Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromStream(new FileInputStream(args[0])));
-        TypedProgram typedSyntaxTree = Factory.getFactory().getSemantikCheck().semantikCheckStart(syntaxTree);
-        System.out.println("Generating the typed syntax tree!");
-        //TODO: typed syntax call
 
+        //Generates Semantik check
+        System.out.println("Generating the typed syntax tree!");
+        TypedProgram typedSyntaxTree = Factory.getFactory().getSemantikCheck().semantikCheckStart(syntaxTree);
+
+        //Generates Byte code
         System.out.println("Generating the bytecode");
         HashMap<String, byte[]> res = Factory.getFactory().getCodeGenerator().getCode(typedSyntaxTree);
 
-
-
-        //Only for Debugging reasons
+        //Writes Bytecode to File
         for(Map.Entry<String, byte[]> entry : res.entrySet()) {
             String key = entry.getKey();
             byte[] value = entry.getValue();

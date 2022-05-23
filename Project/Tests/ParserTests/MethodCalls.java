@@ -75,7 +75,7 @@ public class MethodCalls
     public void MethodWithExpressionParameters() throws IOException
     {
 
-        String src = "class MyClass { public void A() { B(5,Y.C()); } }";
+        String src = "class MyClass { public void A() { B(5,this.C()); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
@@ -97,7 +97,7 @@ public class MethodCalls
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
-        var block =  new Block(List.of(new MethodCallStatementExpression("Foo", new LocalOrFieldVar("a"), List.of(new ConstExpression(false)))));
+        var block =  new Block(List.of(new MethodCallStatementExpression("Foo", new LocalOrFieldVar("a"), List.of(new BooleanExpression(false)))));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(), List.of(
@@ -110,7 +110,7 @@ public class MethodCalls
     public void ComplexMethodCallMixedUp() throws IOException
     {
 
-        String src = "class MyClass { public void A() { a.Foo(Y.X(false)); } }";
+        String src = "class MyClass { public void A() { a.Foo(this.X(false)); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
@@ -119,8 +119,8 @@ public class MethodCalls
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
                                 new VoidType(),
-                                new Block(List.of(new MethodCallStatementExpression("a", new LocalOrFieldVar("a"),
-                                        List.of(new MethodCallStatementExpression("X", new LocalOrFieldVar("Y"), List.of(new ConstExpression(false))))))))),
+                                new Block(List.of(new MethodCallStatementExpression("Foo", new LocalOrFieldVar("a"),
+                                        List.of(new MethodCallStatementExpression("X", new ThisExpression(), List.of(new BooleanExpression(false))))))))),
                         new ArrayList<>()))));
     }
 
