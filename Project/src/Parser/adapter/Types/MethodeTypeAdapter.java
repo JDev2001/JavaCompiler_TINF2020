@@ -16,6 +16,7 @@ public class MethodeTypeAdapter {
                     return new IntType();
                 case "char":
                     return new CharType();
+                case "bool":
                 case "boolean":
                     return new BoolType();
                 default:

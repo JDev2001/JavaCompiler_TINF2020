@@ -5,9 +5,7 @@ import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
-import Parser.DataClasses.Expressions.ConstExpression;
-import Parser.DataClasses.Expressions.LocalOrFieldVar;
-import Parser.DataClasses.Expressions.ThisExpression;
+import Parser.DataClasses.Expressions.*;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
 import Parser.DataClasses.Types.VoidType;
@@ -70,14 +68,14 @@ public class MethodCalls
                                 new ArrayList<>(),
                                 new VoidType(),
                                 new Block(List.of(new MethodCallStatementExpression("B", new ThisExpression(),
-                                        List.of(new ConstExpression(5), new ConstExpression('c'), new ConstExpression(false) )))))),
+                                        List.of(new ConstExpression(5), new CharacterExpression('c'), new BooleanExpression(false) )))))),
                         new ArrayList<>()))));
     }
     @Test
     public void MethodWithExpressionParameters() throws IOException
     {
 
-        String src = "class MyClass { public void A() { B(5,this.C()); } }";
+        String src = "class MyClass { public void A() { B(5,Y.C()); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
@@ -112,7 +110,7 @@ public class MethodCalls
     public void ComplexMethodCallMixedUp() throws IOException
     {
 
-        String src = "class MyClass { public void A() { a.Foo(this.X(false)); } }";
+        String src = "class MyClass { public void A() { a.Foo(Y.X(false)); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
@@ -122,7 +120,7 @@ public class MethodCalls
                                 new ArrayList<>(),
                                 new VoidType(),
                                 new Block(List.of(new MethodCallStatementExpression("a", new LocalOrFieldVar("a"),
-                                        List.of(new MethodCallStatementExpression("X", new ThisExpression(), List.of(new ConstExpression(false))))))))),
+                                        List.of(new MethodCallStatementExpression("X", new LocalOrFieldVar("Y"), List.of(new ConstExpression(false))))))))),
                         new ArrayList<>()))));
     }
 

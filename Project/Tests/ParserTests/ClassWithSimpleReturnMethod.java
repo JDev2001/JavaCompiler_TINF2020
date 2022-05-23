@@ -2,6 +2,7 @@ package ParserTests;
 
 
 import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.BooleanExpression;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.BoolType;
@@ -32,7 +33,7 @@ public class ClassWithSimpleReturnMethod
                 new Class("MyClass",new ArrayList<>(), List.of(
                 new Method(AccessModifiers.Public,"A", new ArrayList<>(),
                         new BoolType(),
-                        new Block(List.of(new ReturnStatement(new ConstExpression(false)))))),
+                        new Block(List.of(new ReturnStatement(new BooleanExpression(false)))))),
                         new ArrayList<>()))));
     }
 }

@@ -14,6 +14,6 @@ public class IfElseAdapter {
 
         return new IfElseStatement(ExpressionAdapter.generate(ctx.jIf().expression()),
                 BlockAdapter.generate(ctx.jIf().block()),
-                null);
+                BlockAdapter.generate(ctx.jElse().block()));
     }
 }
