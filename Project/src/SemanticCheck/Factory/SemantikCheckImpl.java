@@ -253,7 +253,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped) throws Exception {
         ITypedStatementExpression typedConstructorCall = checkStatementExpression(untyped.constructorCall());
 
-        return new TypedNewStatementExpression((TypedMethodCallStatementExpression) typedConstructorCall, untyped.type(), typedConstructorCall.getType()); //TODO: review
+        //return new TypedNewStatementExpression((TypedMethodCallStatementExpression) typedConstructorCall, untyped.constructorCall().name(), typedConstructorCall.getType()); //TODO: review
         return null;
     }
 
