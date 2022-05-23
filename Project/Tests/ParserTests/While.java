@@ -85,12 +85,12 @@ public class While
     public void NeastedWhile() throws IOException
     {
 
-        String src = "class MyClass { public void A() { if(5>3) {} else {  while(5>3) { while(5>3){}} } } }";
+        String src = "class MyClass { public void A() { while(5>3) { while(5>3) {}}  } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
         var innerblock = new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()))));
 
-        var block =  new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(List.of(innerblock)))));
+        var block =  new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), innerblock)));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(

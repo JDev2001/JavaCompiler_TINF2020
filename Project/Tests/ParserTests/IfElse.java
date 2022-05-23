@@ -90,7 +90,7 @@ public class IfElse
         Assertions.assertNotNull(syntaxTree);
         var innerblock = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
 
-        var block = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), new Block(List.of(innerblock)))));
+        var block = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), innerblock)));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(
