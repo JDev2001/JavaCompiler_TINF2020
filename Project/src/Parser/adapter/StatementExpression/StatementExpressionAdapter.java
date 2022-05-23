@@ -17,9 +17,6 @@ public class StatementExpressionAdapter {
         if(ctx.assign() != null){
             return AssignStatementExpressionGenerator.generate(ctx.assign());
         }
-        else if(ctx.instVar()!= null){
-            return InstVarStatementExpressionAdapter.generate(ctx.instVar());
-        }
         else if(ctx.methodCall() != null){
             return MethodCallStatementExpressionAdapter.generate(ctx.methodCall());
         }

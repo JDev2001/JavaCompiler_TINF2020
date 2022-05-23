@@ -1,9 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="updated IntelliJ and added function for vars...">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser">
+      <change afterPath="$PROJECT_DIR$/lib/apiguardian-api-1.1.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-api-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-engine-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-jupiter-params-5.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-commons-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/junit-platform-engine-1.7.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/opentest4j-1.2.0.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodArgumentCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/InstVarStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/InstVarStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/AssignStatementExpressionGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/AssignStatementExpressionGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/InstVarStatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/InstVarStatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/VarDeclarationAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/VarDeclarationAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Types/MethodeTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Types/MethodeTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/ClassWithFields.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/Helper/ReflectLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Helper/ReflectLoader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/AccessingInstVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/AccessingInstVar.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassInstantiatingAnotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributeAccessMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributeAccessMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithConstructor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithLocalVarDecMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithLocalVarDecMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithSimpleReturnMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/EmptyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/IfElse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/IfElse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/MethodCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/ParserTests/ReturnExpressionMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ReturnExpressionMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckBlock.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Tests/SemanticCheckTests/CheckMethodCall.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckMethodCall.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,26 +75,35 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithConstructor.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ReturnExpressionMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/IfElse.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithSimpleReturnMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributes.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/EmptyClass.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.iml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributeAccessMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyMethod.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/ParserTests/AccessingInstVar.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ClassWithSimpleReturnMethod.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/EmptyClass.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/IfElse.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/MethodCalls.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Tests/ParserTests/ReturnExpressionMethod.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -62,13 +116,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="true" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/.jdks/junit-jupiter-5.8.2.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.19934641" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
@@ -76,46 +135,21 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\src\com\company" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Parser\src\generated" />
       <recent name="C:\Users\Jona\IdeaProjects\JavaCompiler_TINF2020\Project\Parser\src" />
       <recent name="C:\Users\Jona\IdeaProjects\JavaCompiler_TINF2020\Project\Parser" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
-      <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="Parser.DataClasses.Expressions" />
-      <recent name="SemanticCheck.TypedDataClasses.typedExpressions" />
+      <recent name="Parser.adapter.Types" />
       <recent name="ParserTests" />
       <recent name="SemanticCheckTests" />
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="18" />
-      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
-      <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;Ressources\EmptyClass.java&quot;" />
-      <option name="VM_PARAMETERS" value="--enable-preview" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.company.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="EmptyClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.AccessingInstVar.Test">
+    <configuration name="AccessingInstVar.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -124,13 +158,29 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.EmptyClass" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.AccessingInstVar" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ClassWithAssignMethod (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithAssignMethod" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ClassWithAssignMethod.MethodAssign" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -139,9 +189,12 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.EmptyClass" />
-      <option name="METHOD_NAME" value="Test" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithAssignMethod" />
+      <option name="METHOD_NAME" value="MethodAssign" />
       <option name="TEST_OBJECT" value="method" />
+      <uniqueIds>
+        <uniqueId value="[engine:junit-jupiter]/[class:ParserTests.ClassWithAssignMethod]" />
+      </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -162,20 +215,36 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ReturnExpressionMethod.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ReturnExpressionMethod" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="Application.Main" />
-      <item itemvalue="JUnit.EmptyClass" />
-      <item itemvalue="JUnit.EmptyClass.Test" />
-      <item itemvalue="JUnit.All in Project" />
       <item itemvalue="JUnit.ParserTests in Project" />
+      <item itemvalue="JUnit.ClassWithAssignMethod.MethodAssign" />
+      <item itemvalue="JUnit.ClassWithAssignMethod (1)" />
+      <item itemvalue="JUnit.ReturnExpressionMethod.Test" />
+      <item itemvalue="JUnit.AccessingInstVar.Test" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.EmptyClass" />
+        <item itemvalue="JUnit.AccessingInstVar.Test" />
         <item itemvalue="JUnit.ParserTests in Project" />
-        <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.EmptyClass.Test" />
+        <item itemvalue="JUnit.ReturnExpressionMethod.Test" />
+        <item itemvalue="JUnit.ClassWithAssignMethod (1)" />
+        <item itemvalue="JUnit.ClassWithAssignMethod.MethodAssign" />
       </list>
     </recent_temporary>
   </component>
@@ -354,35 +423,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653167273756</updated>
     </task>
-    <task id="LOCAL-00024" summary="fixed">
-      <created>1653245703051</created>
+    <task id="LOCAL-00024" summary="Parser">
+      <created>1653175688207</created>
       <option name="number" value="00024" />
       <option name="presentableId" value="LOCAL-00024" />
       <option name="project" value="LOCAL" />
-      <updated>1653245703051</updated>
+      <updated>1653175688207</updated>
     </task>
-    <task id="LOCAL-00025" summary="Fix for the gods">
-      <created>1653246598485</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1653246598485</updated>
-    </task>
-    <task id="LOCAL-00026" summary="Fixes">
-      <created>1653247387682</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1653247387682</updated>
-    </task>
-    <task id="LOCAL-00027" summary="updated IntelliJ and added function for vars...">
-      <created>1653249623534</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1653249623534</updated>
-    </task>
-    <option name="localTasksCounter" value="28" />
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -398,6 +446,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -421,22 +470,10 @@
     <MESSAGE value="AddedTests" />
     <MESSAGE value="FixedTest" />
     <MESSAGE value="Can generate EmptyClass.class" />
-    <MESSAGE value="fixed" />
-    <MESSAGE value="Fix for the gods" />
-    <MESSAGE value="Fixes" />
-    <MESSAGE value="updated IntelliJ and added function for vars..." />
-    <option name="LAST_COMMIT_MESSAGE" value="updated IntelliJ and added function for vars..." />
+    <MESSAGE value="Parser" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/com/company/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>137</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />

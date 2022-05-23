@@ -13,8 +13,8 @@ import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
 import Parser.DataClasses.Types.VoidType;
 import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -137,6 +137,12 @@ public interface antlrGrammarVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitAssign(antlrGrammarParser.AssignContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link antlrGrammarParser#assignOperator}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssignOperator(antlrGrammarParser.AssignOperatorContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link antlrGrammarParser#methodCall}.
 	 * @param ctx the parse tree
 	 * @return the visitor result

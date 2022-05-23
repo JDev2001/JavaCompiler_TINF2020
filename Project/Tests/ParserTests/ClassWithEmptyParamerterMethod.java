@@ -13,6 +13,7 @@ import Parser.DataClasses.Types.IntType;
 import Parser.DataClasses.Types.VoidType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import Parser.DataClasses.Common.Class;
 import java.io.IOException;
 import java.util.ArrayList;

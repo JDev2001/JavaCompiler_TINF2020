@@ -13,8 +13,8 @@ import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Types.VoidType;
 import Parser.DataClasses.Common.Class;
-import org.junit.Test;
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.io.IOException;
 import java.util.ArrayList;

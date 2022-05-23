@@ -17,6 +17,7 @@ import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import Parser.DataClasses.Common.Class;
 
 import java.io.IOException;

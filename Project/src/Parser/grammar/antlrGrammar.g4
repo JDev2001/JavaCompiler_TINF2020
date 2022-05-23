@@ -15,7 +15,7 @@ fieldDeclaration: AccessModifier?  type Identifier (Comma Identifier)* (Equal ex
 //Method things
 //Type
 type: 'int'|'char'|'boolean'| Identifier;
-methodType: 'void'|type;
+methodType: 'void' | type;
 //Methodparameters
 nMethodParameters: (methodParameter)? | methodParameter (Comma methodParameter)+;
 methodParameter: type Identifier;
@@ -26,8 +26,8 @@ block: CurlyLBracket (statement)* CurlyRBracket;
 statement: block | varDeclaration Semicolon | ifelse | jWhile | jReturn Semicolon | statementExpressions Semicolon;
 
 //localVar
-varDeclaration : type Identifier (Comma Identifier)* expression;
-//varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?; -> Warum was soll das?
+//varDeclaration : type Identifier (Comma Identifier)* expression;
+varDeclaration: type Identifier (Comma Identifier)* ((Equal|PlusEqual|MinusEqual) expression)?; //-> Warum was soll das?
 
 //something with if
 //ifelse: jIf jElseIf* jElse?;
@@ -41,7 +41,7 @@ jWhile: 'while' LBracket expression RBracket block;
 jReturn: 'return' expression;
 
 //Statements
-statementExpressions: assign | instVar | methodCall | jNew ;
+statementExpressions: assign | methodCall | jNew ;
 instVar:  (This Dot Identifier) | ((This Dot)? (Identifier Dot)+ Identifier);
 
 //Statement Expressions
@@ -52,7 +52,7 @@ jNew: 'new' Identifier LBracket nArguments RBracket;
 
 //Method Call
 methodCallPrefix: (instVar|Identifier Dot);
-nArguments: expression? | expression (Comma expression)*; //| instVar
+nArguments: expression? | expression (Comma expression)*; // | instVar
 
 //In all other
 expression:  basicexpressions | expression operators expression;

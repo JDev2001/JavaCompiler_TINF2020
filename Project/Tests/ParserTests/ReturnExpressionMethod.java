@@ -14,6 +14,7 @@ import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +31,7 @@ public class ReturnExpressionMethod
                 new Class("MyClass",new ArrayList<>(), List.of(
                         new Method(AccessModifiers.Public,"A", new ArrayList<>(),
                                 new IntType(),
-                                new Block(List.of(new ReturnStatement(new BinaryExpression(new ConstExpression(1), new BinaryExpression(new ConstExpression(1),new ConstExpression(1),"+"), "+")))))),
+                                new Block(List.of(new ReturnStatement(new BinaryExpression(new BinaryExpression(new ConstExpression(1),new ConstExpression(1),"+"), new ConstExpression(1),"+")))))),
                         new ArrayList<>()))));
     }
 }
