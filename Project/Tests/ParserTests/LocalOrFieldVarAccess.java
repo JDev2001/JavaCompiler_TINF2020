@@ -1,36 +1,40 @@
 package ParserTests;
 
+
 import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.TypeExpression;
+import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Statements.ReturnStatement;
+import Parser.DataClasses.Types.CustomType;
 import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
-import Parser.DataClasses.Types.VoidType;
+import Parser.DataClasses.Types.IntType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ClassWithConstructor
+public class LocalOrFieldVarAccess
 {
     @Test
     public void Test() throws IOException
     {
 
-        String src = "class MyClass { protected MyClass() { } }";
+        String src = "class MyClass { private int x; public int A() { return x; } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", List.of(
-                        new Method(AccessModifiers.Protected,"MyClass",
+                new Class("MyClass",new ArrayList<>(), List.of(
+                        new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
-                                new VoidType(),
-                                new Block(new ArrayList<>()))),
-                        new ArrayList<>(),new ArrayList<>()))));
+                                new IntType(),
+                                new Block(List.of(new ReturnStatement(new TypeExpression(new CustomType("x"))))))),
+                        List.of(new Field("x", new IntType(),AccessModifiers.Private))))));
     }
 }

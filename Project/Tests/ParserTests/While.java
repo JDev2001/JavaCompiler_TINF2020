@@ -1,6 +1,9 @@
 package ParserTests;
 
 
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Block;
+import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.BinaryExpression;
 import Parser.DataClasses.Expressions.BooleanExpression;
@@ -9,13 +12,10 @@ import Parser.DataClasses.Expressions.ThisExpression;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.StatementExpression.MethodCallStatementExpression;
 import Parser.DataClasses.Statements.IfElseStatement;
+import Parser.DataClasses.Statements.WhileStatement;
+import Parser.DataClasses.Types.VoidType;
 import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
-
-import Parser.DataClasses.Common.AccessModifiers;
-import Parser.DataClasses.Common.Block;
-import Parser.DataClasses.Types.VoidType;
-import Parser.DataClasses.Common.Class;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -23,16 +23,16 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class IfElse
+public class While
 {
     @Test
-    public void SimpleIfWithConstCondition() throws IOException {
+    public void SimpleWhileWithConstCondition() throws IOException {
 
-        String src = "class MyClass { public void A() { if(true) {} else {} } }";
+        String src = "class MyClass { public void A() { while(true) {}}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
-        var block = new Block(List.of(new IfElseStatement(new BooleanExpression(true), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
+        var block = new Block(List.of(new WhileStatement(new BooleanExpression(true), new Block(new ArrayList<>()))));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(
@@ -44,14 +44,14 @@ public class IfElse
         Assertions.assertEquals(syntaxTree,program);
     }
     @Test
-    public void SimpleIfWithExpressionCondition() throws IOException
+    public void SimpleWhileWithExpressionCondition() throws IOException
     {
 
-        String src = "class MyClass { public void A() { if(5>3) {} else {} } }";
+        String src = "class MyClass { public void A() { while(5>3) {} } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
-        var block = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
+        var block = new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()))));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(
@@ -63,14 +63,14 @@ public class IfElse
         Assertions.assertEquals(syntaxTree,program);
     }
     @Test
-    public void SimpleIfWithMethodCallCondition() throws IOException
+    public void SimpleWhileWithMethodCallCondition() throws IOException
     {
 
-        String src = "class MyClass { public void A() { if(foo()) {} else {} } }";
+        String src = "class MyClass { public void A() { while(foo()) {} } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
-        var block = new Block(List.of(new IfElseStatement(new MethodCallStatementExpression("foo",new ThisExpression(),new ArrayList<>()), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
+        var block = new Block(List.of(new WhileStatement(new MethodCallStatementExpression("foo",new ThisExpression(),new ArrayList<>()), new Block(new ArrayList<>()))));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(
@@ -82,15 +82,15 @@ public class IfElse
         Assertions.assertEquals(syntaxTree,program);
     }
     @Test
-    public void NeastedIf() throws IOException
+    public void NeastedWhile() throws IOException
     {
 
-        String src = "class MyClass { public void A() { if(5>3) {} else {  if(5>3) {} else { } } } }";
+        String src = "class MyClass { public void A() { if(5>3) {} else {  while(5>3) { while(5>3){}} } } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
-        var innerblock = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
+        var innerblock = new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()))));
 
-        var block = new Block(List.of(new IfElseStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(new ArrayList<>()), new Block(List.of(innerblock)))));
+        var block =  new Block(List.of(new WhileStatement(new BinaryExpression(new ConstExpression(5),new ConstExpression(3),">"), new Block(List.of(innerblock)))));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(

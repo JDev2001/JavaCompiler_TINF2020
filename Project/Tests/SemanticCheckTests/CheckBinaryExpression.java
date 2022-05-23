@@ -10,7 +10,7 @@ import SemanticCheck.TypedDataClasses.typedExpressions.TypedConstExpression;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-public class CheckExpression
+public class CheckBinaryExpression
 {
     @Test
     public void TestAddExpression() throws Exception

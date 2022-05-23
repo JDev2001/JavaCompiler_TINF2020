@@ -5,10 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="FixedTypeChecker">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/LocalVarDeclaration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/MethodDefinitions.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/While.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckLocalOrFieldVar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckUnaryExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/AccessingInstVar.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/InstVarAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/InstantiationClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/LocalOrFieldVarAssignment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributeAccessMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/LocalOrFieldVarAccess.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithConstructor.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ConstructorDefinitions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithEmptyParamerterMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/Expressions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithLocalVarDecMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithSimpleReturnMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/EmptyClass.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/IfElse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/IfElse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ReturnExpressionMethod.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/SemanticCheckTests/CheckBinaryExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +108,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ClassWithAssignMethod">
+  <component name="RunManager" selected="JUnit.All in Project">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -98,7 +117,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckBinaryExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -107,13 +126,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckExpression" />
+      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBinaryExpression" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckExpression.InvalidLogicalExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CheckLocalOrFieldVar.CheckLocalVarBool" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -122,30 +141,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckExpression" />
-      <option name="METHOD_NAME" value="InvalidLogicalExpression" />
+      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckLocalOrFieldVar" />
+      <option name="METHOD_NAME" value="CheckLocalVarBool" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CheckExpression.TestAndExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckExpression" />
-      <option name="METHOD_NAME" value="TestAndExpression" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ClassWithAssignMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ConstructorDefinitions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -154,26 +157,40 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithAssignMethod" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.ConstructorDefinitions" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SemanticCheckTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.ClassWithAssignMethod" />
-      <item itemvalue="JUnit.CheckExpression" />
-      <item itemvalue="JUnit.CheckExpression.InvalidLogicalExpression" />
-      <item itemvalue="JUnit.CheckExpression.TestAndExpression" />
+      <item itemvalue="JUnit.CheckBinaryExpression" />
+      <item itemvalue="JUnit.CheckLocalOrFieldVar.CheckLocalVarBool" />
+      <item itemvalue="JUnit.ConstructorDefinitions" />
+      <item itemvalue="JUnit.SemanticCheckTests in Project" />
       <item itemvalue="JUnit.All in Project" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ClassWithAssignMethod" />
         <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.CheckExpression" />
-        <item itemvalue="JUnit.CheckExpression.InvalidLogicalExpression" />
-        <item itemvalue="JUnit.CheckExpression.TestAndExpression" />
+        <item itemvalue="JUnit.SemanticCheckTests in Project" />
+        <item itemvalue="JUnit.CheckBinaryExpression" />
+        <item itemvalue="JUnit.CheckLocalOrFieldVar.CheckLocalVarBool" />
+        <item itemvalue="JUnit.ConstructorDefinitions" />
       </list>
     </recent_temporary>
   </component>
@@ -193,7 +210,8 @@
       <workItem from="1653162992906" duration="902000" />
       <workItem from="1653211074983" duration="766000" />
       <workItem from="1653244943440" duration="1455000" />
-      <workItem from="1653320018854" duration="738000" />
+      <workItem from="1653320018854" duration="953000" />
+      <workItem from="1653325462247" duration="4018000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -356,7 +374,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653139665147</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="FixedTypeChecker">
+      <created>1653322113951</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1653322113951</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
