@@ -268,6 +268,18 @@ public class antlrGrammarBaseListener implements antlrGrammarListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterAssignOperator(antlrGrammarParser.AssignOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssignOperator(antlrGrammarParser.AssignOperatorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMethodCall(antlrGrammarParser.MethodCallContext ctx) { }
 	/**
 	 * {@inheritDoc}

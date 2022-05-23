@@ -18,6 +18,7 @@ import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 import Parser.DataClasses.Common.Class;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -42,6 +43,7 @@ public class ClassWithAssignMethod
                                         new VarDeclarationStatement("x", new IntType()),asign)))),
                         new ArrayList<>()))));
     }
+
     @Test
     public void MethodAssign() throws IOException
     {
@@ -56,7 +58,11 @@ public class ClassWithAssignMethod
                 new ArrayList<>(),
                 new VoidType(),
                 new Block(List.of(new VarDeclarationStatement("x", new IntType()),new AssignStatementExpression(new LocalOrFieldVar("x"),new MethodCallStatementExpression("B",new ThisExpression(),new ArrayList<>())))));
-        Assertions.assertEquals(syntaxTree,new Program(List.of(new Class("MyClass", new ArrayList<>(),List.of(methodA,methodB),
+
+        Assertions.assertEquals(syntaxTree,
+                new Program(List.of(new Class("MyClass",
+                        new ArrayList<>(),
+                        List.of(methodB,methodA),
                         new ArrayList<>()))));
     }
 }

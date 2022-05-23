@@ -1,23 +1,15 @@
 package CodeGenerator;
 
-import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Field.Field;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import Parser.DataClasses.Common.AccessModifiers;
-import Parser.DataClasses.Common.Class;
-import Parser.DataClasses.Common.Program;
-import Parser.DataClasses.Field.Field;
-import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.Method.MethodParameter;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedMethod.TypedMethod;
 import SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import Parser.DataClasses.Types.*;
 import org.objectweb.asm.ClassWriter;
@@ -97,6 +89,9 @@ public class BytecodeGenerator {
                 //Initiate HashMap for local variables inside the method
                 HashMap<String, Integer> locals = generateParameters(method.parameters());
                 MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), new VoidType()), null, null);
+                methodVisitor.visitCode();
+                generateStatement(cw, locals, method.statement());
+                methodVisitor.visitEnd();
             }
         }
     }
@@ -107,7 +102,8 @@ public class BytecodeGenerator {
             HashMap<String, Integer> locals = generateParameters(method.parameters());
             MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), method.returnType()), null, null);
             methodVisitor.visitCode();
-            generateBlock(cw, (TypedBlock) method.statement());
+            generateStatement(cw, locals, method.statement());
+            methodVisitor.visitEnd();
         }
     }
 
@@ -168,18 +164,21 @@ public class BytecodeGenerator {
 
     private HashMap<String, Integer> generateParameters(List<TypedMethodParameter> methodParameters) {
         HashMap<String, Integer> parameters = new HashMap<String, Integer>();
-        int counter = 1;
         for (var parameter : methodParameters) {
-            parameters.put(parameter.identifier(), counter);
-            counter++;
+            parameters.put(parameter.identifier(), parameters.size() + 1);
         }
         return parameters;
     }
 
-    private void generateStatement(ClassWriter cw, ITypedStatement pStatement) {
+    private HashMap<String, Integer> addLocalVar(HashMap<String, Integer> methodLocals, LocalOrFieldVar newVar) {
+        methodLocals.put(newVar.name(), methodLocals.size() + 1);
+        return methodLocals;
+    }
+
+    private void generateStatement(ClassWriter cw, HashMap<String, Integer> locals, ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedBlock statement -> {
-                generateBlock(cw, statement);
+                generateBlock(cw, locals, statement);
             }
             case TypedIfElseStatement statement -> {
                 generateIfElse(cw, statement);
@@ -212,9 +211,9 @@ public class BytecodeGenerator {
 
     }
 
-    private void generateBlock(ClassWriter cw, TypedBlock block) {
-        for(var statement : block.statements()) {
-            generateStatement(cw, statement);
+    private void generateBlock(ClassWriter cw,   HashMap<String, Integer> locals, TypedBlock block) {
+        for (var statement : block.statements()) {
+            generateStatement(cw, locals, statement);
         }
     }
 
@@ -224,9 +223,6 @@ public class BytecodeGenerator {
                 System.out.println(expression);
             }
             case TypedConstExpression expression -> {
-                System.out.println(expression);
-            }
-            case TypedInstVarStatementExpression expression -> {
                 System.out.println(expression);
             }
             case TypedJNullExpression expression -> {
@@ -245,6 +241,9 @@ public class BytecodeGenerator {
                 System.out.println(expression);
             }
             //StatementExpressions
+            case TypedInstVarStatementExpression expression -> {
+                System.out.println(expression);
+            }
             case TypedAssignStatementExpression statement -> {
                 System.out.println(statement);
             }

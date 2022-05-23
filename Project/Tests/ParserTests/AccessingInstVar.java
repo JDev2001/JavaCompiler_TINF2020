@@ -27,7 +27,7 @@ public class AccessingInstVar
             String src = "class MyClass { public MyClass() { myInstance.attr = 5; } }";
             Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
-            var block = new Block(List.of(new AssignStatementExpression(new InstVarStatementExpression("myInstance", new LocalOrFieldVar("attr")), new ConstExpression(5))));
+            var block = new Block(List.of(new AssignStatementExpression(new InstVarStatementExpression("attr", new LocalOrFieldVar("myInstance")), new ConstExpression(5))));
             Assertions.assertEquals(syntaxTree,new Program(List.of(
                     new Class("MyClass", List.of(
                             new Method(AccessModifiers.Public,"MyClass",

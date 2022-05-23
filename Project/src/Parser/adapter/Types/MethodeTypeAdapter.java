@@ -1,7 +1,6 @@
 package Parser.adapter.Types;
 
-import Parser.DataClasses.Types.IMethodType;
-import Parser.DataClasses.Types.VoidType;
+import Parser.DataClasses.Types.*;
 import generated.antlrGrammarParser;
 
 public class MethodeTypeAdapter {
@@ -12,11 +11,19 @@ public class MethodeTypeAdapter {
         //'void'|Type
 
         if(ctx.type() != null){
-            new TypeAdapter();
+            switch (ctx.type().getText()) {
+                case "int":
+                    return new IntType();
+                case "char":
+                    return new CharType();
+                case "boolean":
+                    return new BoolType();
+                default:
+                    return new CustomType(ctx.type().getText());
+            }
         }
-        else if(ctx.getText().equals("void")){
+        else{
             return new VoidType();
         }
-        return null;
     }
 }

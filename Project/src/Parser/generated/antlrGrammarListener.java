@@ -218,6 +218,16 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitAssign(antlrGrammarParser.AssignContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#assignOperator}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssignOperator(antlrGrammarParser.AssignOperatorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#assignOperator}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssignOperator(antlrGrammarParser.AssignOperatorContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#methodCall}.
 	 * @param ctx the parse tree
 	 */

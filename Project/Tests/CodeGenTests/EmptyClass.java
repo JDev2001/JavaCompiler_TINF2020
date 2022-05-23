@@ -4,8 +4,6 @@ package CodeGenTests;
 import CodeGenerator.BytecodeGenerator;
 
 import Helper.ReflectLoader;
-import Parser.DataClasses.Common.Class;
-import Parser.DataClasses.Common.Program;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import org.junit.jupiter.api.Assertions;

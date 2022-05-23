@@ -1,8 +1,6 @@
 <component name="libraryTable">
   <library name="junit5-rt">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../../../../../Programme/Androide Studio/plugins/junit/lib/junit5-rt.jar!/" />
-    </CLASSES>
+    <CLASSES />
     <JAVADOC />
     <SOURCES />
   </library>

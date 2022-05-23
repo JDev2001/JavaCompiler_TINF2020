@@ -1,5 +1,9 @@
 package Parser.adapter.Statements;
 
+import Parser.DataClasses.StatementExpression.AssignStatementExpression;
+import Parser.adapter.Expressions.ExpressionAdapter;
+import Parser.adapter.StatementExpression.AssignStatementExpressionGenerator;
+import Parser.adapter.StatementExpression.StatementExpressionAdapter;
 import Parser.adapter.Types.TypeAdapter;
 import Parser.DataClasses.Statements.IStatement;
 import Parser.DataClasses.Statements.VarDeclarationStatement;
@@ -15,7 +19,8 @@ public class VarDeclarationAdapter {
         List<IStatement> statements = new ArrayList<>();
 
 
-        ctx.Identifier().forEach(identifier -> statements.add(new VarDeclarationStatement(identifier.getText(), TypeAdapter.generate(ctx.type()))));
+        ctx.Identifier().forEach(identifier -> statements.add(new VarDeclarationStatement(identifier.getText(),
+                TypeAdapter.generate(ctx.type()))));
 
         //return new VarDeclarationStatement(ctx.Identifier().g, )
         return statements;

@@ -10,11 +10,8 @@ import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
+import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression;
-import SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression;
 
 public interface SemantikCheck {
     TypedProgram semantikCheckStart(Program program) throws Exception;

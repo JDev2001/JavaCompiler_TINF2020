@@ -4,16 +4,14 @@ package CodeGenTests;
 import Helper.ReflectLoader;
 import CodeGenerator.BytecodeGenerator;
 import Parser.DataClasses.Common.AccessModifiers;
-import Parser.DataClasses.Common.Class;
-import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Types.BoolType;
-import Parser.DataClasses.Types.IMethodType;
 import Parser.DataClasses.Types.IntType;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;

@@ -16,6 +16,7 @@ import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Types.IntType;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Assertions;
 
 import java.io.IOException;
 import java.util.ArrayList;
