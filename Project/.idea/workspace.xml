@@ -148,7 +148,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AccessingInstVar.Test">
+  <component name="RunManager" selected="JUnit.ParserTests in Project">
     <configuration name="AccessingInstVar.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
@@ -240,8 +240,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.AccessingInstVar.Test" />
         <item itemvalue="JUnit.ParserTests in Project" />
+        <item itemvalue="JUnit.AccessingInstVar.Test" />
         <item itemvalue="JUnit.ReturnExpressionMethod.Test" />
         <item itemvalue="JUnit.ClassWithAssignMethod (1)" />
         <item itemvalue="JUnit.ClassWithAssignMethod.MethodAssign" />
