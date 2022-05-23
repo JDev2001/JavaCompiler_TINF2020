@@ -2,12 +2,14 @@ package ParserTests;
 
 
 import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.TypeExpression;
 import Parser.DataClasses.StatementExpression.InstVarStatementExpression;
 import Parser.DataClasses.Expressions.ThisExpression;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.BoolType;
+import Parser.DataClasses.Types.CustomType;
 import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 import Parser.DataClasses.Common.Class;
@@ -35,8 +37,8 @@ public class ClassWithAttributeAccessMethod
                 new Class("MyClass",new ArrayList<>(), List.of(
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
-                                new BoolType(),
-                                new Block(List.of(new ReturnStatement(new InstVarStatementExpression("x", new ThisExpression())))))),
+                                new IntType(),
+                                new Block(List.of(new ReturnStatement(new TypeExpression(new CustomType("x"))))))),
                         List.of(new Field("x", new IntType(),AccessModifiers.Private))))));
     }
 }

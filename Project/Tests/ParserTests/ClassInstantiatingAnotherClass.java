@@ -35,12 +35,14 @@ public class ClassInstantiatingAnotherClass
 
         var constructorCall = new NewStatementExpression(new MethodCallStatementExpression("A", new ThisExpression(),new ArrayList<>()),new CustomType("A"));
 
-        Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", new ArrayList<>(), List.of(
+        Assertions.assertEquals(syntaxTree,
+                new Program(List.of(
+                new Class("MyClass", List.of(
                         new Method(AccessModifiers.Public,"MyClass",
                                 new ArrayList<>(),
                                 new VoidType(),
-                                new Block(List.of(constructorCall)))), new ArrayList<>()),
+                                new Block(List.of(constructorCall)))),
+                        new ArrayList<>(), new ArrayList<>()),
                 new Class("A",new ArrayList<>(),new ArrayList<>(),new ArrayList<>())))
         );
     }

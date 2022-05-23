@@ -3,6 +3,7 @@ package ParserTests;
 
 import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.BinaryExpression;
+import Parser.DataClasses.Expressions.BooleanExpression;
 import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Statements.IfElseStatement;
@@ -29,7 +30,7 @@ public class IfElse
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
-        var block = new Block(List.of(new IfElseStatement(new ConstExpression(true), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
+        var block = new Block(List.of(new IfElseStatement(new BooleanExpression(true), new Block(new ArrayList<>()), new Block(new ArrayList<>()))));
 
         var program = new Program(List.of(
                 new Class("MyClass",  new ArrayList<>(),List.of(
