@@ -34,14 +34,16 @@ public class ClassWithAssignMethod
 
         var asign =  new AssignStatementExpression(new LocalOrFieldVar("x"),new ConstExpression(9));
 
-        Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass", new ArrayList<>(),List.of(
-                        new Method(AccessModifiers.Public,"A",
-                                new ArrayList<>(),
-                                new VoidType(),
-                                new Block(List.of(
-                                        new VarDeclarationStatement("x", new IntType()),asign)))),
-                        new ArrayList<>()))));
+        Program ast = new Program(List.of(
+            new Class("MyClass", new ArrayList<>(),List.of(
+                    new Method(AccessModifiers.Public,"A",
+                            new ArrayList<>(),
+                            new VoidType(),
+                            new Block(List.of(
+                                    new VarDeclarationStatement("x", new IntType()),asign)))),
+                    new ArrayList<>())));
+
+        Assertions.assertEquals(syntaxTree, ast);
     }
 
     @Test

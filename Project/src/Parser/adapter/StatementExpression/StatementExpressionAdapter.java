@@ -21,14 +21,7 @@ public class StatementExpressionAdapter {
             return MethodCallStatementExpressionAdapter.generate(ctx.methodCall());
         }
         else if(ctx.jNew() != null){
-
-            List<IExpression> nparameters = new ArrayList<>();
-
-            ctx.jNew().nArguments().expression().forEach(t -> nparameters.add(ExpressionAdapter.generate(t)));
-
-            //return new NewStatementExpression(new MethodCallStatementExpression(ctx.jNew().Identifier().getText(), null, nparameters))
-            //was soll das target sein?
-            return null;
+            return new NewStatementExpression(MethodCallStatementExpressionAdapter.generateWithNew(ctx.jNew()));
         }
         return null;
 

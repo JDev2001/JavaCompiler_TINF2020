@@ -208,6 +208,16 @@ public interface antlrGrammarListener extends ParseTreeListener {
 	 */
 	void exitInstVar(antlrGrammarParser.InstVarContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link antlrGrammarParser#this}.
+	 * @param ctx the parse tree
+	 */
+	void enterThis(antlrGrammarParser.ThisContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link antlrGrammarParser#this}.
+	 * @param ctx the parse tree
+	 */
+	void exitThis(antlrGrammarParser.ThisContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link antlrGrammarParser#assign}.
 	 * @param ctx the parse tree
 	 */

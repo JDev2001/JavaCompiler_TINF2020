@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Test Records">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser Tests">
+      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/MultipleMethodCall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/NewStatementExpressionAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributeAccessMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributeAccessMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithSimpleReturnMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithSimpleReturnMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/IfElse.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/IfElse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/IfElseAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/IfElseAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Types/MethodeTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Types/MethodeTypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/test.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/NewStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/NewStatementExpression.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,7 +96,7 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.jdks/junit-jupiter-5.8.2.jar" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.19934641" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -111,7 +123,7 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.ParserTests in Project">
-    <configuration name="ClassInstantiatingAnotherClass.SimpleInstantiating" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MethodCalls.SimpleMethodCallWithThis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -120,30 +132,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassInstantiatingAnotherClass" />
-      <option name="METHOD_NAME" value="SimpleInstantiating" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.MethodCalls" />
+      <option name="METHOD_NAME" value="SimpleMethodCallWithThis" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ClassWithAttributes.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ParserTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.ClassWithAttributes" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IfElse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MultipleMethodCall (2)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -156,13 +152,13 @@
       <option name="METHOD_NAME" value="" />
       <option name="TEST_OBJECT" value="uniqueId" />
       <uniqueIds>
-        <uniqueId value="[engine:junit-jupiter]/[class:ParserTests.IfElse]" />
+        <uniqueId value="[engine:junit-jupiter]/[class:ParserTests.MultipleMethodCall]" />
       </uniqueIds>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MethodCalls.SimpleMethodCallWithThis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MultipleMethodCall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -171,8 +167,23 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.MethodCalls" />
-      <option name="METHOD_NAME" value="SimpleMethodCallWithThis" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.MultipleMethodCall" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipleMethodCall.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.MultipleMethodCall" />
+      <option name="METHOD_NAME" value="Test" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -196,18 +207,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.ParserTests in Project" />
-      <item itemvalue="JUnit.IfElse" />
-      <item itemvalue="JUnit.ClassInstantiatingAnotherClass.SimpleInstantiating" />
-      <item itemvalue="JUnit.ClassWithAttributes.Test" />
+      <item itemvalue="JUnit.MultipleMethodCall.Test" />
       <item itemvalue="JUnit.MethodCalls.SimpleMethodCallWithThis" />
+      <item itemvalue="JUnit.MultipleMethodCall (2)" />
+      <item itemvalue="JUnit.MultipleMethodCall" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ParserTests in Project" />
+        <item itemvalue="JUnit.MultipleMethodCall.Test" />
+        <item itemvalue="JUnit.MultipleMethodCall" />
+        <item itemvalue="JUnit.MultipleMethodCall (2)" />
         <item itemvalue="JUnit.MethodCalls.SimpleMethodCallWithThis" />
-        <item itemvalue="JUnit.ClassWithAttributes.Test" />
-        <item itemvalue="JUnit.ClassInstantiatingAnotherClass.SimpleInstantiating" />
-        <item itemvalue="JUnit.IfElse" />
       </list>
     </recent_temporary>
   </component>
@@ -407,7 +418,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653300612840</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Parser Tests">
+      <created>1653303135455</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1653303135455</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -449,21 +467,36 @@
     <MESSAGE value="Can generate EmptyClass.class" />
     <MESSAGE value="Parser" />
     <MESSAGE value="Test Records" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test Records" />
+    <MESSAGE value="Parser Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser Tests" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/ParserTests/ClassWithAttributes.java</url>
+          <line>33</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java</url>
+          <line>45</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java</url>
+          <line>123</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
+        <PinnedItemInfo parentTag="Parser.DataClasses.Common.Class" memberName="fields" />
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />
         <PinnedItemInfo parentTag="Common.Program" memberName="classes" />
       </pinned-members>
     </pin-to-top-manager>
-    <watches-manager>
-      <configuration name="JUnit">
-        <watch expression="syntaxTree.classes" />
-        <watch expression="syntaxTree.classes" />
-      </configuration>
-    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
