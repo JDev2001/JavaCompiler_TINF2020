@@ -1,27 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser Tests">
-      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/MultipleMethodCall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/NewStatementExpressionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassInstantiatingAnotherClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithAssignMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/ClassWithExpressionCalcMethod.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/MethodCalls.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/test.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/NewStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/DataClasses/StatementExpression/NewStatementExpression.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/MethodCallStatementExpressionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/StatementExpression/StatementExpressionAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Statements/StatementAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarBaseVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarVisitor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser all Tests">
       <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -425,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653303135455</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="Parser all Tests">
+      <created>1653328426050</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1653328426050</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -468,7 +455,8 @@
     <MESSAGE value="Parser" />
     <MESSAGE value="Test Records" />
     <MESSAGE value="Parser Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parser Tests" />
+    <MESSAGE value="Parser all Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser all Tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
