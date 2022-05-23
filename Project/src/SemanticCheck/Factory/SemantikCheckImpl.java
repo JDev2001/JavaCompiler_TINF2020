@@ -257,8 +257,6 @@ public class SemantikCheckImpl implements SemantikCheck{
         return null;
     }
 
-
-
     public TypedIfElseStatement semantikCheck(IfElseStatement untyped) throws Exception {
         ITypedExpression typedExpression = checkExpression(untyped.expression());
         ITypedStatement typedIfBlock = checkStatement(untyped.ifBlock());

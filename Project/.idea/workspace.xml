@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser all Tests">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Forogot to uncoment smt in SemantikCheckImpl.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,19 +104,18 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParserTests in Project">
-    <configuration name="MethodCalls.SimpleMethodCallWithThis" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="Ressources/EmptyClass.java" />
+      <option name="VM_PARAMETERS" value="--enable-preview" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ParserTests.*" />
+          <option name="PATTERN" value="com.company.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.MethodCalls" />
-      <option name="METHOD_NAME" value="SimpleMethodCallWithThis" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -186,19 +187,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.ParserTests in Project" />
       <item itemvalue="JUnit.MultipleMethodCall.Test" />
-      <item itemvalue="JUnit.MethodCalls.SimpleMethodCallWithThis" />
       <item itemvalue="JUnit.MultipleMethodCall (2)" />
       <item itemvalue="JUnit.MultipleMethodCall" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.ParserTests in Project" />
         <item itemvalue="JUnit.MultipleMethodCall.Test" />
         <item itemvalue="JUnit.MultipleMethodCall" />
         <item itemvalue="JUnit.MultipleMethodCall (2)" />
-        <item itemvalue="JUnit.MethodCalls.SimpleMethodCallWithThis" />
       </list>
     </recent_temporary>
   </component>
@@ -412,7 +413,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653328426050</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Forogot to uncoment smt in SemantikCheckImpl.java">
+      <created>1653328577457</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1653328577457</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -456,7 +464,8 @@
     <MESSAGE value="Test Records" />
     <MESSAGE value="Parser Tests" />
     <MESSAGE value="Parser all Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parser all Tests" />
+    <MESSAGE value="Forogot to uncoment smt in SemantikCheckImpl.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Forogot to uncoment smt in SemantikCheckImpl.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
