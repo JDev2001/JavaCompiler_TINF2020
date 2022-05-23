@@ -9,7 +9,7 @@
 + Jonathan Schwab - Projektleiter & UML & Test:
 + Felix Wochele - Parser
 + Jan Perthel - Typechecker
-+ Reinhold Jooß - Bytcode Generierung
++ Reinhold Jooß - Bytecode Generierung
 
 <!--# Erste UML Entwürfe-->
 <!--[UML](./Project/DataClasses/src/diagram.png)-->
