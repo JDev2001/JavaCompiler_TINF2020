@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Fixed bug and improved constructor generating">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Changes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedMethodCallStatementExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedMethodCallStatementExpression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,13 +56,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
@@ -385,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653249893614</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Changes">
+      <created>1653430661872</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1653430661872</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -404,7 +409,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Setup parser folder structure and main methode" />
     <MESSAGE value="Antlr Configuration" />
     <MESSAGE value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
@@ -429,7 +433,8 @@
     <MESSAGE value="Fixes" />
     <MESSAGE value="updated IntelliJ and added function for vars..." />
     <MESSAGE value="Fixed bug and improved constructor generating" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug and improved constructor generating" />
+    <MESSAGE value="Changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

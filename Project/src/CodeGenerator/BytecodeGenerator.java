@@ -376,13 +376,17 @@ public class BytecodeGenerator {
 
     private void generateAssignStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedAssignStatementExpression statement) {
         //TODO
-        int a = locals.get(((TypedLocalOrFieldVar) statement.expressionA()).name());
-        if (a) {
-            mv.visitVarInsn(Opcodes.ALOAD, 0);
-            mv.visitVarInsn(Opcodes.ILOAD, );
+        //Weird way to check if var is in locals
+        int a = -1;
+        if (locals.get(((TypedLocalOrFieldVar) statement.expressionA()).name()) != null) {
+            a = locals.get(((TypedLocalOrFieldVar) statement.expressionA()).name());
+        }
+        if (a >= 0) {
+            //get b value
+            mv.visitVarInsn(Opcodes.ISTORE, a);
             //ISTORE or ICONST, depending on int/char or boolean
         } else {
-            mv.visitVarInsn(Opcodes.ALOAD, 0);
+            //get b value
             mv.visitVarInsn(Opcodes.ALOAD, 0);
             mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, ((TypedLocalOrFieldVar) statement.expressionA()).name(), generateTypeString(statement.getType()));
         }
