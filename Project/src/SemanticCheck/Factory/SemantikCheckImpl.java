@@ -21,6 +21,7 @@ import Parser.DataClasses.Common.Class;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
@@ -118,6 +119,7 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedBlock semantikCheck(Block untyped) throws Exception {
+        //TODO: check CustomType - IntType/BoolType
         IMethodType type = new VoidType();
         List<ITypedStatement> typedStatements = new ArrayList<>();
 
@@ -223,7 +225,7 @@ public class SemantikCheckImpl implements SemantikCheck{
         else if (optionalField.isPresent()){
             return new TypedLocalOrFieldVar(untyped.name(), optionalField.get().type());
         }
-        throw new Exception("Var not found");
+        throw new Exception("Variable" + untyped.name() + "not found");
     }
 
     public TypedJNullExpression semantikCheck(JNullExpression untyped) throws Exception {
@@ -243,16 +245,18 @@ public class SemantikCheckImpl implements SemantikCheck{
         String operator = untyped.operator();
 
         switch(operator){
-            case "NotOperator":
+            case "!":
                 if(typedExpression.getType() instanceof BoolType){
                     return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
                 }
                 else {
                     throw new Exception("Invalid type");
                 }
-            case "AddSubOperator":
-            case "PointSlashOperator":
-                if(typedExpression.getType() instanceof CharType || typedExpression.getType() instanceof IntType){
+            case "+":
+            case "-":
+            case "/":
+            case "*":
+                if(typedExpression.getType() instanceof IntType){
                     return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
                 }
                 else{
@@ -298,13 +302,17 @@ public class SemantikCheckImpl implements SemantikCheck{
         ITypedExpression typedTarget = checkExpression(untyped.target());
         List<ITypedExpression> typedParameters = new ArrayList<>();
         ITypedExpression typedParameter = null;
-        //TODO: check null
 
         for (IExpression parameter : untyped.parameters()) {
             typedParameter = checkExpression(parameter);
             typedParameters.add(typedParameter);
         }
-        return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, typedParameter.getType());
+        if(typedParameter == null){ //TODO: überprüfen ob das Sinn macht
+            return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, new VoidType());
+        }
+        else{
+            return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, typedParameter.getType());
+        }
     }
 
     public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped) throws Exception {
@@ -317,8 +325,7 @@ public class SemantikCheckImpl implements SemantikCheck{
         ITypedStatement typedIfBlock = checkStatement(untyped.ifBlock());
         ITypedStatement typedElseBlock = checkStatement(untyped.elseBlock());
 
-        if (typedExpression.getType() instanceof BoolType
-                && typedIfBlock.getType().equals(typedElseBlock.getType())) {
+        if (typedExpression.getType() instanceof BoolType && typedIfBlock.getType().equals(typedElseBlock.getType())) {
             return new TypedIfElseStatement(typedExpression, (TypedBlock) typedIfBlock, (TypedBlock) typedElseBlock, typedIfBlock.getType());
         }
         else{
@@ -338,8 +345,13 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped) throws Exception {
-        //TODO: already defined check
         var typedVarDeclarationStatement = new TypedVarDeclarationStatement(untyped.name(), untyped.type(), new VoidType());
+
+        for(TypedVarDeclarationStatement varDeclarationStatement : varDeclarationStatements){
+            if(Objects.equals(varDeclarationStatement.name(), typedVarDeclarationStatement.name())){
+                throw new Exception("Variable" + untyped.name() + "is already defined");
+            }
+        }
         varDeclarationStatements.add(typedVarDeclarationStatement);
         return typedVarDeclarationStatement;
     }
@@ -348,8 +360,7 @@ public class SemantikCheckImpl implements SemantikCheck{
         ITypedExpression typedExpression = checkExpression(untyped.expression());
         ITypedStatement typedBlock = checkStatement(untyped.block());
 
-        if (typedExpression.getType() instanceof BoolType
-                && typedBlock instanceof TypedBlock) {
+        if (typedExpression.getType() instanceof BoolType && typedBlock instanceof TypedBlock) {
             return new TypedWhileStatement((TypedBinaryExpression) typedExpression, (TypedBlock) typedBlock, typedBlock.getType());
         }
         else {

@@ -234,9 +234,6 @@ public class BytecodeGenerator {
             case TypedThisExpression expression -> {
                 System.out.println(expression);
             }
-            case TypedTypeExpression expression -> {
-                System.out.println(expression);
-            }
             case TypedUnaryExpression expression -> {
                 System.out.println(expression);
             }
