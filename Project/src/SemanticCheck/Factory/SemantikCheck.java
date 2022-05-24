@@ -40,4 +40,3 @@ public interface SemantikCheck {
     TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped) throws Exception;
     TypedWhileStatement semantikCheck(WhileStatement untyped) throws Exception;
 }
-

@@ -5,6 +5,7 @@ import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.*;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Method.MethodParameter;
 import Parser.DataClasses.StatementExpression.*;
 import Parser.DataClasses.Statements.*;
 import Parser.DataClasses.Types.*;
@@ -13,6 +14,7 @@ import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
 import SemanticCheck.TypedDataClasses.typedMethod.TypedMethod;
+import SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 import Parser.DataClasses.Common.Class;
@@ -144,15 +146,26 @@ public class SemantikCheckImpl implements SemantikCheck{
         List<Field> typedFields = new ArrayList<>(untyped.fields());
 
         for (Method constructor : untyped.constructor()){
-            typedConstructors.add(constructor);
+            semantikCheckMethodParameter(typedConstructors, constructor);
         }
 
         for (Method method : untyped.methods()){
-            typedMethods.add(method);
+            semantikCheckMethodParameter(typedMethods, method);
         }
         return new TypedClass(untyped.identifier(), typedConstructors, typedMethods, typedFields);
     }
 
+    private void semantikCheckMethodParameter(List<TypedMethod> typedMethods, Method method) throws Exception {
+        List<TypedMethodParameter> typedMethodParameters = new ArrayList<>();
+        ITypedStatement typedStatement = checkStatement(method.statement());
+
+        for (MethodParameter parameter : method.parameters()){
+            typedMethodParameters.add(new TypedMethodParameter(parameter.identifier(), parameter.type(), parameter.type()));
+        }
+
+        typedMethods.add(new TypedMethod(method.accessModifier(), method.identifier(), typedMethodParameters,
+                method.returnType(), typedStatement, typedStatement.getType()));
+    }
 
 
     public TypedBinaryExpression semantikCheck(BinaryExpression untyped) throws Exception {
@@ -284,7 +297,8 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped) throws Exception {
         ITypedExpression typedTarget = checkExpression(untyped.target());
         List<ITypedExpression> typedParameters = new ArrayList<>();
-        ITypedExpression typedParameter = null; //TODO: check null
+        ITypedExpression typedParameter = null;
+        //TODO: check null
 
         for (IExpression parameter : untyped.parameters()) {
             typedParameter = checkExpression(parameter);
@@ -342,5 +356,4 @@ public class SemantikCheckImpl implements SemantikCheck{
             throw new Exception("Invalid type");
         }
     }
-
 }

@@ -6,7 +6,7 @@ import Parser.DataClasses.Types.IMethodType;
 
 import java.util.List;
 
-public record  Method(AccessModifiers accessModfier, String identifer, List<MethodParameter> parameters, IMethodType returnType, IStatement statement)
+public record  Method(AccessModifiers accessModifier, String identifier, List<MethodParameter> parameters, IMethodType returnType, IStatement statement)
 {
 
 }
