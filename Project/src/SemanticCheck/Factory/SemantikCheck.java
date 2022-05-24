@@ -25,14 +25,9 @@ public interface SemantikCheck {
     TypedBinaryExpression semantikCheck(BinaryExpression untyped) throws Exception;
     TypedConstExpression semantikCheck(ConstExpression untyped) throws Exception;
     TypedJNullExpression semantikCheck(JNullExpression untyped) throws Exception;
+    TypedLocalOrFieldVar semantikCheck(LocalOrFieldVar untyped) throws Exception;
     TypedSuperExpression semantikCheck(SuperExpression untyped) throws Exception;
-
-    default TypedThisExpression semantikCheck(ThisExpression untyped) throws Exception
-    {
-        return null;
-    }
-
-    TypedTypeExpression semantikCheck(TypeExpression untyped) throws Exception;
+    TypedThisExpression semantikCheck(ThisExpression untyped) throws Exception;
     TypedUnaryExpression semantikCheck(UnaryExpression untyped) throws Exception;
 
     TypedAssignStatementExpression semantikCheck(AssignStatementExpression untyped) throws Exception;
