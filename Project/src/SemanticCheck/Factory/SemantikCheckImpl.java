@@ -1,23 +1,18 @@
 package SemanticCheck.Factory;
 
-import Parser.DataClasses.Common.Block;
-import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Common.*;
+import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Expressions.*;
 import Parser.DataClasses.Field.Field;
-import Parser.DataClasses.Method.Method;
-import Parser.DataClasses.Method.MethodParameter;
+import Parser.DataClasses.Method.*;
 import Parser.DataClasses.StatementExpression.*;
 import Parser.DataClasses.Statements.*;
 import Parser.DataClasses.Types.*;
-import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
-import SemanticCheck.TypedDataClasses.typedCommon.TypedClass;
-import SemanticCheck.TypedDataClasses.typedCommon.TypedProgram;
+import SemanticCheck.TypedDataClasses.typedCommon.*;
 import SemanticCheck.TypedDataClasses.typedExpressions.*;
-import SemanticCheck.TypedDataClasses.typedMethod.TypedMethod;
-import SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter;
+import SemanticCheck.TypedDataClasses.typedMethod.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
-import Parser.DataClasses.Common.Class;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -119,23 +114,14 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedBlock semantikCheck(Block untyped) throws Exception {
-        //TODO: check CustomType - IntType/BoolType
         IMethodType type = new VoidType();
         List<ITypedStatement> typedStatements = new ArrayList<>();
 
         for (IStatement statement : untyped.statements()){
             ITypedStatement typedStatement = checkStatement(statement);
 
-            if (typedStatement.getType() instanceof VoidType){
+            if (!(typedStatement.getType() instanceof VoidType)){
                 type = typedStatement.getType();
-            }
-            else if (!(typedStatement.getType() instanceof VoidType && !(typedStatement.getType().getName().equals(type.getName())))){
-                if(type.getName().equals(new CharType().getName()) && typedStatement.getType() instanceof IntType) {
-                    type = new IntType();
-                }
-                else{
-                    type = new CustomType("Object");
-                }
             }
             typedStatements.add(typedStatement);
         }
