@@ -25,7 +25,7 @@ public class BytecodeGenerator {
     private FieldVisitor fieldVisitor;
 
     private String currentClassName;
-    private String currentLocalOrFieldVar;
+    private TypedLocalOrFieldVar targetOfInstVar;
     private String targetName;
     private IMethodType currentTargetType;
 
@@ -212,6 +212,7 @@ public class BytecodeGenerator {
             //StatementExpressions
             case TypedInstVarStatementExpression expression -> {
                 //TODO
+                generateInstVarStatementExpression(mv, locals, expression);
 
                 System.out.println(expression);
             }
@@ -232,6 +233,11 @@ public class BytecodeGenerator {
             }
             default -> throw new IllegalStateException("Unexpected value: " + pStatement);
         }
+    }
+
+    private void generateInstVarStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedInstVarStatementExpression expression) {
+        generateExpression(mv, locals, expression);
+        mv.visitFieldInsn(Opcodes.GETFIELD, targetOfInstVar.getType().getName(), expression.varName(), generateTypeString(expression.getType()));
     }
 
     private void generateNewStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedNewStatementExpression statement) {
@@ -339,7 +345,7 @@ public class BytecodeGenerator {
             case TypedInstVarStatementExpression expression -> {
                 //TODO
                 //put-/getfield in different class
-
+                generateInstVarStatementExpression(mv, locals, expression);
 
                 System.out.println(expression);
             }
@@ -365,9 +371,10 @@ public class BytecodeGenerator {
     private void generateLocalOrFieldVarExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar expression) {
         if(checkIfLocalVar(mv, locals, expression)) {
             mv.visitVarInsn(Opcodes.ILOAD, locals.get(expression.name()));
+            targetOfInstVar = expression;
         } else {
             mv.visitFieldInsn(Opcodes.GETFIELD, targetName, expression.name(), generateTypeString(expression.getType()));
-            currentLocalOrFieldVar = expression.name();
+            targetOfInstVar = expression;
         }
     }
 
@@ -396,27 +403,26 @@ public class BytecodeGenerator {
     }
 
     private void generateAssignStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedAssignStatementExpression statement) {
+        /*
+
         //TODO
         generateExpression(mv, locals, statement.expressionA());
-        switch(statement.expressionA()) {
-            case TypedLocalOrFieldVar exp -> {
-                if(checkIfLocalVar(mv, locals, exp)) {
-                    //is local Var, load instvar
-                    //load b onto stack
-                    generateExpression(mv, locals, statement.expressionB());
-                    //store in local
-                    mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
-                } else {
-                    //load b onto stack
-                    //mv.visitFieldInsn(Opcodes.PUTFIELD, currentTargetType.getName(), ,
-                    //                            generateTypeString(statement.expressionB().getType()));
-                }
-            }
-            case TypedMethodCallStatementExpression exp -> {
-                generateExpression(mv, locals, exp);
-            }
-            default -> throw new IllegalStateException("Unexpected value: " + statement.expressionA());
+        var toAssign;
+        var targetOfAssign;
+        generateExpression(mv, locals, statement.expressionB());
+
+        //getfield of b expression
+
+        if(checkIfLocalVar(mv, locals, )) {
+            //is localVar
+            mv.visitVarInsn(Opcodes.ISTORE, locals.get());
+        } else {
+            //is field
+            //mv.visitVar
         }
+
+
+         */
     }
 
     private boolean checkIfLocalVar(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar exp) {
@@ -480,8 +486,7 @@ public class BytecodeGenerator {
                 break;
             }
             case "%": {
-                //modulo bytecode not found
-                //mv.visitInsn(Opcodes.);
+                mv.visitInsn(Opcodes.IREM);
                 break;
             }
             case "==": {
@@ -549,6 +554,34 @@ public class BytecodeGenerator {
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
                 break;
+            }
+            case "&&": {
+                generateExpression(mv, locals, expression.a());
+                Label falseLabel = new Label();
+                mv.visitJumpInsn(Opcodes.IFEQ, falseLabel);
+                generateExpression(mv, locals, expression.b());
+                mv.visitJumpInsn(Opcodes.IFEQ, falseLabel);
+                mv.visitInsn(Opcodes.ICONST_1);
+                Label endLabel = new Label();
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitLabel(falseLabel);
+                mv.visitInsn(Opcodes.ICONST_0);
+                mv.visitLabel(endLabel);
+            }
+            case "||": {
+                generateExpression(mv, locals, expression.a());
+                Label bLabel = new Label();
+                mv.visitJumpInsn(Opcodes.IFEQ, bLabel);
+                Label endLabel = new Label();
+                mv.visitInsn(Opcodes.ICONST_1);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitLabel(bLabel);
+                generateExpression(mv, locals, expression.b());
+                Label falseLabel = new Label();
+                mv.visitJumpInsn(Opcodes.IFEQ, falseLabel);
+                mv.visitLabel(falseLabel);
+                mv.visitInsn(Opcodes.ICONST_0);
+                mv.visitLabel(endLabel);
             }
             default: {
                 throw new IllegalStateException("Unexpected value: " + expression.operator());
