@@ -42,7 +42,7 @@ public class CheckMethodCall
 
         var typedThisExpression = new TypedThisExpression(new CustomType("MyClass"));
         var typedMethodCall = new TypedMethodCallStatementExpression("B",typedThisExpression, new ArrayList<>(),new IntType());
-        var expected = new TypedBlock(List.of(typedMethodCall),new IntType());
+        var expected = new TypedBlock(List.of(typedMethodCall),new VoidType());
         Assertions.assertEquals(expected,blockStatement);
     }
 }

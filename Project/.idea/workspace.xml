@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Test">
-      <change afterPath="$PROJECT_DIR$/Tests/IntegrationTest/ParseExpression.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Integration Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,12 +55,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
@@ -84,11 +82,50 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParseExpression.Test">
-    <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.CheckMethodCall.TypeVoidMethodCall">
+    <configuration name="CheckBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckBlock.TestNestedBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
+      <option name="METHOD_NAME" value="TestNestedBlock" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CheckMethodCall.TypeVoidMethodCall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="SemanticCheckTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckMethodCall" />
+      <option name="METHOD_NAME" value="TypeVoidMethodCall" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -109,67 +146,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TestExpressions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SemanticCheckTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="PATTERN" value="SemanticCheckTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestExpressions.TestSimpleAndExpr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
-      <option name="METHOD_NAME" value="TestSimpleAndExpr" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestExpressions.TestSimpleOrExpr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
-      <option name="METHOD_NAME" value="TestSimpleOrExpr" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.All in Project" />
+      <item itemvalue="JUnit.CheckBlock" />
+      <item itemvalue="JUnit.CheckBlock.TestNestedBlock" />
+      <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
+      <item itemvalue="JUnit.SemanticCheckTests in Project" />
       <item itemvalue="JUnit.ParseExpression.Test" />
-      <item itemvalue="JUnit.TestExpressions" />
-      <item itemvalue="JUnit.TestExpressions.TestSimpleAndExpr" />
-      <item itemvalue="JUnit.TestExpressions.TestSimpleOrExpr" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
+        <item itemvalue="JUnit.SemanticCheckTests in Project" />
+        <item itemvalue="JUnit.CheckBlock.TestNestedBlock" />
+        <item itemvalue="JUnit.CheckBlock" />
         <item itemvalue="JUnit.ParseExpression.Test" />
-        <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.TestExpressions.TestSimpleOrExpr" />
-        <item itemvalue="JUnit.TestExpressions" />
-        <item itemvalue="JUnit.TestExpressions.TestSimpleAndExpr" />
       </list>
     </recent_temporary>
   </component>
@@ -187,6 +191,8 @@
       <workItem from="1652974373468" duration="652000" />
       <workItem from="1653134296437" duration="5188000" />
       <workItem from="1653483615530" duration="7112000" />
+      <workItem from="1653491086993" duration="377000" />
+      <workItem from="1653497489578" duration="558000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -440,7 +446,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653490509619</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Added Integration Tests">
+      <created>1653491432678</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1653491432679</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -459,7 +472,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Main class edited" />
     <MESSAGE value="Klassen auf Records umgestellt" />
     <MESSAGE value="Tests eingefügt" />
     <MESSAGE value="BCGen stuff" />
@@ -484,7 +496,8 @@
     <MESSAGE value="Parser -&gt; local or field var fix" />
     <MESSAGE value="Added TEsts" />
     <MESSAGE value="Added Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Test" />
+    <MESSAGE value="Added Integration Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Integration Tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -496,7 +509,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>67</line>
+          <line>65</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -528,6 +541,21 @@
           <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
           <line>467</line>
           <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/SemanticCheckTests/CheckBlock.java</url>
+          <line>70</line>
+          <option name="timeStamp" value="59" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>108</line>
+          <option name="timeStamp" value="60" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>133</line>
+          <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
