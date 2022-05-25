@@ -24,6 +24,8 @@ import java.util.List;
 
 public class TestExpressions
 {
+
+
     @Test
     public void TestGreaterEQExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
@@ -135,7 +137,7 @@ public class TestExpressions
     public void TestSimpleAndExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
         String classIdentifier = "TestIdentifier";
-        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(false,new BoolType()),"&", new BoolType());
+        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(false,new BoolType()),"&&", new BoolType());
         TypedProgram prog = getTypedProgram(classIdentifier, binaryExpression, new BoolType());
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
@@ -155,7 +157,7 @@ public class TestExpressions
     public void TestSimpleOrExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
         String classIdentifier = "TestIdentifier";
-        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(true,new BoolType()),"|", new BoolType());
+        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(true,new BoolType()),"||", new BoolType());
         TypedProgram prog = getTypedProgram(classIdentifier, binaryExpression, new BoolType());
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
