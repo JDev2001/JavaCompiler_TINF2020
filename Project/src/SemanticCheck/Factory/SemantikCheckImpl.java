@@ -293,7 +293,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             typedParameter = checkExpression(parameter);
             typedParameters.add(typedParameter);
         }
-        if(typedParameter == null){ //TODO: überprüfen ob das Sinn macht
+        if(typedParameter == null){
             return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, new VoidType());
         }
         else{
