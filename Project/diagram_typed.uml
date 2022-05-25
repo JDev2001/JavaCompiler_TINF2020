@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1399.187437751016" y="1148.709232339409">SemanticCheck.TypedDataClasses.typedExpressions.TypedSuperExpression</node>
+    <node x="629.0429582883492" y="767.7753741501444">SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression</node>
+    <node x="1274.2106812653328" y="-14.83018578279706">Parser.DataClasses.Types.CustomType</node>
+    <node x="156.25448242801647" y="955.7929267173271">SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression</node>
+    <node x="-112.63719209196597" y="595.8349168190583">SemanticCheck.TypedDataClasses.typedStatementExpression.TypedInstVarStatementExpression</node>
+    <node x="1120.422201333899" y="1022.0665826023974">SemanticCheck.TypedDataClasses.typedExpressions.TypedLocalOrFieldVar</node>
+    <node x="-152.5250348713098" y="796.0338048558599">SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression</node>
+    <node x="501.80829529228754" y="287.1782560763037">SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement</node>
+    <node x="801.9648068285715" y="44.6595938044958">Parser.DataClasses.Types.IMethodType</node>
+    <node x="1028.422431739857" y="54.38313340254901">Parser.DataClasses.Types.VoidType</node>
+    <node x="1079.0630972982174" y="-11.425649991334723">Parser.DataClasses.Types.IType</node>
+    <node x="1000.950322613553" y="285.4824359363239">SemanticCheck.TypedDataClasses.typedStatements.TypedReturnStatement</node>
+    <node x="1293.7639091415967" y="198.5810500525692">Parser.DataClasses.Types.CharType</node>
+    <node x="679.248484672244" y="296.7963245745006">SemanticCheck.TypedDataClasses.typedStatements.TypedVarDeclarationStatement</node>
+    <node x="894.3887033483699" y="112.90665305208537">SemanticCheck.TypedDataClasses.typedStatements.TypedWhileStatement</node>
+    <node x="1324.6075780846854" y="288.0594742577907">Parser.DataClasses.Types.IntType</node>
+    <node x="843.9298096703549" y="618.1216114819713">SemanticCheck.TypedDataClasses.typedExpressions.TypedThisExpression</node>
+    <node x="561.5967995584989" y="952.0583204118841">SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression</node>
+    <node x="1594.1365637738002" y="440.87281665828834">SemanticCheck.TypedDataClasses.typedMethod.TypedMethodParameter</node>
+    <node x="1625.0638350031068" y="636.0538844937995">SemanticCheck.TypedDataClasses.typedMethod.TypedMethod</node>
+    <node x="1094.7873202736625" y="612.9498550057501">SemanticCheck.TypedDataClasses.typedExpressions.TypedJNullExpression</node>
+    <node x="1169.3108540812143" y="399.8186795385395">SemanticCheck.TypedDataClasses.typedStatements.TypedIfElseStatement</node>
+    <node x="1111.655982025829" y="735.4741577120571">SemanticCheck.TypedDataClasses.typedCommon.TypedClass</node>
+    <node x="580.4145593310684" y="466.3618039143124">Parser.DataClasses.Field.Field</node>
+    <node x="1038.767233633781" y="1193.8488851728368">SemanticCheck.TypedDataClasses.typedExpressions.TypedBinaryExpression</node>
+    <node x="881.9808163923279" y="496.39628295063267">SemanticCheck.TypedDataClasses.typedCommon.TypedProgram</node>
+    <node x="223.03654348919372" y="659.8707535677388">SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression</node>
+    <node x="818.0608074221961" y="853.0570329179894">SemanticCheck.TypedDataClasses.typedExpressions.TypedUnaryExpression</node>
+    <node x="1249.634367751343" y="109.41997465660441">Parser.DataClasses.Types.BoolType</node>
+    <node x="1334.4356053248664" y="610.2360622653171">SemanticCheck.TypedDataClasses.typedCommon.TypedBlock</node>
+    <node x="870.5976145365611" y="721.2860001058353">SemanticCheck.TypedDataClasses.typedExpressions.TypedConstExpression</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="INTERFACE_GENERALIZATION">
+      <point x="35.946158729850254" y="-14.5" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.TypedMethodCallStatementExpression" target="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" relationship="REALIZATION">
+      <point x="153.99951757198352" y="7.328267292905366E-5" />
+      <point x="529.0" y="1082.7930000000001" />
+      <point x="529.0" y="979.058" />
+      <point x="-116.49979955849889" y="-3.2041188410403265E-4" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedJNullExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="-3.2027366250986233E-4" y="27.00014499424998" />
+      <point x="1214.787" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.CharType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="56.00009085840338" y="-5.005256917911538E-5" />
+      <point x="1447.0" y="237.08100000000002" />
+      <point x="1447.0" y="1.6699999999999875" />
+      <point x="42.99990270178262" y="-1.4043500086652898" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatements.TypedVarDeclarationStatement" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="REALIZATION">
+      <point x="-4.8467224399928455E-4" y="48.99967542549939" />
+      <point x="861.748" y="482.0" />
+      <point x="587.808" y="482.0" />
+      <point x="-2.952922875465447E-4" y="14.499743923696315" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.TypedAssignStatementExpression" target="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" relationship="REALIZATION">
+      <point x="4.5651080628239527E-4" y="49.00024643226118" />
+      <point x="410.537" y="833.0" />
+      <point x="529.0" y="833.0" />
+      <point x="529.0" y="979.058" />
+      <point x="-116.49979955849889" y="-3.2041188410403265E-4" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedLocalOrFieldVar" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="-99.00020133389887" y="4.1739760263226344E-4" />
+      <point x="1138.0" y="1105.067" />
+      <point x="1138.0" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedSuperExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="-4.377510160793463E-4" y="-27.00023233940908" />
+      <point x="1521.187" y="1038.0" />
+      <point x="1138.0" y="1038.0" />
+      <point x="1138.0" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.TypedNewStatementExpression" target="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" relationship="REALIZATION">
+      <point x="3.487130982193776E-5" y="-48.99980485585991" />
+      <point x="40.47500000000002" y="833.0" />
+      <point x="529.0" y="833.0" />
+      <point x="529.0" y="979.058" />
+      <point x="-116.49979955849889" y="-3.2041188410403265E-4" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatements.TypedReturnStatement" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="REALIZATION">
+      <point x="-3.226135530667307E-4" y="37.999564063676104" />
+      <point x="1172.95" y="437.0" />
+      <point x="1014.5" y="437.0" />
+      <point x="1014.5" y="482.0" />
+      <point x="587.808" y="482.0" />
+      <point x="-2.952922875465447E-4" y="14.499743923696315" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.CustomType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="67.00031873466719" y="1.857827970610515E-4" />
+      <point x="1447.0" y="46.17" />
+      <point x="1447.0" y="1.6699999999999875" />
+      <point x="42.99990270178262" y="-1.4043500086652898" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatements.TypedWhileStatement" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="REALIZATION">
+      <point x="-36.93870334836981" y="49.00034694791463" />
+      <point x="1052.45" y="437.0" />
+      <point x="1014.5" y="437.0" />
+      <point x="1014.5" y="482.0" />
+      <point x="587.808" y="482.0" />
+      <point x="-2.952922875465447E-4" y="14.499743923696315" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="INTERFACE_GENERALIZATION">
+      <point x="-106.28879955849891" y="-14.5" />
+      <point x="-15.000295292287547" y="14.5" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatements.TypedIfElseStatement" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="REALIZATION">
+      <point x="1.4591878573355643E-4" y="-59.99967953853951" />
+      <point x="1355.8110000000001" y="437.0" />
+      <point x="1014.5" y="437.0" />
+      <point x="1014.5" y="482.0" />
+      <point x="587.808" y="482.0" />
+      <point x="-2.952922875465447E-4" y="14.499743923696315" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedCommon.TypedBlock" target="SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement" relationship="REALIZATION">
+      <point x="3.9467513352065E-4" y="-38.00006226531707" />
+      <point x="1493.436" y="437.0" />
+      <point x="1014.5" y="437.0" />
+      <point x="1014.5" y="482.0" />
+      <point x="587.808" y="482.0" />
+      <point x="-2.952922875465447E-4" y="14.499743923696315" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.VoidType" target="Parser.DataClasses.Types.IMethodType" relationship="REALIZATION">
+      <point x="-56.5" y="10.776460401946792" />
+      <point x="871.9648068285715" y="103.6595938044958" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedBinaryExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="-94.5002336337808" y="-59.99988517283691" />
+      <point x="1127.267" y="1038.0" />
+      <point x="1138.0" y="1038.0" />
+      <point x="1138.0" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.IType" target="Parser.DataClasses.Types.IMethodType" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="14.5" />
+      <point x="1122.0630972982174" y="60.88313340254901" />
+      <point x="68.99999999999994" y="-10.776460401946792" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedConstExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="3.854634388744671E-4" y="-38.0000001058354" />
+      <point x="1012.598" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedThisExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="1.9032964507914585E-4" y="27.00038851802873" />
+      <point x="961.43" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedStatementExpression.TypedInstVarStatementExpression" target="SemanticCheck.TypedDataClasses.typedStatementExpression.ITypedStatementExpression" relationship="REALIZATION">
+      <point x="1.9209196597103073E-4" y="49.000083180941715" />
+      <point x="75.363" y="833.0" />
+      <point x="529.0" y="833.0" />
+      <point x="529.0" y="979.058" />
+      <point x="-116.49979955849889" y="-3.2041188410403265E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.IntType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="4.2191531440494145E-4" y="-14.5004742577907" />
+      <point x="1394.608" y="284.407" />
+      <point x="1447.0" y="284.407" />
+      <point x="1447.0" y="1.6699999999999875" />
+      <point x="42.99990270178262" y="-1.4043500086652898" />
+    </edge>
+    <edge source="SemanticCheck.TypedDataClasses.typedExpressions.TypedUnaryExpression" target="SemanticCheck.TypedDataClasses.typedExpressions.ITypedExpression" relationship="REALIZATION">
+      <point x="100.50019257780389" y="-3.291798941518209E-5" />
+      <point x="1138.0" y="958.057" />
+      <point x="1138.0" y="749.0" />
+      <point x="715.043" y="749.0" />
+      <point x="4.171165085153916E-5" y="-14.500374150144467" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.BoolType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="56.49963224865701" y="2.5343395584798145E-5" />
+      <point x="1447.0" y="147.92000000000002" />
+      <point x="1447.0" y="1.6699999999999875" />
+      <point x="42.99990270178262" y="-1.4043500086652898" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.5967633175994606" showDependencies="false" x="933.0000000000001" y="726.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

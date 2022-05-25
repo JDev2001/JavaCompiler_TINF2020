@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="733.4070360754816" y="1942.5953042144645">Parser.DataClasses.StatementExpression.InstVarStatementExpression</node>
+    <node x="1103.6015676838997" y="1435.765029591453">Parser.DataClasses.StatementExpression.NewStatementExpression</node>
+    <node x="395.0010722989312" y="1019.2147552260037">Parser.DataClasses.Expressions.IntExpression</node>
+    <node x="407.27950184077656" y="170.82231974353033">Parser.DataClasses.Types.CustomType</node>
+    <node x="119.0988006441874" y="678.1985017798218">Parser.DataClasses.Expressions.BooleanExpression</node>
+    <node x="1117.1636571970503" y="1229.4709548542871">Parser.DataClasses.Method.MethodParameter</node>
+    <node x="1217.8353471986245" y="1598.2231773108217">Parser.DataClasses.Method.Method</node>
+    <node x="-154.025484225593" y="433.62740770375524">Parser.DataClasses.Types.IMethodType</node>
+    <node x="29.350108053177337" y="966.2637901614282">Parser.DataClasses.Types.VoidType</node>
+    <node x="327.52894754545645" y="856.2057890242754">Parser.DataClasses.Expressions.ConstExpression</node>
+    <node x="110.77258109955429" y="345.6558461101149">Parser.DataClasses.Types.IType</node>
+    <node x="614.7454041570395" y="509.16530140010786">Parser.DataClasses.Expressions.CharacterExpression</node>
+    <node x="276.38779747369784" y="-70.63096389645688">Parser.DataClasses.Types.CharType</node>
+    <node x="707.5205088284515" y="1477.7726125236622">Parser.DataClasses.StatementExpression.AssignStatementExpression</node>
+    <node x="-7.457055698447903" y="1376.6177257094994">Parser.DataClasses.Expressions.BinaryExpression</node>
+    <node x="1207.5496262712563" y="2187.0168489963607">Parser.DataClasses.Common.Program</node>
+    <node x="93.39361457849813" y="1166.7889941564044">Parser.DataClasses.Expressions.UnaryExpression</node>
+    <node x="612.9119527989453" y="724.1028437840758">Parser.DataClasses.Expressions.SuperExpression</node>
+    <node x="369.14320488870686" y="2225.1011747560965">Parser.DataClasses.Common.Block</node>
+    <node x="497.924464537389" y="32.31554738083347">Parser.DataClasses.Types.IntType</node>
+    <node x="689.8517058956542" y="2170.307625159977">Parser.DataClasses.Common.Class</node>
+    <node x="358.7418269761307" y="1470.3330990493428">Parser.DataClasses.Statements.IfElseStatement</node>
+    <node x="377.9941165435737" y="561.1951246077965">Parser.DataClasses.Expressions.LocalOrFieldVar</node>
+    <node x="676.3505913046279" y="1220.1276134449558">Parser.DataClasses.StatementExpression.MethodCallStatementExpression</node>
+    <node x="394.865232005453" y="741.5998413945316">Parser.DataClasses.Expressions.ThisExpression</node>
+    <node x="186.54979585347297" y="1963.0491149555219">Parser.DataClasses.Statements.IStatement</node>
+    <node x="372.8356054500341" y="398.67744949304716">Parser.DataClasses.Expressions.TypeExpression</node>
+    <node x="829.4587830233918" y="1694.0718578728113">Parser.DataClasses.Common.AccessModifiers</node>
+    <node x="1099.936900983324" y="1936.3558746704146">Parser.DataClasses.Field.Field</node>
+    <node x="469.68624204196874" y="1720.5550773408925">Parser.DataClasses.Statements.WhileStatement</node>
+    <node x="4.982603891956202" y="876.3619265888209">Parser.DataClasses.Expressions.IExpression</node>
+    <node x="406.3528717919586" y="1927.2050765927463">Parser.DataClasses.Statements.VarDeclarationStatement</node>
+    <node x="410.3136346399042" y="1308.0351115829756">Parser.DataClasses.Statements.ReturnStatement</node>
+    <node x="437.1625667983715" y="2133.9117657467696">Parser.DataClasses.StatementExpression.IStatementExpression</node>
+    <node x="161.30270309884358" y="563.564564016981">Parser.DataClasses.Expressions.JNullExpression</node>
+    <node x="625.8788540652813" y="346.7347123164729">Parser.DataClasses.Types.BoolType</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="Parser.DataClasses.StatementExpression.AssignStatementExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="4.911715484468004E-4" y="-72.99961252366234" />
+      <point x="869.021" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.CharType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="2.0252630213235534E-4" y="38.999963896456876" />
+      <point x="346.388" y="141.0" />
+      <point x="138.773" y="141.0" />
+      <point x="138.773" y="321.0" />
+      <point x="153.773" y="321.0" />
+      <point x="4.1890044570891405E-4" y="-14.499846110114902" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.IfElseStatement" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="1.7302386930850844E-4" y="-95.00009904934268" />
+      <point x="490.742" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.TypeExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="-83.4996054500341" y="-4.494930471423686E-4" />
+      <point x="345.0" y="449.677" />
+      <point x="345.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.ReturnStatement" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="3.653600958273273E-4" y="50.99988841702452" />
+      <point x="513.3140000000001" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.LocalOrFieldVar" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="87.49988345642635" y="-1.246077964651704E-4" />
+      <point x="583.0" y="612.195" />
+      <point x="583.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.ConstExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="5.245454354962931E-5" y="-50.9997890242754" />
+      <point x="416.529" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.WhileStatement" target="Parser.DataClasses.Statements.IStatement" relationship="REALIZATION">
+      <point x="-2.4204196870414307E-4" y="72.9999226591076" />
+      <point x="586.686" y="1897.0" />
+      <point x="335.0" y="1897.0" />
+      <point x="335.0" y="1977.549" />
+      <point x="61.00020414652704" y="-1.1495552189444425E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Common.Program" target="Parser.DataClasses.Common.Class" relationship="TO_MANY">
+      <point x="-84.5" y="0.0" />
+      <point x="175.0" y="-49.2907761636161" />
+    </edge>
+    <edge source="Parser.DataClasses.Common.Block" target="Parser.DataClasses.Statements.IStatement" relationship="REALIZATION">
+      <point x="-104.50020488870689" y="-1.747560963849537E-4" />
+      <point x="335.0" y="2276.101" />
+      <point x="335.0" y="1977.549" />
+      <point x="61.00020414652704" y="-1.1495552189444425E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.NewStatementExpression" target="Parser.DataClasses.StatementExpression.MethodCallStatementExpression" relationship="TO_ONE">
+      <point x="0.0" y="-51.0" />
+      <point x="1284.1015676838997" y="1392.9709548542871" />
+      <point x="183.5" y="77.84334140933129" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.VoidType" target="Parser.DataClasses.Types.IMethodType" relationship="REALIZATION">
+      <point x="-70.0" y="0.0" />
+      <point x="-84.025484225593" y="1005.2637901614282" />
+      <point x="0.0" y="27.0" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.BinaryExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="152.5000556984479" y="6.215274290500702" />
+      <point x="341.242" y="1477.833" />
+      <point x="341.242" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.IType" target="Parser.DataClasses.Types.IMethodType" relationship="INTERFACE_GENERALIZATION">
+      <point x="-43.0" y="0.0" />
+      <point x="-84.025484225593" y="360.1558461101149" />
+      <point x="0.0" y="-27.0" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.JNullExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="77.00029690115642" y="4.3598301908787107E-4" />
+      <point x="345.0" y="590.565" />
+      <point x="345.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.IStatementExpression" target="Parser.DataClasses.Statements.IStatement" relationship="INTERFACE_GENERALIZATION">
+      <point x="0.0" y="-14.5" />
+      <point x="533.1625667983715" y="2106.0953042144647" />
+      <point x="247.54979585347297" y="2106.0953042144647" />
+      <point x="0.0" y="14.5" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.MethodCallStatementExpression" target="Parser.DataClasses.StatementExpression.IStatementExpression" relationship="REALIZATION">
+      <point x="183.50040869537224" y="3.865550440877996E-4" />
+      <point x="1075.0" y="1315.128" />
+      <point x="1075.0" y="2148.412" />
+      <point x="96.00043320162854" y="2.342532302463951E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.UnaryExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="120.00038542150187" y="15.000005843595545" />
+      <point x="658.851" y="1254.789" />
+      <point x="658.851" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.NewStatementExpression" target="Parser.DataClasses.StatementExpression.IStatementExpression" relationship="REALIZATION">
+      <point x="-180.4995676838996" y="-2.9591452857857803E-5" />
+      <point x="1075.0" y="1486.765" />
+      <point x="1075.0" y="2148.412" />
+      <point x="96.00043320162854" y="2.342532302463951E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.UnaryExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="120.00038542150187" y="5.8435955452296184E-6" />
+      <point x="583.0" y="1239.789" />
+      <point x="583.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.IfElseStatement" target="Parser.DataClasses.Statements.IStatement" relationship="REALIZATION">
+      <point x="-131.9998269761307" y="-9.904934267979115E-5" />
+      <point x="335.0" y="1565.333" />
+      <point x="335.0" y="1977.549" />
+      <point x="61.00020414652704" y="-1.1495552189444425E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.TypeExpression" target="Parser.DataClasses.Types.IType" relationship="TO_ONE">
+      <point x="0.0" y="-51.0" />
+      <point x="456.3356054500341" y="360.1558461101149" />
+      <point x="43.0" y="0.0" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.BinaryExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="-152.4999443015521" y="2.7429050055616244E-4" />
+      <point x="-24.957" y="1471.618" />
+      <point x="-24.957" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.InstVarStatementExpression" target="Parser.DataClasses.StatementExpression.IStatementExpression" relationship="REALIZATION">
+      <point x="149.9999639245184" y="-3.0421446444961475E-4" />
+      <point x="1075.0" y="2015.595" />
+      <point x="1075.0" y="2148.412" />
+      <point x="96.00043320162854" y="2.342532302463951E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.ThisExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="-2.3200545297186181E-4" y="27.000158605468414" />
+      <point x="468.865" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.VarDeclarationStatement" target="Parser.DataClasses.Statements.IStatement" relationship="REALIZATION">
+      <point x="1.282080413602671E-4" y="-73.00007659274638" />
+      <point x="535.853" y="1897.0" />
+      <point x="335.0" y="1897.0" />
+      <point x="335.0" y="1977.549" />
+      <point x="61.00020414652704" y="-1.1495552189444425E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Method.Method" target="Parser.DataClasses.Common.AccessModifiers" relationship="TO_ONE">
+      <point x="-187.5" y="40.84868056198957" />
+      <point x="109.5" y="0.0" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.IntExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="70.99992770106877" y="2.4477399620081997E-4" />
+      <point x="583.0" y="1070.215" />
+      <point x="583.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.SuperExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="-79.99995279894529" y="1.5621592410752783E-4" />
+      <point x="583.0" y="751.103" />
+      <point x="583.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Common.Block" target="Parser.DataClasses.Statements.IStatement" relationship="TO_MANY">
+      <point x="-104.5" y="14.999825243903615" />
+      <point x="232.54979585347297" y="2291.101" />
+      <point x="-15.0" y="14.5" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.IStatementExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="INTERFACE_GENERALIZATION">
+      <point x="62.48063809033533" y="14.5" />
+      <point x="595.6432048887068" y="2344.6011747560965" />
+      <point x="-39.956999999999994" y="2344.6011747560965" />
+      <point x="-39.956999999999994" y="890.8619265888209" />
+      <point x="-62.0" y="0.0" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.CustomType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="4.981592234116761E-4" y="61.999680256469674" />
+      <point x="485.28" y="321.0" />
+      <point x="153.773" y="321.0" />
+      <point x="4.1890044570891405E-4" y="-14.499846110114902" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.ReturnStatement" target="Parser.DataClasses.Statements.IStatement" relationship="REALIZATION">
+      <point x="103.00036536009577" y="-1.1158297547808615E-4" />
+      <point x="640.242" y="1359.035" />
+      <point x="640.242" y="1703.055" />
+      <point x="335.0" y="1703.055" />
+      <point x="335.0" y="1977.549" />
+      <point x="61.00020414652704" y="-1.1495552189444425E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.StatementExpression.AssignStatementExpression" target="Parser.DataClasses.StatementExpression.IStatementExpression" relationship="REALIZATION">
+      <point x="161.50049117154845" y="3.8747633766433864E-4" />
+      <point x="1075.0" y="1550.773" />
+      <point x="1075.0" y="2148.412" />
+      <point x="96.00043320162854" y="2.342532302463951E-4" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.BooleanExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="99.00019935581258" y="4.982201782013362E-4" />
+      <point x="345.0" y="729.199" />
+      <point x="345.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Expressions.CharacterExpression" target="Parser.DataClasses.Expressions.IExpression" relationship="REALIZATION">
+      <point x="-94.5004041570395" y="-3.0140010790091765E-4" />
+      <point x="583.0" y="560.165" />
+      <point x="583.0" y="826.0" />
+      <point x="66.983" y="826.0" />
+      <point x="3.961080437946407E-4" y="-14.499926588820927" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.IntType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="-4.645373890070914E-4" y="39.00045261916653" />
+      <point x="567.924" y="141.0" />
+      <point x="138.773" y="141.0" />
+      <point x="138.773" y="321.0" />
+      <point x="153.773" y="321.0" />
+      <point x="4.1890044570891405E-4" y="-14.499846110114902" />
+    </edge>
+    <edge source="Parser.DataClasses.Statements.WhileStatement" target="Parser.DataClasses.Expressions.IExpression" relationship="TO_ONE">
+      <point x="100.31375795803126" y="-73.0000773408924" />
+      <point x="687.0" y="1441.0" />
+      <point x="325.894" y="1441.0" />
+      <point x="325.894" y="1345.289" />
+      <point x="11.85" y="1345.289" />
+      <point x="-55.1326038919562" y="14.500073411179073" />
+    </edge>
+    <edge source="Parser.DataClasses.Types.BoolType" target="Parser.DataClasses.Types.IType" relationship="REALIZATION">
+      <point x="1.4593471871648944E-4" y="-38.99971231647288" />
+      <point x="695.879" y="321.0" />
+      <point x="153.773" y="321.0" />
+      <point x="4.1890044570891405E-4" y="-14.499846110114902" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Compact" zoom="0.3545673076923077" showDependencies="true" x="729.0" y="1177.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Inner Classes</Category>
+    <Category>Methods</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
