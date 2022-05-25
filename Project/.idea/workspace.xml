@@ -1,16 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="more">
-      <change afterPath="$PROJECT_DIR$/Ressources/Add.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/CallAdd.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/Add.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/EmptyClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/ParserTests/IndividualTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser -&gt; local or field var fix">
+      <change afterPath="$PROJECT_DIR$/Ressources/Add.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +58,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Parser" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -89,7 +84,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.Add">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
@@ -174,8 +169,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.Add" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.Add" />
         <item itemvalue="JUnit.IndividualTests" />
         <item itemvalue="JUnit.EmptyClass" />
         <item itemvalue="JUnit.SemanticCheckTests in Project" />
@@ -413,7 +408,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653454410065</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Parser -&gt; local or field var fix">
+      <created>1653472532569</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1653472532569</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -432,7 +434,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="EmptyClass.java added" />
     <MESSAGE value="Main class edited" />
@@ -457,7 +458,8 @@
     <MESSAGE value="Fixed bug and improved constructor generating" />
     <MESSAGE value="Changes" />
     <MESSAGE value="more" />
-    <option name="LAST_COMMIT_MESSAGE" value="more" />
+    <MESSAGE value="Parser -&gt; local or field var fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser -&gt; local or field var fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -469,26 +471,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>74</line>
+          <line>67</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>219</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>179</line>
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="11" />
+          <line>49</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
