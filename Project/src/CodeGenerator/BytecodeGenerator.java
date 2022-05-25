@@ -173,11 +173,6 @@ public class BytecodeGenerator {
         return parameters;
     }
 
-    private HashMap<String, Integer> addLocalVar(HashMap<String, Integer> methodLocals, LocalOrFieldVar newVar) {
-        methodLocals.put(newVar.name(), methodLocals.size() + 1);
-        return methodLocals;
-    }
-
     private void generateStatement(MethodVisitor mv, HashMap<String, Integer> locals, ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedBlock statement -> {
@@ -234,8 +229,9 @@ public class BytecodeGenerator {
 
     private void generateReturn(MethodVisitor mv, HashMap<String, Integer> locals, TypedReturnStatement statement) {
         //TODO
+        generateExpression(mv, locals, statement.returnValue());
         switch (statement.getType()) {
-            case BoolType type -> mv.visitInsn(Opcodes.IRETURN); //Ireturn, 0 = false, 1 = true
+            case BoolType type -> mv.visitInsn(Opcodes.IRETURN); //IRETURN, 0 = false, 1 = true
             case IntType type -> mv.visitInsn(Opcodes.IRETURN);
             case CharType type -> mv.visitInsn(Opcodes.IRETURN);
             case VoidType type -> mv.visitInsn(Opcodes.RETURN);
@@ -329,6 +325,7 @@ public class BytecodeGenerator {
             //StatementExpressions
             case TypedInstVarStatementExpression expression -> {
                 //TODO
+                //put-/getfield in different class
 
                 System.out.println(expression);
             }
@@ -338,7 +335,7 @@ public class BytecodeGenerator {
                 System.out.println(statement);
             }
             case TypedMethodCallStatementExpression statement -> {
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(), generateDescriptor(statement.parameters(), statement.getType()), false);
+                generateTypedMethodCallStatementExpression(mv, locals, statement);
 
                 System.out.println(statement);
             }
@@ -348,6 +345,17 @@ public class BytecodeGenerator {
                 System.out.println(statement);
             }
             default -> throw new IllegalStateException("Unexpected value: " + pExpression);
+        }
+    }
+
+    private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
+        switch(statement.target()) {
+            case TypedLocalOrFieldVar type -> {
+                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, type.name(), statement.name(),
+                        generateDescriptor(statement.parameters(), statement.getType()), false);
+            }
+            case
+            default -> throw new IllegalStateException("Unexpected value: " + statement.target());
         }
     }
 
