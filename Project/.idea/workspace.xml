@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Test">
+      <change afterPath="$PROJECT_DIR$/Tests/IntegrationTest/ParseExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +84,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TestExpressions.TestSimpleOrExpr">
+  <component name="RunManager" selected="JUnit.ParseExpression.Test">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -91,16 +93,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CodeGenTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParseExpression.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="PATTERN" value="IntegrationTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="PACKAGE_NAME" value="IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest.ParseExpression" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -154,18 +158,18 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.All in Project" />
-      <item itemvalue="JUnit.CodeGenTests in Project" />
+      <item itemvalue="JUnit.ParseExpression.Test" />
       <item itemvalue="JUnit.TestExpressions" />
       <item itemvalue="JUnit.TestExpressions.TestSimpleAndExpr" />
       <item itemvalue="JUnit.TestExpressions.TestSimpleOrExpr" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ParseExpression.Test" />
+        <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.TestExpressions.TestSimpleOrExpr" />
         <item itemvalue="JUnit.TestExpressions" />
         <item itemvalue="JUnit.TestExpressions.TestSimpleAndExpr" />
-        <item itemvalue="JUnit.CodeGenTests in Project" />
-        <item itemvalue="JUnit.All in Project" />
       </list>
     </recent_temporary>
   </component>
@@ -182,7 +186,7 @@
       <workItem from="1652528109751" duration="8078000" />
       <workItem from="1652974373468" duration="652000" />
       <workItem from="1653134296437" duration="5188000" />
-      <workItem from="1653483615530" duration="6688000" />
+      <workItem from="1653483615530" duration="7112000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -429,7 +433,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653489706190</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Added Test">
+      <created>1653490509619</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1653490509619</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -509,13 +520,8 @@
           <option name="timeStamp" value="48" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
-          <line>142</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
-          <line>586</line>
+          <line>590</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
