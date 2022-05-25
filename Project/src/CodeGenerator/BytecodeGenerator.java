@@ -567,6 +567,7 @@ public class BytecodeGenerator {
                 mv.visitLabel(falseLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 mv.visitLabel(endLabel);
+                break;
             }
             case "||": {
                 generateExpression(mv, locals, expression.a());
@@ -579,9 +580,12 @@ public class BytecodeGenerator {
                 generateExpression(mv, locals, expression.b());
                 Label falseLabel = new Label();
                 mv.visitJumpInsn(Opcodes.IFEQ, falseLabel);
+                mv.visitInsn(Opcodes.ICONST_1);
+                mv.visitJumpInsn(Opcodes.GOTO,endLabel);
                 mv.visitLabel(falseLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 mv.visitLabel(endLabel);
+                break;
             }
             default: {
                 throw new IllegalStateException("Unexpected value: " + expression.operator());
