@@ -1,6 +1,5 @@
 package CodeGenerator;
 
-import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Field.Field;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
 import Parser.DataClasses.Common.AccessModifiers;
@@ -27,6 +26,8 @@ public class BytecodeGenerator {
 
     private String currentClassName;
     private String currentLocalOrFieldVar;
+    private String targetName;
+    private IMethodType currentTargetType;
 
     public BytecodeGenerator(TypedProgram pProgram) {
         aProgram = pProgram;
@@ -218,7 +219,7 @@ public class BytecodeGenerator {
                 System.out.println(statement);
             }
             case TypedMethodCallStatementExpression statement -> {
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(), generateDescriptor(statement.parameters(), statement.getType()), false);
+                generateTypedMethodCallStatementExpression(mv, locals, statement);
 
                 System.out.println(statement);
             }
@@ -318,7 +319,7 @@ public class BytecodeGenerator {
                 System.out.println(expression);
             }
             case TypedLocalOrFieldVar expression -> {
-                //not needed?
+                generateLocalOrFieldVarExpression(mv, locals, expression);
 
                 System.out.println(expression);
             }
@@ -336,6 +337,7 @@ public class BytecodeGenerator {
             case TypedInstVarStatementExpression expression -> {
                 //TODO
                 //put-/getfield in different class
+
 
                 System.out.println(expression);
             }
@@ -358,19 +360,22 @@ public class BytecodeGenerator {
         }
     }
 
-    private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
-        switch(statement.target()) {
-            case TypedLocalOrFieldVar type -> {
-                mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, type.name(), statement.name(),
-                        generateDescriptor(statement.parameters(), statement.getType()), false);
-            }
-            case
-            default -> throw new IllegalStateException("Unexpected value: " + statement.target());
+    private void generateLocalOrFieldVarExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar expression) {
+        if(checkIfLocalVar(mv, locals, expression)) {
+            mv.visitVarInsn(Opcodes.ILOAD, locals.get(expression.name()));
+        } else {
+            mv.visitFieldInsn(Opcodes.GETFIELD, targetName, expression.name(), generateTypeString(expression.getType()));
+            currentLocalOrFieldVar = expression.name();
         }
     }
 
-    private void generateLocalOrFieldVar(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar expression) {
-
+    private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
+        for (var parameter : statement.parameters()) {
+            generateExpression(mv, locals, parameter);
+        }
+        mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(),
+                generateDescriptor(statement.parameters(), statement.getType()), false);
+        currentTargetType = statement.target().getType();
     }
 
     private void generateConstExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedConstExpression expression) {
@@ -390,6 +395,7 @@ public class BytecodeGenerator {
 
     private void generateAssignStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedAssignStatementExpression statement) {
         //TODO
+        generateExpression(mv, locals, statement.expressionA());
         switch(statement.expressionA()) {
             case TypedLocalOrFieldVar exp -> {
                 if(checkIfLocalVar(mv, locals, exp)) {
@@ -400,8 +406,8 @@ public class BytecodeGenerator {
                     mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
                 } else {
                     //load b onto stack
-                    mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, exp.name(),
-                            generateTypeString(statement.expressionB().getType()));
+                    //mv.visitFieldInsn(Opcodes.PUTFIELD, currentTargetType.getName(), ,
+                    //                            generateTypeString(statement.expressionB().getType()));
                 }
             }
             case TypedMethodCallStatementExpression exp -> {
