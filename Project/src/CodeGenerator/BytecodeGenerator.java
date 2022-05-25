@@ -352,7 +352,7 @@ public class BytecodeGenerator {
     }
 
     private void generateLocalOrFieldVar(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar expression) {
-        //TODO
+        //TODO not needed?
         //switch(expression.name) {
         //
         //        }
