@@ -3,6 +3,7 @@ package SemanticCheckTests;
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Class;
+import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Field.Field;
@@ -38,7 +39,7 @@ public class CheckLocalOrFieldVar
                 List.of(new Method(AccessModifiers.Public,"Foo", new ArrayList<>(), new VoidType(), block)), new ArrayList<>());
 
         var checker = new SemantikCheckImpl();
-        var typedClass = checker.semantikCheck(untyped);
+        var typedClass = checker.semantikCheckStart(new Program(List.of(untyped))).classes().get(0);
 
         var typedBlock= ((TypedBlock)typedClass.methods().get(0).statement());
 
@@ -65,7 +66,7 @@ public class CheckLocalOrFieldVar
                 List.of(new Field("b", new BoolType(),AccessModifiers.Private)));
 
         var checker = new SemantikCheckImpl();
-        var typedClass = checker.semantikCheck(untyped);
+        var typedClass = checker.semantikCheckStart(new Program(List.of(untyped))).classes().get(0);
 
         var typedBlock= ((TypedBlock)typedClass.methods().get(0).statement());
 

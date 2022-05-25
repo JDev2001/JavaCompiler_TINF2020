@@ -14,15 +14,13 @@ import SemanticCheck.TypedDataClasses.typedMethod.*;
 import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
     Class currentClass;
     Method currentMethod;
-    List<TypedVarDeclarationStatement> varDeclarationStatements = new ArrayList<>();
+    Stack<List<TypedVarDeclarationStatement>> varDeclarationStatements = new Stack<>();
     List<Class> classList;
 
     public TypedProgram semantikCheckStart(Program semantikCheckProgram) throws Exception {
@@ -63,7 +61,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             }
             case LocalOrFieldVar localOrFieldVar ->
             {
-                        return semantikCheck(localOrFieldVar);
+                return semantikCheck(localOrFieldVar);
             }
             default -> throw new IllegalStateException("Unexpected value: " + expression);
         }
@@ -111,16 +109,14 @@ public class SemantikCheckImpl implements SemantikCheck{
         IMethodType type = new VoidType();
         List<ITypedStatement> typedStatements = new ArrayList<>();
 
+        varDeclarationStatements.push(new ArrayList<>());
+
         for (IStatement statement : untyped.statements()){
         ITypedStatement typedStatement;
             switch (statement){
-                case IStatementExpression istatementExpression -> {
-                    typedStatement = checkStatementExpression(istatementExpression);
-                }
+                case IStatementExpression istatementExpression -> typedStatement = checkStatementExpression(istatementExpression);
 
-                case IStatement iStatement -> {
-                    typedStatement = checkStatement(iStatement);
-                }
+                case IStatement iStatement -> typedStatement = checkStatement(iStatement);
             }
 
             if (!(typedStatement.getType() instanceof VoidType)){
@@ -138,6 +134,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                 throw new Exception("Invalid type");
             }
         }
+        varDeclarationStatements.pop();
         return new TypedBlock(typedStatements, type);
     }
 
@@ -151,21 +148,9 @@ public class SemantikCheckImpl implements SemantikCheck{
         }
 
         for (Method semantikCheckMethod : untyped.methods()){
-            System.out.println("kkk");
             currentMethod = semantikCheckMethod;
-            varDeclarationStatements = new ArrayList<>();
-          /*  switch (semantikCheckMethod.statement()) {
-                case IStatementExpression iStatementExpression -> checkStatementExpression(iStatementExpression);
-
-                case IExpression iExpression -> checkExpression(iExpression);
-
-                case IStatement iStatement -> typedMethods.add(new TypedMethod(semantikCheckMethod.accessModifier(),semantikCheckMethod.identifier(),));;
-            }*/
+            varDeclarationStatements.push(new ArrayList<>());
             typedMethods.add(checkMethod(semantikCheckMethod));
-        }
-
-        for (Method method : untyped.methods()){
-           // semantikCheckMethodParameter(typedMethods, method);
         }
         return new TypedClass(untyped.identifier(), typedConstructors, typedMethods, typedFields);
     }
@@ -230,9 +215,7 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedLocalOrFieldVar semantikCheck(LocalOrFieldVar untyped) throws Exception {
-
-
-        var optionalTypedVarDeclarationStatement = varDeclarationStatements.stream().filter(x -> x.name().equals(untyped.name())).findFirst();
+        var optionalTypedVarDeclarationStatement = varDeclarationStatements.stream().flatMap(Collection::stream).filter(x -> x.name().equals(untyped.name())).findFirst();
         var optionalMethodParameter = currentMethod.parameters().stream().filter(x -> x.identifier().equals(untyped.name())).findFirst();
         var optionalField = currentClass.fields().stream().filter(x-> x.name().equals(untyped.name())).findFirst();
 
@@ -368,12 +351,12 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedVarDeclarationStatement semantikCheck(VarDeclarationStatement untyped) throws Exception {
         var typedVarDeclarationStatement = new TypedVarDeclarationStatement(untyped.name(), untyped.type(), new VoidType());
 
-        for(TypedVarDeclarationStatement varDeclarationStatement : varDeclarationStatements){
-            if(Objects.equals(varDeclarationStatement.name(), typedVarDeclarationStatement.name())){
+        for(TypedVarDeclarationStatement varDeclarationStatement : varDeclarationStatements.peek()){
+            if(varDeclarationStatement.name().equals(typedVarDeclarationStatement.name())){
                 throw new Exception("Variable" + untyped.name() + "is already defined");
             }
         }
-        varDeclarationStatements.add(typedVarDeclarationStatement);
+        varDeclarationStatements.peek().add(typedVarDeclarationStatement);
         return typedVarDeclarationStatement;
     }
 
