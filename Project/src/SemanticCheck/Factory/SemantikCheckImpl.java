@@ -106,34 +106,44 @@ public class SemantikCheckImpl implements SemantikCheck{
 
 
     public TypedBlock semantikCheck(Block untyped) throws Exception {
-        IMethodType type = new VoidType();
+        IMethodType type = null;
         List<ITypedStatement> typedStatements = new ArrayList<>();
 
         varDeclarationStatements.push(new ArrayList<>());
 
-        for (IStatement statement : untyped.statements()){
-        ITypedStatement typedStatement;
-            switch (statement){
+        for (IStatement statement : untyped.statements()) {
+            ITypedStatement typedStatement;
+            switch (statement) {
                 case IStatementExpression istatementExpression -> typedStatement = checkStatementExpression(istatementExpression);
 
                 case IStatement iStatement -> typedStatement = checkStatement(iStatement);
             }
 
-            if (!(typedStatement.getType() instanceof VoidType)){
-                type = typedStatement.getType();
+            switch (typedStatement) {
+                case TypedBlock typedBlock -> {
+                    if (!(typedBlock.getType() instanceof VoidType)) {
+                        if (type != null && type != typedBlock.getType()){
+                            throw new Exception("Invalid type");
+                        }
+                        type = typedBlock.getType();
+                    }
+                }
+
+                case TypedReturnStatement typedReturnStatement -> {
+                    if (type != null && type != typedReturnStatement.getType()){
+                        throw new Exception("Invalid type");
+                    }
+                    type = typedReturnStatement.getType();
+                }
+
+                case ITypedStatement iTypedStatement -> {
+                }
             }
-            typedStatements.add(typedStatement);
+        }
+        if (type == null){
+            type = new VoidType();
         }
 
-        IMethodType typedStatementType = null;
-        for (ITypedStatement typedStatement : typedStatements){
-            if (typedStatementType == null || typedStatementType.equals(typedStatement.getType())){
-                typedStatementType = typedStatement.getType();
-            }
-            else {
-                throw new Exception("Invalid type");
-            }
-        }
         varDeclarationStatements.pop();
         return new TypedBlock(typedStatements, type);
     }
