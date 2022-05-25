@@ -195,7 +195,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             default -> throw new Exception("Invalid type");
         }
     }
-
+//instvar, methodcall, receiver richtig verstanden haben
     public TypedLocalOrFieldVar semantikCheck(LocalOrFieldVar untyped) throws Exception {
         var optionalTypedVarDeclarationStatement = varDeclarationStatements.stream().filter(x -> x.name().equals(untyped.name())).findFirst();
         var optionalMethodParameter = currentMethod.parameters().stream().filter(x -> x.identifier().equals(untyped.name())).findFirst();
@@ -271,9 +271,9 @@ public class SemantikCheckImpl implements SemantikCheck{
         var optionalClass = classList.stream().filter(x -> x.identifier().equals(typedExpression.getType().getName())).findFirst();
 
         if (optionalClass.isPresent()){
-            var temp2 = optionalClass.get().fields().stream().filter(x -> x.name().equals(untyped.varName())).findFirst();
-            if(temp2.isPresent()){
-                return new TypedInstVarStatementExpression(untyped.varName(), typedExpression, temp2.get().type());
+            var optionalField = optionalClass.get().fields().stream().filter(x -> x.name().equals(untyped.varName())).findFirst();
+            if(optionalField.isPresent()){
+                return new TypedInstVarStatementExpression(untyped.varName(), typedExpression, optionalField.get().type());
             }
             else {
                 throw new Exception("Can not find field");
