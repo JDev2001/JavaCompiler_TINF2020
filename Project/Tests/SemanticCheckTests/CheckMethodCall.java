@@ -3,6 +3,7 @@ package SemanticCheckTests;
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Class;
+import Parser.DataClasses.Common.Program;
 import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Expressions.ThisExpression;
 import Parser.DataClasses.Method.Method;
@@ -35,12 +36,12 @@ public class CheckMethodCall
         var untypedClass = new Class("MyClass",  new ArrayList<>(), List.of(methodA,methodB),new ArrayList<>());
 
         var checker = new SemantikCheckImpl();
-        var typedClass = checker.semantikCheck(untypedClass);
+        var typedClass = checker.semantikCheckStart(new Program(List.of(untypedClass))).classes().get(0);
 
         var blockStatement = typedClass.methods().stream().filter(x->x.identifer().equals("A")).findFirst().get().statement();
 
         var typedThisExpression = new TypedThisExpression(new CustomType("MyClass"));
-        var typedMethodCall = new TypedMethodCallStatementExpression("A",typedThisExpression, new ArrayList<>(),new IntType());
+        var typedMethodCall = new TypedMethodCallStatementExpression("B",typedThisExpression, new ArrayList<>(),new IntType());
         var expected = new TypedBlock(List.of(typedMethodCall),new IntType());
         Assertions.assertEquals(expected,blockStatement);
     }

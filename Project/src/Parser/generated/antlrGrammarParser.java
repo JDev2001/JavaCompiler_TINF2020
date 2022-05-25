@@ -1,4 +1,4 @@
-// Generated from F:/User Folder/Work/ARBURG/DHBW/Dokumente/Compilerbau/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
+// Generated from C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/src/Parser/grammar\antlrGrammar.g4 by ANTLR 4.10.1
 package generated;
 import org.antlr.v4.runtime.atn.*;
 import org.antlr.v4.runtime.dfa.DFA;
@@ -2307,13 +2307,13 @@ public class antlrGrammarParser extends Parser {
 	}
 
 	public static class BaseTypeContext extends ParserRuleContext {
+		public TerminalNode Identifier() { return getToken(antlrGrammarParser.Identifier, 0); }
 		public TypeContext type() {
 			return getRuleContext(TypeContext.class,0);
 		}
 		public TerminalNode JBoolean() { return getToken(antlrGrammarParser.JBoolean, 0); }
 		public TerminalNode JNull() { return getToken(antlrGrammarParser.JNull, 0); }
 		public TerminalNode This() { return getToken(antlrGrammarParser.This, 0); }
-		public TerminalNode Identifier() { return getToken(antlrGrammarParser.Identifier, 0); }
 		public TerminalNode JCharacter() { return getToken(antlrGrammarParser.JCharacter, 0); }
 		public TerminalNode Const() { return getToken(antlrGrammarParser.Const, 0); }
 		public TerminalNode Super() { return getToken(antlrGrammarParser.Super, 0); }
@@ -2347,35 +2347,35 @@ public class antlrGrammarParser extends Parser {
 				enterOuterAlt(_localctx, 1);
 				{
 				setState(308);
-				type();
+				match(Identifier);
 				}
 				break;
 			case 2:
 				enterOuterAlt(_localctx, 2);
 				{
 				setState(309);
-				match(JBoolean);
+				type();
 				}
 				break;
 			case 3:
 				enterOuterAlt(_localctx, 3);
 				{
 				setState(310);
-				match(JNull);
+				match(JBoolean);
 				}
 				break;
 			case 4:
 				enterOuterAlt(_localctx, 4);
 				{
 				setState(311);
-				match(This);
+				match(JNull);
 				}
 				break;
 			case 5:
 				enterOuterAlt(_localctx, 5);
 				{
 				setState(312);
-				match(Identifier);
+				match(This);
 				}
 				break;
 			case 6:
@@ -2675,10 +2675,10 @@ public class antlrGrammarParser extends Parser {
 		"\u0001\u0000\u0000\u0000\u012d\u0129\u0001\u0000\u0000\u0000\u012e9\u0001"+
 		"\u0000\u0000\u0000\u012f\u0130\u0003<\u001e\u0000\u0130\u0131\u00036\u001b"+
 		"\u0000\u0131;\u0001\u0000\u0000\u0000\u0132\u0133\u0007\u0002\u0000\u0000"+
-		"\u0133=\u0001\u0000\u0000\u0000\u0134\u013d\u0003\f\u0006\u0000\u0135"+
-		"\u013d\u0005\n\u0000\u0000\u0136\u013d\u0005\u000b\u0000\u0000\u0137\u013d"+
-		"\u0005\r\u0000\u0000\u0138\u013d\u0005 \u0000\u0000\u0139\u013d\u0005"+
-		"!\u0000\u0000\u013a\u013d\u0005\"\u0000\u0000\u013b\u013d\u0005\f\u0000"+
+		"\u0133=\u0001\u0000\u0000\u0000\u0134\u013d\u0005 \u0000\u0000\u0135\u013d"+
+		"\u0003\f\u0006\u0000\u0136\u013d\u0005\n\u0000\u0000\u0137\u013d\u0005"+
+		"\u000b\u0000\u0000\u0138\u013d\u0005\r\u0000\u0000\u0139\u013d\u0005!"+
+		"\u0000\u0000\u013a\u013d\u0005\"\u0000\u0000\u013b\u013d\u0005\f\u0000"+
 		"\u0000\u013c\u0134\u0001\u0000\u0000\u0000\u013c\u0135\u0001\u0000\u0000"+
 		"\u0000\u013c\u0136\u0001\u0000\u0000\u0000\u013c\u0137\u0001\u0000\u0000"+
 		"\u0000\u013c\u0138\u0001\u0000\u0000\u0000\u013c\u0139\u0001\u0000\u0000"+

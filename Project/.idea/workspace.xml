@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="return">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser -&gt; local or field var fix">
+      <change afterPath="$PROJECT_DIR$/Ressources/Add.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,20 +31,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Project.iml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -56,16 +57,12 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/suuya/IdeaProjects/JavaCompiler_TINF2020/Project&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
-  }
-}</component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/Parser" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
@@ -80,19 +77,19 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ParserTests" />
       <recent name="Parser.DataClasses.Expressions" />
       <recent name="SemanticCheck.TypedDataClasses.typedExpressions" />
-      <recent name="ParserTests" />
       <recent name="SemanticCheckTests" />
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="18" />
       <option name="MAIN_CLASS_NAME" value="com.company.Main" />
       <module name="Project" />
-      <option name="PROGRAM_PARAMETERS" value="&quot;Ressources\EmptyClass.java&quot;" />
+      <option name="PROGRAM_PARAMETERS" value="&quot;Ressources/Add.java&quot;" />
       <option name="VM_PARAMETERS" value="--enable-preview" />
       <extension name="coverage">
         <pattern>
@@ -104,10 +101,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="Add" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="TEST_OBJECT" value="package" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ParserTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.Add" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IndividualTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -136,24 +140,21 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="ParserTests.EmptyClass" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.IndividualTests" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ParserTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SemanticCheckTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ParserTests.*" />
+          <option name="PATTERN" value="SemanticCheckTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ParserTests" />
-      <option name="MAIN_CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
+      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,17 +163,17 @@
     <list>
       <item itemvalue="Application.Main" />
       <item itemvalue="JUnit.EmptyClass" />
-      <item itemvalue="JUnit.EmptyClass.Test" />
-      <item itemvalue="JUnit.All in Project" />
-      <item itemvalue="JUnit.ParserTests in Project" />
+      <item itemvalue="JUnit.SemanticCheckTests in Project" />
+      <item itemvalue="JUnit.IndividualTests" />
+      <item itemvalue="JUnit.Add" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.EmptyClass" />
-        <item itemvalue="JUnit.ParserTests in Project" />
         <item itemvalue="Application.Main" />
-        <item itemvalue="JUnit.EmptyClass.Test" />
+        <item itemvalue="JUnit.Add" />
+        <item itemvalue="JUnit.IndividualTests" />
+        <item itemvalue="JUnit.EmptyClass" />
+        <item itemvalue="JUnit.SemanticCheckTests in Project" />
       </list>
     </recent_temporary>
   </component>
@@ -407,12 +408,12 @@
       <option name="project" value="LOCAL" />
       <updated>1653454410065</updated>
     </task>
-    <task id="LOCAL-00032" summary="return">
-      <created>1653467576997</created>
+    <task id="LOCAL-00032" summary="Parser -&gt; local or field var fix">
+      <created>1653472532569</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1653467576997</updated>
+      <updated>1653472532569</updated>
     </task>
     <option name="localTasksCounter" value="33" />
     <servers />
@@ -457,8 +458,8 @@
     <MESSAGE value="Fixed bug and improved constructor generating" />
     <MESSAGE value="Changes" />
     <MESSAGE value="more" />
-    <MESSAGE value="return" />
-    <option name="LAST_COMMIT_MESSAGE" value="return" />
+    <MESSAGE value="Parser -&gt; local or field var fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser -&gt; local or field var fix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -467,6 +468,16 @@
           <url>file://$PROJECT_DIR$/src/com/company/SemanticCheck/Factory/SemantikCheckImpl.java</url>
           <line>137</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>67</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

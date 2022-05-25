@@ -22,27 +22,17 @@ public class SemantikCheckImpl implements SemantikCheck{
 
     Class currentClass;
     Method currentMethod;
-    List<TypedVarDeclarationStatement> varDeclarationStatements;
+    List<TypedVarDeclarationStatement> varDeclarationStatements = new ArrayList<>();
     List<Class> classList;
 
     public TypedProgram semantikCheckStart(Program semantikCheckProgram) throws Exception {
         classList = semantikCheckProgram.classes();
+        List<TypedClass> typedClassList = new ArrayList<>();
         for (Class semantikCheckClass : classList) {
             currentClass = semantikCheckClass;
-            semantikCheck(semantikCheckClass);
-            for (Method semantikCheckMethod : semantikCheckClass.methods()){
-                currentMethod = semantikCheckMethod;
-                varDeclarationStatements = new ArrayList<>();
-                switch (semantikCheckMethod.statement()) {
-                    case IStatementExpression iStatementExpression -> checkStatementExpression(iStatementExpression);
-
-                    case IExpression iExpression -> checkExpression(iExpression);
-
-                    case IStatement iStatement -> checkStatement(iStatement);
-                }
-            }
+            typedClassList.add(semantikCheck(semantikCheckClass));
         }
-        throw new Exception("Semantic check not implemented");
+        return new TypedProgram(typedClassList);
     }
 
 
@@ -70,6 +60,10 @@ public class SemantikCheckImpl implements SemantikCheck{
             }
             case UnaryExpression unaryExpression -> {
                 return semantikCheck(unaryExpression);
+            }
+            case LocalOrFieldVar localOrFieldVar ->
+            {
+                        return semantikCheck(localOrFieldVar);
             }
             default -> throw new IllegalStateException("Unexpected value: " + expression);
         }
@@ -118,12 +112,31 @@ public class SemantikCheckImpl implements SemantikCheck{
         List<ITypedStatement> typedStatements = new ArrayList<>();
 
         for (IStatement statement : untyped.statements()){
-            ITypedStatement typedStatement = checkStatement(statement);
+        ITypedStatement typedStatement;
+            switch (statement){
+                case IStatementExpression istatementExpression -> {
+                    typedStatement = checkStatementExpression(istatementExpression);
+                }
+
+                case IStatement iStatement -> {
+                    typedStatement = checkStatement(iStatement);
+                }
+            }
 
             if (!(typedStatement.getType() instanceof VoidType)){
                 type = typedStatement.getType();
             }
             typedStatements.add(typedStatement);
+        }
+
+        IMethodType typedStatementType = null;
+        for (ITypedStatement typedStatement : typedStatements){
+            if (typedStatementType == null || typedStatementType.equals(typedStatement.getType())){
+                typedStatementType = typedStatement.getType();
+            }
+            else {
+                throw new Exception("Invalid type");
+            }
         }
         return new TypedBlock(typedStatements, type);
     }
@@ -137,10 +150,30 @@ public class SemantikCheckImpl implements SemantikCheck{
             semantikCheckMethodParameter(typedConstructors, constructor);
         }
 
+        for (Method semantikCheckMethod : untyped.methods()){
+            System.out.println("kkk");
+            currentMethod = semantikCheckMethod;
+            varDeclarationStatements = new ArrayList<>();
+          /*  switch (semantikCheckMethod.statement()) {
+                case IStatementExpression iStatementExpression -> checkStatementExpression(iStatementExpression);
+
+                case IExpression iExpression -> checkExpression(iExpression);
+
+                case IStatement iStatement -> typedMethods.add(new TypedMethod(semantikCheckMethod.accessModifier(),semantikCheckMethod.identifier(),));;
+            }*/
+            typedMethods.add(checkMethod(semantikCheckMethod));
+        }
+
         for (Method method : untyped.methods()){
-            semantikCheckMethodParameter(typedMethods, method);
+           // semantikCheckMethodParameter(typedMethods, method);
         }
         return new TypedClass(untyped.identifier(), typedConstructors, typedMethods, typedFields);
+    }
+
+    private TypedMethod checkMethod(Method method) throws Exception {
+        var typedBlock = checkStatement(method.statement());
+        var typedParameters =method.parameters().stream().map(x->new TypedMethodParameter(x.identifier(),x.type(),x.type())).toList();
+        return new TypedMethod(method.accessModifier(),method.identifier(),typedParameters,method.returnType(),typedBlock,typedBlock.getType());
     }
 
     private void semantikCheckMethodParameter(List<TypedMethod> typedMethods, Method method) throws Exception {
@@ -195,8 +228,10 @@ public class SemantikCheckImpl implements SemantikCheck{
             default -> throw new Exception("Invalid type");
         }
     }
-//instvar, methodcall, receiver richtig verstanden haben
+
     public TypedLocalOrFieldVar semantikCheck(LocalOrFieldVar untyped) throws Exception {
+
+
         var optionalTypedVarDeclarationStatement = varDeclarationStatements.stream().filter(x -> x.name().equals(untyped.name())).findFirst();
         var optionalMethodParameter = currentMethod.parameters().stream().filter(x -> x.identifier().equals(untyped.name())).findFirst();
         var optionalField = currentClass.fields().stream().filter(x-> x.name().equals(untyped.name())).findFirst();
@@ -287,18 +322,18 @@ public class SemantikCheckImpl implements SemantikCheck{
     public TypedMethodCallStatementExpression semantikCheck(MethodCallStatementExpression untyped) throws Exception {
         ITypedExpression typedTarget = checkExpression(untyped.target());
         List<ITypedExpression> typedParameters = new ArrayList<>();
-        ITypedExpression typedParameter = null;
+        ITypedExpression typedParameter;
 
         for (IExpression parameter : untyped.parameters()) {
             typedParameter = checkExpression(parameter);
             typedParameters.add(typedParameter);
         }
-        if(typedParameter == null){
-            return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, new VoidType());
-        }
-        else{
-            return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, typedParameter.getType());
-        }
+        var method = currentClass.methods().stream().filter(x-> x.identifier().equals(untyped.name())).findFirst();
+        if(method.isEmpty())
+            throw new Exception("Method not found");
+
+        var type = method.get().returnType();
+        return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, type);
     }
 
     public TypedNewStatementExpression semantikCheck(NewStatementExpression untyped) throws Exception {
