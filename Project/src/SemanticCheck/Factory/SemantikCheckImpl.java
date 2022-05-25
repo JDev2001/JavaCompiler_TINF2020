@@ -122,7 +122,7 @@ public class SemantikCheckImpl implements SemantikCheck{
             switch (typedStatement) {
                 case TypedBlock typedBlock -> {
                     if (!(typedBlock.getType() instanceof VoidType)) {
-                        if (type != null && type != typedBlock.getType()){
+                        if (type != null && !(type.getName().equals(typedBlock.getType().getName()))){
                             throw new Exception("Invalid type");
                         }
                         type = typedBlock.getType();
@@ -130,7 +130,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                 }
 
                 case TypedReturnStatement typedReturnStatement -> {
-                    if (type != null && type != typedReturnStatement.getType()){
+                    if (type != null && !(type.getName().equals(typedReturnStatement.getType().getName()))){
                         throw new Exception("Invalid type");
                     }
                     type = typedReturnStatement.getType();
