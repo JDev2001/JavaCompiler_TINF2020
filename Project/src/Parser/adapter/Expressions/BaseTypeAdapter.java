@@ -12,6 +12,9 @@ public class BaseTypeAdapter {
         if(ctx.JBoolean() != null){
             return new BooleanExpression((ctx.JBoolean().getText().equals("true")));
         }
+        else if(ctx.Identifier() != null){
+            return new LocalOrFieldVar(ctx.Identifier().getText());
+        }
         else if(ctx.JNull()!= null){
             return new JNullExpression();
         }
@@ -31,9 +34,6 @@ public class BaseTypeAdapter {
         }
         else if(ctx.Super() != null){
             return new SuperExpression();
-        }
-        else if(ctx.Identifier() != null){
-            return new LocalOrFieldVar(ctx.Identifier().getText());
         }
         return null;
     }

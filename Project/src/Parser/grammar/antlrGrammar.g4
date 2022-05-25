@@ -69,7 +69,7 @@ basicexpressions: baseType | statementExpressions | unary | LBracket expression 
 //Base
 unary:  unaryOperator expression;
 unaryOperator: NotOperator|OpIdentifier;
-baseType: type | JBoolean | JNull | This | Identifier | JCharacter | Const | Super; //JString = WS ??? Vorher stand bei ws JString
+baseType: Identifier | type | JBoolean | JNull | This | JCharacter | Const | Super ; //JString = WS ??? Vorher stand bei ws JString
 operators: LogicalOperator|Comperator|AddSubOperator|PointSlashOperator;
 
 AccessModifier: 'public' | 'protected' | 'private';
