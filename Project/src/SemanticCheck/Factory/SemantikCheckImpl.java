@@ -136,8 +136,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                     type = typedReturnStatement.getType();
                 }
 
-                case ITypedStatement iTypedStatement -> {
-                }
+                default -> {}
             }
             typedStatements.add(typedStatement);
         }
@@ -200,7 +199,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                     return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
                 }
                 else{
-                    throw new Exception("Invalid types Expression");
+                    throw new Exception("Invalid type in expression");
                 }
             case "&":
             case "|":
@@ -208,7 +207,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                     return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
                 }
                 else{
-                    throw new Exception("Invalid type in Expression");
+                    throw new Exception("Invalid type in expression");
                 }
             default: throw new Exception("Invalid type");
         }
@@ -230,7 +229,6 @@ public class SemantikCheckImpl implements SemantikCheck{
         var optionalMethodParameter = currentMethod.parameters().stream().filter(x -> x.identifier().equals(untyped.name())).findFirst();
         var optionalField = currentClass.fields().stream().filter(x-> x.name().equals(untyped.name())).findFirst();
 
-        //TODO: Variable entfernen, nachdem Block verlassen wird
         if (optionalTypedVarDeclarationStatement.isPresent()){
             return new TypedLocalOrFieldVar(untyped.name(), optionalTypedVarDeclarationStatement.get().type());
         }
@@ -240,7 +238,7 @@ public class SemantikCheckImpl implements SemantikCheck{
         else if (optionalField.isPresent()){
             return new TypedLocalOrFieldVar(untyped.name(), optionalField.get().type());
         }
-        throw new Exception("Variable" + untyped.name() + "not found");
+        throw new Exception("Variable " + untyped.name() + " not found");
     }
 
     public TypedJNullExpression semantikCheck(JNullExpression untyped) throws Exception {
@@ -265,7 +263,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                     return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
                 }
                 else {
-                    throw new Exception("Invalid type");
+                    throw new Exception("Invalid type in expression");
                 }
             case "+":
             case "-":
@@ -275,7 +273,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                     return new TypedUnaryExpression(typedExpression, operator, typedExpression.getType());
                 }
                 else{
-                    throw new Exception("Invalid type");
+                    throw new Exception("Invalid type in expression");
                 }
             default: throw new Exception("Invalid type");
         }
@@ -364,7 +362,7 @@ public class SemantikCheckImpl implements SemantikCheck{
 
         for(TypedVarDeclarationStatement varDeclarationStatement : varDeclarationStatements.peek()){
             if(varDeclarationStatement.name().equals(typedVarDeclarationStatement.name())){
-                throw new Exception("Variable" + untyped.name() + "is already defined");
+                throw new Exception("Variable " + untyped.name() + " is already defined");
             }
         }
         varDeclarationStatements.peek().add(typedVarDeclarationStatement);
