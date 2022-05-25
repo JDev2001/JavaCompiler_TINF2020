@@ -26,6 +26,7 @@ public class BytecodeGenerator {
     private FieldVisitor fieldVisitor;
 
     private String currentClassName;
+    private String currentLocalOrFieldVar;
 
     public BytecodeGenerator(TypedProgram pProgram) {
         aProgram = pProgram;
@@ -360,10 +361,7 @@ public class BytecodeGenerator {
     }
 
     private void generateLocalOrFieldVar(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar expression) {
-        //TODO not needed?
-        //switch(expression.name) {
-        //
-        //        }
+
     }
 
     private void generateConstExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedConstExpression expression) {
@@ -383,33 +381,32 @@ public class BytecodeGenerator {
 
     private void generateAssignStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedAssignStatementExpression statement) {
         //TODO
-        //Weird way to check if var is in locals
-        int a = -1;
-        if (locals.get(((TypedLocalOrFieldVar) statement.expressionA()).name()) != null) {
-            a = locals.get(((TypedLocalOrFieldVar) statement.expressionA()).name());
-        }
-        if (a >= 0) {
-            //get b value
-            mv.visitVarInsn(Opcodes.ISTORE, a);
-            //ISTORE or ICONST, depending on int/char or boolean
-        } else {
-            //If var isn't in locals, it's a field
-            //get b value
-            pushSecondValue(mv, locals, statement.expressionB());
-            mv.visitVarInsn(Opcodes.ALOAD, 0);
-            mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, ((TypedLocalOrFieldVar) statement.expressionA()).name(), generateTypeString(statement.getType()));
+        switch(statement.expressionA()) {
+            case TypedLocalOrFieldVar exp -> {
+                if(checkIfLocalVar(mv, locals, exp)) {
+                    //is local Var, load instvar
+                    //load b onto stack
+                    generateExpression(mv, locals, statement.expressionB());
+                    //store in local
+                    mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
+                } else {
+                    //load b onto stack
+                    mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, exp.name(),
+                            generateTypeString(statement.expressionB().getType()));
+                }
+            }
+            case TypedMethodCallStatementExpression exp -> {
+                generateExpression(mv, locals, exp);
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + statement.expressionA());
         }
     }
 
-    private void pushSecondValue(MethodVisitor mv, HashMap<String, Integer> locals, ITypedExpression expressionB) {
-        switch(expressionB) {
-            case TypedConstExpression exp -> {
-                generateConstExpression(mv, locals, exp);
-            }
-            case TypedLocalOrFieldVar exp -> {
-                mv.visitVarInsn(Opcodes.ILOAD, locals.get(exp.name()));
-            }
-            default -> throw new IllegalStateException("Unexpected value: " + expressionB);
+    private boolean checkIfLocalVar(MethodVisitor mv, HashMap<String, Integer> locals, TypedLocalOrFieldVar exp) {
+        if (locals.get(exp.name()) != null) {
+            return true;
+        } else {
+            return false;
         }
     }
 
