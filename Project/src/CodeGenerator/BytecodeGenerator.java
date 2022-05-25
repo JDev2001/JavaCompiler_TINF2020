@@ -1,6 +1,5 @@
 package CodeGenerator;
 
-import Parser.DataClasses.Expressions.ConstExpression;
 import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Field.Field;
 import SemanticCheck.TypedDataClasses.typedCommon.TypedBlock;
@@ -386,9 +385,23 @@ public class BytecodeGenerator {
             mv.visitVarInsn(Opcodes.ISTORE, a);
             //ISTORE or ICONST, depending on int/char or boolean
         } else {
+            //If var isn't in locals, it's a field
             //get b value
+            pushSecondValue(mv, locals, statement.expressionB());
             mv.visitVarInsn(Opcodes.ALOAD, 0);
             mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, ((TypedLocalOrFieldVar) statement.expressionA()).name(), generateTypeString(statement.getType()));
+        }
+    }
+
+    private void pushSecondValue(MethodVisitor mv, HashMap<String, Integer> locals, ITypedExpression expressionB) {
+        switch(expressionB) {
+            case TypedConstExpression exp -> {
+                generateConstExpression(mv, locals, exp);
+            }
+            case TypedLocalOrFieldVar exp -> {
+                mv.visitVarInsn(Opcodes.ILOAD, locals.get(exp.name()));
+            }
+            default -> throw new IllegalStateException("Unexpected value: " + expressionB);
         }
     }
 
