@@ -24,6 +24,8 @@ import java.util.List;
 
 public class TestExpressions
 {
+
+
     @Test
     public void TestGreaterEQExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
@@ -135,7 +137,7 @@ public class TestExpressions
     public void TestSimpleAndExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
         String classIdentifier = "TestIdentifier";
-        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(false,new BoolType()),"&", new BoolType());
+        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(false,new BoolType()),"&&", new BoolType());
         TypedProgram prog = getTypedProgram(classIdentifier, binaryExpression, new BoolType());
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
@@ -155,7 +157,7 @@ public class TestExpressions
     public void TestSimpleOrExpr() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
     {
         String classIdentifier = "TestIdentifier";
-        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(true,new BoolType()),"|", new BoolType());
+        var binaryExpression = new TypedBinaryExpression(new TypedConstExpression(false, new BoolType()), new TypedConstExpression(true,new BoolType()),"||", new BoolType());
         TypedProgram prog = getTypedProgram(classIdentifier, binaryExpression, new BoolType());
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
@@ -256,6 +258,31 @@ public class TestExpressions
 
     }
 
+    @Test
+    public void TestComplexExpression() throws NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException
+    {
+        String classIdentifier = "TestIdentifier";
+        var binaryExpression = new TypedBinaryExpression(
+                new TypedConstExpression(5, new IntType()),
+                new TypedBinaryExpression(new TypedConstExpression(2,new IntType()),
+                        new TypedConstExpression(3,new IntType()),"-", new IntType()),"*",new IntType());
+        //5* (2-3)
+
+        TypedProgram prog = getTypedProgram(classIdentifier, binaryExpression, new IntType());
+        BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
+        var byteCode = bytecodeGenerator.genCode();
+        ReflectLoader loader = new ReflectLoader(byteCode.get(classIdentifier));
+        Class c = loader.findClass(classIdentifier);
+        var methods = c.getMethods();
+        var c2 = c.getConstructors();
+        var obj = c.newInstance();
+        var methodInstance = c.getDeclaredMethod("Method");
+
+        var res =(int)methodInstance.invoke(obj);
+
+        Assertions.assertEquals(-5,res);
+
+    }
     private TypedProgram getTypedProgram(String classIdentifier, ITypedExpression binaryExpression, IMethodType type)
     {
         var block = new TypedBlock(List.of(new TypedReturnStatement(binaryExpression,type)), type);
