@@ -139,6 +139,7 @@ public class SemantikCheckImpl implements SemantikCheck{
                 case ITypedStatement iTypedStatement -> {
                 }
             }
+            typedStatements.add(typedStatement);
         }
         if (type == null){
             type = new VoidType();
