@@ -52,7 +52,8 @@ public class BytecodeGenerator {
         MethodVisitor methodVisitor;
         FieldVisitor fieldVisitor;
         //V18 for Java Version
-        cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
+        //cw.visit(Opcodes.V18, Opcodes.ACC_SUPER, pClass.identifier(), null, "java/lang/Object", null);
+        cw.visit(Opcodes.V18, Opcodes.ACC_PUBLIC, pClass.identifier(), null, "java/lang/Object", null);
 
         //visit Fields first
         generateFieldCode(pClass.fields());
@@ -62,6 +63,7 @@ public class BytecodeGenerator {
 
         //visit Methods next
         generateMethodCode(cw, pClass.methods());
+
 
         //Close classwriter
         cw.visitEnd();
@@ -444,7 +446,7 @@ public class BytecodeGenerator {
                 //not equal means expression is false -> load 1 onto stack
                 mv.visitInsn(Opcodes.ICONST_1);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 //equal means means expression is true -> load 0 onto stack
                 mv.visitLabel(falseLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
@@ -487,7 +489,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPEQ, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
@@ -498,7 +500,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPNE, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
@@ -509,7 +511,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPLT, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
@@ -520,7 +522,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPLE, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
@@ -531,7 +533,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPGT, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);
@@ -542,7 +544,7 @@ public class BytecodeGenerator {
                 mv.visitJumpInsn(Opcodes.IF_ICMPGE, trueLabel);
                 mv.visitInsn(Opcodes.ICONST_0);
                 Label endLabel = new Label();
-                methodVisitor.visitJumpInsn(Opcodes.GOTO, endLabel);
+                mv.visitJumpInsn(Opcodes.GOTO, endLabel);
                 mv.visitLabel(trueLabel);
                 mv.visitInsn(Opcodes.ICONST_1);
                 mv.visitLabel(endLabel);

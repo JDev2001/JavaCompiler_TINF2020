@@ -9,6 +9,7 @@ import Parser.DataClasses.Method.Method;
 import Parser.DataClasses.Method.MethodParameter;
 import Parser.DataClasses.Statements.ReturnStatement;
 import Parser.DataClasses.Types.BoolType;
+import Parser.DataClasses.Types.CharType;
 import Parser.Factory.SyntaxTreeGenerator;
 import org.antlr.v4.runtime.CharStreams;
 
@@ -45,13 +46,17 @@ public class MethodDefinitions
     public void EmptyMethodWithParameter() throws IOException
     {
 
-        String src = "class MyClass { public void A(int x) { } }";
+        String src = "class MyClass { public void A(int x, boolean b, char c) { } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
                 new Class("MyClass", new ArrayList<>(),List.of(
                 new Method(AccessModifiers.Public,"A",
-                        List.of(new MethodParameter("x", new IntType())),
+                        List.of(
+                                new MethodParameter("x", new IntType()),
+                                new MethodParameter("b", new BoolType()),
+                                new MethodParameter("c", new CharType())
+                        ),
                         new VoidType(),
                         new Block(new ArrayList<>()))),
                         new ArrayList<>()))));
