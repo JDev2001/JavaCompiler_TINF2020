@@ -90,7 +90,7 @@ public class BytecodeGenerator {
             for (var method : pConstructors) {
                 //Initiate HashMap for local variables inside the method
                 HashMap<String, Integer> locals = generateParameters(method.parameters());
-                MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), new VoidType()), null, null);
+                MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptorParameter(method.parameters(), new VoidType()), null, null);
                 methodVisitor.visitCode();
                 generateStatement(methodVisitor, locals, method.statement());
                 methodVisitor.visitMaxs(0, 0);
@@ -103,7 +103,7 @@ public class BytecodeGenerator {
         for (var method : pMethods) {
             //Initiate HashMap for local variables inside the method
             HashMap<String, Integer> locals = generateParameters(method.parameters());
-            MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptor(method.parameters(), method.returnType()), null, null);
+            MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptorParameter(method.parameters(), method.returnType()), null, null);
             methodVisitor.visitCode();
             generateStatement(methodVisitor, locals, method.statement());
             methodVisitor.visitMaxs(0, 0);
@@ -124,7 +124,16 @@ public class BytecodeGenerator {
         }
     }
 
-    private String generateDescriptor(List<TypedMethodParameter> parameters, IMethodType returnType) {
+    private String generateDescriptor(List<ITypedExpression> parameters, IMethodType returnType) {
+        String descriptor = "(";
+        for (var parameter : parameters) {
+            descriptor = descriptor + generateTypeString(parameter.getType());
+        }
+        descriptor = descriptor + ")" + generateTypeString(returnType);
+        return descriptor;
+    }
+
+    private String generateDescriptorParameter(List<TypedMethodParameter> parameters, IMethodType returnType) {
         String descriptor = "(";
         for (var parameter : parameters) {
             descriptor = descriptor + generateTypeString(parameter.type());
