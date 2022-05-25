@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser -&gt; local or field var fix">
-      <change afterPath="$PROJECT_DIR$/Tests/CodeGenTests/ClassWithMethods.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/MethodDefinitions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/MethodDefinitions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added TEsts">
+      <change beforePath="$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +106,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestExpressions.TestComplexExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
+      <option name="METHOD_NAME" value="TestComplexExpression" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestExpressions.TestGreaterEQThanExpr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
@@ -122,22 +133,6 @@
       <option name="PACKAGE_NAME" value="CodeGenTests" />
       <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
       <option name="METHOD_NAME" value="TestGreaterEQThanExpr" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TestExpressions.TestGreatherExpr" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.TestExpressions" />
-      <option name="METHOD_NAME" value="TestGreatherExpr" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -162,17 +157,17 @@
     <list>
       <item itemvalue="JUnit.All in Project" />
       <item itemvalue="JUnit.TestExpressions" />
+      <item itemvalue="JUnit.TestExpressions.TestComplexExpression" />
       <item itemvalue="JUnit.TestExpressions.TestGreaterEQThanExpr" />
-      <item itemvalue="JUnit.TestExpressions.TestGreatherExpr" />
       <item itemvalue="JUnit.TestExpressions.TestLesserThanExpr" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.TestExpressions" />
+        <item itemvalue="JUnit.TestExpressions.TestComplexExpression" />
         <item itemvalue="JUnit.TestExpressions.TestGreaterEQThanExpr" />
         <item itemvalue="JUnit.TestExpressions.TestLesserThanExpr" />
-        <item itemvalue="JUnit.TestExpressions.TestGreatherExpr" />
       </list>
     </recent_temporary>
   </component>
@@ -189,7 +184,7 @@
       <workItem from="1652528109751" duration="8078000" />
       <workItem from="1652974373468" duration="652000" />
       <workItem from="1653134296437" duration="5188000" />
-      <workItem from="1653483615530" duration="5549000" />
+      <workItem from="1653483615530" duration="5976000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -415,7 +410,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653472532569</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Added TEsts">
+      <created>1653489302681</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1653489302681</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -434,7 +436,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Main class + Base for the Parser/Lexer (Added Program/Class Adapter)" />
     <MESSAGE value="EmptyClass.java added" />
     <MESSAGE value="Main class edited" />
     <MESSAGE value="Klassen auf Records umgestellt" />
@@ -459,7 +460,8 @@
     <MESSAGE value="Changes" />
     <MESSAGE value="more" />
     <MESSAGE value="Parser -&gt; local or field var fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parser -&gt; local or field var fix" />
+    <MESSAGE value="Added TEsts" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added TEsts" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -481,7 +483,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
-          <line>54</line>
+          <line>97</line>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
