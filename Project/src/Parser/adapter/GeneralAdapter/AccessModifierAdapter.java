@@ -8,14 +8,13 @@ public class AccessModifierAdapter {
     public static AccessModifiers generate(TerminalNode accessModifier) {
 
         //get the right accessmodifier -> see Enum AccessModifiers
-        switch (accessModifier.getText()){
-            case "public":
-                return AccessModifiers.Public;
-            case "private":
-                return AccessModifiers.Private;
-            default:
-                return AccessModifiers.Protected;
-        }
+        if(accessModifier==null||accessModifier.getText()==null) return AccessModifiers.Private;
+        return switch (accessModifier.getText())
+                {
+                    case "public" -> AccessModifiers.Public;
+                    case "private" -> AccessModifiers.Private;
+                    default -> AccessModifiers.Protected;
+                };
     }
 
 

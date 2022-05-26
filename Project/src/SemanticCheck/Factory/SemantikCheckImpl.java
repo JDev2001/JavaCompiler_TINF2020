@@ -15,6 +15,8 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 
 import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class SemantikCheckImpl implements SemantikCheck{
 
@@ -23,8 +25,11 @@ public class SemantikCheckImpl implements SemantikCheck{
     Stack<List<TypedVarDeclarationStatement>> varDeclarationStatements = new Stack<>();
     List<Class> classList;
 
+    Program program;
+
     public TypedProgram semantikCheckStart(Program semantikCheckProgram) throws Exception {
         classList = semantikCheckProgram.classes();
+        program = semantikCheckProgram;
         List<TypedClass> typedClassList = new ArrayList<>();
         for (Class semantikCheckClass : classList) {
             currentClass = semantikCheckClass;
@@ -47,6 +52,10 @@ public class SemantikCheckImpl implements SemantikCheck{
                 instVarStatementExpression -> {
                 return semantikCheck(instVarStatementExpression);
             }
+            case NewStatementExpression newStatementExpression ->
+            {
+                return semantikCheck(newStatementExpression);
+            }
             case JNullExpression jNullExpression -> {
                 return semantikCheck(jNullExpression);
             }
@@ -62,6 +71,10 @@ public class SemantikCheckImpl implements SemantikCheck{
             case LocalOrFieldVar localOrFieldVar ->
             {
                 return semantikCheck(localOrFieldVar);
+            }
+            case MethodCallStatementExpression methodCallStatementExpression ->
+            {
+                return semantikCheck(methodCallStatementExpression);
             }
             default -> throw new IllegalStateException("Unexpected value: " + expression);
         }
@@ -320,7 +333,9 @@ public class SemantikCheckImpl implements SemantikCheck{
             typedParameter = checkExpression(parameter);
             typedParameters.add(typedParameter);
         }
-        var method = currentClass.methods().stream().filter(x-> x.identifier().equals(untyped.name())).findFirst();
+        var constructors = program.classes().stream().map(Class::constructor).flatMap(List::stream);
+        var methods =  program.classes().stream().map(Class::methods).flatMap(List::stream);
+        var method = Stream.concat(methods, constructors).filter(x-> x.identifier().equals(untyped.name())).findFirst();
         if(method.isEmpty())
             throw new Exception("Method not found");
 
