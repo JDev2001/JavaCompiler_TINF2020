@@ -11,17 +11,17 @@
 
 - [Architektur](#Architektur)
 
-- [Schnittstellen](#Schnittstellen)
+    - [Schnittstellen](#Schnittstellen)
 
-- [Klassendiagram-Abstrakte-Syntax](#Klassendiagram-Abstrakte-Syntax)
+    - [Klassendiagram-Abstrakte-Syntax](#Klassendiagram-Abstrakte-Syntax)
 
-- [Klassendiagram-Getyped-Abstrakte-Syntax](#Klassendiagram-Getyped-Abstrakte-Syntax)
+    - [Klassendiagram-Getyped-Abstrakte-Syntax](#Klassendiagram-Getyped-Abstrakte-Syntax)
 
-- [Java-Records](#Java-Records)
+    - [Java-Records](#Java-Records)
 
-- [Java-Pattern-Matching](#Java-Pattern-Matching)
+    - [Java-Pattern-Matching](#Java-Pattern-Matching)
 
-- [Factory-Pattern](#Factory-Pattern)
+    - [Factory-Pattern](#Factory-Pattern)
 
 - [Öffnen-des-Projektes-in-einer-IDE](#Öffnen-des-Projektes-in-einer-IDE)
 
@@ -35,15 +35,15 @@
 
 - [Testing](#Testing)
 
-- [Parser-Tests](#Parser-Tests)
+    - [Parser-Tests](#Parser-Tests)
 
-- [Typ-Checker-Tests](#Typ-Checker-Tests)
+    - [Typ-Checker-Tests](#Typ-Checker-Tests)
 
-- [Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
+    - [Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
 
-- [Integration-Tests](#Integration-Tests)
+    - [Integration-Tests](#Integration-Tests)
 
-- [Functional-Tests](#Functional-Tests)
+    - [Functional-Tests](#Functional-Tests)
 
 # Rollenverteilung
 
@@ -141,7 +141,8 @@ Um Abhängigkeiten zu entkoppeln ohne aufwendige Frameworklösungen wie Dependen
 
 # Öffnen-des-Projektes-in-einer-IDE
 
-Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden: ![](RackMultipart20220527-1-9y4fb8_html_de761331209c5e39.png)
+Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden:\
+![](./Project/IntelliJ_Lang_Level.png)
 
 Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable-preview&quot; gesetzt werden.
 
