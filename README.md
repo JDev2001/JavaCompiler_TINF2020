@@ -61,15 +61,21 @@ In diesem Abschnitt werden die Schnittstellen, Klassenstrukturen und speziellen 
 
 - Parser
 
+```java
 getSyntaxTree(charStream:input):AbstractSyntax
+```
 
 - Type-Checker
 
+```java
 semantikCheck(input:AbstractSyntax):TypedAbstractSyntax
+```
 
 - Byte-Code-Generator:
 
-generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, byte[]\&gt;
+```java
+generateByteCode(input:TypedAbstractSyntax):Hashmap<String, byte[]>
+```
 
 ##
 
@@ -79,13 +85,13 @@ generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, byte[]\&gt;
 
 Die abstrakte Syntax wird vom Parser erzeugt.
 
-![](RackMultipart20220527-1-9y4fb8_html_a49adefd6e194383.png)
+![]("Project\diagram.png)
 
 ## V.Klassendiagram Getyped-Abstrakte-Syntax
 
 Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Jedoch werden alle Expressions und Statements um einen Typ erweitert.
 
-![](RackMultipart20220527-1-9y4fb8_html_35a8425252912374.png)
+![]("Project\diagram_typed.png)
 
 #
 
