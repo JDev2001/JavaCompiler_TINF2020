@@ -57,7 +57,7 @@
 
 In diesem Abschnitt werden die Schnittstellen, Klassenstrukturen und speziellen verwendeten Java-Features erklärt.
 
-## III.Schnittstellen
+## Schnittstellen
 
 - Parser
 
@@ -85,13 +85,13 @@ generateByteCode(input:TypedAbstractSyntax):Hashmap<String, byte[]>
 
 Die abstrakte Syntax wird vom Parser erzeugt.
 
-![]("./Project/diagram.png)
+![](./Project/diagram.png)
 
 ## Klassendiagram-Getyped-Abstrakte-Syntax
 
 Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Jedoch werden alle Expressions und Statements um einen Typ erweitert.
 
-![]("./Project/diagram_typed.png)
+![](./Project/diagram_typed.png)
 
 #
 
