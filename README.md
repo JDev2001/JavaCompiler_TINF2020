@@ -153,7 +153,7 @@ Der Parser übersetzt Java-Quellcode in eine abstrakte Syntax. Hierfür wird der
 
 Schnittstelle:
 ```java
-getSyntaxTree(charStream:input):AbstractSyntax
+getSyntaxTree(input:charStream):AbstractSyntax
 ```
 
 # Type-Checker
