@@ -141,13 +141,13 @@ Um Abhängigkeiten zu entkoppeln ohne aufwendige Frameworklösungen wie Dependen
 
 # IX.Öffnen des Projektes in einer IDE
 
-Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden: ![](RackMultipart20220527-1-9y4fb8_html_de761331209c5e39.png)
+Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden: ![](./Project/IntelliJ_Lang_Level.png)
 
-Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable-preview&quot; gesetzt werden.
+Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag ```--enable-preview``` gesetzt werden.
 
 # X.Ausführen des Compilers
 
-Der entwickelte Compiler kann mit „java -jar compiler.jar <<arg>> aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
+Der entwickelte Compiler kann mit ```java -jar compiler.jar <arg>``` aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
 
 # XI.Parser
 
