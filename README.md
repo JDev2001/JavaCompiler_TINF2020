@@ -13,19 +13,19 @@
 
 [Schnittstellen](#Schnittstellen)
 
-[Klassendiagram Abstrakte Syntax](#Klassendiagram Abstrakte Syntax)
+[Klassendiagram-Abstrakte-Syntax](#Klassendiagram Abstrakte Syntax)
 
-[Klassendiagram Getyped-Abstrakte-Syntax](#Klassendiagram Getyped-Abstrakte-Syntax)
+[Klassendiagram-Getyped-Abstrakte-Syntax](#Klassendiagram Getyped-Abstrakte-Syntax)
 
-[Java Records](#Java Records)
+[Java-Records](#Java Records)
 
-[Java Pattern Matching](#Java Pattern Matching)
+[Java-Pattern-Matching](#Java Pattern Matching)
 
 [Factory-Pattern](#Factory-Pattern)
 
-[Öffnen des Projektes in einer IDE](#Öffnen des Projektes in einer IDE)
+[Öffnen-des-Projektes-in-einer-IDE](#Öffnen des Projektes in einer IDE)
 
-[Ausführen des Compilers](#Ausführen des Compilers)
+[Ausführen-des-Compilers](#Ausführen des Compilers)
 
 [Parser](#Parser)
 
@@ -35,9 +35,9 @@
 
 [Testing](#Testing)
 
-[Parser Tests](#Parser Tests)
+[Parser-Tests](#Parser Tests)
 
-[Typ-Checker Tests](#Typ-Checker Tests)
+[Typ-Checker-Tests](#Typ-Checker Tests)
 
 [Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
 
@@ -81,13 +81,13 @@ generateByteCode(input:TypedAbstractSyntax):Hashmap<String, byte[]>
 
 ##
 
-## Klassendiagram Abstrakte Syntax
+## Klassendiagram-Abstrakte-Syntax
 
 Die abstrakte Syntax wird vom Parser erzeugt.
 
 ![]("./Project/diagram.png)
 
-## Klassendiagram Getyped-Abstrakte-Syntax
+## Klassendiagram-Getyped-Abstrakte-Syntax
 
 Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Jedoch werden alle Expressions und Statements um einen Typ erweitert.
 
@@ -97,7 +97,7 @@ Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Je
 
 #
 
-## Java Records
+## Java-Records
 
 Seit Version 17 werden von Java Record-Typen angeboten. Records dienen zur Speicherung von unveränderlichen Daten. Der Schreibaufwand von Code ist im Vergleich zu Klassen deutlich geringer. Des Weiteren besitzen Records Standardimplementierungen für die Methoden „hashCode&quot;, „equals&quot; und „toString&quot;. Diese Methoden können bei Bedarf aber zusätzlich implementiert werden. Records unterstützen keine Vererbung, erlauben es jedoch Schnittstellen zu implementieren. Ein Record kann wie Folgt definiert werden:
 
@@ -107,7 +107,7 @@ record Data (int Id, Stringname) {}
 
 Zum Entwickeln eines JavaCompilers bieten sich diese Recordtypen an. Der Parser generiert eine abstrakte Syntax, die nach Generierung unveränderlich ist. Dasselbe gilt für den Type-Checker. Darüber hinaus müssen einige Tests geschrieben werden, welche die abstrakte Syntax und die getypte abstrakte Syntax nachbilden und mit den Ergebnissen des Parsers bzw. Type-Checks abgleichen. Werden die Record-Typen für diese Datenstruktur verwendet, muss anders als bei Klassen die Methode „equals&quot; nicht von Hand implementiert werden, um Assertions mit JUnit durchzuführen zu können.
 
-## Java Pattern Matching
+## Java-Pattern-Matching
 
 Seit Java 17 wird eine einfache Form von Pattern Matching angeboten. In einem Switch-Case-Statement wird ein instanceof-Check mit direktem anschließenden Typecast durchgeführt. So kann ein Basistyp auf verschiedene Subtypen geprüft werden.
 
@@ -139,13 +139,13 @@ Durch die Verwendung von Pattern Matching im Type-Check und Bytecode-Generator k
 
 Um Abhängigkeiten zu entkoppeln ohne aufwendige Frameworklösungen wie Dependency Injection zu verwenden, wird das Factory Pattern genutzt. Eine Factory Klasse bietet einen IParser, einen ISemanticChecker und einen ICodeGenerator an. Die Factory instanziiert diese Klassen, sobald diese angefordert werden. Zurückgegeben werden nur Referenzen auf die Schnittstellen und nicht die Implementierungen. So wird Austauschbarkeit der einzelnen Komponenten gewährleistet.
 
-# Öffnen des Projektes in einer IDE
+# Öffnen-des-Projektes-in-einer-IDE
 
 Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden: ![](RackMultipart20220527-1-9y4fb8_html_de761331209c5e39.png)
 
 Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable-preview&quot; gesetzt werden.
 
-# Ausführen des Compilers
+# Ausführen-des-Compilers
 
 Der entwickelte Compiler kann mit „java -jar compiler.jar \&lt;\&lt;arg\&gt;\&gt;&quot; aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
 
@@ -169,11 +169,11 @@ Schnittstelle: generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, b
 
 # Testing
 
-## Parser Tests
+## Parser-Tests
 
 Ein Text, der Java-Quellcode enthält wird durch den Parser in eine abstrakte Syntax übersetzt. Das Ergebnis des Parsers wird anschließend mit einer händisch nachgebildeten Datenstruktur der erwarteten abstrakten Syntax auf inhaltliche Gleichheit überprüft. Getestet werden alle denkbaren Szenarios.
 
-## Typ-Checker Tests
+## Typ-Checker-Tests
 
 Eine händisch aufgebaute abstrakte Syntax wird dem Typ-Checker als Eingabe übergeben. Das Ergebnis ist eine getypte abstrakte Syntax. Diese getypte Abstrakte syntax wird mit einer händisch nachgebildeten Datenstruktur der erwarteten getyped abstrakten Syntax auf inhaltliche Gleichheit überprüft. Getestet werden alle denkbaren Szenarios.
 
