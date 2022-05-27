@@ -7,43 +7,43 @@
 
 # Inhalt
 
-[Rollenverteilung](#Rollenverteilung)
+- [Rollenverteilung](#Rollenverteilung)
 
-[Architektur](#Architektur)
+- [Architektur](#Architektur)
 
-[Schnittstellen](#Schnittstellen)
+- [Schnittstellen](#Schnittstellen)
 
-[Klassendiagram-Abstrakte-Syntax](#Klassendiagram Abstrakte Syntax)
+- [Klassendiagram-Abstrakte-Syntax](#Klassendiagram-Abstrakte-Syntax)
 
-[Klassendiagram-Getyped-Abstrakte-Syntax](#Klassendiagram Getyped-Abstrakte-Syntax)
+- [Klassendiagram-Getyped-Abstrakte-Syntax](#Klassendiagram-Getyped-Abstrakte-Syntax)
 
-[Java-Records](#Java Records)
+- [Java-Records](#Java-Records)
 
-[Java-Pattern-Matching](#Java Pattern Matching)
+- [Java-Pattern-Matching](#Java-Pattern-Matching)
 
-[Factory-Pattern](#Factory-Pattern)
+- [Factory-Pattern](#Factory-Pattern)
 
-[Öffnen-des-Projektes-in-einer-IDE](#Öffnen des Projektes in einer IDE)
+- [Öffnen-des-Projektes-in-einer-IDE](#Öffnen-des-Projektes-in-einer-IDE)
 
-[Ausführen-des-Compilers](#Ausführen des Compilers)
+- [Ausführen-des-Compilers](#Ausführen-des-Compilers)
 
-[Parser](#Parser)
+- [Parser](#Parser)
 
-[Type-Checker](#Type-Checker)
+- [Type-Checker](#Type-Checker)
 
-[Bytecode-Generator](#Bytecode-Generator)
+- [Bytecode-Generator](#Bytecode-Generator)
 
-[Testing](#Testing)
+- [Testing](#Testing)
 
-[Parser-Tests](#Parser Tests)
+- [Parser-Tests](#Parser-Tests)
 
-[Typ-Checker-Tests](#Typ-Checker Tests)
+- [Typ-Checker-Tests](#Typ-Checker-Tests)
 
-[Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
+- [Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
 
-[Integration-Tests](#Integration-Tests)
+- [Integration-Tests](#Integration-Tests)
 
-[Functional-Tests](#Functional-Tests)
+- [Functional-Tests](#Functional-Tests)
 
 # Rollenverteilung
 
