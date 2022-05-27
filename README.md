@@ -7,45 +7,45 @@
 
 # Inhalt
 
-[1. Rollenverteilung 2](#_Toc104408040)
+[Rollenverteilung](#Rollenverteilung)
 
-[2. Architektur 3](#_Toc104408041)
+[Architektur](#Architektur)
 
-[I. Schnittstellen 3](#_Toc104408042)
+[Schnittstellen](#Schnittstellen)
 
-[II. Klassendiagram Abstrakte Syntax 4](#_Toc104408043)
+[Klassendiagram Abstrakte Syntax](#Klassendiagram Abstrakte Syntax)
 
-[III. Klassendiagram Getyped-Abstrakte-Syntax 5](#_Toc104408044)
+[Klassendiagram Getyped-Abstrakte-Syntax](#Klassendiagram Getyped-Abstrakte-Syntax)
 
-[IV.Java Records 6](#_Toc104408045)
+[Java Records](#Java Records)
 
-[V.Java Pattern Matching 7](#_Toc104408046)
+[Java Pattern Matching](#Java Pattern Matching)
 
-[VI.Factory-Pattern 7](#_Toc104408047)
+[Factory-Pattern](#Factory-Pattern)
 
-[3. Öffnen des Projektes in einer IDE 7](#_Toc104408048)
+[Öffnen des Projektes in einer IDE](#Öffnen des Projektes in einer IDE)
 
-[4. Ausführen des Compilers 8](#_Toc104408049)
+[Ausführen des Compilers](#Ausführen des Compilers)
 
-[5.Parser 9](#_Toc104408050)
+[Parser](#Parser)
 
-[6.Type-Checker 9](#_Toc104408051)
+[Type-Checker](#Type-Checker)
 
-[7.Bytecode-Generator 9](#_Toc104408052)
+[Bytecode-Generator](#Bytecode-Generator)
 
-[8.Testing 10](#_Toc104408053)
+[Testing](#Testing)
 
-[VII.Parser Tests 10](#_Toc104408054)
+[Parser Tests](#Parser Tests)
 
-[VIII.Typ-Checker Tests 10](#_Toc104408055)
+[Typ-Checker Tests](#Typ-Checker Tests)
 
-[IX. Bytecode-Generator-Tests 10](#_Toc104408056)
+[Bytecode-Generator-Tests](#Bytecode-Generator-Tests)
 
-[X. Integration-Tests 10](#_Toc104408057)
+[Integration-Tests](#Integration-Tests)
 
-[XI. Functional-Tests 10](#_Toc104408058)
+[Functional-Tests](#Functional-Tests)
 
-# I.Rollenverteilung
+# Rollenverteilung
 
 + Jonathan Schwab [@JDev2001](https://github.com/JDev2001) - Projektleiter & UML & Test:
 + Felix Wochele [@FelixWochele](https://github.com/FelixWochele) - Parser
@@ -53,7 +53,7 @@
 + Reinhold Jooß [@SuuyaaYeet](https://github.com/SuuyaaYeet) - Bytecode Generierung
 
 
-# II.Architektur
+# Architektur
 
 In diesem Abschnitt werden die Schnittstellen, Klassenstrukturen und speziellen verwendeten Java-Features erklärt.
 
@@ -81,33 +81,33 @@ generateByteCode(input:TypedAbstractSyntax):Hashmap<String, byte[]>
 
 ##
 
-## IV.Klassendiagram Abstrakte Syntax
+## Klassendiagram Abstrakte Syntax
 
 Die abstrakte Syntax wird vom Parser erzeugt.
 
-![](./Project/diagram.png)
+![]("./Project/diagram.png)
 
-## V.Klassendiagram Getyped-Abstrakte-Syntax
+## Klassendiagram Getyped-Abstrakte-Syntax
 
 Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Jedoch werden alle Expressions und Statements um einen Typ erweitert.
 
-![](./Project/diagram_typed.png)
+![]("./Project/diagram_typed.png)
 
 #
 
 #
 
-## VI.Java Records
+## Java Records
 
 Seit Version 17 werden von Java Record-Typen angeboten. Records dienen zur Speicherung von unveränderlichen Daten. Der Schreibaufwand von Code ist im Vergleich zu Klassen deutlich geringer. Des Weiteren besitzen Records Standardimplementierungen für die Methoden „hashCode&quot;, „equals&quot; und „toString&quot;. Diese Methoden können bei Bedarf aber zusätzlich implementiert werden. Records unterstützen keine Vererbung, erlauben es jedoch Schnittstellen zu implementieren. Ein Record kann wie Folgt definiert werden:
 
 ```java
-record Data (int Id, String name) {}
+record Data (int Id, Stringname) {}
 ```
 
 Zum Entwickeln eines JavaCompilers bieten sich diese Recordtypen an. Der Parser generiert eine abstrakte Syntax, die nach Generierung unveränderlich ist. Dasselbe gilt für den Type-Checker. Darüber hinaus müssen einige Tests geschrieben werden, welche die abstrakte Syntax und die getypte abstrakte Syntax nachbilden und mit den Ergebnissen des Parsers bzw. Type-Checks abgleichen. Werden die Record-Typen für diese Datenstruktur verwendet, muss anders als bei Klassen die Methode „equals&quot; nicht von Hand implementiert werden, um Assertions mit JUnit durchzuführen zu können.
 
-## VII.Java Pattern Matching
+## Java Pattern Matching
 
 Seit Java 17 wird eine einfache Form von Pattern Matching angeboten. In einem Switch-Case-Statement wird ein instanceof-Check mit direktem anschließenden Typecast durchgeführt. So kann ein Basistyp auf verschiedene Subtypen geprüft werden.
 
@@ -135,66 +135,56 @@ voidCheck(Object o)
 
 Durch die Verwendung von Pattern Matching im Type-Check und Bytecode-Generator kann auf das Visitor-Pattern verzichtet werden.
 
-## VIII.Factory-Pattern
+## Factory-Pattern
 
 Um Abhängigkeiten zu entkoppeln ohne aufwendige Frameworklösungen wie Dependency Injection zu verwenden, wird das Factory Pattern genutzt. Eine Factory Klasse bietet einen IParser, einen ISemanticChecker und einen ICodeGenerator an. Die Factory instanziiert diese Klassen, sobald diese angefordert werden. Zurückgegeben werden nur Referenzen auf die Schnittstellen und nicht die Implementierungen. So wird Austauschbarkeit der einzelnen Komponenten gewährleistet.
 
-# IX.Öffnen des Projektes in einer IDE
+# Öffnen des Projektes in einer IDE
 
-Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden:\
-![](./Project/IntelliJ_Lang_Level.png)
+Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden: ![](RackMultipart20220527-1-9y4fb8_html_de761331209c5e39.png)
 
-Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag ```--enable-preview``` gesetzt werden.
+Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable-preview&quot; gesetzt werden.
 
-# X.Ausführen des Compilers
+# Ausführen des Compilers
 
-Der entwickelte Compiler kann mit ```java -jar compiler.jar <arg>``` aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
+Der entwickelte Compiler kann mit „java -jar compiler.jar \&lt;\&lt;arg\&gt;\&gt;&quot; aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
 
-# XI.Parser
+# Parser
 
 Der Parser übersetzt Java-Quellcode in eine abstrakte Syntax. Hierfür wird der Parser Generator Antler verwendet. In einer separaten Datei (.g4-Datei) wird die Grammatik zum Parsen des Java-Quellcodes definiert. Aus der Grammatik werden Klassen generiert. Zur Übersetzung in die abstrakte Syntax werden verschiedene Adapter geschrieben, welche die abstrakte Syntax erzeugen und ggf. noch kleine Anpassungen vornehmen. So wird nach und nach ein Syntaxbaum aufgebaut.
 
-Schnittstelle: 
-```java
-getSyntaxTree(charStream:input):AbstractSyntax
-```
+Schnittstelle: getSyntaxTree(charStream:input):AbstractSyntax
 
-# XII.Type-Checker
+# Type-Checker
 
 Der Typchecker übersetzt die abstrakte Syntax in eine getyped abstrakte Syntax. Da es sich bei Java um eine statisch typisierte Programmiersprache handelt, müssen Typprüfungen zur Kompilierungszeit vorgenommen werden. Diese Überprüfungen sind nicht mit dem Parser-Generator möglich und müssen in einem separaten Schritt vorgenommen werden. Der Typ-Checker prüft mit Regeln aus der Vorlesung, ob der Code konsistent typisiert ist und leitet die Typen her.
 
-Schnittstelle: 
-```java
-semantikCheck(input:AbstractSyntax):TypedAbstractSyntax
-```
+Schnittstelle: semantikCheck(input:AbstractSyntax):TypedAbstractSyntax
 
-# XIII.Bytecode-Generator
+# Bytecode-Generator
 
 Der Bytecode-Generator übersetzt die typisierte abstrakte Syntax in Bytecode. Hierfür wird die Java-Bibliothek ASM verwendet. Der Abstrakte Syntaxbaum wird durchlaufen und mittels dem ASM ClassWriter daraus Bytecode generiert. Zurückgegeben wird eine Hashmap, wobei ein Eintrag aus dem Klassennamen und dem zugehörigen Bytecode besteht.
 
-Schnittstelle: 
-```java
-generateByteCode(input:TypedAbstractSyntax):Hashmap<String,byte[]>;
-```
+Schnittstelle: generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, byte[]\&gt;
 
-# XIV.Testing
+# Testing
 
-## XV.Parser Tests
+## Parser Tests
 
 Ein Text, der Java-Quellcode enthält wird durch den Parser in eine abstrakte Syntax übersetzt. Das Ergebnis des Parsers wird anschließend mit einer händisch nachgebildeten Datenstruktur der erwarteten abstrakten Syntax auf inhaltliche Gleichheit überprüft. Getestet werden alle denkbaren Szenarios.
 
-## XVI.Typ-Checker Tests
+## Typ-Checker Tests
 
 Eine händisch aufgebaute abstrakte Syntax wird dem Typ-Checker als Eingabe übergeben. Das Ergebnis ist eine getypte abstrakte Syntax. Diese getypte Abstrakte syntax wird mit einer händisch nachgebildeten Datenstruktur der erwarteten getyped abstrakten Syntax auf inhaltliche Gleichheit überprüft. Getestet werden alle denkbaren Szenarios.
 
-## XVII.Bytecode-Generator-Tests
+## Bytecode-Generator-Tests
 
 Über Java Reflection kann der generierte Bytecode getestet werden. Hierzu wird dieser über den ReflectionLoader eingelesen. Anschließend können die enthalten Klassen, deren Felder, Methoden und Konstruktoren zur Laufzeit untersucht werden. Außerdem können Methoden aufgerufen und das erwartete Ergebnis abgerufen werden. So kann der erwartete strukturelle einer Klasse geprüft werden. Außerdem ist die Auswertung von Methodenaufrufen, Statements und Expressions möglich.
 
-## XVIII.Integration-Tests
+## Integration-Tests
 
 In den Integration-Tests werden der Parser, Type-Checker und ByteCode-Generator gemeinsam getestet. Die Eingabe ist somit ein String, der Java-Quellcode enthält und die Ausgabe ist Java-Bytecode. Über Reflection können dann Methoden im generierten Bytecode aufgerufen werden. Anschließend wird das Ergebnis validiert.
 
-## XIX.Functional-Tests
+## Functional-Tests
 
 In einem Functional-Test wird der gesamte Compiler als Java Anwendung überprüft. Hierzu wird die Jar-Datei mit einem Kommandozeilenargument (Pfad zu einer Java-Datei, die kompiliert werden soll) aufgerufen. Die Anwendung kompiliert anschließend ein .class-File aus dem Quellcode. Da von dem entwickelten Compiler keine statischen Methoden unterstützt werden (somit auch kein public static void main(String args[])), müssen die generierten Klassen von einer weiteren Java-Datei, die über JavaC kompiliert wird, eingebunden werden. Diese Hilfsdatei enthält den Einstiegspunkt und testet die kompilierten Klassen auf ihre Funktionalität.
