@@ -102,7 +102,7 @@ Die getyped Abstrakte Syntax ist ähnlich aufgebaut wie die abstrakte Syntax. Je
 Seit Version 17 werden von Java Record-Typen angeboten. Records dienen zur Speicherung von unveränderlichen Daten. Der Schreibaufwand von Code ist im Vergleich zu Klassen deutlich geringer. Des Weiteren besitzen Records Standardimplementierungen für die Methoden „hashCode&quot;, „equals&quot; und „toString&quot;. Diese Methoden können bei Bedarf aber zusätzlich implementiert werden. Records unterstützen keine Vererbung, erlauben es jedoch Schnittstellen zu implementieren. Ein Record kann wie Folgt definiert werden:
 
 ```java
-record Data (int Id, Stringname) {}
+record Data (int Id, String name) {}
 ```
 
 Zum Entwickeln eines JavaCompilers bieten sich diese Recordtypen an. Der Parser generiert eine abstrakte Syntax, die nach Generierung unveränderlich ist. Dasselbe gilt für den Type-Checker. Darüber hinaus müssen einige Tests geschrieben werden, welche die abstrakte Syntax und die getypte abstrakte Syntax nachbilden und mit den Ergebnissen des Parsers bzw. Type-Checks abgleichen. Werden die Record-Typen für diese Datenstruktur verwendet, muss anders als bei Klassen die Methode „equals&quot; nicht von Hand implementiert werden, um Assertions mit JUnit durchzuführen zu können.
