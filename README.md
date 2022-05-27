@@ -141,7 +141,7 @@ Um Abhängigkeiten zu entkoppeln ohne aufwendige Frameworklösungen wie Dependen
 
 # IX.Öffnen des Projektes in einer IDE
 
-Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden:
+Das erforderliche Sprachlevel zum Kompilieren des Java-Compilers ist die Preview-Version Java 17 oder Java 18 mit Unterstützung für Pattern-Matching for switch. Wird die neuste Version von IntelliJ verwendet, kann diese Einstellung in dem Fesnter „Project Structure&quot; vorgenommen werden:\
 ![](./Project/IntelliJ_Lang_Level.png)
 
 Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag ```--enable-preview``` gesetzt werden.
