@@ -151,25 +151,25 @@ Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable
 Der entwickelte Compiler kann mit „java -jar compiler.jar \&lt;\&lt;arg\&gt;\&gt;&quot; aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
 
 # Parser
-
+Der Parser befindet sich im Folgenden Verzeichnis: [Bytecode-Generator](./Project/src/Parser).
 Der Parser übersetzt Java-Quellcode in eine abstrakte Syntax. Hierfür wird der Parser Generator Antler verwendet. In einer separaten Datei (.g4-Datei) wird die Grammatik zum Parsen des Java-Quellcodes definiert. Aus der Grammatik werden Klassen generiert. Zur Übersetzung in die abstrakte Syntax werden verschiedene Adapter geschrieben, welche die abstrakte Syntax erzeugen und ggf. noch kleine Anpassungen vornehmen. So wird nach und nach ein Syntaxbaum aufgebaut.
 
 Schnittstelle: getSyntaxTree(charStream:input):AbstractSyntax
 
 # Type-Checker
-
+Der Type-Checker befindet sich im Folgenden Verzeichnis: [Bytecode-Generator](./Project/src/SemanticCheck).
 Der Typchecker übersetzt die abstrakte Syntax in eine getyped abstrakte Syntax. Da es sich bei Java um eine statisch typisierte Programmiersprache handelt, müssen Typprüfungen zur Kompilierungszeit vorgenommen werden. Diese Überprüfungen sind nicht mit dem Parser-Generator möglich und müssen in einem separaten Schritt vorgenommen werden. Der Typ-Checker prüft mit Regeln aus der Vorlesung, ob der Code konsistent typisiert ist und leitet die Typen her.
 
 Schnittstelle: semantikCheck(input:AbstractSyntax):TypedAbstractSyntax
 
 # Bytecode-Generator
-
+Der Bytecode-Generator befindet sich im Folgenden Verzeichnis: [Bytecode-Generator](./Project/src/CodeGenerator).
 Der Bytecode-Generator übersetzt die typisierte abstrakte Syntax in Bytecode. Hierfür wird die Java-Bibliothek ASM verwendet. Der Abstrakte Syntaxbaum wird durchlaufen und mittels dem ASM ClassWriter daraus Bytecode generiert. Zurückgegeben wird eine Hashmap, wobei ein Eintrag aus dem Klassennamen und dem zugehörigen Bytecode besteht.
 
 Schnittstelle: generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, byte[]\&gt;
 
 # Testing
-[](./Project/Tests)
+Die Tests befinden sich im Folgenden Verzeichnis: [Tests](./Project/Tests).
 
 ## Parser-Tests
 
