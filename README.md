@@ -169,6 +169,7 @@ Der Bytecode-Generator übersetzt die typisierte abstrakte Syntax in Bytecode. H
 Schnittstelle: generateByteCode(input:TypedAbstractSyntax):Hashmap\&lt;String, byte[]\&gt;
 
 # Testing
+[](./Project/Tests)
 
 ## Parser-Tests
 
