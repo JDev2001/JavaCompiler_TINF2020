@@ -117,13 +117,10 @@ voidCheck(Object o)
     switch (o) {
 
         caseString s:
-
             // {...}
             break;
         caseInteger i:
-
             //  {...}
-
             break;
 
         caseBoolean i:
