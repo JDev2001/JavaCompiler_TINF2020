@@ -1,14 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Project:jar" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Integration Tests">
-      <change afterPath="$PROJECT_DIR$/diagram.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagram.uml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagram_typed.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/diagram_typed.uml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Compilerbau Dokumentation.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../Compilerbau Dokumentation.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Project_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ressources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/IntegrationTest/ParseExpression.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/IntegrationTest/ParseExpression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,11 +67,14 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "shared-indexes"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -91,99 +98,93 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ParseExpression.Test4">
-    <configuration name="CheckBlock.TestNestedBlock" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.All in Project">
+    <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckBlock" />
-      <option name="METHOD_NAME" value="TestNestedBlock" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CheckMethodCall.TypeVoidMethodCall" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
-      <option name="MAIN_CLASS_NAME" value="SemanticCheckTests.CheckMethodCall" />
-      <option name="METHOD_NAME" value="TypeVoidMethodCall" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParseExpression.Test3" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.ParseExpression" />
-      <option name="METHOD_NAME" value="Test3" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ParseExpression.Test4" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.ParseExpression" />
-      <option name="METHOD_NAME" value="Test4" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SemanticCheckTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="SemanticCheckTests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="SemanticCheckTests" />
+      <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="IntegrationTests.AccessObjectMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
+      <option name="METHOD_NAME" value="AccessObjectMethod" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTests.AssignAttribute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
+      <option name="METHOD_NAME" value="AssignAttribute" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTests.AssignLocalVar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
+      <option name="METHOD_NAME" value="AssignLocalVar" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="IntegrationTest" />
+      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
+      <option name="METHOD_NAME" value="InstantiateClass" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
-      <item itemvalue="JUnit.CheckBlock.TestNestedBlock" />
-      <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
-      <item itemvalue="JUnit.ParseExpression.Test3" />
-      <item itemvalue="JUnit.ParseExpression.Test4" />
-      <item itemvalue="JUnit.SemanticCheckTests in Project" />
+      <item itemvalue="JUnit.All in Project" />
+      <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
+      <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
+      <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
+      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ParseExpression.Test4" />
-        <item itemvalue="JUnit.ParseExpression.Test3" />
-        <item itemvalue="JUnit.CheckMethodCall.TypeVoidMethodCall" />
-        <item itemvalue="JUnit.SemanticCheckTests in Project" />
-        <item itemvalue="JUnit.CheckBlock.TestNestedBlock" />
+        <item itemvalue="JUnit.All in Project" />
+        <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
+        <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
+        <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
+        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
       </list>
     </recent_temporary>
   </component>
@@ -205,6 +206,10 @@
       <workItem from="1653497489578" duration="1324000" />
       <workItem from="1653499908825" duration="663000" />
       <workItem from="1653506643606" duration="1953000" />
+      <workItem from="1653578381064" duration="1601000" />
+      <workItem from="1653635972035" duration="139000" />
+      <workItem from="1653637869423" duration="604000" />
+      <workItem from="1653749696595" duration="1024000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -527,11 +532,6 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>65</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/Main.java</url>
           <line>49</line>
           <option name="timeStamp" value="15" />
@@ -563,13 +563,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>133</line>
+          <line>146</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Tests/SemanticCheckTests/CheckMethodCall.java</url>
           <line>38</line>
           <option name="timeStamp" value="63" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>339</line>
+          <option name="timeStamp" value="70" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>253</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
@@ -587,6 +597,7 @@
         <PinnedItemInfo parentTag="SemanticCheck.TypedDataClasses.typedCommon.TypedClass" memberName="methods" />
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />
         <PinnedItemInfo parentTag="Common.Program" memberName="classes" />
+        <PinnedItemInfo parentTag="Parser.DataClasses.Expressions.LocalOrFieldVar" memberName="name" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
@@ -599,5 +610,10 @@
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Project$ParseExpression_AccessObjectMethod.ic" NAME="ParseExpression.AccessObjectMethod Coverage Results" MODIFIED="1653579094024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>IntegrationTest.*</FILTER>
+    </SUITE>
   </component>
 </project>
