@@ -12,6 +12,28 @@ import org.junit.jupiter.api.Assertions;
 public class IntegrationTests
 {
     @org.junit.jupiter.api.Test
+    public void IfElse() throws Exception
+    {
+        String src = "class Empty { public boolean Method() { if(4>9) { return false;} else { return true;}  } }";
+        Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
+        TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
+
+        BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
+        var byteCode = bytecodeGenerator.genCode();
+        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        Class c = loader.findClass("Empty");
+        var methods = c.getMethods();
+        var c2 = c.getConstructors();
+        var obj = c.newInstance();
+        var methodInstance = c.getDeclaredMethod("Method");
+
+        var res =(boolean)methodInstance.invoke(obj);
+
+        System.out.println(res);
+
+        Assertions.assertEquals(true,res);
+    }
+    @org.junit.jupiter.api.Test
     public void AssignLocalVar() throws Exception
     {
         String src = "class Empty { private void Method() { int i; i=50; return i;} } }";

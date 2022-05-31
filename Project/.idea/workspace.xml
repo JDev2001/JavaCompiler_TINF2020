@@ -9,10 +9,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Integration Tests">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Project_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ressources/META-INF/MANIFEST.MF" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Functional Test">
+      <change afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedBooleanExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedCharacterExpression.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedIntExpression.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +72,7 @@
   "keyToString": {
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project",
+    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/src/SemanticCheck/TypedDataClasses/typedExpressions",
     "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
@@ -79,6 +82,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\jonas\IdeaProjects\JavaCompiler_TINF2020\Project\src\SemanticCheck\TypedDataClasses\typedExpressions" />
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\src\com\company" />
@@ -98,7 +102,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="JUnit.IntegrationTests.IfElse">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -155,7 +159,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTests.IfElse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -165,26 +169,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="IntegrationTest" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="InstantiateClass" />
+      <option name="METHOD_NAME" value="IfElse" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.IntegrationTests.IfElse" />
       <item itemvalue="JUnit.All in Project" />
       <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
       <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
       <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
-      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTests.IfElse" />
         <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
         <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
         <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
-        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
       </list>
     </recent_temporary>
   </component>
@@ -209,7 +213,10 @@
       <workItem from="1653578381064" duration="1601000" />
       <workItem from="1653635972035" duration="139000" />
       <workItem from="1653637869423" duration="604000" />
-      <workItem from="1653749696595" duration="1024000" />
+      <workItem from="1653749696595" duration="1079000" />
+      <workItem from="1653828051282" duration="1892000" />
+      <workItem from="1653998601290" duration="1881000" />
+      <workItem from="1654003348304" duration="807000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -477,7 +484,14 @@
       <option name="project" value="LOCAL" />
       <updated>1653498287345</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Added Functional Test">
+      <created>1653751068734</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1653751068734</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,7 +510,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Klassen auf Records umgestellt" />
     <MESSAGE value="Tests eingefügt" />
     <MESSAGE value="BCGen stuff" />
     <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
@@ -521,7 +534,8 @@
     <MESSAGE value="Added TEsts" />
     <MESSAGE value="Added Test" />
     <MESSAGE value="Added Integration Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Integration Tests" />
+    <MESSAGE value="Added Functional Test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Functional Test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -563,7 +577,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>146</line>
+          <line>172</line>
           <option name="timeStamp" value="62" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -573,13 +587,18 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>339</line>
+          <line>375</line>
           <option name="timeStamp" value="70" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
-          <line>253</line>
+          <line>289</line>
           <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java</url>
+          <line>226</line>
+          <option name="timeStamp" value="75" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
