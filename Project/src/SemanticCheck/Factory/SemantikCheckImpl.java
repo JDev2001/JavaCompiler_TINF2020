@@ -15,7 +15,6 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SemantikCheckImpl implements SemantikCheck{
@@ -76,8 +75,35 @@ public class SemantikCheckImpl implements SemantikCheck{
             {
                 return semantikCheck(methodCallStatementExpression);
             }
+            case BooleanExpression booleanExpression ->
+            {
+                return semantikCheck(booleanExpression);
+            }
+            case CharacterExpression characterExpression ->
+            {
+                return semantikCheck(characterExpression);
+            }
+            case IntExpression  intExpression ->
+            {
+                return semantikCheck(intExpression);
+            }
             default -> throw new IllegalStateException("Unexpected value: " + expression);
         }
+    }
+
+    private ITypedExpression semantikCheck(CharacterExpression characterExpression)
+    {
+        return new TypedConstExpression(characterExpression.character(), new CharType());
+    }
+
+    private ITypedExpression semantikCheck(BooleanExpression booleanExpression)
+    {
+        return new TypedConstExpression(booleanExpression.value(), new BoolType());
+    }
+
+    private ITypedExpression semantikCheck(IntExpression intExpression)
+    {
+        return new TypedConstExpression(intExpression.integer(),new IntType());
     }
 
     public ITypedStatementExpression checkStatementExpression(IStatementExpression statementExpression) throws Exception {
@@ -218,6 +244,16 @@ public class SemantikCheckImpl implements SemantikCheck{
             case "|":
                 if(typedA.getType() instanceof BoolType && typedB.getType() instanceof BoolType){
                     return new TypedBinaryExpression(typedA, typedB, operator, typedA.getType());
+                }
+                else{
+                    throw new Exception("Invalid type in expression");
+                }
+            case "<":
+            case "<=":
+            case ">=":
+            case ">":
+                if(typedA.getType() instanceof IntType && typedB.getType() instanceof IntType){
+                    return new TypedBinaryExpression(typedA, typedB, operator, new BoolType());
                 }
                 else{
                     throw new Exception("Invalid type in expression");

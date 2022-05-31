@@ -25,12 +25,13 @@ public class Add
     public void SimpleMethodCall() throws IOException
     {
 
-        String src = "class MyClass { public void Add(int a, int b) { return a + b } }";
+        String src = "class MyClass { public void A() { B() } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
         Assertions.assertEquals(syntaxTree,new Program(List.of(
-                new Class("MyClass",  new ArrayList<>(), List.of(
+                new Class("MyClass", new ArrayList<>(),
+                        List.of(
                 new Method(AccessModifiers.Public,"A",
                         new ArrayList<>(),
                         new VoidType(),
