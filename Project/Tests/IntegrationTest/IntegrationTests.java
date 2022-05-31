@@ -20,7 +20,7 @@ public class IntegrationTests
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -36,13 +36,13 @@ public class IntegrationTests
     @org.junit.jupiter.api.Test
     public void AssignLocalVar() throws Exception
     {
-        String src = "class Empty { private void Method() { int i; i=50; return i;} } }";
+        String src = "class Empty { public int Method() { int i; i=50; return i;} }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -57,13 +57,13 @@ public class IntegrationTests
     @org.junit.jupiter.api.Test
     public void AssignAttribute() throws Exception
     {
-        String src = "class Empty { int i; private void Method() { i=50;} } }";
+        String src = "class Empty { public int i; public void Method() { i=50;} }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -78,13 +78,13 @@ public class IntegrationTests
     @org.junit.jupiter.api.Test
     public void AccessObjectMethod() throws Exception
     {
-        String src = "class Empty { private int Method() { A a; a = new A(); return a.Foo(); } } class A{ public A() {} public int Foo(){return 4;}}}";
+        String src = "class Empty { public int Method() { A a; a = new A(); return a.Foo(); } } class A{ public A() {} public int Foo(){return 4;}}}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -99,13 +99,13 @@ public class IntegrationTests
     @org.junit.jupiter.api.Test
     public void InstantiateClass() throws Exception
     {
-        String src = "class Empty { private A Method() { return new A(); } } class A{ public A() {}}";
+       String src = "class Empty { public A Method() { return new A(); } }class A{ public A() {}}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -118,15 +118,15 @@ public class IntegrationTests
     }
 
     @org.junit.jupiter.api.Test
-    public void NeastedExpression() throws Exception
+    public void NestedExpression() throws Exception
     {
-        String src = "class Empty { private int A() { return 5; } public int Method(int x, int y, int z) { return x+y+z+A();} }";
+        String src = "class Empty { public int A() { return 5; } public int Method(int x, int y, int z) { return x+y+z+A();} }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();
@@ -148,7 +148,7 @@ public class IntegrationTests
 
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get("Empty"));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass("Empty");
         var methods = c.getMethods();
         var c2 = c.getConstructors();

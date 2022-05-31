@@ -33,7 +33,7 @@ public class ClassWithMethods
         var prog = new TypedProgram(List.of(new TypedClass(identifier, new ArrayList<>(), methods, new ArrayList<>())));
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
-        ReflectLoader loader = new ReflectLoader(byteCode.get(identifier));
+        ReflectLoader loader = new ReflectLoader(byteCode);
         Class c = loader.findClass(identifier);
         var reflcMethods = c.getMethods();
 
