@@ -2,6 +2,7 @@ package ParserTests;
 
 
 import Parser.DataClasses.Common.Program;
+import Parser.DataClasses.Expressions.LocalOrFieldVar;
 import Parser.DataClasses.Expressions.TypeExpression;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
@@ -34,7 +35,7 @@ public class LocalOrFieldVarAccess
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
                                 new IntType(),
-                                new Block(List.of(new ReturnStatement(new TypeExpression(new CustomType("x"))))))),
+                                new Block(List.of(new ReturnStatement(new LocalOrFieldVar("x")))))),
                         List.of(new Field("x", new IntType(),AccessModifiers.Private))))));
     }
 }

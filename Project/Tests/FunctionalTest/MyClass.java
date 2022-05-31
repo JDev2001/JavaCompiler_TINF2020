@@ -4,4 +4,8 @@ public class MyClass
     {
         return a+b;
     }
+    public int Method2(int a, int b)
+    {
+        return a*b;
+    }
 }

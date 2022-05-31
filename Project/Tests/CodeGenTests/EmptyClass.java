@@ -23,7 +23,10 @@ public class EmptyClass
         var prog = new TypedProgram(List.of(new TypedClass(identifier, new ArrayList<>(),new ArrayList<>(),new ArrayList<>())));
         BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(prog);
         var byteCode = bytecodeGenerator.genCode();
+
+
         ReflectLoader loader = new ReflectLoader(byteCode.get(identifier));
+
         java.lang.Class c = loader.findClass(identifier);
         var name = c.getName();
         var constructor = Arrays.stream(c.getConstructors()).findFirst().get();
