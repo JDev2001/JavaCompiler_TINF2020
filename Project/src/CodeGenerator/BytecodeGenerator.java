@@ -78,7 +78,7 @@ public class BytecodeGenerator {
             accessmod = generateAccessMod(field.accessModifier());
             // extract field type
             descriptor = generateTypeString(field.type());
-            System.out.println("AAAAAAAAAH"+field.name());
+            System.out.println("AAAAAAAAAH" + field.name());
             fieldVisitor = cw.visitField(accessmod, field.name(), descriptor, null, null);
             fieldVisitor.visitEnd();
         }
@@ -123,7 +123,7 @@ public class BytecodeGenerator {
             MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), method.identifer(), generateDescriptorParameter(method.parameters(), method.returnType()), null, null);
             methodVisitor.visitCode();
             generateStatement(methodVisitor, locals, method.statement());
-            if(method.objectType() instanceof VoidType) {
+            if (method.objectType() instanceof VoidType) {
                 methodVisitor.visitInsn(Opcodes.RETURN);
             }
             methodVisitor.visitMaxs(0, 0);
@@ -247,8 +247,11 @@ public class BytecodeGenerator {
 
     private void generateNewStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedNewStatementExpression statement) {
         mv.visitTypeInsn(Opcodes.NEW, statement.type().getName());
+        System.out.printf("mv.visitTypeInsn(Opcodes.NEW, " + statement.type().getName() + ")");
         mv.visitInsn(Opcodes.DUP);
+        System.out.println("mv.visitInsn(Opcodes.DUP)");
         mv.visitMethodInsn(Opcodes.INVOKESPECIAL, statement.type().getName(), "<init>", generateDescriptor(statement.constructorCall().parameters(), new VoidType()), false);
+        System.out.println("mv.visitMethodInsn(Opcodes.INVOKESPECIAL, " + "statement.type().getName()" + ", " + "<init>" + ", " + generateDescriptor(statement.constructorCall().parameters(), new VoidType()) + ", " + false + ")");
     }
 
     private void generateReturn(MethodVisitor mv, HashMap<String, Integer> locals, TypedReturnStatement statement) {
@@ -394,7 +397,7 @@ public class BytecodeGenerator {
                 System.out.println("Opcodes.GETFIELD," + currentLocalOrFieldVar.getType().getName() + ", " + expression.name() + ", " + generateTypeString(expression.getType()) + ")");
             }
         }
-        if(doAssignA) mv.visitVarInsn(Opcodes.ALOAD, 0);
+        if (doAssignA) mv.visitVarInsn(Opcodes.ALOAD, 0);
         currentLocalOrFieldVar = expression;
     }
 
@@ -402,6 +405,7 @@ public class BytecodeGenerator {
         //for (var parameter : statement.parameters()) {
         //            generateExpression(mv, locals, parameter);
         //        }
+        generateExpression(mv, locals, statement.target());
         mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(),
                 generateDescriptor(statement.parameters(), statement.getType()), false);
     }
@@ -441,8 +445,13 @@ public class BytecodeGenerator {
         switch (valueToAssign) {
             case TypedLocalOrFieldVar exp -> {
                 if (checkIfLocalVar(locals, exp)) {
-                    mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
-                    System.out.println("mv.visitFieldInsn(Opcodes.ISTORE, " + locals.get(exp.name()) + ")");
+                    if (exp.getType() instanceof CustomType) {
+                        mv.visitVarInsn(Opcodes.ASTORE, locals.get(exp.name()));
+                        System.out.println("mv.visitFieldInsn(Opcodes.ASTORE, " + locals.get(exp.name()) + ")");
+                    } else {
+                        mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
+                        System.out.println("mv.visitFieldInsn(Opcodes.ISTORE, " + locals.get(exp.name()) + ")");
+                    }
                 } else {
                     mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, exp.name(), generateTypeString(exp.getType()));
                     System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + currentClassName + ", " + exp.name() + ", " + generateTypeString(exp.getType()) + ")");

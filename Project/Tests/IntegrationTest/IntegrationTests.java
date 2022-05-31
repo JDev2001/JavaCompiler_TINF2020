@@ -78,7 +78,7 @@ public class IntegrationTests
     @org.junit.jupiter.api.Test
     public void AccessObjectMethod() throws Exception
     {
-        String src = "class Empty { public int Method() { A a; a = new A(); return a.Foo(); } } class A{ public A() {} public int Foo(){return 4;}}}";
+        String src = "class Empty { public int Method() { A a; a = new A(); return a.Foo(); } } class A{ public A() {} public int Foo(){return 4;}}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
 
