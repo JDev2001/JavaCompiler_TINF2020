@@ -15,7 +15,6 @@ import SemanticCheck.TypedDataClasses.typedStatementExpression.*;
 import SemanticCheck.TypedDataClasses.typedStatements.*;
 
 import java.util.*;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class SemantikCheckImpl implements SemantikCheck{
