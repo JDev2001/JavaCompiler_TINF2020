@@ -33,8 +33,6 @@ public class MethodeAdapter {
                             new MethodParameter(methodParameter.Identifier().getText(), TypeAdapter.generate(methodParameter.type()))));
         }
 
-        //Hier muss noch zwischen Main Methoden unterschieden werden -> vgl awesome
-
         return new Method(AccessModifierAdapter.generate(ctx.AccessModifier()),
                 ctx.Identifier().getText(),
                 methodParameters,

@@ -1,8 +1,12 @@
 package Parser.adapter.GeneralAdapter;
 
+import Parser.DataClasses.Common.AccessModifiers;
+import Parser.DataClasses.Common.Block;
 import Parser.DataClasses.Common.Class;
 import Parser.DataClasses.Field.Field;
 import Parser.DataClasses.Method.Method;
+import Parser.DataClasses.Statements.IStatement;
+import Parser.DataClasses.Types.VoidType;
 import Parser.adapter.FieldAdapter.FieldAdapter;
 import Parser.adapter.MethodAdapter.MethodeAdapter;
 import generated.antlrGrammarParser;
@@ -31,10 +35,17 @@ public class ClassAdapter {
         ctx.classBody().constructor().forEach(constructorContext -> constructors.add(MethodeAdapter.generateConstructor(ctx.Identifier().getText(), constructorContext)));
         ctx.classBody().methodDeclaration().forEach(methodDeclarationContext -> methods.add(MethodeAdapter.generate(methodDeclarationContext)));
 
+        /*
+        If needed for Bytecode, atm not
+        if(constructors.size() == 0){
+            constructors.add(new Method(AccessModifiers.Public,
+                    ctx.Identifier().getText(),
+                    new ArrayList<>(),
+                    new VoidType(),
+                    new Block(new ArrayList<>())));
+        }
+        */
+
         return new Class(ctx.Identifier().getText(), constructors, methods, fields);
     }
-
-
-
-
 }
