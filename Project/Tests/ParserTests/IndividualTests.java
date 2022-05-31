@@ -22,10 +22,10 @@ import java.util.List;
 public class IndividualTests {
 
     @Test
-    public void SimpleMethodCall() throws IOException
+    public void ExtendedMethodCall() throws IOException
     {
 
-        String src = "class MyClass { public void A() { a.b.c = 5; } }";
+        String src = "class MyClass { public void A() { A().B(); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
@@ -34,7 +34,8 @@ public class IndividualTests {
                         new Method(AccessModifiers.Public,"A",
                                 new ArrayList<>(),
                                 new VoidType(),
-                                new Block(List.of(new MethodCallStatementExpression("B", new ThisExpression(),new ArrayList<>()))))),
+                                new Block(List.of(new MethodCallStatementExpression("B",
+                                        new MethodCallStatementExpression("A", new ThisExpression(), new ArrayList<>()),new ArrayList<>()))))),
                         new ArrayList<>()))));
     }
 }
