@@ -60,7 +60,7 @@ public class Main {
 
             //Generate output File
             try {
-                File outputFile = new File(TransformFilename(args[0]));
+                File outputFile = new File(key+".class");
                 if(debugFlag) {
                     if (outputFile.createNewFile()) {
                         System.out.println("File created: " + outputFile.getName());
