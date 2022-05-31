@@ -11,6 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Fixed TypeChecker">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/CodeGenTests/EmptyClass.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -97,11 +98,43 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="JUnit.EmptyClass.Test2">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
       <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmptyClass.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.EmptyClass" />
+      <option name="METHOD_NAME" value="Test" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="EmptyClass.Test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="CodeGenTests" />
+      <option name="MAIN_CLASS_NAME" value="CodeGenTests.EmptyClass" />
+      <option name="METHOD_NAME" value="Test2" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -122,7 +155,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests.AssignAttribute" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -132,58 +165,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="IntegrationTest" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="AssignAttribute" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.AssignLocalVar" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="AssignLocalVar" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.IfElse" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="IfElse" />
+      <option name="METHOD_NAME" value="InstantiateClass" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IntegrationTests.IfElse" />
+      <item itemvalue="JUnit.EmptyClass.Test" />
+      <item itemvalue="JUnit.EmptyClass.Test2" />
       <item itemvalue="JUnit.All in Project" />
       <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
-      <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
-      <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
+      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.IntegrationTests.IfElse" />
-        <item itemvalue="JUnit.IntegrationTests.AssignLocalVar" />
-        <item itemvalue="JUnit.IntegrationTests.AssignAttribute" />
+        <item itemvalue="JUnit.EmptyClass.Test2" />
+        <item itemvalue="JUnit.EmptyClass.Test" />
+        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
         <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
+        <item itemvalue="JUnit.All in Project" />
       </list>
     </recent_temporary>
   </component>
@@ -211,7 +212,7 @@
       <workItem from="1653749696595" duration="1079000" />
       <workItem from="1653828051282" duration="1892000" />
       <workItem from="1653998601290" duration="1881000" />
-      <workItem from="1654003348304" duration="3753000" />
+      <workItem from="1654003348304" duration="7281000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -514,7 +515,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654007886426</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Fixed TypeChecker">
+      <created>1654008111019</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1654008111019</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -604,14 +612,14 @@
           <option name="timeStamp" value="74" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java</url>
-          <line>105</line>
-          <option name="timeStamp" value="76" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
           <line>201</line>
           <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java</url>
+          <line>107</line>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
