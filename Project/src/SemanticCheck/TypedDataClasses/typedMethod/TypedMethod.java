@@ -1,6 +1,5 @@
 package SemanticCheck.TypedDataClasses.typedMethod;
 
-
 import Parser.DataClasses.Common.AccessModifiers;
 import Parser.DataClasses.Types.IMethodType;
 import SemanticCheck.TypedDataClasses.typedStatements.ITypedStatement;
