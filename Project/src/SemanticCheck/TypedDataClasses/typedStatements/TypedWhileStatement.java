@@ -6,7 +6,6 @@ import SemanticCheck.TypedDataClasses.typedExpressions.TypedBinaryExpression;
 
 public record TypedWhileStatement(TypedBinaryExpression condition, TypedBlock block, IMethodType objectType)  implements ITypedStatement {
 
-
     @Override
     public IMethodType getType() {
         return objectType;
