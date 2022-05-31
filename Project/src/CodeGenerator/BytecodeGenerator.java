@@ -78,7 +78,6 @@ public class BytecodeGenerator {
             accessmod = generateAccessMod(field.accessModifier());
             // extract field type
             descriptor = generateTypeString(field.type());
-            System.out.println("AAAAAAAAAH" + field.name());
             fieldVisitor = cw.visitField(accessmod, field.name(), descriptor, null, null);
             fieldVisitor.visitEnd();
         }
