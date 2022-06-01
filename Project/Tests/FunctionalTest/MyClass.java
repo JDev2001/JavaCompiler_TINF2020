@@ -21,4 +21,24 @@ public class MyClass
         return i;
     }
 
+    public int GetData()
+    {
+        Data d;
+        d = new Data(2);
+        return d.GetID()*10+2;
+    }
+
+}
+
+public class Data
+{
+    private int id;
+    public Data(int id)
+    {
+        this.id = id;
+    }
+    public int GetID()
+    {
+        return id;
+    }
 }
