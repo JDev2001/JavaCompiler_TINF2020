@@ -29,7 +29,7 @@ public class Data
     private int id;
     public Data(int pId)
     {
-        id = pId;
+        this.id = pId;
     }
     public int GetID()
     {
