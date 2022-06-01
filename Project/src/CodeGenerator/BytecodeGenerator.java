@@ -188,8 +188,9 @@ public class BytecodeGenerator {
 
     private HashMap<String, Integer> generateParameters(List<TypedMethodParameter> methodParameters) {
         HashMap<String, Integer> parameters = new HashMap<String, Integer>();
+        parameters.put(currentClassName, 0);
         for (var parameter : methodParameters) {
-            parameters.put(parameter.identifier(), parameters.size() + 1);
+            parameters.put(parameter.identifier(), parameters.size());
         }
         return parameters;
     }
@@ -283,7 +284,7 @@ public class BytecodeGenerator {
     }
 
     private void generateVarDeclaration(MethodVisitor mv, HashMap<String, Integer> locals, TypedVarDeclarationStatement statement) {
-        locals.put(statement.name(), locals.size() + 1);
+        locals.put(statement.name(), locals.size());
     }
 
     private void generateWhile(MethodVisitor mv, HashMap<String, Integer> locals, TypedWhileStatement statement) {
@@ -357,7 +358,6 @@ public class BytecodeGenerator {
 
                 if (debugFlag)
                     System.out.println("ALOAD, 0");
-
             }
             case TypedLocalOrFieldVar expression -> {
                 if (debugFlag)
@@ -365,11 +365,6 @@ public class BytecodeGenerator {
                 generateLocalOrFieldVarExpression(mv, locals, expression);
 
             }
-            /*
-            case TypedTypeExpression expression -> {
-                //TODO
-                System.out.println(expression);
-            }*/
             case TypedUnaryExpression expression -> {
                 if (debugFlag)
                     System.out.println(expression);
@@ -497,9 +492,9 @@ public class BytecodeGenerator {
                 }
             }
             case TypedInstVarStatementExpression exp -> {
-                mv.visitFieldInsn(Opcodes.PUTFIELD, currentLocalOrFieldVar.getType().getName(), exp.varName(), generateTypeString(exp.getType()));
+                mv.visitFieldInsn(Opcodes.PUTFIELD, exp.expression().getType().getName(), exp.varName(), generateTypeString(exp.getType()));
                 if (debugFlag)
-                    System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + currentLocalOrFieldVar.getType().getName() + ", " + exp.varName() + ", " + generateTypeString(exp.getType()) + ")");
+                    System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + exp.expression().getType().getName() + ", " + exp.varName() + ", " + generateTypeString(exp.getType()) + ")");
             }
             default -> throw new IllegalStateException("Unexpected value: " + valueToAssign);
         }
