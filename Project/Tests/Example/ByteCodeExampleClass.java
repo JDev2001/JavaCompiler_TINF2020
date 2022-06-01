@@ -1,24 +1,24 @@
-class ByteCodeExampleClass {
-    int j;
-    int h;
+public class ByteCodeExampleClass {
+    private int i;
+    private int j;
     public Returner returner;
 
     public ByteCodeExampleClass() {
-        j = 32;
-        h = 32;
+        this.i = 32;
+        this.j = 36;
         returner = new Returner();
     }
 
-    public int whatsMyj() {
-        return returner.returnIt(j);
+    public int whatsMyI() {
+        return returner.returnIt(i);
     }
 
-    public int moreThanh() {
-        return returner.returnMore(h);
+    public int moreThanJustJ() {
+        return returner.returnMore(j);
     }
 }
 
-class Returner {
+public class Returner {
     public int returnIt(int i) {
         return i;
     }

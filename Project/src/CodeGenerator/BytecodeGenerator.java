@@ -429,10 +429,10 @@ public class BytecodeGenerator {
     }
 
     private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
+        generateExpression(mv, locals, statement.target());
         for (var parameter : statement.parameters()) {
             generateExpression(mv, locals, parameter);
         }
-        generateExpression(mv, locals, statement.target());
         mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(),
                 generateDescriptor(statement.parameters(), statement.getType()), false);
     }

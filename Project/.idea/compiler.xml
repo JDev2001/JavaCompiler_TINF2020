@@ -3,6 +3,14 @@
   <component name="CompilerConfiguration">
     <excludeFromCompile>
       <directory url="file://$PROJECT_DIR$/Tests/FunctionalTest" includeSubdirectories="true" />
+      <directory url="file://$PROJECT_DIR$/Tests/Example" includeSubdirectories="true" />
+      <file url="file://$PROJECT_DIR$/Tests/Example/ByteCodeExample.java" />
+      <file url="file://$PROJECT_DIR$/Tests/Example/ByteCodeExampleClass.java" />
+      <file url="file://$PROJECT_DIR$/Tests/Example/compile.bat" />
+      <file url="file://$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" />
+      <file url="file://$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" />
+      <file url="file://$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" />
+      <file url="file://$PROJECT_DIR$/Tests/FunctionalTest/Data.class" />
     </excludeFromCompile>
   </component>
   <component name="JavacSettings">
