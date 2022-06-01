@@ -47,7 +47,7 @@
 
 # Rollenverteilung
 
-+ Jonathan Schwab [@JDev2001](https://github.com/JDev2001) - Projektleiter & UML & Test:
++ Jonathan Schwab [@JDev2001](https://github.com/JDev2001) - Projektleiter & UML & Test
 + Felix Wochele [@FelixWochele](https://github.com/FelixWochele) - Parser
 + Jan Perthel [@jan510](https://github.com/jan510) - Typechecker
 + Reinhold Jooß [@SuuyaaYeet](https://github.com/SuuyaaYeet) - Bytecode Generierung
