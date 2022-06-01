@@ -262,6 +262,9 @@ public class BytecodeGenerator {
         mv.visitInsn(Opcodes.DUP);
         if (debugFlag)
             System.out.println("mv.visitInsn(Opcodes.DUP)");
+        for (var parameter : statement.constructorCall().parameters()) {
+            generateExpression(mv, locals, parameter);
+        }
         mv.visitMethodInsn(Opcodes.INVOKESPECIAL, statement.type().getName(), "<init>", generateDescriptor(statement.constructorCall().parameters(), new VoidType()), false);
         if (debugFlag)
             System.out.println("mv.visitMethodInsn(Opcodes.INVOKESPECIAL, " + "statement.type().getName()" + ", " + "<init>" + ", " + generateDescriptor(statement.constructorCall().parameters(), new VoidType()) + ", " + false + ")");
@@ -426,15 +429,15 @@ public class BytecodeGenerator {
                 }
             }
         }
-        if (doAssignA) mv.visitVarInsn(Opcodes.ALOAD, 0);
+        if (doAssignA && !checkIfLocalVar(locals, expression)) mv.visitVarInsn(Opcodes.ALOAD, 0);
         currentLocalOrFieldVar = expression;
     }
 
     private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
-        generateExpression(mv, locals, statement.target());
         for (var parameter : statement.parameters()) {
             generateExpression(mv, locals, parameter);
         }
+        generateExpression(mv, locals, statement.target());
         mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(),
                 generateDescriptor(statement.parameters(), statement.getType()), false);
     }
