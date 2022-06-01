@@ -418,11 +418,11 @@ public class BytecodeGenerator {
             } else {
 
                 mv.visitVarInsn(Opcodes.ALOAD, 0);
-                mv.visitFieldInsn(Opcodes.GETFIELD, currentLocalOrFieldVar.getType().getName(), expression.name(), generateTypeString(expression.getType()));
+                mv.visitFieldInsn(Opcodes.GETFIELD, currentClassName, expression.name(), generateTypeString(expression.getType()));
 
                 if (debugFlag) {
                     System.out.println("Opcodes.ALOAD, 0");
-                    System.out.println("Opcodes.GETFIELD," + currentLocalOrFieldVar.getType().getName() + ", " + expression.name() + ", " + generateTypeString(expression.getType()) + ")");
+                    System.out.println("Opcodes.GETFIELD," + currentClassName + ", " + expression.name() + ", " + generateTypeString(expression.getType()) + ")");
                 }
             }
         }
