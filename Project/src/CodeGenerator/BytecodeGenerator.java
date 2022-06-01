@@ -418,7 +418,7 @@ public class BytecodeGenerator {
             } else {
 
                 mv.visitVarInsn(Opcodes.ALOAD, 0);
-                mv.visitFieldInsn(Opcodes.GETFIELD, currentLocalOrFieldVar.getType().getName(), expression.name(), generateTypeString(expression.getType()) + ")");
+                mv.visitFieldInsn(Opcodes.GETFIELD, currentLocalOrFieldVar.getType().getName(), expression.name(), generateTypeString(expression.getType()));
 
                 if (debugFlag) {
                     System.out.println("Opcodes.ALOAD, 0");
