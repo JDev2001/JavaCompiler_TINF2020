@@ -374,7 +374,13 @@ public class SemantikCheckImpl implements SemantikCheck{
         var methods =  program.classes().stream().map(Class::methods).flatMap(List::stream);
         var method = Stream.concat(methods, constructors).filter(x-> x.identifier().equals(untyped.name())).findFirst();
         if(method.isEmpty())
+        {
+            if(untyped.parameters().isEmpty()&&classList.stream().anyMatch(x-> x.identifier().equals(untyped.name()))) //Defaultconstructoraufruf
+            {
+                return new TypedMethodCallStatementExpression(untyped.name(),typedTarget,typedParameters,new VoidType());
+            }
             throw new Exception("Method not found");
+        }
 
         var type = method.get().returnType();
         return new TypedMethodCallStatementExpression(untyped.name(), typedTarget, typedParameters, type);
