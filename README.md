@@ -145,6 +145,7 @@ Bei anderen IDEs muss zustäzlich bei Gradle oder Maven das JVM Flag „--enable
 
 # Ausführen-des-Compilers
 
+Die kompilierte Kompiler befindet sich im folgenden Verzeichnis: [Jar-Datei](./Project/out/artifacts/Project_jar).\
 Der entwickelte Compiler kann mit ```java -jar --enable-preview compiler.jar <arg>  ``` aufgerufen werden. Arg ist hierbei die Java Datei, die kompiliert werden soll. Der Compiler erzeugt anschließend eine .class Datei, welche den kompilierten Java-Bytecode enthält.
 
 # Parser
