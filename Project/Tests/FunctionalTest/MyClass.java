@@ -1,5 +1,6 @@
+package FunctionalTest;
 
-public class MyClass
+class MyClass
 {
 
     int i;
@@ -30,12 +31,12 @@ public class MyClass
 
 }
 
-public class Data
+class Data
 {
     private int id;
-    public Data(int id)
+    public Data(int id2)
     {
-        this.id = id;
+        id = id2;
     }
     public int GetID()
     {
