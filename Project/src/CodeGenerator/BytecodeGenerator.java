@@ -493,7 +493,7 @@ public class BytecodeGenerator {
             }
             case TypedInstVarStatementExpression exp -> {
                 mv.visitFieldInsn(Opcodes.PUTFIELD, exp.expression().getType().getName(), exp.varName(), generateTypeString(exp.getType()));
-                //if (debugFlag)
+                if (debugFlag)
                     System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + exp.expression().getType().getName() + ", " + exp.varName() + ", " + generateTypeString(exp.getType()) + ")");
             }
             default -> throw new IllegalStateException("Unexpected value: " + valueToAssign);
