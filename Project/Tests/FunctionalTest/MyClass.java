@@ -20,4 +20,5 @@ public class MyClass
     public int A(){
         return i;
     }
+
 }

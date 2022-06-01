@@ -275,7 +275,6 @@ public class SemantikCheckImpl implements SemantikCheck{
     }
 
     public TypedLocalOrFieldVar semantikCheck(LocalOrFieldVar untyped) throws Exception {
-        System.out.println(untyped.name().toString());
         var optionalTypedVarDeclarationStatement = varDeclarationStatements.stream().flatMap(Collection::stream).filter(x -> x.name().equals(untyped.name())).findFirst();
         var optionalMethodParameter = currentMethod.parameters().stream().filter(x -> x.identifier().equals(untyped.name())).findFirst();
         var optionalField = currentClass.fields().stream().filter(x-> x.name().equals(untyped.name())).findFirst();

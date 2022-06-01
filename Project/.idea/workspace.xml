@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser Tests">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="SemantikCheckImpl Constructor BugFix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
@@ -423,7 +421,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654006791796</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="SemantikCheckImpl Constructor BugFix">
+      <created>1654097043448</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1654097043448</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -442,7 +447,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Main class edited" />
     <MESSAGE value="Klassen auf Records umgestellt" />
     <MESSAGE value="Tests eingefügt" />
     <MESSAGE value="BCGen stuff" />
@@ -467,7 +471,8 @@
     <MESSAGE value="|| and &amp;&amp; works" />
     <MESSAGE value="Fixed instantiating class" />
     <MESSAGE value="Parser Tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Parser Tests" />
+    <MESSAGE value="SemantikCheckImpl Constructor BugFix" />
+    <option name="LAST_COMMIT_MESSAGE" value="SemantikCheckImpl Constructor BugFix" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
