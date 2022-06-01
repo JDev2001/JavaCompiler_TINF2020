@@ -28,7 +28,7 @@ public class While
     @Test
     public void SimpleWhileWithConstCondition() throws IOException {
 
-        String src = "class MyClass { public void A() { while(true) {}}";
+        String src = "class MyClass { public void A() { while(true) {} }}";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 
