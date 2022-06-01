@@ -94,7 +94,7 @@ public class BytecodeGenerator {
                 MethodVisitor methodVisitor = cw.visitMethod(generateAccessMod(method.accessModfier()), "<init>", generateDescriptorParameter(method.parameters(), new VoidType()), null, null);
                 methodVisitor.visitCode();
                 methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println("ALOAD, 0");
                 methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
                 generateStatement(methodVisitor, locals, method.statement());
@@ -109,7 +109,7 @@ public class BytecodeGenerator {
         MethodVisitor methodVisitor = cw.visitMethod(Opcodes.ACC_PUBLIC, "<init>", "()V", null, null);
         methodVisitor.visitCode();
         methodVisitor.visitVarInsn(Opcodes.ALOAD, 0);
-        if(debugFlag)
+        if (debugFlag)
             System.out.println("ALOAD, 0");
         methodVisitor.visitMethodInsn(Opcodes.INVOKESPECIAL, "java/lang/Object", "<init>", "()V", false);
         methodVisitor.visitInsn(Opcodes.RETURN);
@@ -197,49 +197,49 @@ public class BytecodeGenerator {
     private void generateStatement(MethodVisitor mv, HashMap<String, Integer> locals, ITypedStatement pStatement) {
         switch (pStatement) {
             case TypedBlock statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateBlock(mv, locals, statement);
             }
             case TypedIfElseStatement statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateIfElse(mv, locals, statement);
             }
             case TypedReturnStatement statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateReturn(mv, locals, statement);
             }
             case TypedVarDeclarationStatement statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateVarDeclaration(mv, locals, statement);
             }
             case TypedWhileStatement statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateWhile(mv, locals, statement);
             }
             //StatementExpressions
             case TypedInstVarStatementExpression expression -> {
                 //TODO
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateInstVarStatementExpression(mv, locals, expression);
             }
             case TypedAssignStatementExpression statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateAssignStatementExpression(mv, locals, statement);
             }
             case TypedMethodCallStatementExpression statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateTypedMethodCallStatementExpression(mv, locals, statement);
             }
             case TypedNewStatementExpression statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateNewStatementExpression(mv, locals, statement);
             }
@@ -257,13 +257,13 @@ public class BytecodeGenerator {
 
     private void generateNewStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedNewStatementExpression statement) {
         mv.visitTypeInsn(Opcodes.NEW, statement.type().getName());
-        if(debugFlag)
+        if (debugFlag)
             System.out.printf("mv.visitTypeInsn(Opcodes.NEW, " + statement.type().getName() + ")");
         mv.visitInsn(Opcodes.DUP);
-        if(debugFlag)
+        if (debugFlag)
             System.out.println("mv.visitInsn(Opcodes.DUP)");
         mv.visitMethodInsn(Opcodes.INVOKESPECIAL, statement.type().getName(), "<init>", generateDescriptor(statement.constructorCall().parameters(), new VoidType()), false);
-        if(debugFlag)
+        if (debugFlag)
             System.out.println("mv.visitMethodInsn(Opcodes.INVOKESPECIAL, " + "statement.type().getName()" + ", " + "<init>" + ", " + generateDescriptor(statement.constructorCall().parameters(), new VoidType()) + ", " + false + ")");
     }
 
@@ -324,40 +324,40 @@ public class BytecodeGenerator {
         //If an expression is true, load ICONST_1 onto stack, false is ICONST_0
         switch (pExpression) {
             case TypedBinaryExpression expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateTypedBinaryExpression(mv, locals, expression);
 
             }
             case TypedConstExpression expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateConstExpression(mv, locals, expression);
 
             }
             case TypedJNullExpression expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 mv.visitInsn(Opcodes.ACONST_NULL);
 
             }
             case TypedSuperExpression expression -> {
                 //TODO
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
             }
             case TypedThisExpression expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
 
                 mv.visitVarInsn(Opcodes.ALOAD, 0);
 
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println("ALOAD, 0");
 
             }
             case TypedLocalOrFieldVar expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateLocalOrFieldVarExpression(mv, locals, expression);
 
@@ -368,7 +368,7 @@ public class BytecodeGenerator {
                 System.out.println(expression);
             }*/
             case TypedUnaryExpression expression -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateUnaryExpression(mv, locals, expression);
 
@@ -377,7 +377,7 @@ public class BytecodeGenerator {
             case TypedInstVarStatementExpression expression -> {
                 //TODO
                 //put-/getfield in different class
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(expression);
                 generateInstVarStatementExpression(mv, locals, expression);
 
@@ -388,13 +388,13 @@ public class BytecodeGenerator {
 
             }
             case TypedMethodCallStatementExpression statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateTypedMethodCallStatementExpression(mv, locals, statement);
 
             }
             case TypedNewStatementExpression statement -> {
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println(statement);
                 generateNewStatementExpression(mv, locals, statement);
 
@@ -408,11 +408,11 @@ public class BytecodeGenerator {
             if (checkIfLocalVar(locals, expression)) {
                 if (expression.getType() instanceof CustomType) {
                     mv.visitVarInsn(Opcodes.ALOAD, locals.get(expression.name()));
-                    if(debugFlag)
+                    if (debugFlag)
                         System.out.println("mv.visitVarInsn(Opcodes.ALOAD, " + locals.get(expression.name()) + ")");
                 } else {
                     mv.visitVarInsn(Opcodes.ILOAD, locals.get(expression.name()));
-                    if(debugFlag)
+                    if (debugFlag)
                         System.out.println("mv.visitVarInsn(Opcodes.ILOAD, " + locals.get(expression.name()) + ")");
                 }
             } else {
@@ -420,20 +420,21 @@ public class BytecodeGenerator {
                 mv.visitVarInsn(Opcodes.ALOAD, 0);
                 mv.visitFieldInsn(Opcodes.GETFIELD, currentLocalOrFieldVar.getType().getName(), expression.name(), generateTypeString(expression.getType()) + ")");
 
-                if(debugFlag) {
+                if (debugFlag) {
                     System.out.println("Opcodes.ALOAD, 0");
                     System.out.println("Opcodes.GETFIELD," + currentLocalOrFieldVar.getType().getName() + ", " + expression.name() + ", " + generateTypeString(expression.getType()) + ")");
-                }}
+                }
+            }
         }
         if (doAssignA) mv.visitVarInsn(Opcodes.ALOAD, 0);
         currentLocalOrFieldVar = expression;
     }
 
     private void generateTypedMethodCallStatementExpression(MethodVisitor mv, HashMap<String, Integer> locals, TypedMethodCallStatementExpression statement) {
-        //for (var parameter : statement.parameters()) {
-        //            generateExpression(mv, locals, parameter);
-        //        }
         generateExpression(mv, locals, statement.target());
+        for (var parameter : statement.parameters()) {
+            generateExpression(mv, locals, parameter);
+        }
         mv.visitMethodInsn(Opcodes.INVOKEVIRTUAL, statement.target().getType().getName(), statement.name(),
                 generateDescriptor(statement.parameters(), statement.getType()), false);
     }
@@ -442,22 +443,22 @@ public class BytecodeGenerator {
         switch (expression.getType()) {
             case IntType type -> {
                 mv.visitIntInsn(Opcodes.BIPUSH, (Integer) expression.value());
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println("Pushed " + expression.value() + " onto stack");
             }
             case CharType type -> {
                 mv.visitIntInsn(Opcodes.BIPUSH, (Integer) expression.value());
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println("Pushed " + expression.value() + " onto stack");
             }
             case BoolType type -> {
                 if ((Boolean) expression.value()) {
                     mv.visitInsn(Opcodes.ICONST_1);
-                    if(debugFlag)
+                    if (debugFlag)
                         System.out.println("Pushed Opcodes.ICONST_1 onto stack");
                 } else {
                     mv.visitInsn(Opcodes.ICONST_0);
-                    if(debugFlag)
+                    if (debugFlag)
                         System.out.println("Pushed Opcodes.ICONST_0 onto stack");
                 }
             }
@@ -479,22 +480,22 @@ public class BytecodeGenerator {
                 if (checkIfLocalVar(locals, exp)) {
                     if (exp.getType() instanceof CustomType) {
                         mv.visitVarInsn(Opcodes.ASTORE, locals.get(exp.name()));
-                        if(debugFlag)
+                        if (debugFlag)
                             System.out.println("mv.visitFieldInsn(Opcodes.ASTORE, " + locals.get(exp.name()) + ")");
                     } else {
                         mv.visitVarInsn(Opcodes.ISTORE, locals.get(exp.name()));
-                        if(debugFlag)
+                        if (debugFlag)
                             System.out.println("mv.visitFieldInsn(Opcodes.ISTORE, " + locals.get(exp.name()) + ")");
                     }
                 } else {
                     mv.visitFieldInsn(Opcodes.PUTFIELD, currentClassName, exp.name(), generateTypeString(exp.getType()));
-                    if(debugFlag)
+                    if (debugFlag)
                         System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + currentClassName + ", " + exp.name() + ", " + generateTypeString(exp.getType()) + ")");
                 }
             }
             case TypedInstVarStatementExpression exp -> {
                 mv.visitFieldInsn(Opcodes.PUTFIELD, currentLocalOrFieldVar.getType().getName(), exp.varName(), generateTypeString(exp.getType()));
-                if(debugFlag)
+                if (debugFlag)
                     System.out.println("mv.visitFieldInsn(Opcodes.PUTFIELD, " + currentLocalOrFieldVar.getType().getName() + ", " + exp.varName() + ", " + generateTypeString(exp.getType()) + ")");
             }
             default -> throw new IllegalStateException("Unexpected value: " + valueToAssign);
