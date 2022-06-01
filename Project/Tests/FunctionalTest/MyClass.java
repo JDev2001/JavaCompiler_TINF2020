@@ -1,5 +1,12 @@
+
 public class MyClass
 {
+
+    int i;
+
+    public MyClass(){
+        i = 13;
+    }
 
     public int Method(int a, int b)
     {
@@ -11,6 +18,6 @@ public class MyClass
     }
 
     public int A(){
-        return 36;
+        return i;
     }
 }

@@ -3,18 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/Add.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/While.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/While.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/SemanticCheck/Factory/SemantikCheckImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,16 +61,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Tests/FunctionalTest",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Tests/FunctionalTest&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Tests\FunctionalTest" />

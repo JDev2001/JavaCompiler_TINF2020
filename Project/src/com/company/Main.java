@@ -13,7 +13,7 @@ import java.util.Map;
 public class Main {
 
     //Global Debuging Flas -> For more/less debugging infos turn true/false
-    public static boolean debugFlag = false;
+    public static boolean debugFlag = true;
 
     /**
      * Main method of the application
