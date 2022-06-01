@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Project:jar" />
-    </artifacts-to-build>
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Jar udpated">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="optimized">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Example/ByteCodeExample.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Example/ByteCodeExample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Example/ByteCodeExampleClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Example/ByteCodeExampleClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Example/Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Example/Project.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/Data.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/adapter/Expressions/BaseTypeAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +45,7 @@
     <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/ClassWithMethods.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="jar://$PROJECT_DIR$/asm-9.3.jar!/org/objectweb/asm/MethodVisitor.class" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/BoolType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
@@ -65,30 +69,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Suuyaa/IdeaProjects/JavaCompiler_TINF2020/Project/Tests/FunctionalTest/Data.class",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Tests/FunctionalTest&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\Suuyaa\IdeaProjects\JavaCompiler_TINF2020\Project\Tests" />
+      <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Tests\FunctionalTest" />
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\src\com\company" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Tests\FunctionalTest" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Parser\src\generated" />
       <recent name="C:\Users\Jona\IdeaProjects\JavaCompiler_TINF2020\Project\Parser\src" />
       <recent name="C:\Users\Jona\IdeaProjects\JavaCompiler_TINF2020\Project\Parser" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
-      <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="Parser.DataClasses.Expressions" />
@@ -98,7 +102,29 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.IntegrationTests">
+  <component name="RunManager" selected="JUnit.All in Project">
+    <configuration name="MainProg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainProg" />
+      <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="Ressources/Add.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.company.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="Ressources/Add.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -107,83 +133,50 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ParserTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="PATTERN" value="ParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="While.SimpleWhileWithConstCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="PATTERN" value="ParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="InstantiateClass" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.NestedExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="NestedExpression" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.ThisExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="ThisExpression" />
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.While" />
+      <option name="METHOD_NAME" value="SimpleWhileWithConstCondition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
-      <item itemvalue="JUnit.IntegrationTests.ThisExpression" />
-      <item itemvalue="JUnit.IntegrationTests" />
-      <item itemvalue="JUnit.IntegrationTests.NestedExpression" />
+      <item itemvalue="Application.com.company.Main" />
+      <item itemvalue="Application.MainProg" />
+      <item itemvalue="JUnit.ParserTests in Project" />
+      <item itemvalue="JUnit.While.SimpleWhileWithConstCondition" />
       <item itemvalue="JUnit.All in Project" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.IntegrationTests" />
         <item itemvalue="JUnit.All in Project" />
-        <item itemvalue="JUnit.IntegrationTests.ThisExpression" />
-        <item itemvalue="JUnit.IntegrationTests.NestedExpression" />
-        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
+        <item itemvalue="JUnit.ParserTests in Project" />
+        <item itemvalue="JUnit.While.SimpleWhileWithConstCondition" />
+        <item itemvalue="Application.com.company.Main" />
+        <item itemvalue="Application.MainProg" />
       </list>
     </recent_temporary>
   </component>
@@ -200,6 +193,13 @@
       <workItem from="1652528109751" duration="8078000" />
       <workItem from="1652974373468" duration="652000" />
       <workItem from="1653134296437" duration="5188000" />
+    </task>
+    <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
+      <created>1652109126816</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1652109126816</updated>
     </task>
     <task id="LOCAL-00002" summary="Antlr Configuration">
       <created>1652112691052</created>
@@ -425,126 +425,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653989448058</updated>
     </task>
-    <task id="LOCAL-00034" summary="Fixes and implementation of assign">
-      <created>1654005129994</created>
+    <task id="LOCAL-00034" summary="Parser Tests">
+      <created>1654006791796</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1654005129994</updated>
+      <updated>1654006791796</updated>
     </task>
-    <task id="LOCAL-00035" summary="Create multiple class files">
-      <created>1654011765733</created>
+    <task id="LOCAL-00035" summary="SemantikCheckImpl Constructor BugFix">
+      <created>1654097043448</created>
       <option name="number" value="00035" />
       <option name="presentableId" value="LOCAL-00035" />
       <option name="project" value="LOCAL" />
-      <updated>1654011765733</updated>
+      <updated>1654097043448</updated>
     </task>
-    <task id="LOCAL-00036" summary="More fixes">
-      <created>1654020640243</created>
+    <task id="LOCAL-00036" summary="optimized">
+      <created>1654097258110</created>
       <option name="number" value="00036" />
       <option name="presentableId" value="LOCAL-00036" />
       <option name="project" value="LOCAL" />
-      <updated>1654020640243</updated>
+      <updated>1654097258110</updated>
     </task>
-    <task id="LOCAL-00037" summary="Fixed all tests">
-      <created>1654021756775</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1654021756775</updated>
-    </task>
-    <task id="LOCAL-00038" summary="removed AAAAAAAAAAAHi">
-      <created>1654021933216</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1654021933216</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Example added">
-      <created>1654086887834</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1654086887834</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Fixes">
-      <created>1654088523226</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1654088523226</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Fixes">
-      <created>1654088893536</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1654088893536</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Fix?">
-      <created>1654095726641</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1654095726641</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Fixes">
-      <created>1654106852246</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1654106852246</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Example updated">
-      <created>1654108690548</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1654108690548</updated>
-    </task>
-    <task id="LOCAL-00045" summary="Example updated">
-      <created>1654108773519</created>
-      <option name="number" value="00045" />
-      <option name="presentableId" value="LOCAL-00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1654108773519</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Fixed this">
-      <created>1654110112756</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1654110112756</updated>
-    </task>
-    <task id="LOCAL-00047" summary="Updated jars in tests">
-      <created>1654110231790</created>
-      <option name="number" value="00047" />
-      <option name="presentableId" value="LOCAL-00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1654110231790</updated>
-    </task>
-    <task id="LOCAL-00048" summary="Comments">
-      <created>1654110308478</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1654110308478</updated>
-    </task>
-    <task id="LOCAL-00049" summary="Jar udpated">
-      <created>1654110481773</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1654110481773</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Jar udpated">
-      <created>1654110490290</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1654110490291</updated>
-    </task>
-    <option name="localTasksCounter" value="51" />
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -563,45 +465,40 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Tests eingefügt" />
+    <MESSAGE value="BCGen stuff" />
+    <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
+    <MESSAGE value="Added constructors to class" />
+    <MESSAGE value="standard constructor" />
+    <MESSAGE value="Added stack for variables and fields" />
+    <MESSAGE value="." />
+    <MESSAGE value="StatementParser" />
+    <MESSAGE value="Parser Expressions" />
+    <MESSAGE value="Removed Modules" />
     <MESSAGE value="AddedTests" />
     <MESSAGE value="FixedTest" />
     <MESSAGE value="Can generate EmptyClass.class" />
     <MESSAGE value="fixed" />
     <MESSAGE value="Fix for the gods" />
+    <MESSAGE value="Fixes" />
     <MESSAGE value="updated IntelliJ and added function for vars..." />
     <MESSAGE value="Fixed bug and improved constructor generating" />
     <MESSAGE value="Changes" />
     <MESSAGE value="more" />
     <MESSAGE value="|| and &amp;&amp; works" />
     <MESSAGE value="Fixed instantiating class" />
-    <MESSAGE value="Fixes and implementation of assign" />
-    <MESSAGE value="Create multiple class files" />
-    <MESSAGE value="More fixes" />
-    <MESSAGE value="Fixed all tests" />
-    <MESSAGE value="removed AAAAAAAAAAAHi" />
-    <MESSAGE value="Example added" />
-    <MESSAGE value="Fix?" />
-    <MESSAGE value="Reverted changes to fix tests..." />
-    <MESSAGE value="Fixes" />
-    <MESSAGE value="Example updated" />
-    <MESSAGE value="Fixed this" />
-    <MESSAGE value="Updated jars in tests" />
-    <MESSAGE value="Comments" />
-    <MESSAGE value="Jar udpated" />
-    <option name="LAST_COMMIT_MESSAGE" value="Jar udpated" />
+    <MESSAGE value="Parser Tests" />
+    <MESSAGE value="SemantikCheckImpl Constructor BugFix" />
+    <MESSAGE value="optimized" />
+    <option name="LAST_COMMIT_MESSAGE" value="optimized" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
+        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/com/company/SemanticCheck/Factory/SemantikCheckImpl.java</url>
           <line>137</line>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

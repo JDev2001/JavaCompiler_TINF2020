@@ -1,3 +1,4 @@
+
 public class MainProg
 {
     public static void main(String[] args)
@@ -7,3 +8,4 @@ public class MainProg
         System.out.println(myClass.GetData(1,false));
     }
 }
+

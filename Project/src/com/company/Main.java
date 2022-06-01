@@ -18,7 +18,7 @@ public class Main {
     /**
      * Main method of the application
      *
-     * @param args path of the input java file (./EmptyClass.java)
+     * @param args path of the input java file (Ressources/EmptyClass.java)
      * @throws IOException IO errror if the file does not exist
      */
     public static void main(String[] args) throws Exception {

@@ -18,7 +18,7 @@ public class MyClass
         }
         else
         {
-            return 1;
+            return -36;
         }
     }
 

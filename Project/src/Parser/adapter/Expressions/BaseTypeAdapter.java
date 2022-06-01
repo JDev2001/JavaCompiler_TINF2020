@@ -5,6 +5,8 @@ import Parser.adapter.StatementExpression.StatementExpressionAdapter;
 import Parser.adapter.Types.TypeAdapter;
 import generated.antlrGrammarParser;
 
+import java.util.Objects;
+
 public class BaseTypeAdapter {
 
     public static IExpression generate(antlrGrammarParser.BaseTypeContext ctx) {
@@ -29,8 +31,13 @@ public class BaseTypeAdapter {
             return new CharacterExpression(ctx.JCharacter().getText().charAt(1));
         }
         else if(ctx.Const() != null){
-            //So Richtig??
-            return new ConstExpression(Integer.parseInt(ctx.Const().getText()));
+            if(ctx.AddSubOperator() != null && Objects.equals(ctx.AddSubOperator().getText(), "-")){
+                //If negativ Value
+                return new ConstExpression(-1 * Integer.parseInt(ctx.Const().getText()));
+            }else {
+                //If positive or smt else xD
+                return new ConstExpression(Integer.parseInt(ctx.Const().getText()));
+            }
         }
         else if(ctx.Super() != null){
             return new SuperExpression();
