@@ -193,6 +193,7 @@ public class SemantikCheckImpl implements SemantikCheck{
         List<Field> typedFields = new ArrayList<>(untyped.fields());
 
         for (Method constructor : untyped.constructor()){
+            currentMethod = constructor;
             semantikCheckMethodParameter(typedConstructors, constructor);
         }
 
