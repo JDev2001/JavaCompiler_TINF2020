@@ -38,4 +38,12 @@ public class IndividualTests {
                                         new MethodCallStatementExpression("A", new ThisExpression(), new ArrayList<>()),new ArrayList<>()))))),
                         new ArrayList<>()))));
     }
+
+    @Test
+    public void TestNegativeConst() throws IOException
+    {
+        String src = "public class MyClass {  public MyClass() { i = -1;} }";
+        Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
+        Assertions.assertNotNull(syntaxTree);
+    }
 }

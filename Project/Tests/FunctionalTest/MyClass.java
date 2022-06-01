@@ -5,27 +5,21 @@ public class MyClass
     int i;
 
     public MyClass(){
-        i = 13;
+        i = 3;
     }
 
-    public int Method(int a, int b)
-    {
-        return a+b;
-    }
-    public int Method2()
-    {
-        return A();
-    }
-
-    public int A(){
-        return i;
-    }
-
-    public int GetData()
+    public int GetData(int pI, boolean pB)
     {
         Data d;
         d = new Data(2);
-        return d.GetID()*10+2;
+        if(pB)
+        {
+            return d.GetID()*pI+3-i;
+        }
+        else
+        {
+            return -1;
+        }
     }
 
 }
@@ -33,9 +27,9 @@ public class MyClass
 public class Data
 {
     private int id;
-    public Data(int id)
+    public Data(int pId)
     {
-        this.id = id;
+        id = pId;
     }
     public int GetID()
     {

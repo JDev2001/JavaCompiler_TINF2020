@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Fixed TypeChecker">
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" afterDir="false" />
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added FunctionTest">
+      <change afterPath="$PROJECT_DIR$/Tests/FunctionalTest/Data.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/IndividualTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/IndividualTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,18 +67,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/src/SemanticCheck/TypedDataClasses/typedExpressions&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/Tests/FunctionalTest",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.excludes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\jonas\IdeaProjects\JavaCompiler_TINF2020\Project\src\SemanticCheck\TypedDataClasses\typedExpressions" />
@@ -100,7 +101,7 @@
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in Project">
+  <component name="RunManager" selected="JUnit.IntegrationTests.ThisExpression">
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -141,23 +142,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests.AccessObjectMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IndividualTests.TestNegativeConst" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
+          <option name="PATTERN" value="ParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="AccessObjectMethod" />
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.IndividualTests" />
+      <option name="METHOD_NAME" value="TestNegativeConst" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="IntegrationTests.ThisExpression" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -167,26 +168,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="IntegrationTest" />
       <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="InstantiateClass" />
+      <option name="METHOD_NAME" value="ThisExpression" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="JUnit.IndividualTests.TestNegativeConst" />
+      <item itemvalue="JUnit.IntegrationTests.ThisExpression" />
       <item itemvalue="JUnit.EmptyClass.Test" />
       <item itemvalue="JUnit.EmptyClass.Test2" />
       <item itemvalue="JUnit.All in Project" />
-      <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
-      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.IntegrationTests.ThisExpression" />
+        <item itemvalue="JUnit.IndividualTests.TestNegativeConst" />
         <item itemvalue="JUnit.All in Project" />
         <item itemvalue="JUnit.EmptyClass.Test2" />
         <item itemvalue="JUnit.EmptyClass.Test" />
-        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
-        <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
       </list>
     </recent_temporary>
   </component>
@@ -216,7 +217,7 @@
       <workItem from="1653998601290" duration="1881000" />
       <workItem from="1654003348304" duration="7397000" />
       <workItem from="1654021793210" duration="1064000" />
-      <workItem from="1654097757346" duration="738000" />
+      <workItem from="1654097757346" duration="2708000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -540,7 +541,14 @@
       <option name="project" value="LOCAL" />
       <updated>1654097863067</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Added FunctionTest">
+      <created>1654098740641</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1654098740641</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -559,7 +567,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="BCGen stuff" />
     <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
     <MESSAGE value="Added constructors to class" />
     <MESSAGE value="standard constructor" />
@@ -584,7 +591,8 @@
     <MESSAGE value="Added Integration Tests" />
     <MESSAGE value="Added Functional Test" />
     <MESSAGE value="Fixed TypeChecker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed TypeChecker" />
+    <MESSAGE value="Added FunctionTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FunctionTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -606,7 +614,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
-          <line>667</line>
+          <line>670</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -639,6 +647,11 @@
           <line>107</line>
           <option name="timeStamp" value="79" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Tests/ParserTests/IndividualTests.java</url>
+          <line>46</line>
+          <option name="timeStamp" value="80" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
           <line>199</line>
@@ -663,6 +676,8 @@
         <watch expression="syntaxTree.classes" />
         <watch expression="syntaxTree.classes" />
         <watch expression="((TypedBlock)typedClass.methods.get(0).statement).statements" custom="SemanticCheck.TypedDataClasses.typedCommon.TypedBlock" />
+        <watch expression="syntaxTree.classes" />
+        <watch expression="syntaxTree.classes" />
       </configuration>
     </watches-manager>
   </component>

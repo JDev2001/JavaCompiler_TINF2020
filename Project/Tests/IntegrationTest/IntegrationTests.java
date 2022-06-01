@@ -12,6 +12,22 @@ import org.junit.jupiter.api.Assertions;
 public class IntegrationTests
 {
     @org.junit.jupiter.api.Test
+    public void ThisExpression() throws Exception
+    {
+        String src = "public class Empty { public int i; public Empty(){ this.i = 3;} }";
+        Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
+        TypedProgram typedProgram = new SemantikCheckImpl().semantikCheckStart(syntaxTree);
+
+        BytecodeGenerator bytecodeGenerator = new BytecodeGenerator(typedProgram);
+        var byteCode = bytecodeGenerator.genCode();
+        ReflectLoader loader = new ReflectLoader(byteCode);
+        Class c = loader.findClass("Empty");
+        var obj = c.newInstance();
+        var i =c.getDeclaredField("i").getInt(obj);
+
+        Assertions.assertEquals(3,i);
+    }
+    @org.junit.jupiter.api.Test
     public void IfElse() throws Exception
     {
         String src = "class Empty { public boolean Method() { if(4>9) { return false;} else { return true;}  } }";
