@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ArtifactsWorkspaceSettings">
-    <artifacts-to-build>
-      <artifact name="Project:jar" />
-    </artifacts-to-build>
-  </component>
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Added Integration Tests">
+    <list default="true" id="ffcb8091-eb45-4ad6-9380-debf4ae64294" name="Default Changelist" comment="Parser Tests">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MainProg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/MyClass.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/Project.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/FunctionalTest/compile.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/Add.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/Add.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/ParserTests/While.java" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/ParserTests/While.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammar.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarLexer.interp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/generated/antlrGrammarParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" beforeDir="false" afterPath="$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/company/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/company/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,20 +42,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Project.iml" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Block.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Common/Class.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/Method.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Method/MethodParameter.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/ClassWithFields.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/CodeGenTests/ClassWithMethods.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/BoolType.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/Parser/DataClasses/Types/IMethodType.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/FieldAdapter/FieldAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/BlockAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/GeneralAdapter/ClassAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/MethodAdapter/MethodeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/adapter/Types/TypeAdapter.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/Parser/grammar/antlrGrammar.g4" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/Main.java" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/src/com/company/common/Factory/Factory.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/ITypedExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedConstExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedJNullExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedExpressions/TypedLocalOrFieldVar.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedAssignStatementExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedInstVarStatementExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedMethodCallStatementExpression.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/SemanticCheck/TypedDataClasses/typedStatementExpression/TypedNewStatementExpression.java" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -63,21 +68,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/jonas/IdeaProjects/JavaCompiler_TINF2020/Project/src/SemanticCheck/TypedDataClasses/typedExpressions&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;shared-indexes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/Administrator/Desktop/JavaCompiler_TINF2020/Project/Tests/FunctionalTest",
+    "project.structure.last.edited": "Artifacts",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\jonas\IdeaProjects\JavaCompiler_TINF2020\Project\src\SemanticCheck\TypedDataClasses\typedExpressions" />
+      <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Tests\FunctionalTest" />
       <recent name="F:\User Folder\Work\ARBURG\DHBW\Dokumente\Compilerbau\JavaCompiler_TINF2020\Project\src\CodeGenerator\Code Generator" />
       <recent name="C:\Users\Administrator\Desktop\JavaCompiler_TINF2020\Project\Ressources" />
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project\src\com\company" />
@@ -90,14 +93,36 @@
       <recent name="F:\User Folder\Desktop\JavaCompiler_TINF2020\Project" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ParserTests" />
       <recent name="Parser.DataClasses.Expressions" />
       <recent name="SemanticCheck.TypedDataClasses.typedExpressions" />
+      <recent name="ParserTests" />
       <recent name="SemanticCheckTests" />
       <recent name="CodeGenTests" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.EmptyClass.Test2">
+  <component name="RunManager" selected="JUnit.All in Project">
+    <configuration name="MainProg" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainProg" />
+      <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="Ressources/Add.java" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.company.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.company.Main" />
+      <module name="Project" />
+      <option name="PROGRAM_PARAMETERS" value="Ressources/Add.java" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.company.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="All in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,7 +131,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass.Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="CodeGenTests in Project" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
@@ -115,75 +140,41 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.EmptyClass" />
-      <option name="METHOD_NAME" value="Test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="TEST_OBJECT" value="package" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="EmptyClass.Test2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="While.SimpleWhileWithConstCondition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="CodeGenTests.*" />
+          <option name="PATTERN" value="ParserTests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="CodeGenTests" />
-      <option name="MAIN_CLASS_NAME" value="CodeGenTests.EmptyClass" />
-      <option name="METHOD_NAME" value="Test2" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.AccessObjectMethod" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="AccessObjectMethod" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="IntegrationTests.InstantiateClass" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="IntegrationTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="IntegrationTest" />
-      <option name="MAIN_CLASS_NAME" value="IntegrationTest.IntegrationTests" />
-      <option name="METHOD_NAME" value="InstantiateClass" />
+      <option name="PACKAGE_NAME" value="ParserTests" />
+      <option name="MAIN_CLASS_NAME" value="ParserTests.While" />
+      <option name="METHOD_NAME" value="SimpleWhileWithConstCondition" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
-      <item itemvalue="JUnit.EmptyClass.Test" />
-      <item itemvalue="JUnit.EmptyClass.Test2" />
+      <item itemvalue="Application.com.company.Main" />
+      <item itemvalue="Application.MainProg" />
+      <item itemvalue="JUnit.While.SimpleWhileWithConstCondition" />
       <item itemvalue="JUnit.All in Project" />
-      <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
-      <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
+      <item itemvalue="JUnit.CodeGenTests in Project" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.EmptyClass.Test2" />
-        <item itemvalue="JUnit.EmptyClass.Test" />
-        <item itemvalue="JUnit.IntegrationTests.InstantiateClass" />
-        <item itemvalue="JUnit.IntegrationTests.AccessObjectMethod" />
         <item itemvalue="JUnit.All in Project" />
+        <item itemvalue="JUnit.While.SimpleWhileWithConstCondition" />
+        <item itemvalue="Application.com.company.Main" />
+        <item itemvalue="Application.MainProg" />
+        <item itemvalue="JUnit.CodeGenTests in Project" />
       </list>
     </recent_temporary>
   </component>
@@ -200,18 +191,6 @@
       <workItem from="1652528109751" duration="8078000" />
       <workItem from="1652974373468" duration="652000" />
       <workItem from="1653134296437" duration="5188000" />
-      <workItem from="1653483615530" duration="7112000" />
-      <workItem from="1653491086993" duration="377000" />
-      <workItem from="1653497489578" duration="1324000" />
-      <workItem from="1653499908825" duration="663000" />
-      <workItem from="1653506643606" duration="1953000" />
-      <workItem from="1653578381064" duration="1601000" />
-      <workItem from="1653635972035" duration="139000" />
-      <workItem from="1653637869423" duration="604000" />
-      <workItem from="1653749696595" duration="1079000" />
-      <workItem from="1653828051282" duration="1892000" />
-      <workItem from="1653998601290" duration="1881000" />
-      <workItem from="1654003348304" duration="7281000" />
     </task>
     <task id="LOCAL-00001" summary="Setup parser folder structure and main methode">
       <created>1652109126816</created>
@@ -430,98 +409,28 @@
       <option name="project" value="LOCAL" />
       <updated>1653454410065</updated>
     </task>
-    <task id="LOCAL-00032" summary="Parser -&gt; local or field var fix">
-      <created>1653472532569</created>
+    <task id="LOCAL-00032" summary="|| and &amp;&amp; works">
+      <created>1653490048716</created>
       <option name="number" value="00032" />
       <option name="presentableId" value="LOCAL-00032" />
       <option name="project" value="LOCAL" />
-      <updated>1653472532569</updated>
+      <updated>1653490048716</updated>
     </task>
-    <task id="LOCAL-00033" summary="Added TEsts">
-      <created>1653489302681</created>
+    <task id="LOCAL-00033" summary="Fixed instantiating class">
+      <created>1653989448058</created>
       <option name="number" value="00033" />
       <option name="presentableId" value="LOCAL-00033" />
       <option name="project" value="LOCAL" />
-      <updated>1653489302681</updated>
+      <updated>1653989448058</updated>
     </task>
-    <task id="LOCAL-00034" summary="Added Test">
-      <created>1653489630959</created>
+    <task id="LOCAL-00034" summary="Parser Tests">
+      <created>1654006791796</created>
       <option name="number" value="00034" />
       <option name="presentableId" value="LOCAL-00034" />
       <option name="project" value="LOCAL" />
-      <updated>1653489630959</updated>
+      <updated>1654006791796</updated>
     </task>
-    <task id="LOCAL-00035" summary="Added Test">
-      <created>1653489706190</created>
-      <option name="number" value="00035" />
-      <option name="presentableId" value="LOCAL-00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1653489706190</updated>
-    </task>
-    <task id="LOCAL-00036" summary="Added Test">
-      <created>1653490509619</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1653490509619</updated>
-    </task>
-    <task id="LOCAL-00037" summary="Added Integration Tests">
-      <created>1653491432678</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1653491432679</updated>
-    </task>
-    <task id="LOCAL-00038" summary="Added Integration Tests">
-      <created>1653498287345</created>
-      <option name="number" value="00038" />
-      <option name="presentableId" value="LOCAL-00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1653498287345</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Added Functional Test">
-      <created>1653751068734</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1653751068734</updated>
-    </task>
-    <task id="LOCAL-00040" summary="Fixed TypeChecker">
-      <created>1654004303765</created>
-      <option name="number" value="00040" />
-      <option name="presentableId" value="LOCAL-00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1654004303765</updated>
-    </task>
-    <task id="LOCAL-00041" summary="Fixed TypeChecker">
-      <created>1654004560401</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1654004560401</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Fixed TypeChecker">
-      <created>1654005153201</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1654005153201</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Fixed TypeChecker">
-      <created>1654007886426</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1654007886426</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Fixed TypeChecker">
-      <created>1654008111019</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1654008111019</updated>
-    </task>
-    <option name="localTasksCounter" value="45" />
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -540,6 +449,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Main class edited" />
+    <MESSAGE value="Klassen auf Records umgestellt" />
+    <MESSAGE value="Tests eingefügt" />
     <MESSAGE value="BCGen stuff" />
     <MESSAGE value="BCGen stuff&#10;Fixed InstVarStatementExpression" />
     <MESSAGE value="Added constructors to class" />
@@ -559,13 +471,10 @@
     <MESSAGE value="Fixed bug and improved constructor generating" />
     <MESSAGE value="Changes" />
     <MESSAGE value="more" />
-    <MESSAGE value="Parser -&gt; local or field var fix" />
-    <MESSAGE value="Added TEsts" />
-    <MESSAGE value="Added Test" />
-    <MESSAGE value="Added Integration Tests" />
-    <MESSAGE value="Added Functional Test" />
-    <MESSAGE value="Fixed TypeChecker" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed TypeChecker" />
+    <MESSAGE value="|| and &amp;&amp; works" />
+    <MESSAGE value="Fixed instantiating class" />
+    <MESSAGE value="Parser Tests" />
+    <option name="LAST_COMMIT_MESSAGE" value="Parser Tests" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,65 +484,23 @@
           <line>137</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
-          <line>145</line>
-          <option name="timeStamp" value="48" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/CodeGenerator/BytecodeGenerator.java</url>
-          <line>608</line>
-          <option name="timeStamp" value="54" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/SemanticCheckTests/CheckMethodCall.java</url>
-          <line>38</line>
-          <option name="timeStamp" value="63" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
-          <line>201</line>
-          <option name="timeStamp" value="77" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Tests/IntegrationTest/IntegrationTests.java</url>
-          <line>107</line>
-          <option name="timeStamp" value="79" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/Tests/CodeGenTests/TestExpressions.java</url>
-          <line>199</line>
-          <properties class="CodeGenTests.TestExpressions" method="TestSimpleMulExpr">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo parentTag="SemanticCheck.TypedDataClasses.typedCommon.TypedClass" memberName="methods" />
         <PinnedItemInfo parentTag="Common.Block" memberName="statements" />
         <PinnedItemInfo parentTag="Common.Program" memberName="classes" />
-        <PinnedItemInfo parentTag="Parser.DataClasses.Expressions.LocalOrFieldVar" memberName="name" />
       </pinned-members>
     </pin-to-top-manager>
     <watches-manager>
       <configuration name="JUnit">
         <watch expression="syntaxTree.classes" />
         <watch expression="syntaxTree.classes" />
-        <watch expression="((TypedBlock)typedClass.methods.get(0).statement).statements" custom="SemanticCheck.TypedDataClasses.typedCommon.TypedBlock" />
       </configuration>
     </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
-  </component>
-  <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Project$ParseExpression_AccessObjectMethod.ic" NAME="ParseExpression.AccessObjectMethod Coverage Results" MODIFIED="1653579094024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>IntegrationTest.*</FILTER>
-    </SUITE>
   </component>
 </project>

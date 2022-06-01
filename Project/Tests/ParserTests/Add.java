@@ -25,7 +25,7 @@ public class Add
     public void SimpleMethodCall() throws IOException
     {
 
-        String src = "class MyClass { public void A() { B() } }";
+        String src = "class MyClass { public void A() { B(); } }";
         Program syntaxTree = new SyntaxTreeGenerator().getSyntaxTree(CharStreams.fromString(src));
         Assertions.assertNotNull(syntaxTree);
 

@@ -13,7 +13,7 @@ import java.util.Map;
 public class Main {
 
     //Global Debuging Flas -> For more/less debugging infos turn true/false
-    public static boolean debugFlag = true;
+    public static boolean debugFlag = false;
 
     /**
      * Main method of the application
@@ -23,6 +23,9 @@ public class Main {
      */
     public static void main(String[] args) throws Exception {
 
+        //Prints Welcome Message
+        WelcomeMessage();
+
         //Der Pfad der Input Datei (./EmptyClass.java) wird als startparameter mitgegeben
         //Ändern unter "Edit Configurations ..."->"Program arguments"
 
@@ -31,26 +34,18 @@ public class Main {
             return;
         }
 
-        /*
-        //Für mehrere Files in den args
-        //Itterates over the input files an create an inputstream for each
-        var inputFiles = new ArrayList<FileInputStream>() {{
-            for (var filePath : args) {
-                add(new FileInputStream(filePath));
-            }
-        }};
-         */
+        System.out.println("Input File: " + args[0] + "\n");
 
         //Generates the syntax tree
-        System.out.println("Generating the syntax tree!");
+        System.out.println("Generating syntax tree!");
         Program syntaxTree = Factory.getFactory().getSyntaxTreeGenerator().getSyntaxTree(CharStreams.fromStream(new FileInputStream(args[0])));
 
         //Generates Semantik check
-        System.out.println("Generating the typed syntax tree!");
+        System.out.println("Generating typed syntax tree!");
         TypedProgram typedSyntaxTree = Factory.getFactory().getSemantikCheck().semantikCheckStart(syntaxTree);
 
         //Generates Byte code
-        System.out.println("Generating the bytecode");
+        System.out.println("Generating bytecode!");
         HashMap<String, byte[]> res = Factory.getFactory().getCodeGenerator().getCode(typedSyntaxTree);
 
         //Writes Bytecode to File
@@ -81,17 +76,47 @@ public class Main {
 
             //Debugging output
             if(debugFlag) {
+                System.out.println("Debug:");
                 System.out.println("Key: \n" + key);
                 System.out.println("Value: \n" + Arrays.toString(value));
             }
         }
 
-        System.out.println("Finished! Outputfile path: " + TransformFilename(args[0]));
+        System.out.println("\nFinished! Outputfile: " + TransformFilename(args[0]));
     }
 
     //TestClass.java -> TestClass.class
     public static String TransformFilename(String input){
         return input.substring(0, input.length() - 5) + ".class";
     }
+
+    public static void WelcomeMessage(){
+
+
+        String message = "\n" + """
+                       _                        _____                          _  _            \s
+                      | |                      / ____|                        (_)| |           \s
+                      | |  __ _ __   __ __ _  | |      ___   _ __ ___   _ __   _ | |  ___  _ __\s
+                  _   | | / _` |\\ \\ / // _` | | |     / _ \\ | '_ ` _ \\ | '_ \\ | || | / _ \\| '__|
+                 | |__| || (_| | \\ V /| (_| | | |____| (_) || | | | | || |_) || || ||  __/| |  \s
+                  \\____/  \\__,_|  \\_/  \\__,_|  \\_____|\\___/ |_| |_| |_|| .__/ |_||_| \\___||_|  \s
+                                                                       | |                     \s
+                                                                       |_|\s
+                """;
+
+        String by = """
+                                /----------------------------------------------\\
+                                |                DHBW - TINF20                 |
+                                |               Jonathan Schwab                |
+                                |                Felix Wochele                 |
+                                |                Reinhold Jooss                |
+                                |                 Jan Perthel                  |
+                                \\----------------------------------------------/
+                """;
+
+        System.out.println(message);
+        System.out.println(by);
+    }
+
 }
 

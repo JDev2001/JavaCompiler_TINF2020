@@ -2,7 +2,7 @@ grammar antlrGrammar;
 
 programm: Identifier? jClass+;
 
-jClass: 'class' Identifier classBody;
+jClass: AccessModifier? 'class' Identifier classBody;
 
 //Class
 classBody: CurlyLBracket (methodDeclaration|fieldDeclaration|constructor)* CurlyRBracket;
